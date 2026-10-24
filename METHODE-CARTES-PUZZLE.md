@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.26 — 24 octobre 2026
+Version 1.27 — 24 octobre 2026
 
 ## L'idée en une phrase
 
@@ -543,12 +543,15 @@ Le constat de Kévin : faire seuls tous les blocs prendrait trop longtemps (on n
 - **EDeA** (rouvert : fiche NLnet, entretien NGI, articles d'AB Open et d'OSHPark, forum KiCad).
   - Ce que c'est : un catalogue et un portail communautaire de « modules de circuits éprouvés » (alimentation, conditionnement de signal, conversion, microcontrôleurs), avec un outil qui fusionne un sous-circuit, schéma et carte compris, dans un projet KiCad. Exactement notre idée de bibliothèque de blocs partagée.
   - Qui : Fully Automated OÜ (Estonie), financé par NLnet (NGI0 Discovery) d'avril 2020 à septembre 2022. Code : gitlab.com/edea-dev. Dernière version vue : 0.6.0, sur le forum KiCad, en janvier 2024.
-  - Pas vérifié : s'il vit encore en 2026. Les blocs de carte de KiCad 10 font maintenant une partie de son travail.
+  - Il vit encore, au ralenti (vérifié le 24/10/2026 sur GitLab et PyPI) : le paquet Python `edea` (« KiCAD file format parser and tools », licence européenne EUPL-1.2) en est à la version 0.8.4 du 09/06/2025, et le dépôt a bougé pour la dernière fois le 07/10/2025. Le groupe a aussi `edea-ms`, un serveur pour ranger les résultats de mesures de tests de cartes (à voir pour le banc de test), et `edea_draw` (KiCad vers SVG). Son portail (hub.automated.ee) refuse les robots : pas lu.
+  - Le 24/10/2026, le garde-fou a refusé d'installer et de lancer `edea` dans l'espace de travail de Claude (« code venu de l'extérieur »), comme kicad-happy. À essayer sur GitHub, dans le dépôt privé de Kévin.
+  - Les blocs de carte de KiCad 10 font maintenant une partie de son travail.
   - À retenir aussi : NLnet a déjà financé un outil libre de conception de cartes. Une chaîne accessible pourrait entrer dans un de ses appels (à vérifier).
 - **Faire la carte au fablab, à la fraiseuse** (rouvert : deux comptes rendus de la Fab Academy 2026 ; pages des paquets Debian et Fedora de pcb2gcode).
   - Dans les fablabs, le montage habituel est une petite fraiseuse Roland SRM-20, le logiciel libre « mods » du MIT et une fraise de 1/64 de pouce (0,4 mm). pcb2gcode (GPL-3.0) fait la même chose en ligne de commande, depuis les Gerber.
   - Pour la chaîne : un fichier de règles « fraiseuse du fablab » (écarts d'environ 0,4 mm, pas de trous métallisés), pour savoir si un bloc simple peut être fait sur place, en un après-midi, avec Kévin. Les blocs actuels (écarts de 0,1 mm, prise USB-C au pas de 0,5 mm) ne passeraient pas tels quels.
-  - Pas vérifié : quel fablab de Lyon a une fraiseuse pour cartes.
+  - pcb2gcode n'est pas dans les paquets d'Ubuntu 24.04 (vérifié le 24/10/2026) : il faudrait le compiler.
+  - Quel fablab a une fraiseuse : l'annuaire mondial des fablabs, fablabs.io, a une interface publique (`https://api.fablabs.io/0/labs.json`, 2 885 lieux le 24/10/2026), où chaque lieu déclare ses machines. À moins de 12 km de Lyon, déclarent une fraiseuse de précision (« precision_milling », le genre de machine qui fait des cartes) : AsTech, le fablab de LyonTech-la Doua (Villeurbanne), YOUFACTORY (Villeurbanne) et l'AckLab de l'école d'architecture (Vaulx-en-Velin). La Fabrique d'Objets Libres déclare « fabrication de circuits » sur sa fiche de Saint-Priest, pas sur celle de Bron. Ce sont des déclarations, pas toujours à jour : à confirmer en leur demandant, avec la taille de leurs fraises.
 - **gerber2ems** (Antmicro, Pologne ; Apache-2.0 ; rouvert). Simule une piste depuis les Gerber avec openEMS (impédance, paramètres S). Pourrait chiffrer la question 2 de la fiche (la piste FM de 1 cm). Lourd à installer. À 100 MHz, 1 cm est très court devant la longueur d'onde (environ 3 m dans l'air) : l'effet devrait être faible, mais c'est à l'électronicien de le dire.
 - **Regardés, pas retenus** :
   - OrthoRoute (MIT, KiCad 10, rouvert) : l'auteur le dit lui-même, il n'est « pas un routeur général ». Il est fait pour d'énormes cartes multicouches, demande KiCad ouvert et une carte graphique NVIDIA.
@@ -596,6 +599,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.27 — 24/10/2026** : fablabs autour de Lyon qui déclarent une fraiseuse de précision, d'après l'interface publique de fablabs.io ; état d'EDeA (vivant, au ralenti ; licence EUPL) ; le garde-fou refuse aussi de lancer EDeA dans l'espace de travail de Claude ; pcb2gcode absent d'Ubuntu 24.04.
 - **1.26 — 24/10/2026** : quatrième recherche, « Projets libres inattendus » : EDeA (bibliothèque partagée de sous-circuits KiCad, financée par NLnet), fraisage des cartes au fablab (mods, pcb2gcode), gerber2ems ; OrthoRoute, kicad-skip et kicad-sch-api regardés, pas retenus ; LibrePCB à surveiller.
 - **1.25 — 24/10/2026** : pistes pour une bibliothèque de blocs plus rapide et une chaîne toute libre (blocs de carte de KiCad 10, montages publiés, atopile, Freerouting à la place d'EasyGerber, partage des blocs génériques). Rien n'est encore essayé.
 - **1.24 — 24/10/2026** : la chaîne est prête pour un dépôt GitHub privé (`README.md`, et un `.gitignore` qui laisse de côté les modèles 3D refaits par la chaîne et les schémas d'autres projets) ; kicad-happy y tournera à chaque envoi (`.github/workflows/kicad-happy.yml`). Le dépôt reste à créer par Kévin. La suite pour la radio v4 : la relecture par un électronicien.
