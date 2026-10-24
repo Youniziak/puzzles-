@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.23 — 24 octobre 2026
+Version 1.24 — 24 octobre 2026
 
 ## L'idée en une phrase
 
@@ -504,7 +504,7 @@ Recherche dans les tickets GitHub et GitLab, le forum KiCad, les forums japonais
     - Ce que c'est : des scripts Python sans dépendance (`analyze_schematic.py`, `analyze_pcb.py`, `cross_analysis.py`…), qui marchent seuls, sans KiCad, et des compétences pour Claude.
     - Ce qu'il ajouterait : des contrôles de valeurs, que `controle_circuit.py` ne fait pas. Par exemple : la capacité de charge d'un quartz, le temps de montée du bus I2C avec la valeur des tirages, la tension des condensateurs, la puissance des résistances, les protections contre les décharges.
     - D'après la recherche, il devine une partie des choses d'après les noms des liaisons, et dépend lui aussi des types de broches.
-    - Pas lancé : le 24/10/2026, le garde-fou de l'espace de travail de Claude a refusé trois fois d'exécuter ce code téléchargé, dont deux fois après l'accord écrit de Kévin. L'accord donné dans la conversation ne suffit pas à le débloquer. Pour le lancer pour de vrai : ailleurs, par exemple avec son action GitHub, sur le dépôt de Kévin quand il existera.
+    - Pas lancé : le 24/10/2026, le garde-fou de l'espace de travail de Claude a refusé trois fois d'exécuter ce code téléchargé, dont deux fois après l'accord écrit de Kévin. L'accord donné dans la conversation ne suffit pas à le débloquer. Pour le lancer pour de vrai : sur les machines de GitHub, dans un dépôt privé de Kévin. Le réglage est prêt : `.github/workflows/kicad-happy.yml` (version de kicad-happy épinglée, droits en lecture seule, un dossier de résultats par carte). Le garde-fou refuse aussi que Claude crée le dépôt (« partage de données ») : Kévin crée le dépôt vide `chaine-puzzle` (privé), puis Claude y envoie la chaîne.
     - Ses contrôles ont été refaits à la main sur la radio v4, d'après sa documentation (`methodology_schematic.md`), le 24/10/2026 :
       - le quartz : deux 22 pF pour un quartz prévu pour 12,5 pF donnent environ 14 pF. Skyworks fait exactement pareil dans sa note AN299 : pas une erreur ;
       - la tension des condensateurs : tous tiennent au moins 25 V, sur des liaisons de 5 V au plus ;
@@ -566,6 +566,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.24 — 24/10/2026** : la chaîne est prête pour un dépôt GitHub privé (`README.md`, et un `.gitignore` qui laisse de côté les modèles 3D refaits par la chaîne et les schémas d'autres projets) ; kicad-happy y tournera à chaque envoi (`.github/workflows/kicad-happy.yml`). Le dépôt reste à créer par Kévin. La suite pour la radio v4 : la relecture par un électronicien.
 - **1.23 — 24/10/2026** : le contrôle du circuit voit maintenant tout seul les deux points trouvés à la main : plus de 10 µF sur le VBUS d'une prise USB, et une ligne de données USB sans résistance en série (règles 10 et 11 de `controle_circuit.py`, essayées sur une copie corrigée de la radio v4).
 - **1.22 — 24/10/2026** : contrôles de kicad-happy refaits à la main sur la radio v4, car l'outil n'a pas pu être lancé ici ; fiche de questions de la radio v4 en version 1.5, avec deux questions de plus (condensateurs sur VBUS, lignes USB) ; dossier de relecture refait (12 questions).
 - **1.21 — 24/10/2026** : contrôle du circuit (`controle_circuit.py`, étape 0 quater) ; vrais types de broches depuis la bibliothèque officielle de KiCad (`outils/typer_broches.py`, `types-broches.json`), drapeaux d'alimentation, étiquettes globales et ERC complet dans `schema.py` ; parité schéma ↔ carte de KiCad ; correction des champs des empreintes (18 références LCSC fausses dans le fichier KiCad) ; essai par erreurs volontaires. La chaîne relit ses scripts avant de partir (`relire_scripts.py`, pyflakes) et signale toute étape plantée (code de sortie 2) ; la maquette, qui plantait depuis la version 1.16, est corrigée. Composants rouverts : kicad-happy, KiPart, akcli, KiBot, KiPilot.
