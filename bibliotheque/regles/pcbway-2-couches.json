@@ -1,0 +1,61 @@
+{
+ "nom": "PCBWay, 2 couches, cuivre 35 µm (offre standard)",
+ "type": "fabricant",
+ "kikit": "pcbway",
+ "stock_verifiable": false,
+ "source": "PCBWay, pages « PCB Capabilities » (offre standard) et « Advanced PCB Capabilities », consultées le 23/10/2026 : https://www.pcbway.com/capabilities.html",
+ "kicad": {
+  "min_clearance": 0.1,
+  "min_track_width": 0.1,
+  "min_copper_edge_clearance": 0.25,
+  "min_through_hole_diameter": 0.2,
+  "min_hole_clearance": 0.15,
+  "min_hole_to_hole": 0.28,
+  "min_via_diameter": 0.5,
+  "min_via_annular_width": 0.15
+ },
+ "notes": {
+  "publie": "Piste et écart 0,1 mm ; couronne 0,15 mm (« for pads with vias in the middle ») ; perçage de 0,15 à 6 mm, avec un supplément sous 0,2 mm (d'où 0,2 mm ici, pour rester sans supplément).",
+  "non_publie_en_standard": "L'écart entre un trou et le cuivre, entre deux trous et au bord ne sont pas dans le tableau standard. On a pris les valeurs « procédé normal » de la page avancée : trou-cuivre 6 mil (0,15 mm), trous de via 11 mil (0,28 mm), piste-bord 0,25 mm. À confirmer avec PCBWay.",
+  "assemblage": "PCBWay achète les pièces lui-même, d'après la référence du fabricant (MPN). Leur stock ne se vérifie pas d'ici : il est donné sur le devis."
+ },
+ "controle": {
+  "trou_metallise_cuivre": 0.15,
+  "trou_non_metallise_cuivre": 0.15,
+  "couronne_min": 0.15,
+  "couronne_conseillee": 0.25
+ },
+ "regles_kicad_dru": [],
+ "classe_par_defaut": {
+  "clearance": 0.1,
+  "track_width": 0.25,
+  "via_diameter": 0.7,
+  "via_drill": 0.3,
+  "note": "Via de 0,7 mm pour un trou de 0,3 mm : couronne de 0,2 mm + écart de 0,1 mm = 0,3 mm entre le trou et le cuivre d'un autre réseau, au-dessus des 0,28 mm de JLCPCB. Constaté le 23/10/2026 : avec 0,6 mm, Freerouting a posé un via à 0,25 mm du 5 V."
+ },
+ "alimentations": {
+  "echauffement_C": 10,
+  "epaisseur_cuivre_um": 35,
+  "marge_largeur": 1.5,
+  "note": "Largeur donnée à Freerouting pour une alimentation : largeur IPC-2221 pour le courant, × la marge, arrondie au 0,05 mm supérieur. Si Freerouting n'y arrive pas, deuxième passage à la largeur minimale (sans marge)."
+ },
+ "plans": {
+  "retrait_du_bord": 0.3,
+  "ecart_masse": 0.25,
+  "ecart_alimentation": 0.15,
+  "epaisseur_min": 0.25
+ },
+ "routage": {
+  "passages_max": 3,
+  "note": "Nombre de passages de Freerouting au plus, si des liaisons manquent encore. Environ 5 minutes par passage."
+ },
+ "thermique": {
+  "temperature_ambiante_C": 40,
+  "marge_C": 10,
+  "note": "Température de l'air autour de la carte, dans un boîtier fermé : 40 °C (hypothèse prudente). Marge : on avertit à moins de 10 °C de la limite."
+ },
+ "ajustements": {
+  "agrandir_vias": true,
+  "note": "Les vias des blocs EasyGerber ont parfois une couronne de 0,1375 mm ; PCBWay demande 0,15 mm. Pour PCBWay, la chaîne les agrandit sur une copie de la carte, puis KiCad et le contrôle indépendant vérifient les écarts."
+ }
+}

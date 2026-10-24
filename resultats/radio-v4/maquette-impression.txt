@@ -1,0 +1,28 @@
+Maquette à toucher — RADIONÉO carte radio v4 — échelle 3, plaque de 3 mm
+
+Deux façons de l'imprimer :
+
+1. Imprimante à plusieurs bobines : maquette-couleurs.3mf, en une seule pièce.
+   Chaque partie porte le nom de sa couleur :
+   - alim — plaque (bleu) (#0072B2)
+   - tuner — plaque (orange) (#E69F00)
+   - ampli — plaque (vert) (#009E73)
+   - fond et légende — plaque (gris clair) (#C8C8C8)
+   - reliefs : pistes, composants, braille, lettres (noir) (#1A1A1A)
+
+2. Imprimante à une bobine : les pièces du dossier maquette-puzzle, chacune dans sa couleur.
+   Facultatif : à 3 mm de hauteur, faire une pause et passer au fil noir ; les pistes, les composants, le braille et les lettres ressortent alors en noir.
+   - 01-alim-bleu.stl : alim, fil bleu, texture « lignes », 121 × 195 mm
+   - 02-tuner-orange.stl : tuner, fil orange, texture « quadrillage », 83 × 79 mm
+   - 03-ampli-vert.stl : ampli, fil vert, texture « trous », 75 × 65 mm
+   - 04-fond-gris-clair.stl : fond et légende, fil gris clair, texture « lisse », 240 × 247 mm — plus grand qu'un plateau de 220 × 220 mm
+
+   Assemblage : chaque bloc se pose dans son logement du fond, sur une pente à 45° (jeu de 0,2 mm).
+   Il peut s'enlever, comme un bloc qu'on change dans la chaîne puzzle, ou se coller pour de bon.
+   Posée sur une table, la maquette tient seule ; pour la tenir en main ou toucher le dessous (pistes en creux),
+   retirer les blocs ou les coller.
+
+Textures (en creux, une par bloc) : alim = lignes, tuner = quadrillage, ampli = trous, fond = lisse.
+La couleur et la texture disent la même chose : l'une aux yeux, l'autre aux doigts.
+
+Supports : les prises et l'antenne débordent ou sont en porte-à-faux ; prévoir des supports à ces endroits.

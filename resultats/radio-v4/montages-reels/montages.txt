@@ -1,0 +1,195 @@
+Montages réels de « SI4732|PAM8403D » — jeu Open Schematics (https://huggingface.co/datasets/bshada/open-schematics), 23/10/2026
+Projets publiés, non vérifiés : à comparer, pas à recopier les yeux fermés.
+
+== dépôt Ahmed-H300/Carcotech — An autonomous car that can solve maze and find it's path out.
+   U7 = PAM8403D
+     broche 1 LOUT+ → LS1 Speaker
+     broche 2 PGND → masse
+     broche 3 LOUT- → LS1 Speaker
+     broche 4 PVDD → U10 TCT5000, U11 256 K-bit EEPROM (24C256), U13 ~, U4 SX1509 (port expander), U4 SX1509 (port expander), U5 LM2596S-3.3
+     broche 5 ~{MUTE} → non reliée
+     broche 6 VDD → U10 TCT5000, U11 256 K-bit EEPROM (24C256), U13 ~, U4 SX1509 (port expander), U4 SX1509 (port expander), U5 LM2596S-3.3
+     broche 7 INL → U6 DFR0299
+     broche 8 VREF → non reliée
+     broche 9 NC → non reliée
+     broche 10 INR → U6 DFR0299
+     broche 11 GND → masse
+     broche 12 ~{SHDN} → non reliée
+     broche 13 PVDD → U10 TCT5000, U11 256 K-bit EEPROM (24C256), U13 ~, U4 SX1509 (port expander), U4 SX1509 (port expander), U5 LM2596S-3.3
+     broche 14 ROUT- → LS2 Speaker
+     broche 15 PGND → masse
+     broche 16 ROUT+ → LS2 Speaker
+
+== dépôt Polyche/Polihack_Hush — First Place for an Active Noice Cancelling Speaker project done at Polihack V16
+   U3 = PAM8403D
+     broche 1 LOUT+ → LS2 Speaker
+     broche 2 PGND → non reliée
+     broche 3 LOUT- → LS2 Speaker
+     broche 4 PVDD → C6 100nF, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U4 LM78L05_TO92
+     broche 5 ~{MUTE} → C6 100nF, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U4 LM78L05_TO92
+     broche 6 VDD → C6 100nF, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U4 LM78L05_TO92
+     broche 7 INL → U1 STM32F103C8Tx
+     broche 8 VREF → C1 1uF
+     broche 9 NC → non reliée
+     broche 10 INR → U1 STM32F103C8Tx
+     broche 11 GND → masse
+     broche 12 ~{SHDN} → non reliée
+     broche 13 PVDD → C6 100nF, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U4 LM78L05_TO92
+     broche 14 ROUT- → LS1 Speaker
+     broche 15 PGND → non reliée
+     broche 16 ROUT+ → LS1 Speaker
+
+== dépôt rh1tech/frank — Murmulator
+   U12 = PAM8403D
+     broche 1 +OUT → non reliée
+     broche 2 PGND → masse
+     broche 3 -OUTL → non reliée
+     broche 4 PVDD → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K
+     broche 5 MUTE → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K
+     broche 6 VDD → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K
+     broche 7 INL → R55 10K
+     broche 8 VREF → C50 100n
+     broche 9 NC → non reliée
+     broche 10 INR → R60 10K
+     broche 11 GND → masse
+     broche 12 SHND → R63 10K
+     broche 13 PVDD → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K
+     broche 14 -OUT → non reliée
+     broche 15 PGND → masse
+     broche 16 +OUT → non reliée
+
+== dépôt kholia/ConsensusBasedTimeSync — A portable, efficient, passive, consensus based (relative) time synchronization mechanism over radio
+   U2 = SI4732-A10-GS
+     broche 1 LOUT/DFS → C3 4.7u
+     broche 2 GPO3/DCLK → non reliée
+     broche 3 GPO2/INTB → non reliée
+     broche 4 GPO1 → non reliée
+     broche 5 NC → non reliée
+     broche 6 FMI → non reliée
+     broche 7 RFGND → masse
+     broche 8 AMI → C11 10n, D1 BAT54S
+     broche 9 *RST → U3 ATTINY3224-SSU
+     broche 10 SENB → masse
+     broche 11 SCLK → ES1 ESC, U3 ATTINY3224-SSU
+     broche 12 SDIO → ES1 ESC, U3 ATTINY3224-SSU
+     broche 13 RCLK → C13 100n
+     broche 14 VDD → C8 1u, D3 CD4148WS, U1 XC6206PxxxMR, U3 ATTINY3224-SSU
+     broche 15 GND → masse
+     broche 16 ROUT/DOUT → C12 4.7u
+
+== dépôt locked/picoclock — 
+   U5 = PAM8403D
+     broche 1 LOUT+ → J13 AUDIO
+     broche 2 PGND → masse
+     broche 3 LOUT- → J13 AUDIO
+     broche 4 PVDD → C13 1uF, C14 1uF, C15 1uF, C16 470uF, C17 100nF, C3 0.1uF
+     broche 5 ~{MUTE} → R16 10K, U6 MCP23009-SO
+     broche 6 VDD → C13 1uF, C14 1uF, C15 1uF, C16 470uF, C17 100nF, C3 0.1uF
+     broche 7 INL → U7 MCP4652T
+     broche 8 VREF → C12 0.1uF
+     broche 9 NC → non reliée
+     broche 10 INR → U7 MCP4652T
+     broche 11 GND → masse
+     broche 12 ~{SHDN} → R16 10K, U6 MCP23009-SO
+     broche 13 PVDD → C13 1uF, C14 1uF, C15 1uF, C16 470uF, C17 100nF, C3 0.1uF
+     broche 14 ROUT- → J2 AUDIO
+     broche 15 PGND → masse
+     broche 16 ROUT+ → J2 AUDIO
+
+== dépôt zyyan20h/PCBRenewal — 
+   U3 = PAM8403DR
+     broche 1 +OUT → J1 B2B-PH-SM4-TBLFSN
+     broche 2 PGND@1 → masse
+     broche 3 -OUT → J1 B2B-PH-SM4-TBLFSN
+     broche 4 PVDD@1 → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u
+     broche 5 MUTE → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u
+     broche 6 VDD → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u
+     broche 7 INL → P1 S3B-ZR-SM4A-TF
+     broche 8 VREF → C6 0.1u
+     broche 10 INR → non reliée
+     broche 11 GND → masse
+     broche 12 SHND → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u
+     broche 13 PVDD@2 → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u
+     broche 14 -OUT → non reliée
+     broche 15 PGND@2 → masse
+     broche 16 +OUT → non reliée
+
+== dépôt bt-soft/pico-radio-5 — 
+   JP1 = Si4732 I2C Address
+     broche 1 A → masse
+     broche 2 C → U1 SI4732-A10-GS
+     broche 3 B → C8 4.7uF, C9 100nF, L1 220uH, U1 SI4732-A10-GS
+   U1 = SI4732-A10-GS
+     broche 1 LOUT/DFS → C5 4.7uF
+     broche 2 GPO3/DCLK → C1 22pF, Y1 32.762kHz
+     broche 3 GPO2/INTB → non reliée
+     broche 4 GPO1 → non reliée
+     broche 5 NC → non reliée
+     broche 6 FMI → C10 33pF, L2 220uH
+     broche 7 RFGND → masse
+     broche 8 AMI → C12 1nF
+     broche 9 *RST → A1 RaspberryPi_Pico - purple
+     broche 10 SENB → JP1 Si4732 I2C Address
+     broche 11 SCLK → A1 RaspberryPi_Pico - purple
+     broche 12 SDIO → A1 RaspberryPi_Pico - purple
+     broche 13 RCLK → C2 22pF, Y1 32.762kHz
+     broche 14 VDD → C8 4.7uF, C9 100nF, JP1 Si4732 I2C Address, L1 220uH
+     broche 15 GND → masse
+     broche 16 ROUT/DOUT → C4 4.7uF
+
+== dépôt ralphxavier/SI473x-T-Display-S3 — SI4735/SI4732 Radio with Lilygo T-Display S3
+   U1 = SI4732-A10-GSR
+     broche 1 LOUT/DFS → C6 4.7uF
+     broche 2 GPO3/DCLK → C4 22pF, Y1 Xtal 32768 KHz
+     broche 3 GPO2/INTB → non reliée
+     broche 4 GPO1 → non reliée
+     broche 5 NC → non reliée
+     broche 6 FMI → C2 1nF
+     broche 7 RFGND → masse
+     broche 8 AMI → C1 470nF
+     broche 9 RST → U2 Lilygo T-Display S3
+     broche 10 SENB → S1 SW1
+     broche 11 SCLK → R2 4.7k, U2 Lilygo T-Display S3
+     broche 12 SDIO → R1 4.7k, U2 Lilygo T-Display S3
+     broche 13 RCLK → C5 22pF, Y1 Xtal 32768 KHz
+     broche 14 VDD → C3 100nF, R1 4.7k, R2 4.7k, S1 SW1, U2 Lilygo T-Display S3
+     broche 15 GND → masse
+     broche 16 ROUT/DOUT → C7 4.7uF
+
+== dépôt ralphxavier/SI4735 — SI4735 / SI4732 Radio
+   U1 = SI4732-A10-GSR
+     broche 1 LOUT/DFS → R4 10k
+     broche 2 GPO3/DCLK → C5 22pF, Y1 Xtal 32768 KHz
+     broche 3 GPO2/INTB → non reliée
+     broche 4 GPO1 → non reliée
+     broche 5 NC → non reliée
+     broche 6 FMI → C2 1nF
+     broche 7 RFGND → masse
+     broche 8 AMI → C3 470nF
+     broche 9 RST → U2 TTGO-T-Display
+     broche 10 SENB → S1 SW1
+     broche 11 SCLK → R2 4.7k, U2 TTGO-T-Display
+     broche 12 SDIO → R1 4.7k, U2 TTGO-T-Display
+     broche 13 RCLK → C6 22pF, Y1 Xtal 32768 KHz
+     broche 14 VDD → C4 100nF, R1 4.7k, R2 4.7k, S1 SW1, U2 TTGO-T-Display, U3 MODULE_NS8002
+     broche 15 GND → masse
+     broche 16 ROUT/DOUT → R3 10k
+
+== dépôt Byter64/Hans2 — Es ist wie Hans, aber 2. Also besserer Hans (2).
+   U1 = PAM8403D
+     broche 1 LOUT+ → non reliée
+     broche 2 PGND → masse
+     broche 3 LOUT- → non reliée
+     broche 4 PVDD → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF
+     broche 5 ~{MUTE} → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF
+     broche 6 VDD → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF
+     broche 7 INL → R1 10 kΩ
+     broche 8 VREF → C19 1 μF
+     broche 9 NC → non reliée
+     broche 10 INR → R9 10 kΩ
+     broche 11 GND → masse
+     broche 12 ~{SHDN} → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF
+     broche 13 PVDD → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF
+     broche 14 ROUT- → non reliée
+     broche 15 PGND → masse
+     broche 16 ROUT+ → non reliée

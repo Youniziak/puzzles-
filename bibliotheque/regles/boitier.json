@@ -1,0 +1,53 @@
+{
+ "description": "Réglages du boîtier d'essai (étape 5, boitier.py), fabriqué par YAPP_Box et OpenSCAD à partir de la carte. Les ouvertures, boutons et passages de fils de chaque bloc sont dans son bloc.json (« boitier »).",
+ "yapp": {
+  "depot": "https://github.com/mrWheel/YAPP_Box",
+  "version": "3.3.8",
+  "commit": "f9400c419ef1dea7dc0b3607876989b4f3faa2b7",
+  "licence": "MIT"
+ },
+ "paroi_mm": 2.0,
+ "fond_mm": 1.6,
+ "dessus_mm": 1.6,
+ "marge_autour_carte_mm": 1.0,
+ "sous_la_carte_min_mm": 3.0,
+ "jeu_sous_les_pattes_mm": 0.5,
+ "au_dessus_du_plus_haut_mm": 2.0,
+ "jonction_au_dessus_carte_mm": 2.0,
+ "nervure_mm": 4.0,
+ "jeu_nervure_mm": 0.3,
+ "arrondi_boite_mm": 2.0,
+ "ouvertures": {
+  "jeu_mm": 0.5,
+  "rayon_coins_mm": 1.0,
+  "profondeur_coupe_mm": 0.8
+ },
+ "passages_fils": {
+  "largeur_mm": 8.0,
+  "hauteur_mm": 4.0,
+  "glissement_max_mm": 20.0
+ },
+ "trou_lumiere_mm": 3.0,
+ "boutons": {
+  "rond_diametre_mm": 9.0,
+  "carre_cote_mm": 8.0,
+  "depasse_du_dessus_mm": 2.5,
+  "course_mm": 0.3,
+  "tige_diametre_mm": 3.5
+ },
+ "plots_de_maintien": {
+  "diametre_mm": 5.0,
+  "marge_composants_mm": 0.5,
+  "marge_bord_mm": 0.3,
+  "recherche_le_long_du_bord_mm": 20.0
+ },
+ "etiquettes": {
+  "police": "DejaVu Sans:style=Bold",
+  "taille_mm": 5.0,
+  "profondeur_mm": 0.8,
+  "ecart_mm": 1.5,
+  "note": "La largeur des mots est mesurée dans la police (DejaVu Sans Bold) ; « taille » = hauteur des capitales, comme dans OpenSCAD."
+ },
+ "qualite_rendu": 6,
+ "couche_impression_mm": 0.2
+}

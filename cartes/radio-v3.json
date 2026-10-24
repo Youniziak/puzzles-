@@ -1,0 +1,42 @@
+{
+ "nom": "RADIONÉO carte radio v3",
+ "etiquette": "radio",
+ "bibliotheque": "../bibliotheque",
+ "regles": "jlcpcb-2-couches",
+ "contour": {
+  "largeur": 80.0,
+  "hauteur": 66.0,
+  "rayon_coins": 2.0
+ },
+ "masse": "GND",
+ "alimentations_externes": [
+  "VBUS"
+ ],
+ "alimentations_externes_note": "Liaisons alimentées depuis l'extérieur de la carte (ici le 5 V de la prise USB-C) : schema.py y met un drapeau d'alimentation (PWR_FLAG) pour l'ERC de KiCad.",
+ "blocs": [
+  {
+   "bloc": "A_alim_esp32",
+   "position": [
+    0.0,
+    0.0
+   ],
+   "rotation": 0
+  },
+  {
+   "bloc": "B_tuner",
+   "position": [
+    52.4,
+    28.4
+   ],
+   "rotation": 0
+  },
+  {
+   "bloc": "C_ampli",
+   "position": [
+    54.9,
+    2.3
+   ],
+   "rotation": 0
+  }
+ ]
+}

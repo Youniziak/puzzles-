@@ -1,0 +1,82 @@
+
+=== 0. Vérifier la disposition des blocs ===
+== Sorties des blocs ==
+  19 sorties examinées
+== Ce qui doit être au bord de la carte ==
+  ✓ A_alim_esp32 : prise USB-C (J1) — côté gauche de la carte
+  ✓ A_alim_esp32 : antenne de l'ESP32-S3 — côté haut de la carte
+  ✓ B_tuner : prise d'antenne radio (J2) — côté bas de la carte
+== Bilan de la disposition ==
+  ✓ rien à redire
+(0 s)
+
+=== 1. Assembler les blocs ===
+assemblé : RADIONÉO carte radio — variante compacte (essai de réutilisation des blocs) — 3 blocs, 62 composants (vraies empreintes), 332 pistes et vias des blocs
+alimentations : 3V3 0.8 A → piste de 0.35 mm, SPK_L_N 1.0 A → piste de 0.50 mm, SPK_L_P 1.0 A → piste de 0.50 mm, SPK_R_N 1.0 A → piste de 0.50 mm, SPK_R_P 1.0 A → piste de 0.50 mm, VBUS 1.5 A → piste de 0.80 mm
+zones sans cuivre : ["A_alim_esp32 : antenne de l'ESP32-S3 (ni plan, ni piste, ni via)"]
+pistes de bloc écartées (Freerouting les retracera) : {'A_alim_esp32': ['3']}
+problèmes de pastilles : aucun
+(1 s)
+
+=== 2. Router ce qui manque (Freerouting) et contrôler (KiCad 10) ===
+Réseaux incomplets confiés à Freerouting (14 liaisons) : 3V3, AMP_MUTE, I2C_SCL, I2C_SDA, LOUT, RADIO_INT, RADIO_RST, ROUT, VBUS
+Plan 3V3 (F.Cu) coupé en îlots : laissé de côté pour Freerouting, qui tracera des pistes à la place
+Freerouting (passage 1) : 999 passes ; score final 991.22 (1 unrouted)
+KiCad a repris le travail de Freerouting : 332 → 515 pistes et vias (112 fils sur des réseaux déjà complets écartés)
+Ménage : 2 bout(s) de piste inutile(s) enlevé(s) ; restent 0 signalé(s) (pistes des blocs, verrouillées)
+Encore incomplets : 3V3. Passage 2 sur 3, en repartant du précédent ; largeur minimale pour : 3V3 0.25 mm
+Plan 3V3 (F.Cu) coupé en îlots : laissé de côté pour Freerouting, qui tracera des pistes à la place
+Plan 3V3 (F.Cu) coupé en îlots : laissé de côté pour Freerouting, qui tracera des pistes à la place
+Freerouting (passage 2) : 999 passes ; score final 990.82 (1 unrouted)
+KiCad a repris le travail de Freerouting : 513 → 536 pistes et vias (110 fils sur des réseaux déjà complets écartés)
+Ménage : 1 bout(s) de piste inutile(s) enlevé(s) ; restent 0 signalé(s) (pistes des blocs, verrouillées)
+Contrôle KiCad 10 : aucune erreur | liaisons manquantes : 0
+(316 s)
+
+=== 3. Fichiers pour l'usine, image 3D, contrôle indépendant ===
+Gerber (KiKit) : /tmp/claude-0/-home-claude/a74a14cb-1787-5557-95b8-25def8410e6c/scratchpad/radio-test/chaine/resultats/radio-compacte/fabrication/gerbers.zip
+BOM : 25 lignes ; placement : 43 composants
+Image 3D : /tmp/claude-0/-home-claude/a74a14cb-1787-5557-95b8-25def8410e6c/scratchpad/radio-test/chaine/resultats/radio-compacte/image-3d-dessus.png
+Cuivre lu : dessus 3200 mm², dessous 4595 mm² ; 102 trous métallisés, 2 non métallisés
+== 1. Coupures (un réseau en plusieurs morceaux) ==
+  36/36 réseaux d'un seul tenant
+== 2. Courts-circuits (un morceau de cuivre qui touche deux réseaux) ==
+  0 court(s)-circuit(s)
+== 3. Écart minimal entre cuivres de réseaux différents ==
+  face dessus : 0.102 mm (3V3 ↔ RADIO_INT)
+  face dessous : 0.102 mm (VBUS ↔ 3V3)
+== 4. Zones sans cuivre des blocs ==
+  ✓ A_alim_esp32 : antenne de l'ESP32-S3 (ni plan, ni piste, ni via) : cuivre dessus 0.00 mm², dessous 0.00 mm²
+== 5. Cuivre au bord de la carte ==
+  distance minimale : dessus 0.30 mm, dessous 0.30 mm
+== 6. Perçages ==
+  métallisés : [0.2, 0.25, 0.3, 0.6, 1.1, 1.2, 1.5, 1.7] mm ; non métallisés : [0.7] mm
+== 7. Trous ↔ cuivre d'un autre réseau (mini 0.28 mm pour un trou métallisé, 0.2 mm pour un trou non métallisé) ==
+  trous métallisés : 0.288 mm (trou Ø0.25 en (42.60, 14.40) ↔ 3V3, face dessus)
+  trous non métallisés : 0.200 mm (trou Ø0.7 en (4.89, 57.11) ↔ GND, face dessous)
+  0 trou(s) métallisé(s) à moins de 0.28 mm d'un autre réseau : []
+== 8. Couronne des trous de composants (0.18 mm mini, 0.25 conseillé) ==
+  plus petites : [(0.25, 'J1.13'), (0.25, 'J1.14'), (0.3, 'J1.13'), (0.3, 'J1.14'), (0.3, 'J6.1')]
+== 9. Largeur du cuivre des alimentations (courant demandé, IPC-2221, +10 °C) ==
+  ✓ 3V3 (0.8 A → 0.22 mm mini) : partout assez large
+  ✓ SPK_L_N (1.0 A → 0.30 mm mini) : partout assez large
+  ✓ SPK_L_P (1.0 A → 0.30 mm mini) : partout assez large
+  ✓ SPK_R_N (1.0 A → 0.30 mm mini) : partout assez large
+  ✓ SPK_R_P (1.0 A → 0.30 mm mini) : partout assez large
+  ✓ VBUS (1.5 A → 0.53 mm mini) : partout assez large
+== Bilan ==
+  ✓ rien à corriger
+
+(50 s)
+
+=== 4. Maquette à toucher (impression 3D) ===
+Maquette : /tmp/claude-0/-home-claude/a74a14cb-1787-5557-95b8-25def8410e6c/scratchpad/radio-test/chaine/resultats/radio-compacte/maquette-a-toucher.stl (14.8 Mo) — 198 × 253 mm, échelle 3, plaque 3.0 mm
+  43 composants en 3D, 19 sorties en plots, 120 points de braille ; légende : radio compacte échelle trois / a ampli t tuner
+  noms des blocs : alim (en entier dans le bloc), ampli (lettre « a » dans le bloc, expliquée dans la légende), tuner (lettre « t » dans le bloc, expliquée dans la légende)
+(134 s)
+
+Terminé : /tmp/claude-0/-home-claude/a74a14cb-1787-5557-95b8-25def8410e6c/scratchpad/radio-test/chaine/resultats/radio-compacte 
+
+real	8m20.735s
+user	13m35.337s
+sys	0m5.704s

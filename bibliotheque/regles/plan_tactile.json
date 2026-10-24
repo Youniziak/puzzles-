@@ -1,0 +1,49 @@
+{
+ "nom": "Plan à toucher sur papier gonflé (papier thermogonflé : PIAF, Zychem…)",
+ "sources": [
+  "Monica Houston, « Creating Tactile Schematics using Fritzing », Hackster, 05/03/2023, licence GPL-3.0+ (page rouverte le 23/10/2026) : trait le plus épais ramené de 0,09 à 0,05 pouce (1,3 mm), car les traits épais gonflent trop ; au moins 0,25 pouce (6 mm) de vide autour de chaque composant ; pistes droites, à angle droit ; braille en minuscules, à 0,25 pouce (6 mm) de son objet ; encre noire au carbone : l'encre de couleur ne gonfle pas, d'où le texte en bleu pour les personnes qui voient.",
+  "Braille : mêmes dimensions que la maquette à toucher (maquette.json)."
+ ],
+ "a_essayer": "Ces réglages n'ont pas encore été essayés sur du vrai papier gonflé. Après le premier essai, ajuster ici ce qui gonfle trop ou pas assez (traits, carrés, braille).",
+ "papier": {
+  "nom": "A4 à l'italienne",
+  "largeur_mm": 297,
+  "hauteur_mm": 210,
+  "note": "Pour du A3 à l'italienne : 420 × 297. L'échelle se calcule toute seule."
+ },
+ "marge_mm": 12,
+ "colonne_titre_mm": 60,
+ "colonne_titre_note": "Pages 1 et 2 : colonne à gauche pour le titre en braille, la clé des symboles (un mot en braille par symbole) et le texte bleu ; la carte prend le reste, aussi grande que possible.",
+ "traits_mm": {
+  "contour": 1.3,
+  "bloc": 1.0,
+  "liaison": 0.8,
+  "trou": 1.0,
+  "hachures": 0.6
+ },
+ "tirets_bloc_mm": [
+  5.0,
+  3.0
+ ],
+ "sortie_carre_mm": 2.6,
+ "prise_min_mm": 4.0,
+ "hachures_pas_mm": 4.0,
+ "vide_autour_mm": 6.0,
+ "vide_min_mm": 3.0,
+ "vide_min_note": "En dessous de 3 mm, deux objets risquent de se confondre au toucher. Seuil choisi par la chaîne, pas tiré d'une source vérifiée : à confirmer au premier essai.",
+ "pas_sorties_min_mm": 6.0,
+ "pas_sorties_note": "Écart de centre à centre entre deux sorties voisines, comme d'une cellule braille à la suivante (6 mm).",
+ "echelle_min": 1.5,
+ "braille": {
+  "source": "dimensions usuelles du braille imprimé : point de 1,5 à 1,6 mm, 2,5 mm entre points, 6 mm d'une cellule à l'autre, 10 mm d'une ligne à l'autre",
+  "point_diametre_mm": 1.6,
+  "ecart_points_mm": 2.5,
+  "pas_cellule_mm": 6.0,
+  "pas_ligne_mm": 10.0
+ },
+ "texte_voyant": {
+  "couleur": "#1F4FD1",
+  "hauteur_mm": 3.0,
+  "note": "Texte pour les personnes qui voient, en bleu : sans carbone, il ne gonfle pas avec une imprimante à jet d'encre. Une photocopieuse le rendrait noir : il gonflerait."
+ }
+}

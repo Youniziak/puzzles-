@@ -1,0 +1,66 @@
+{
+ "nom": "RADIONÉO carte radio v4",
+ "etiquette": "radio",
+ "bibliotheque": "../bibliotheque",
+ "regles": "jlcpcb-2-couches",
+ "contour": {
+  "largeur": 80.0,
+  "hauteur": 73.0,
+  "rayon_coins": 2.0
+ },
+ "masse": "GND",
+ "alimentations_externes": [
+  "VBUS"
+ ],
+ "alimentations_externes_note": "Liaisons alimentées depuis l'extérieur de la carte (ici le 5 V de la prise USB-C) : schema.py y met un drapeau d'alimentation (PWR_FLAG) pour l'ERC de KiCad.",
+ "blocs": [
+  {
+   "bloc": "A_alim_esp32",
+   "position": [
+    0.0,
+    0.0
+   ],
+   "rotation": 0
+  },
+  {
+   "bloc": "B_tuner_si4732",
+   "position": [
+    52.4,
+    28.4
+   ],
+   "rotation": 0
+  },
+  {
+   "bloc": "C_ampli",
+   "position": [
+    54.9,
+    2.3
+   ],
+   "rotation": 0
+  }
+ ],
+ "trous_fixation": {
+  "diametre_trou_mm": 3.2,
+  "diametre_cuivre_mm": 6.0,
+  "garde_mm": 0.5,
+  "masse": true,
+  "nombre": 4,
+  "ecart_min_mm": 15.0,
+  "positions": "auto",
+  "note": "Ajoutés le 23/10/2026, à la demande de Kévin : la carte passe de 66 à 73 mm de haut, pour faire de la place en haut (le bas, la gauche et la droite ont des prises ou l'antenne au bord)."
+ },
+ "noms_courts": {
+  "VBUS": "5V",
+  "3V3": "3V3",
+  "LOUT": "SON G",
+  "ROUT": "SON D",
+  "AMP_MUTE": "MUTE",
+  "note": "Noms écrits sur le capot du banc de test ; pour les autres liaisons, la fin du nom (I2C_SDA → SDA)."
+ },
+ "relecture": {
+  "auteur": "Kévin Chatellard — Exylia Project",
+  "presentation": "Je conçois sans la vue une radio de table, RADIONÉO, prévue en matériel libre. Cette carte en est le cœur : alimentation par USB-C, microcontrôleur ESP32-S3, tuner FM et AM Si4732, ampli PAM8403.",
+  "duree_estimee": "une à deux heures",
+  "note": "Texte du mot d'accompagnement du dossier de relecture (dossier_relecture.py)."
+ }
+}

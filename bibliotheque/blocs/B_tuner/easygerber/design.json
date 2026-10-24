@@ -1,0 +1,8212 @@
+{
+  "nets": [
+    {
+      "name": "3V3",
+      "class": "power",
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 1.2553183858638604,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "GND",
+      "class": "ground",
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 1.0096754081410138,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "I2C_SDA",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.8753630017933328,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "I2C_SCL",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.8734495839976141,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "RADIO_RST",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.868965311342696,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "RADIO_INT",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.873449583997617,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "DBYP",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.8753630017933328,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "FM_ANT",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.8644435413945256,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "FMI",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.8734495839976141,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "AM_L",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.8753630017933328,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "AMI",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.8753630017933328,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "XTAL_A",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.8753630017933328,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "XTAL_B",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.873449583997617,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "LOUT",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.8753630017933328,
+        "maxTemperatureRiseC": 10
+      }
+    },
+    {
+      "name": "ROUT",
+      "class": "signal",
+      "impedance": {
+        "nominalOhms": 121.93732704684915
+      },
+      "currentCapacity": {
+        "modelId": "ipc2221-corridor-barrel-v1",
+        "estimatedCapacityA": 0.868965311342696,
+        "maxTemperatureRiseC": 10
+      }
+    }
+  ],
+  "vias": [
+    {
+      "x": 12.4,
+      "y": 12.600000000000001,
+      "id": "26",
+      "net": "GND",
+      "drillDiameter": 0.25,
+      "outerDiameter": 0.525,
+      "connectedLayers": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "x": 9.8,
+      "y": 6.2,
+      "id": "27",
+      "net": "GND",
+      "drillDiameter": 0.25,
+      "outerDiameter": 0.525,
+      "connectedLayers": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "x": 12.4,
+      "y": 5,
+      "id": "28",
+      "net": "GND",
+      "drillDiameter": 0.25,
+      "outerDiameter": 0.525,
+      "connectedLayers": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "x": 24.200000000000003,
+      "y": 10,
+      "id": "29",
+      "net": "GND",
+      "drillDiameter": 0.25,
+      "outerDiameter": 0.525,
+      "connectedLayers": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "x": 24.200000000000003,
+      "y": 7.6000000000000005,
+      "id": "30",
+      "net": "GND",
+      "drillDiameter": 0.25,
+      "outerDiameter": 0.525,
+      "connectedLayers": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "x": 13.200000000000001,
+      "y": 3,
+      "id": "31",
+      "net": "GND",
+      "drillDiameter": 0.25,
+      "outerDiameter": 0.525,
+      "connectedLayers": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "x": 11.600000000000001,
+      "y": 7.4,
+      "id": "32",
+      "net": "RADIO_RST",
+      "drillDiameter": 0.25,
+      "outerDiameter": 0.525,
+      "connectedLayers": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "x": 7.800000000000001,
+      "y": 8.4,
+      "id": "33",
+      "net": "RADIO_RST",
+      "drillDiameter": 0.25,
+      "outerDiameter": 0.525,
+      "connectedLayers": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "x": 16.8,
+      "y": 7.6000000000000005,
+      "id": "34",
+      "net": "ROUT",
+      "drillDiameter": 0.25,
+      "outerDiameter": 0.525,
+      "connectedLayers": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    },
+    {
+      "x": 21,
+      "y": 3.4000000000000004,
+      "id": "35",
+      "net": "ROUT",
+      "drillDiameter": 0.25,
+      "outerDiameter": 0.525,
+      "connectedLayers": [
+        "F.Cu",
+        "B.Cu"
+      ]
+    }
+  ],
+  "board": {
+    "width": 27.6,
+    "height": 26.4,
+    "layers": 2,
+    "thickness": 1.6,
+    "cornerRadius": 0,
+    "silkscreenFont": "RobotoMono-Medium",
+    "mechanicalCutouts": []
+  },
+  "parts": [
+    {
+      "x": 13.946,
+      "y": 8.796,
+      "id": "U4",
+      "mpn": "SI4735-D60-GU",
+      "pads": [
+        {
+          "x": -3.492,
+          "y": -2.585,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "",
+          "rotation": 0,
+          "signalName": "DOUT",
+          "electricalType": "output"
+        },
+        {
+          "x": -2.857,
+          "y": -2.585,
+          "id": "2",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "",
+          "rotation": 0,
+          "signalName": "DFS",
+          "electricalType": "passive"
+        },
+        {
+          "x": -2.222,
+          "y": -2.585,
+          "id": "3",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "XTAL_A",
+          "rotation": 0,
+          "signalName": "GPO3/[DCLK]",
+          "electricalType": "passive"
+        },
+        {
+          "x": -1.587,
+          "y": -2.585,
+          "id": "4",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "RADIO_INT",
+          "rotation": 0,
+          "signalName": "GPO2/[INT#]",
+          "electricalType": "passive"
+        },
+        {
+          "x": -0.952,
+          "y": -2.585,
+          "id": "5",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "",
+          "rotation": 0,
+          "signalName": "GPO1",
+          "electricalType": "passive"
+        },
+        {
+          "x": -0.317,
+          "y": -2.585,
+          "id": "6",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "",
+          "rotation": 0,
+          "signalName": "NC",
+          "electricalType": "nc"
+        },
+        {
+          "x": 0.318,
+          "y": -2.585,
+          "id": "7",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "",
+          "rotation": 0,
+          "signalName": "NC",
+          "electricalType": "nc"
+        },
+        {
+          "x": 0.953,
+          "y": -2.585,
+          "id": "8",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "FMI",
+          "rotation": 0,
+          "signalName": "FMI",
+          "electricalType": "passive"
+        },
+        {
+          "x": 1.588,
+          "y": -2.585,
+          "id": "9",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "RFGND",
+          "electricalType": "passive"
+        },
+        {
+          "x": 2.223,
+          "y": -2.585,
+          "id": "10",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "NC",
+          "electricalType": "nc"
+        },
+        {
+          "x": 2.858,
+          "y": -2.585,
+          "id": "11",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "NC",
+          "electricalType": "nc"
+        },
+        {
+          "x": 3.493,
+          "y": -2.585,
+          "id": "12",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "AMI",
+          "rotation": 0,
+          "signalName": "AMI",
+          "electricalType": "passive"
+        },
+        {
+          "x": 3.493,
+          "y": 2.585,
+          "id": "13",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "GND",
+          "electricalType": "ground"
+        },
+        {
+          "x": 2.858,
+          "y": 2.585,
+          "id": "14",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "GND",
+          "electricalType": "ground"
+        },
+        {
+          "x": 2.223,
+          "y": 2.585,
+          "id": "15",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "RADIO_RST",
+          "rotation": 0,
+          "signalName": "RST#",
+          "electricalType": "passive"
+        },
+        {
+          "x": 1.588,
+          "y": 2.585,
+          "id": "16",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "SEN#",
+          "electricalType": "passive"
+        },
+        {
+          "x": 0.953,
+          "y": 2.585,
+          "id": "17",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "I2C_SCL",
+          "rotation": 0,
+          "signalName": "SCLK",
+          "electricalType": "input"
+        },
+        {
+          "x": 0.318,
+          "y": 2.585,
+          "id": "18",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "I2C_SDA",
+          "rotation": 0,
+          "signalName": "SDIO",
+          "electricalType": "passive"
+        },
+        {
+          "x": -0.317,
+          "y": 2.585,
+          "id": "19",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "XTAL_B",
+          "rotation": 0,
+          "signalName": "RCLK",
+          "electricalType": "passive"
+        },
+        {
+          "x": -0.952,
+          "y": 2.585,
+          "id": "20",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "3V3",
+          "rotation": 0,
+          "signalName": "VD",
+          "electricalType": "passive"
+        },
+        {
+          "x": -1.587,
+          "y": 2.585,
+          "id": "21",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "3V3",
+          "rotation": 0,
+          "signalName": "VA",
+          "electricalType": "passive"
+        },
+        {
+          "x": -2.222,
+          "y": 2.585,
+          "id": "22",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "DBYP",
+          "rotation": 0,
+          "signalName": "DBYP",
+          "electricalType": "passive"
+        },
+        {
+          "x": -2.857,
+          "y": 2.585,
+          "id": "23",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "ROUT",
+          "rotation": 0,
+          "signalName": "ROUT/[DOUT]",
+          "electricalType": "passive"
+        },
+        {
+          "x": -3.492,
+          "y": 2.585,
+          "id": "24",
+          "type": "smd",
+          "layer": "top",
+          "shape": "oval",
+          "width": 0.356,
+          "height": 1.805,
+          "netName": "LOUT",
+          "rotation": 0,
+          "signalName": "LOUT/[DFS]",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "ic",
+      "layer": "top",
+      "value": "Si4735 tuner AM/FM/OC",
+      "package": "SSOP-24-150mil",
+      "shortId": "U2FIBF312B",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -4.401,
+              "y": -1.378
+            },
+            {
+              "x": -4.401,
+              "y": 1.378
+            },
+            {
+              "x": 4.401,
+              "y": 1.378
+            },
+            {
+              "x": 4.401,
+              "y": -1.378
+            },
+            {
+              "x": -4.401,
+              "y": -1.378
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 180,
+      "bodyWidth": 8.65,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/53/53ca2ef7619d097f5f53f982efaa7a3ade647383f9eae2332d8652108f3d5e3b.pdf",
+      "bodyHeight": 6,
+      "designator": "U4",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/f9/f9334924c5259f265bdad49b03454443f97b9e19e79740a479d1c29731f0f814.glb",
+      "description": "-20℃~+85℃ 153kHz~279kHz、520kHz~1.71MHz、2.3MHz~26.1MHz、64MHz~108MHz 2.7V~5.5V Receivers SPI、I2C SSOP-24-150mil RF Transceiver ICs ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "SKYWORKS/SILICON LABS",
+      "lcscPartNumber": "C1526089"
+    },
+    {
+      "x": 19.8,
+      "y": 8.821,
+      "id": "Y1",
+      "mpn": "H31003271C2070CY",
+      "pads": [
+        {
+          "x": 1.275,
+          "y": 0,
+          "id": "2",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 1.05,
+          "height": 1.7,
+          "netName": "XTAL_B",
+          "rotation": 0,
+          "signalName": "GND",
+          "electricalType": "ground"
+        },
+        {
+          "x": -1.275,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 1.05,
+          "height": 1.7,
+          "netName": "XTAL_A",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "input"
+        }
+      ],
+      "type": "crystal",
+      "layer": "top",
+      "value": "32.768kHz",
+      "package": "SMD3215-2P",
+      "shortId": "VYB9A07B8Y",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -2.029,
+              "y": -1.079
+            },
+            {
+              "x": -2.029,
+              "y": 1.079
+            },
+            {
+              "x": 2.029,
+              "y": 1.079
+            },
+            {
+              "x": 2.029,
+              "y": -1.079
+            },
+            {
+              "x": -2.029,
+              "y": -1.079
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 270,
+      "bodyWidth": 3.2,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/4c/4c66afe7ebe44c66388617bb2497d2f903c9468bf1c577e06cc2f5c8c1938e1a.pdf",
+      "bodyHeight": 1.5,
+      "designator": "Y1",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/a2/a2eb42e45f06e8d70e3e61c03115d339109ab51a4b1e0f2f97ef6448ed14dd5d.glb",
+      "description": "-40℃~+85℃ 12.5pF 32.768kHz 70kΩ Crystal Oscillator ±20ppm ±30ppm SMD3215-2P Crystals ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "JGHC",
+      "lcscPartNumber": "C5361379"
+    },
+    {
+      "x": 22.7,
+      "y": 10.071,
+      "id": "C11",
+      "mpn": "CL10C220JB8NNNC",
+      "pads": [
+        {
+          "x": 0.7,
+          "y": 0,
+          "id": "2",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "2",
+          "electricalType": "passive"
+        },
+        {
+          "x": -0.7,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "XTAL_A",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "capacitor",
+      "layer": "top",
+      "value": "22pF",
+      "package": "0603",
+      "shortId": "N0E4B0TMAG",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": -0.71
+            },
+            {
+              "x": -1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": -0.71
+            },
+            {
+              "x": 1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": 0.71
+            },
+            {
+              "x": -1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": 0.71
+            },
+            {
+              "x": 1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.39,
+              "y": -0.4
+            },
+            {
+              "x": -1.39,
+              "y": 0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 1.39,
+              "y": 0.4
+            },
+            {
+              "x": 1.39,
+              "y": -0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 0,
+      "bodyWidth": 1.6,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/96/96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6.pdf",
+      "bodyHeight": 0.8,
+      "designator": "C11",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/87/8700315e17276d7049b70b3a1f88c4f2babf7bba170f0641227d78bfb5ff00b7.glb",
+      "description": "22pF 50V C0G ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcscPartNumber": "C1653"
+    },
+    {
+      "x": 22.7,
+      "y": 7.571,
+      "id": "C12",
+      "mpn": "CL10C220JB8NNNC",
+      "pads": [
+        {
+          "x": 0.7,
+          "y": 0,
+          "id": "2",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "2",
+          "electricalType": "passive"
+        },
+        {
+          "x": -0.7,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "XTAL_B",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "capacitor",
+      "layer": "top",
+      "value": "22pF",
+      "package": "0603",
+      "shortId": "N0E4B0TMAG",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": -0.71
+            },
+            {
+              "x": -1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": -0.71
+            },
+            {
+              "x": 1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": 0.71
+            },
+            {
+              "x": -1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": 0.71
+            },
+            {
+              "x": 1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.39,
+              "y": -0.4
+            },
+            {
+              "x": -1.39,
+              "y": 0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 1.39,
+              "y": 0.4
+            },
+            {
+              "x": 1.39,
+              "y": -0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 0,
+      "bodyWidth": 1.6,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/96/96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6.pdf",
+      "bodyHeight": 0.8,
+      "designator": "C12",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/87/8700315e17276d7049b70b3a1f88c4f2babf7bba170f0641227d78bfb5ff00b7.glb",
+      "description": "22pF 50V C0G ±5% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcscPartNumber": "C1653"
+    },
+    {
+      "x": 16.05,
+      "y": 4.221,
+      "id": "C7",
+      "mpn": "CL10B223KB8NNNC",
+      "pads": [
+        {
+          "x": 0.7,
+          "y": 0,
+          "id": "2",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "DBYP",
+          "rotation": 0,
+          "signalName": "2",
+          "electricalType": "passive"
+        },
+        {
+          "x": -0.7,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "3V3",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "capacitor",
+      "layer": "top",
+      "value": "22nF",
+      "package": "0603",
+      "shortId": "TS0TF7H8Z8",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": -0.71
+            },
+            {
+              "x": -1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": -0.71
+            },
+            {
+              "x": 1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": 0.71
+            },
+            {
+              "x": -1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": 0.71
+            },
+            {
+              "x": 1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.39,
+              "y": -0.4
+            },
+            {
+              "x": -1.39,
+              "y": 0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 1.39,
+              "y": 0.4
+            },
+            {
+              "x": 1.39,
+              "y": -0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 0,
+      "bodyWidth": 1.6,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/96/96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6.pdf",
+      "bodyHeight": 0.8,
+      "designator": "C7",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/87/8700315e17276d7049b70b3a1f88c4f2babf7bba170f0641227d78bfb5ff00b7.glb",
+      "description": "22nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcscPartNumber": "C21122"
+    },
+    {
+      "x": 14,
+      "y": 2.221,
+      "id": "C8",
+      "mpn": "CC0603KRX7R9BB104",
+      "pads": [
+        {
+          "x": 0.7,
+          "y": 0,
+          "id": "2",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "2",
+          "electricalType": "passive"
+        },
+        {
+          "x": -0.7,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "3V3",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "capacitor",
+      "layer": "top",
+      "value": "100nF",
+      "package": "0603",
+      "shortId": "7EXPXI1Z2A",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": -0.71
+            },
+            {
+              "x": -1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": -0.71
+            },
+            {
+              "x": 1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": 0.71
+            },
+            {
+              "x": -1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": 0.71
+            },
+            {
+              "x": 1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.39,
+              "y": -0.4
+            },
+            {
+              "x": -1.39,
+              "y": 0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 1.39,
+              "y": 0.4
+            },
+            {
+              "x": 1.39,
+              "y": -0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 180,
+      "bodyWidth": 1.6,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/61/61a606825ab314ea318cfb5362848a62fdffb851efa9818d642e9a541c56a648.pdf",
+      "bodyHeight": 0.8,
+      "designator": "C8",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/87/8700315e17276d7049b70b3a1f88c4f2babf7bba170f0641227d78bfb5ff00b7.glb",
+      "description": "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "Yageo",
+      "lcscPartNumber": "C14663"
+    },
+    {
+      "x": 13,
+      "y": 20.821,
+      "id": "J2",
+      "mpn": "132135",
+      "pads": [
+        {
+          "x": -2.54,
+          "y": -2.54,
+          "id": "1",
+          "type": "through_hole",
+          "drill": {
+            "shape": "circle",
+            "diameter": 1.700022
+          },
+          "layer": "both",
+          "shape": "circle",
+          "width": 2.5,
+          "height": 2.5,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        },
+        {
+          "x": 2.54,
+          "y": -2.54,
+          "id": "2",
+          "type": "through_hole",
+          "drill": {
+            "shape": "circle",
+            "diameter": 1.700022
+          },
+          "layer": "both",
+          "shape": "circle",
+          "width": 2.5,
+          "height": 2.5,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "2",
+          "electricalType": "passive"
+        },
+        {
+          "x": 2.54,
+          "y": 2.54,
+          "id": "3",
+          "type": "through_hole",
+          "drill": {
+            "shape": "circle",
+            "diameter": 1.700022
+          },
+          "layer": "both",
+          "shape": "circle",
+          "width": 2.5,
+          "height": 2.5,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "3",
+          "electricalType": "passive"
+        },
+        {
+          "x": -2.54,
+          "y": 2.54,
+          "id": "4",
+          "type": "through_hole",
+          "drill": {
+            "shape": "circle",
+            "diameter": 1.700022
+          },
+          "layer": "both",
+          "shape": "circle",
+          "width": 2.5,
+          "height": 2.5,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "4",
+          "electricalType": "passive"
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "id": "5",
+          "type": "through_hole",
+          "drill": {
+            "shape": "circle",
+            "diameter": 1.5000224
+          },
+          "layer": "both",
+          "shape": "circle",
+          "width": 2.2,
+          "height": 2.2,
+          "netName": "FM_ANT",
+          "rotation": 0,
+          "signalName": "5",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "connector",
+      "layer": "top",
+      "value": "Antenne FM",
+      "package": "SMA-RA-132135",
+      "shortId": "SX4ULRKADK",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -4.059,
+              "y": -4.729
+            },
+            {
+              "x": -4.059,
+              "y": -10.831
+            },
+            {
+              "x": 4.079,
+              "y": -10.831
+            },
+            {
+              "x": 4.079,
+              "y": -4.77
+            },
+            {
+              "x": -4.059,
+              "y": -4.77
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -3.5,
+              "y": -3.667
+            },
+            {
+              "x": -3.5,
+              "y": -13.1
+            },
+            {
+              "x": 3.5,
+              "y": -13.1
+            },
+            {
+              "x": 3.5,
+              "y": -3.667
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 1.686,
+              "y": -4.77
+            },
+            {
+              "x": 1.686,
+              "y": -10.831
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.616,
+              "y": -4.77
+            },
+            {
+              "x": -1.616,
+              "y": -10.831
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 1.413,
+              "y": -3.5
+            },
+            {
+              "x": -1.413,
+              "y": -3.5
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 1.413,
+              "y": 3.5
+            },
+            {
+              "x": -1.413,
+              "y": 3.5
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 3.5,
+              "y": 1.413
+            },
+            {
+              "x": 3.5,
+              "y": -1.413
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -3.5,
+              "y": 1.413
+            },
+            {
+              "x": -3.5,
+              "y": -1.413
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 90,
+      "bodyWidth": 7.5,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/6a/6a8d5e9749945f2c8ae00a0e5fa09f2e16796f96cf9ab1d56a90eeec9c65f6e5.pdf",
+      "bodyHeight": 16.6,
+      "designator": "J2",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/61/6184859736fa1e88d34e702aad7a558800fb2eea2abde8a51860d6027aa7a348.glb",
+      "description": "1 12.4GHz 50Ω Connector SMA SMA-RA-132135 Coaxial Connectors (RF) ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "Amphenol",
+      "lcscPartNumber": "C5183768"
+    },
+    {
+      "x": 13,
+      "y": 14.621,
+      "id": "C9",
+      "mpn": "CL10B102KB8NNNC",
+      "pads": [
+        {
+          "x": 0.7,
+          "y": 0,
+          "id": "2",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "FMI",
+          "rotation": 0,
+          "signalName": "2",
+          "electricalType": "passive"
+        },
+        {
+          "x": -0.7,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "FM_ANT",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "capacitor",
+      "layer": "top",
+      "value": "1nF",
+      "package": "0603",
+      "shortId": "VFVCVDFPG9",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": -0.71
+            },
+            {
+              "x": -1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": -0.71
+            },
+            {
+              "x": 1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": 0.71
+            },
+            {
+              "x": -1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": 0.71
+            },
+            {
+              "x": 1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.39,
+              "y": -0.4
+            },
+            {
+              "x": -1.39,
+              "y": 0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 1.39,
+              "y": 0.4
+            },
+            {
+              "x": 1.39,
+              "y": -0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 270,
+      "bodyWidth": 1.6,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/96/96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6.pdf",
+      "bodyHeight": 0.8,
+      "designator": "C9",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/87/8700315e17276d7049b70b3a1f88c4f2babf7bba170f0641227d78bfb5ff00b7.glb",
+      "description": "1nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcscPartNumber": "C1588"
+    },
+    {
+      "x": 8.4,
+      "y": 13.821,
+      "id": "C10",
+      "mpn": "CL10B474KA8NNNC",
+      "pads": [
+        {
+          "x": 0.7,
+          "y": 0,
+          "id": "2",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "AMI",
+          "rotation": 0,
+          "signalName": "2",
+          "electricalType": "passive"
+        },
+        {
+          "x": -0.7,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 0.8,
+          "height": 0.9,
+          "netName": "AM_L",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "capacitor",
+      "layer": "top",
+      "value": "470nF",
+      "package": "0603",
+      "shortId": "WQBHN8UCGC",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": -0.71
+            },
+            {
+              "x": -1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": -0.71
+            },
+            {
+              "x": 1.08,
+              "y": -0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -0.28,
+              "y": 0.71
+            },
+            {
+              "x": -1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 0.28,
+              "y": 0.71
+            },
+            {
+              "x": 1.08,
+              "y": 0.71
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.39,
+              "y": -0.4
+            },
+            {
+              "x": -1.39,
+              "y": 0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 1.39,
+              "y": 0.4
+            },
+            {
+              "x": 1.39,
+              "y": -0.4
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 0,
+      "bodyWidth": 1.6,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/96/96baebe4bd0ce363e87be28b5b003f511f1502e084a6fc4f02333ded56c808f6.pdf",
+      "bodyHeight": 0.8,
+      "designator": "C10",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/87/8700315e17276d7049b70b3a1f88c4f2babf7bba170f0641227d78bfb5ff00b7.glb",
+      "description": "25V 470nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "Samsung Electro-Mechanics",
+      "lcscPartNumber": "C1623"
+    },
+    {
+      "x": 4,
+      "y": 13.821,
+      "id": "J3",
+      "mpn": "PZ254V-11-02P",
+      "pads": [
+        {
+          "x": -1.27,
+          "y": 0,
+          "id": "1",
+          "type": "through_hole",
+          "drill": {
+            "shape": "circle",
+            "diameter": 1.1999976
+          },
+          "layer": "both",
+          "shape": "rect",
+          "width": 2,
+          "height": 2,
+          "netName": "AM_L",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        },
+        {
+          "x": 1.27,
+          "y": 0,
+          "id": "2",
+          "type": "through_hole",
+          "drill": {
+            "shape": "circle",
+            "diameter": 1.1999976
+          },
+          "layer": "both",
+          "shape": "circle",
+          "width": 2,
+          "height": 2,
+          "netName": "GND",
+          "rotation": 0,
+          "signalName": "2",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "connector",
+      "layer": "top",
+      "value": "Antenne ferrite AM",
+      "package": "Plugin,P=2.54mm",
+      "shortId": "A1W5211KNX",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 2.54,
+              "y": 1.27
+            },
+            {
+              "x": 2.54,
+              "y": -1.27
+            },
+            {
+              "x": -2.54,
+              "y": -1.27
+            },
+            {
+              "x": -2.54,
+              "y": 1.27
+            },
+            {
+              "x": -0.635,
+              "y": 1.27
+            }
+          ],
+          "strokeWidth": 0.05275
+        },
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": 2.54,
+              "y": 1.27
+            },
+            {
+              "x": -0.635,
+              "y": 1.27
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 180,
+      "bodyWidth": 5.08,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/ab/ab7cce9f65fe602872ac6f30ece4c42bc9cde07fee517f9f296873a4c237ead8.pdf",
+      "bodyHeight": 2.54,
+      "designator": "J3",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/a3/a3a55eed0d7d11e2d98d71cb91981be4f68b6624c37d153601c2c37e77c340ed.glb",
+      "description": "-40℃~+105℃ 1 1x2P 2.54mm 2.5mm 250V 2P 3A 3mm 6mm Black Brass Pin Header Through Hole 插件,P=2.54mm Pin Headers ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "XFCN",
+      "lcscPartNumber": "C492401"
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "id": "TP9",
+      "mpn": "RH-5015",
+      "pads": [
+        {
+          "x": 0,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 2.8,
+          "height": 1.5,
+          "netName": "I2C_SDA",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "ic",
+      "layer": "top",
+      "value": "Sortie I2C_SDA",
+      "package": "-",
+      "shortId": "9S4UAKAWXW",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": -1.016
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 0,
+      "bodyWidth": 2.5,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/ee/ee7e24f0e829423b20c7fa18aeddbe7ae6abe28d84ae23be24d2274b93538df2.pdf",
+      "bodyHeight": 1.2,
+      "designator": "TP9",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/db/dbc08fd548eb6dfcd3d9427367314cbe673d90849acce9c0b5137cfb8aabf5e8.glb",
+      "description": "2.67mmx1.02mm Ferrite Ring (SMD) Non-Plastic - Test Points / Test Rings ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "ronghe",
+      "lcscPartNumber": "C5199798"
+    },
+    {
+      "x": 2,
+      "y": 5.5,
+      "id": "TP10",
+      "mpn": "RH-5015",
+      "pads": [
+        {
+          "x": 0,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 2.8,
+          "height": 1.5,
+          "netName": "I2C_SCL",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "ic",
+      "layer": "top",
+      "value": "Sortie I2C_SCL",
+      "package": "-",
+      "shortId": "9S4UAKAWXW",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": -1.016
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 0,
+      "bodyWidth": 2.5,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/ee/ee7e24f0e829423b20c7fa18aeddbe7ae6abe28d84ae23be24d2274b93538df2.pdf",
+      "bodyHeight": 1.2,
+      "designator": "TP10",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/db/dbc08fd548eb6dfcd3d9427367314cbe673d90849acce9c0b5137cfb8aabf5e8.glb",
+      "description": "2.67mmx1.02mm Ferrite Ring (SMD) Non-Plastic - Test Points / Test Rings ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "ronghe",
+      "lcscPartNumber": "C5199798"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "id": "TP11",
+      "mpn": "RH-5015",
+      "pads": [
+        {
+          "x": 0,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 2.8,
+          "height": 1.5,
+          "netName": "RADIO_RST",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "ic",
+      "layer": "top",
+      "value": "Sortie RADIO_RST",
+      "package": "-",
+      "shortId": "9S4UAKAWXW",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": -1.016
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 0,
+      "bodyWidth": 2.5,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/ee/ee7e24f0e829423b20c7fa18aeddbe7ae6abe28d84ae23be24d2274b93538df2.pdf",
+      "bodyHeight": 1.2,
+      "designator": "TP11",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/db/dbc08fd548eb6dfcd3d9427367314cbe673d90849acce9c0b5137cfb8aabf5e8.glb",
+      "description": "2.67mmx1.02mm Ferrite Ring (SMD) Non-Plastic - Test Points / Test Rings ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "ronghe",
+      "lcscPartNumber": "C5199798"
+    },
+    {
+      "x": 2,
+      "y": 10.5,
+      "id": "TP12",
+      "mpn": "RH-5015",
+      "pads": [
+        {
+          "x": 0,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 2.8,
+          "height": 1.5,
+          "netName": "RADIO_INT",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "ic",
+      "layer": "top",
+      "value": "Sortie RADIO_INT",
+      "package": "-",
+      "shortId": "9S4UAKAWXW",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": -1.016
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 0,
+      "bodyWidth": 2.5,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/ee/ee7e24f0e829423b20c7fa18aeddbe7ae6abe28d84ae23be24d2274b93538df2.pdf",
+      "bodyHeight": 1.2,
+      "designator": "TP12",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/db/dbc08fd548eb6dfcd3d9427367314cbe673d90849acce9c0b5137cfb8aabf5e8.glb",
+      "description": "2.67mmx1.02mm Ferrite Ring (SMD) Non-Plastic - Test Points / Test Rings ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "ronghe",
+      "lcscPartNumber": "C5199798"
+    },
+    {
+      "x": 2,
+      "y": 18,
+      "id": "TP13",
+      "mpn": "RH-5015",
+      "pads": [
+        {
+          "x": 0,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 2.8,
+          "height": 1.5,
+          "netName": "3V3",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "ic",
+      "layer": "top",
+      "value": "Sortie 3V3",
+      "package": "-",
+      "shortId": "9S4UAKAWXW",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": -1.016
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 0,
+      "bodyWidth": 2.5,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/ee/ee7e24f0e829423b20c7fa18aeddbe7ae6abe28d84ae23be24d2274b93538df2.pdf",
+      "bodyHeight": 1.2,
+      "designator": "TP13",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/db/dbc08fd548eb6dfcd3d9427367314cbe673d90849acce9c0b5137cfb8aabf5e8.glb",
+      "description": "2.67mmx1.02mm Ferrite Ring (SMD) Non-Plastic - Test Points / Test Rings ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "ronghe",
+      "lcscPartNumber": "C5199798"
+    },
+    {
+      "x": 19.5,
+      "y": 2.1,
+      "id": "TP14",
+      "mpn": "RH-5015",
+      "pads": [
+        {
+          "x": 0,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 2.8,
+          "height": 1.5,
+          "netName": "LOUT",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "ic",
+      "layer": "top",
+      "value": "Sortie LOUT",
+      "package": "-",
+      "shortId": "9S4UAKAWXW",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": -1.016
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 90,
+      "bodyWidth": 2.5,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/ee/ee7e24f0e829423b20c7fa18aeddbe7ae6abe28d84ae23be24d2274b93538df2.pdf",
+      "bodyHeight": 1.2,
+      "designator": "TP14",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/db/dbc08fd548eb6dfcd3d9427367314cbe673d90849acce9c0b5137cfb8aabf5e8.glb",
+      "description": "2.67mmx1.02mm Ferrite Ring (SMD) Non-Plastic - Test Points / Test Rings ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "ronghe",
+      "lcscPartNumber": "C5199798"
+    },
+    {
+      "x": 22,
+      "y": 2.1,
+      "id": "TP15",
+      "mpn": "RH-5015",
+      "pads": [
+        {
+          "x": 0,
+          "y": 0,
+          "id": "1",
+          "type": "smd",
+          "layer": "top",
+          "shape": "rect",
+          "width": 2.8,
+          "height": 1.5,
+          "netName": "ROUT",
+          "rotation": 0,
+          "signalName": "1",
+          "electricalType": "passive"
+        }
+      ],
+      "type": "ic",
+      "layer": "top",
+      "value": "Sortie ROUT",
+      "package": "-",
+      "shortId": "9S4UAKAWXW",
+      "graphics": [
+        {
+          "type": "line",
+          "layer": "F.SilkS",
+          "points": [
+            {
+              "x": -1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": 1.016
+            },
+            {
+              "x": 1.651,
+              "y": -1.016
+            },
+            {
+              "x": -1.651,
+              "y": -1.016
+            }
+          ],
+          "strokeWidth": 0.05275
+        }
+      ],
+      "rotation": 90,
+      "bodyWidth": 2.5,
+      "datasheet": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/datasheets/sha256/ee/ee7e24f0e829423b20c7fa18aeddbe7ae6abe28d84ae23be24d2274b93538df2.pdf",
+      "bodyHeight": 1.2,
+      "designator": "TP15",
+      "model3dUrl": "https://easygerber-development.sfo3.cdn.digitaloceanspaces.com/library/3d/easyeda/v2/sha256/db/dbc08fd548eb6dfcd3d9427367314cbe673d90849acce9c0b5137cfb8aabf5e8.glb",
+      "description": "2.67mmx1.02mm Ferrite Ring (SMD) Non-Plastic - Test Points / Test Rings ROHS",
+      "bodyHeight3D": 1,
+      "manufacturer": "ronghe",
+      "lcscPartNumber": "C5199798"
+    }
+  ],
+  "zones": [
+    {
+      "id": "36",
+      "net": "3V3",
+      "holes": [
+        [
+          {
+            "x": 0.4946,
+            "y": 2.229
+          },
+          {
+            "x": 0.4946,
+            "y": 3.771
+          },
+          {
+            "x": 0.5106,
+            "y": 3.8097
+          },
+          {
+            "x": 0.5403,
+            "y": 3.8394
+          },
+          {
+            "x": 0.579,
+            "y": 3.8554
+          },
+          {
+            "x": 3.421,
+            "y": 3.8554
+          },
+          {
+            "x": 3.4597,
+            "y": 3.8394
+          },
+          {
+            "x": 3.4894,
+            "y": 3.8097
+          },
+          {
+            "x": 3.5054,
+            "y": 3.771
+          },
+          {
+            "x": 3.5054,
+            "y": 2.63
+          },
+          {
+            "x": 11.1047,
+            "y": 2.63
+          },
+          {
+            "x": 13.37,
+            "y": 4.8953
+          },
+          {
+            "x": 13.37,
+            "y": 5.1176
+          },
+          {
+            "x": 13.37,
+            "y": 5.1176
+          },
+          {
+            "x": 13.37,
+            "y": 5.1176
+          },
+          {
+            "x": 13.37,
+            "y": 5.1176
+          },
+          {
+            "x": 13.37,
+            "y": 5.1176
+          },
+          {
+            "x": 13.37,
+            "y": 5.1176
+          },
+          {
+            "x": 13.37,
+            "y": 5.1176
+          },
+          {
+            "x": 13.37,
+            "y": 5.1176
+          },
+          {
+            "x": 13.367,
+            "y": 5.1472
+          },
+          {
+            "x": 13.367,
+            "y": 5.1472
+          },
+          {
+            "x": 13.3582,
+            "y": 5.1758
+          },
+          {
+            "x": 13.3582,
+            "y": 5.1758
+          },
+          {
+            "x": 13.3438,
+            "y": 5.2021
+          },
+          {
+            "x": 13.3438,
+            "y": 5.2021
+          },
+          {
+            "x": 13.3246,
+            "y": 5.225
+          },
+          {
+            "x": 13.3246,
+            "y": 5.225
+          },
+          {
+            "x": 13.3011,
+            "y": 5.2436
+          },
+          {
+            "x": 13.3011,
+            "y": 5.2436
+          },
+          {
+            "x": 13.2744,
+            "y": 5.2572
+          },
+          {
+            "x": 13.2744,
+            "y": 5.2572
+          },
+          {
+            "x": 13.2456,
+            "y": 5.2653
+          },
+          {
+            "x": 13.2456,
+            "y": 5.2653
+          },
+          {
+            "x": 13.2157,
+            "y": 5.2674
+          },
+          {
+            "x": 13.2157,
+            "y": 5.2674
+          },
+          {
+            "x": 13.1861,
+            "y": 5.2636
+          },
+          {
+            "x": 13.1861,
+            "y": 5.2636
+          },
+          {
+            "x": 13.1577,
+            "y": 5.2539
+          },
+          {
+            "x": 13.1577,
+            "y": 5.2539
+          },
+          {
+            "x": 13.1319,
+            "y": 5.2389
+          },
+          {
+            "x": 13.1319,
+            "y": 5.2389
+          },
+          {
+            "x": 13.1319,
+            "y": 5.2389
+          },
+          {
+            "x": 13.1319,
+            "y": 5.2389
+          },
+          {
+            "x": 13.1319,
+            "y": 5.2389
+          },
+          {
+            "x": 13.1319,
+            "y": 5.2389
+          },
+          {
+            "x": 13.1319,
+            "y": 5.2389
+          },
+          {
+            "x": 13.1319,
+            "y": 5.2389
+          },
+          {
+            "x": 13.1319,
+            "y": 5.2389
+          },
+          {
+            "x": 13.1226,
+            "y": 5.2321
+          },
+          {
+            "x": 13.0377,
+            "y": 5.2045
+          },
+          {
+            "x": 12.9483,
+            "y": 5.2045
+          },
+          {
+            "x": 12.9464,
+            "y": 5.2051
+          },
+          {
+            "x": 12.9464,
+            "y": 5.2051
+          },
+          {
+            "x": 12.9464,
+            "y": 5.2051
+          },
+          {
+            "x": 12.9464,
+            "y": 5.2051
+          },
+          {
+            "x": 12.9464,
+            "y": 5.2051
+          },
+          {
+            "x": 12.9464,
+            "y": 5.2051
+          },
+          {
+            "x": 12.9464,
+            "y": 5.2051
+          },
+          {
+            "x": 12.9464,
+            "y": 5.2051
+          },
+          {
+            "x": 12.9449,
+            "y": 5.2052
+          },
+          {
+            "x": 12.9449,
+            "y": 5.2052
+          },
+          {
+            "x": 12.9217,
+            "y": 5.2085
+          },
+          {
+            "x": 12.9217,
+            "y": 5.2085
+          },
+          {
+            "x": 12.8928,
+            "y": 5.2069
+          },
+          {
+            "x": 12.8928,
+            "y": 5.2069
+          },
+          {
+            "x": 12.8646,
+            "y": 5.1997
+          },
+          {
+            "x": 12.8646,
+            "y": 5.1997
+          },
+          {
+            "x": 12.8384,
+            "y": 5.1873
+          },
+          {
+            "x": 12.8384,
+            "y": 5.1873
+          },
+          {
+            "x": 12.8151,
+            "y": 5.1701
+          },
+          {
+            "x": 12.8151,
+            "y": 5.1701
+          },
+          {
+            "x": 12.7955,
+            "y": 5.1487
+          },
+          {
+            "x": 12.7955,
+            "y": 5.1487
+          },
+          {
+            "x": 12.7804,
+            "y": 5.1239
+          },
+          {
+            "x": 12.7804,
+            "y": 5.1239
+          },
+          {
+            "x": 12.7703,
+            "y": 5.0967
+          },
+          {
+            "x": 12.7703,
+            "y": 5.0967
+          },
+          {
+            "x": 12.7657,
+            "y": 5.068
+          },
+          {
+            "x": 12.7657,
+            "y": 5.068
+          },
+          {
+            "x": 12.7663,
+            "y": 5.05
+          },
+          {
+            "x": 12.7663,
+            "y": 5.05
+          },
+          {
+            "x": 12.7663,
+            "y": 5.05
+          },
+          {
+            "x": 12.7663,
+            "y": 5.05
+          },
+          {
+            "x": 12.7663,
+            "y": 5.05
+          },
+          {
+            "x": 12.7663,
+            "y": 5.05
+          },
+          {
+            "x": 12.7663,
+            "y": 5.05
+          },
+          {
+            "x": 12.7663,
+            "y": 5.05
+          },
+          {
+            "x": 12.7668,
+            "y": 5.0483
+          },
+          {
+            "x": 12.7668,
+            "y": 4.9517
+          },
+          {
+            "x": 12.7418,
+            "y": 4.8584
+          },
+          {
+            "x": 12.6935,
+            "y": 4.7748
+          },
+          {
+            "x": 12.6252,
+            "y": 4.7065
+          },
+          {
+            "x": 12.5416,
+            "y": 4.6582
+          },
+          {
+            "x": 12.4483,
+            "y": 4.6332
+          },
+          {
+            "x": 12.3517,
+            "y": 4.6332
+          },
+          {
+            "x": 12.2584,
+            "y": 4.6582
+          },
+          {
+            "x": 12.1748,
+            "y": 4.7065
+          },
+          {
+            "x": 12.1065,
+            "y": 4.7748
+          },
+          {
+            "x": 12.0582,
+            "y": 4.8584
+          },
+          {
+            "x": 12.0332,
+            "y": 4.9517
+          },
+          {
+            "x": 12.0332,
+            "y": 5.0483
+          },
+          {
+            "x": 12.0358,
+            "y": 5.0579
+          },
+          {
+            "x": 12.0358,
+            "y": 5.0579
+          },
+          {
+            "x": 12.0358,
+            "y": 5.0579
+          },
+          {
+            "x": 12.0358,
+            "y": 5.0579
+          },
+          {
+            "x": 12.0358,
+            "y": 5.0579
+          },
+          {
+            "x": 12.0358,
+            "y": 5.0579
+          },
+          {
+            "x": 12.0358,
+            "y": 5.0579
+          },
+          {
+            "x": 12.0369,
+            "y": 5.0664
+          },
+          {
+            "x": 12.0369,
+            "y": 5.0664
+          },
+          {
+            "x": 12.0378,
+            "y": 5.0965
+          },
+          {
+            "x": 12.0378,
+            "y": 5.0965
+          },
+          {
+            "x": 12.0326,
+            "y": 5.1263
+          },
+          {
+            "x": 12.0326,
+            "y": 5.1263
+          },
+          {
+            "x": 12.0216,
+            "y": 5.1544
+          },
+          {
+            "x": 12.0216,
+            "y": 5.1544
+          },
+          {
+            "x": 12.0052,
+            "y": 5.1797
+          },
+          {
+            "x": 12.0052,
+            "y": 5.1797
+          },
+          {
+            "x": 11.9841,
+            "y": 5.2013
+          },
+          {
+            "x": 11.9841,
+            "y": 5.2013
+          },
+          {
+            "x": 11.959,
+            "y": 5.2181
+          },
+          {
+            "x": 11.959,
+            "y": 5.2181
+          },
+          {
+            "x": 11.9311,
+            "y": 5.2297
+          },
+          {
+            "x": 11.9311,
+            "y": 5.2297
+          },
+          {
+            "x": 11.9015,
+            "y": 5.2353
+          },
+          {
+            "x": 11.9015,
+            "y": 5.2353
+          },
+          {
+            "x": 11.8713,
+            "y": 5.235
+          },
+          {
+            "x": 11.8713,
+            "y": 5.235
+          },
+          {
+            "x": 11.8419,
+            "y": 5.2286
+          },
+          {
+            "x": 11.8419,
+            "y": 5.2286
+          },
+          {
+            "x": 11.8419,
+            "y": 5.2286
+          },
+          {
+            "x": 11.8419,
+            "y": 5.2286
+          },
+          {
+            "x": 11.8419,
+            "y": 5.2286
+          },
+          {
+            "x": 11.8419,
+            "y": 5.2286
+          },
+          {
+            "x": 11.8419,
+            "y": 5.2286
+          },
+          {
+            "x": 11.8419,
+            "y": 5.2286
+          },
+          {
+            "x": 11.7677,
+            "y": 5.2045
+          },
+          {
+            "x": 11.6783,
+            "y": 5.2045
+          },
+          {
+            "x": 11.5934,
+            "y": 5.2321
+          },
+          {
+            "x": 11.5211,
+            "y": 5.2846
+          },
+          {
+            "x": 11.5186,
+            "y": 5.2881
+          },
+          {
+            "x": 11.5186,
+            "y": 5.2881
+          },
+          {
+            "x": 11.5186,
+            "y": 5.2881
+          },
+          {
+            "x": 11.5186,
+            "y": 5.2881
+          },
+          {
+            "x": 11.5186,
+            "y": 5.2881
+          },
+          {
+            "x": 11.5186,
+            "y": 5.2881
+          },
+          {
+            "x": 11.5186,
+            "y": 5.2881
+          },
+          {
+            "x": 11.4989,
+            "y": 5.3071
+          },
+          {
+            "x": 11.4989,
+            "y": 5.3071
+          },
+          {
+            "x": 11.4748,
+            "y": 5.3228
+          },
+          {
+            "x": 11.4748,
+            "y": 5.3228
+          },
+          {
+            "x": 11.4481,
+            "y": 5.3335
+          },
+          {
+            "x": 11.4481,
+            "y": 5.3335
+          },
+          {
+            "x": 11.4199,
+            "y": 5.339
+          },
+          {
+            "x": 11.4199,
+            "y": 5.339
+          },
+          {
+            "x": 11.3911,
+            "y": 5.339
+          },
+          {
+            "x": 11.3911,
+            "y": 5.339
+          },
+          {
+            "x": 11.3629,
+            "y": 5.3335
+          },
+          {
+            "x": 11.3629,
+            "y": 5.3335
+          },
+          {
+            "x": 11.3362,
+            "y": 5.3228
+          },
+          {
+            "x": 11.3362,
+            "y": 5.3228
+          },
+          {
+            "x": 11.3121,
+            "y": 5.3071
+          },
+          {
+            "x": 11.3121,
+            "y": 5.3071
+          },
+          {
+            "x": 11.2924,
+            "y": 5.2881
+          },
+          {
+            "x": 11.2924,
+            "y": 5.2881
+          },
+          {
+            "x": 11.2924,
+            "y": 5.2881
+          },
+          {
+            "x": 11.2924,
+            "y": 5.2881
+          },
+          {
+            "x": 11.2924,
+            "y": 5.2881
+          },
+          {
+            "x": 11.2924,
+            "y": 5.2881
+          },
+          {
+            "x": 11.2924,
+            "y": 5.2881
+          },
+          {
+            "x": 11.2899,
+            "y": 5.2846
+          },
+          {
+            "x": 11.2176,
+            "y": 5.2321
+          },
+          {
+            "x": 11.1327,
+            "y": 5.2045
+          },
+          {
+            "x": 11.0433,
+            "y": 5.2045
+          },
+          {
+            "x": 10.9584,
+            "y": 5.2321
+          },
+          {
+            "x": 10.8861,
+            "y": 5.2846
+          },
+          {
+            "x": 10.8336,
+            "y": 5.3569
+          },
+          {
+            "x": 10.806,
+            "y": 5.4418
+          },
+          {
+            "x": 10.806,
+            "y": 5.9162
+          },
+          {
+            "x": 10.735,
+            "y": 5.9162
+          },
+          {
+            "x": 10.735,
+            "y": 5.4418
+          },
+          {
+            "x": 10.7074,
+            "y": 5.3569
+          },
+          {
+            "x": 10.6549,
+            "y": 5.2846
+          },
+          {
+            "x": 10.5826,
+            "y": 5.2321
+          },
+          {
+            "x": 10.4977,
+            "y": 5.2045
+          },
+          {
+            "x": 10.4083,
+            "y": 5.2045
+          },
+          {
+            "x": 10.3234,
+            "y": 5.2321
+          },
+          {
+            "x": 10.2511,
+            "y": 5.2846
+          },
+          {
+            "x": 10.1986,
+            "y": 5.3569
+          },
+          {
+            "x": 10.171,
+            "y": 5.4418
+          },
+          {
+            "x": 10.171,
+            "y": 5.9162
+          },
+          {
+            "x": 10.035,
+            "y": 5.9162
+          },
+          {
+            "x": 10.0252,
+            "y": 5.9065
+          },
+          {
+            "x": 9.9416,
+            "y": 5.8582
+          },
+          {
+            "x": 9.8483,
+            "y": 5.8332
+          },
+          {
+            "x": 9.7517,
+            "y": 5.8332
+          },
+          {
+            "x": 9.6584,
+            "y": 5.8582
+          },
+          {
+            "x": 9.5748,
+            "y": 5.9065
+          },
+          {
+            "x": 9.5065,
+            "y": 5.9748
+          },
+          {
+            "x": 9.4582,
+            "y": 6.0584
+          },
+          {
+            "x": 9.4332,
+            "y": 6.1517
+          },
+          {
+            "x": 9.4332,
+            "y": 6.2483
+          },
+          {
+            "x": 9.4582,
+            "y": 6.3416
+          },
+          {
+            "x": 9.5065,
+            "y": 6.4252
+          },
+          {
+            "x": 9.5748,
+            "y": 6.4935
+          },
+          {
+            "x": 9.6584,
+            "y": 6.5418
+          },
+          {
+            "x": 9.7517,
+            "y": 6.5668
+          },
+          {
+            "x": 9.8483,
+            "y": 6.5668
+          },
+          {
+            "x": 9.9416,
+            "y": 6.5418
+          },
+          {
+            "x": 10.0231,
+            "y": 6.4948
+          },
+          {
+            "x": 10.171,
+            "y": 6.4948
+          },
+          {
+            "x": 10.171,
+            "y": 6.9802
+          },
+          {
+            "x": 10.1986,
+            "y": 7.0651
+          },
+          {
+            "x": 10.2511,
+            "y": 7.1374
+          },
+          {
+            "x": 10.3234,
+            "y": 7.1899
+          },
+          {
+            "x": 10.4083,
+            "y": 7.2175
+          },
+          {
+            "x": 10.4917,
+            "y": 7.2175
+          },
+          {
+            "x": 10.4917,
+            "y": 7.2175
+          },
+          {
+            "x": 10.4917,
+            "y": 7.2175
+          },
+          {
+            "x": 10.4917,
+            "y": 7.2175
+          },
+          {
+            "x": 10.4917,
+            "y": 7.2175
+          },
+          {
+            "x": 10.4917,
+            "y": 7.2175
+          },
+          {
+            "x": 10.4917,
+            "y": 7.2175
+          },
+          {
+            "x": 10.5205,
+            "y": 7.2203
+          },
+          {
+            "x": 10.5205,
+            "y": 7.2203
+          },
+          {
+            "x": 10.5482,
+            "y": 7.2286
+          },
+          {
+            "x": 10.5482,
+            "y": 7.2286
+          },
+          {
+            "x": 10.5739,
+            "y": 7.242
+          },
+          {
+            "x": 10.5739,
+            "y": 7.242
+          },
+          {
+            "x": 10.5964,
+            "y": 7.2602
+          },
+          {
+            "x": 10.5964,
+            "y": 7.2602
+          },
+          {
+            "x": 10.6151,
+            "y": 7.2823
+          },
+          {
+            "x": 10.6151,
+            "y": 7.2823
+          },
+          {
+            "x": 10.6292,
+            "y": 7.3076
+          },
+          {
+            "x": 10.6292,
+            "y": 7.3076
+          },
+          {
+            "x": 10.6381,
+            "y": 7.3351
+          },
+          {
+            "x": 10.6381,
+            "y": 7.3351
+          },
+          {
+            "x": 10.6416,
+            "y": 7.3639
+          },
+          {
+            "x": 10.6416,
+            "y": 7.3639
+          },
+          {
+            "x": 10.6395,
+            "y": 7.3928
+          },
+          {
+            "x": 10.6395,
+            "y": 7.3928
+          },
+          {
+            "x": 10.6319,
+            "y": 7.4207
+          },
+          {
+            "x": 10.6319,
+            "y": 7.4207
+          },
+          {
+            "x": 10.6191,
+            "y": 7.4467
+          },
+          {
+            "x": 10.6191,
+            "y": 7.4467
+          },
+          {
+            "x": 10.6015,
+            "y": 7.4697
+          },
+          {
+            "x": 10.6015,
+            "y": 7.4697
+          },
+          {
+            "x": 10.5799,
+            "y": 7.4888
+          },
+          {
+            "x": 10.5799,
+            "y": 7.4888
+          },
+          {
+            "x": 10.5799,
+            "y": 7.4888
+          },
+          {
+            "x": 10.5799,
+            "y": 7.4888
+          },
+          {
+            "x": 10.5799,
+            "y": 7.4888
+          },
+          {
+            "x": 10.5799,
+            "y": 7.4888
+          },
+          {
+            "x": 10.5799,
+            "y": 7.4888
+          },
+          {
+            "x": 9.9139,
+            "y": 7.9726
+          },
+          {
+            "x": 9.7362,
+            "y": 8.17
+          },
+          {
+            "x": 9.6953,
+            "y": 8.17
+          },
+          {
+            "x": 6.7626,
+            "y": 5.2374
+          },
+          {
+            "x": 6.7278,
+            "y": 5.2088
+          },
+          {
+            "x": 6.688,
+            "y": 5.1875
+          },
+          {
+            "x": 6.6449,
+            "y": 5.1744
+          },
+          {
+            "x": 6.6,
+            "y": 5.17
+          },
+          {
+            "x": 3.5054,
+            "y": 5.17
+          },
+          {
+            "x": 3.5054,
+            "y": 4.729
+          },
+          {
+            "x": 3.4894,
+            "y": 4.6903
+          },
+          {
+            "x": 3.4597,
+            "y": 4.6606
+          },
+          {
+            "x": 3.421,
+            "y": 4.6446
+          },
+          {
+            "x": 0.579,
+            "y": 4.6446
+          },
+          {
+            "x": 0.5403,
+            "y": 4.6606
+          },
+          {
+            "x": 0.5106,
+            "y": 4.6903
+          },
+          {
+            "x": 0.4946,
+            "y": 4.729
+          },
+          {
+            "x": 0.4946,
+            "y": 6.271
+          },
+          {
+            "x": 0.5106,
+            "y": 6.3097
+          },
+          {
+            "x": 0.5403,
+            "y": 6.3394
+          },
+          {
+            "x": 0.579,
+            "y": 6.3554
+          },
+          {
+            "x": 3.421,
+            "y": 6.3554
+          },
+          {
+            "x": 3.4597,
+            "y": 6.3394
+          },
+          {
+            "x": 3.4894,
+            "y": 6.3097
+          },
+          {
+            "x": 3.5054,
+            "y": 6.271
+          },
+          {
+            "x": 3.5054,
+            "y": 5.63
+          },
+          {
+            "x": 6.5047,
+            "y": 5.63
+          },
+          {
+            "x": 9.4086,
+            "y": 8.5339
+          },
+          {
+            "x": 9.2688,
+            "y": 8.6891
+          },
+          {
+            "x": 8.7867,
+            "y": 9.5241
+          },
+          {
+            "x": 8.7286,
+            "y": 9.703
+          },
+          {
+            "x": 3.667,
+            "y": 9.703
+          },
+          {
+            "x": 3.6221,
+            "y": 9.7074
+          },
+          {
+            "x": 3.579,
+            "y": 9.7205
+          },
+          {
+            "x": 3.5392,
+            "y": 9.7418
+          },
+          {
+            "x": 3.5054,
+            "y": 9.7695
+          },
+          {
+            "x": 3.5054,
+            "y": 9.729
+          },
+          {
+            "x": 3.4894,
+            "y": 9.6903
+          },
+          {
+            "x": 3.4597,
+            "y": 9.6606
+          },
+          {
+            "x": 3.421,
+            "y": 9.6446
+          },
+          {
+            "x": 0.579,
+            "y": 9.6446
+          },
+          {
+            "x": 0.5403,
+            "y": 9.6606
+          },
+          {
+            "x": 0.5106,
+            "y": 9.6903
+          },
+          {
+            "x": 0.4946,
+            "y": 9.729
+          },
+          {
+            "x": 0.4946,
+            "y": 11.271
+          },
+          {
+            "x": 0.5106,
+            "y": 11.3097
+          },
+          {
+            "x": 0.5403,
+            "y": 11.3394
+          },
+          {
+            "x": 0.579,
+            "y": 11.3554
+          },
+          {
+            "x": 3.421,
+            "y": 11.3554
+          },
+          {
+            "x": 3.4597,
+            "y": 11.3394
+          },
+          {
+            "x": 3.4894,
+            "y": 11.3097
+          },
+          {
+            "x": 3.5054,
+            "y": 11.271
+          },
+          {
+            "x": 3.5054,
+            "y": 10.4198
+          },
+          {
+            "x": 3.7623,
+            "y": 10.163
+          },
+          {
+            "x": 8.5791,
+            "y": 10.163
+          },
+          {
+            "x": 8.4887,
+            "y": 10.4411
+          },
+          {
+            "x": 8.388,
+            "y": 11.4
+          },
+          {
+            "x": 8.388,
+            "y": 12.4
+          },
+          {
+            "x": 8.4665,
+            "y": 13.1973
+          },
+          {
+            "x": 8.4447,
+            "y": 13.2785
+          },
+          {
+            "x": 8.3943,
+            "y": 14.2414
+          },
+          {
+            "x": 8.5451,
+            "y": 15.1937
+          },
+          {
+            "x": 8.8906,
+            "y": 16.0938
+          },
+          {
+            "x": 9.4158,
+            "y": 16.9024
+          },
+          {
+            "x": 9.6831,
+            "y": 17.1697
+          },
+          {
+            "x": 9.5649,
+            "y": 17.2604
+          },
+          {
+            "x": 9.4394,
+            "y": 17.3859
+          },
+          {
+            "x": 9.3313,
+            "y": 17.5268
+          },
+          {
+            "x": 9.2425,
+            "y": 17.6806
+          },
+          {
+            "x": 9.1745,
+            "y": 17.8446
+          },
+          {
+            "x": 9.1286,
+            "y": 18.0162
+          },
+          {
+            "x": 9.1054,
+            "y": 18.1922
+          },
+          {
+            "x": 9.1054,
+            "y": 18.3698
+          },
+          {
+            "x": 9.1286,
+            "y": 18.5458
+          },
+          {
+            "x": 9.1745,
+            "y": 18.7174
+          },
+          {
+            "x": 9.2425,
+            "y": 18.8814
+          },
+          {
+            "x": 9.3313,
+            "y": 19.0352
+          },
+          {
+            "x": 9.4394,
+            "y": 19.1761
+          },
+          {
+            "x": 9.5649,
+            "y": 19.3016
+          },
+          {
+            "x": 9.7058,
+            "y": 19.4097
+          },
+          {
+            "x": 9.8596,
+            "y": 19.4985
+          },
+          {
+            "x": 10.0236,
+            "y": 19.5665
+          },
+          {
+            "x": 10.1952,
+            "y": 19.6124
+          },
+          {
+            "x": 10.3712,
+            "y": 19.6356
+          },
+          {
+            "x": 10.5488,
+            "y": 19.6356
+          },
+          {
+            "x": 10.7248,
+            "y": 19.6124
+          },
+          {
+            "x": 10.8964,
+            "y": 19.5665
+          },
+          {
+            "x": 11.0604,
+            "y": 19.4985
+          },
+          {
+            "x": 11.2142,
+            "y": 19.4097
+          },
+          {
+            "x": 11.3551,
+            "y": 19.3016
+          },
+          {
+            "x": 11.4806,
+            "y": 19.1761
+          },
+          {
+            "x": 11.5887,
+            "y": 19.0352
+          },
+          {
+            "x": 11.6775,
+            "y": 18.8814
+          },
+          {
+            "x": 11.7455,
+            "y": 18.7174
+          },
+          {
+            "x": 11.7914,
+            "y": 18.5458
+          },
+          {
+            "x": 11.8035,
+            "y": 18.4538
+          },
+          {
+            "x": 11.8063,
+            "y": 18.4549
+          },
+          {
+            "x": 12.7586,
+            "y": 18.6057
+          },
+          {
+            "x": 12.77,
+            "y": 18.6051
+          },
+          {
+            "x": 12.77,
+            "y": 19.636
+          },
+          {
+            "x": 12.7644,
+            "y": 19.6367
+          },
+          {
+            "x": 12.6119,
+            "y": 19.6776
+          },
+          {
+            "x": 12.4659,
+            "y": 19.738
+          },
+          {
+            "x": 12.3291,
+            "y": 19.817
+          },
+          {
+            "x": 12.2038,
+            "y": 19.9132
+          },
+          {
+            "x": 12.0922,
+            "y": 20.0248
+          },
+          {
+            "x": 11.996,
+            "y": 20.1501
+          },
+          {
+            "x": 11.917,
+            "y": 20.2869
+          },
+          {
+            "x": 11.8566,
+            "y": 20.4329
+          },
+          {
+            "x": 11.8157,
+            "y": 20.5854
+          },
+          {
+            "x": 11.7951,
+            "y": 20.742
+          },
+          {
+            "x": 11.7951,
+            "y": 20.9
+          },
+          {
+            "x": 11.8157,
+            "y": 21.0566
+          },
+          {
+            "x": 11.8566,
+            "y": 21.2091
+          },
+          {
+            "x": 11.917,
+            "y": 21.3551
+          },
+          {
+            "x": 11.996,
+            "y": 21.4919
+          },
+          {
+            "x": 12.0922,
+            "y": 21.6172
+          },
+          {
+            "x": 12.2038,
+            "y": 21.7288
+          },
+          {
+            "x": 12.3291,
+            "y": 21.825
+          },
+          {
+            "x": 12.4659,
+            "y": 21.904
+          },
+          {
+            "x": 12.6119,
+            "y": 21.9644
+          },
+          {
+            "x": 12.7644,
+            "y": 22.0053
+          },
+          {
+            "x": 12.921,
+            "y": 22.0259
+          },
+          {
+            "x": 13.079,
+            "y": 22.0259
+          },
+          {
+            "x": 13.2356,
+            "y": 22.0053
+          },
+          {
+            "x": 13.3881,
+            "y": 21.9644
+          },
+          {
+            "x": 13.5341,
+            "y": 21.904
+          },
+          {
+            "x": 13.6709,
+            "y": 21.825
+          },
+          {
+            "x": 13.7962,
+            "y": 21.7288
+          },
+          {
+            "x": 13.9078,
+            "y": 21.6172
+          },
+          {
+            "x": 14.004,
+            "y": 21.4919
+          },
+          {
+            "x": 14.083,
+            "y": 21.3551
+          },
+          {
+            "x": 14.1434,
+            "y": 21.2091
+          },
+          {
+            "x": 14.1843,
+            "y": 21.0566
+          },
+          {
+            "x": 14.2049,
+            "y": 20.9
+          },
+          {
+            "x": 14.2049,
+            "y": 20.742
+          },
+          {
+            "x": 14.1843,
+            "y": 20.5854
+          },
+          {
+            "x": 14.1434,
+            "y": 20.4329
+          },
+          {
+            "x": 14.083,
+            "y": 20.2869
+          },
+          {
+            "x": 14.004,
+            "y": 20.1501
+          },
+          {
+            "x": 13.9078,
+            "y": 20.0248
+          },
+          {
+            "x": 13.7962,
+            "y": 19.9132
+          },
+          {
+            "x": 13.6709,
+            "y": 19.817
+          },
+          {
+            "x": 13.5341,
+            "y": 19.738
+          },
+          {
+            "x": 13.3881,
+            "y": 19.6776
+          },
+          {
+            "x": 13.2356,
+            "y": 19.6367
+          },
+          {
+            "x": 13.23,
+            "y": 19.636
+          },
+          {
+            "x": 13.23,
+            "y": 18.581
+          },
+          {
+            "x": 13.7215,
+            "y": 18.5553
+          },
+          {
+            "x": 14.1932,
+            "y": 18.4289
+          },
+          {
+            "x": 14.2086,
+            "y": 18.5458
+          },
+          {
+            "x": 14.2545,
+            "y": 18.7174
+          },
+          {
+            "x": 14.3225,
+            "y": 18.8814
+          },
+          {
+            "x": 14.4113,
+            "y": 19.0352
+          },
+          {
+            "x": 14.5194,
+            "y": 19.1761
+          },
+          {
+            "x": 14.6449,
+            "y": 19.3016
+          },
+          {
+            "x": 14.7858,
+            "y": 19.4097
+          },
+          {
+            "x": 14.9396,
+            "y": 19.4985
+          },
+          {
+            "x": 15.1036,
+            "y": 19.5665
+          },
+          {
+            "x": 15.2752,
+            "y": 19.6124
+          },
+          {
+            "x": 15.4512,
+            "y": 19.6356
+          },
+          {
+            "x": 15.6288,
+            "y": 19.6356
+          },
+          {
+            "x": 15.8048,
+            "y": 19.6124
+          },
+          {
+            "x": 15.9764,
+            "y": 19.5665
+          },
+          {
+            "x": 16.1404,
+            "y": 19.4985
+          },
+          {
+            "x": 16.2942,
+            "y": 19.4097
+          },
+          {
+            "x": 16.4351,
+            "y": 19.3016
+          },
+          {
+            "x": 16.5606,
+            "y": 19.1761
+          },
+          {
+            "x": 16.6687,
+            "y": 19.0352
+          },
+          {
+            "x": 16.7575,
+            "y": 18.8814
+          },
+          {
+            "x": 16.8255,
+            "y": 18.7174
+          },
+          {
+            "x": 16.8714,
+            "y": 18.5458
+          },
+          {
+            "x": 16.8946,
+            "y": 18.3698
+          },
+          {
+            "x": 16.8946,
+            "y": 18.1922
+          },
+          {
+            "x": 16.8714,
+            "y": 18.0162
+          },
+          {
+            "x": 16.8255,
+            "y": 17.8446
+          },
+          {
+            "x": 16.7575,
+            "y": 17.6806
+          },
+          {
+            "x": 16.6687,
+            "y": 17.5268
+          },
+          {
+            "x": 16.5606,
+            "y": 17.3859
+          },
+          {
+            "x": 16.4351,
+            "y": 17.2604
+          },
+          {
+            "x": 16.3372,
+            "y": 17.1852
+          },
+          {
+            "x": 16.4612,
+            "y": 17.0612
+          },
+          {
+            "x": 17.0348,
+            "y": 16.3623
+          },
+          {
+            "x": 17.461,
+            "y": 15.5649
+          },
+          {
+            "x": 17.7234,
+            "y": 14.6998
+          },
+          {
+            "x": 17.812,
+            "y": 13.8
+          },
+          {
+            "x": 17.812,
+            "y": 13.03
+          },
+          {
+            "x": 18.2,
+            "y": 13.03
+          },
+          {
+            "x": 18.2449,
+            "y": 13.0256
+          },
+          {
+            "x": 18.288,
+            "y": 13.0125
+          },
+          {
+            "x": 18.3278,
+            "y": 12.9912
+          },
+          {
+            "x": 18.3626,
+            "y": 12.9626
+          },
+          {
+            "x": 20.5988,
+            "y": 10.7264
+          },
+          {
+            "x": 20.671,
+            "y": 10.7264
+          },
+          {
+            "x": 20.7097,
+            "y": 10.7104
+          },
+          {
+            "x": 20.7394,
+            "y": 10.6807
+          },
+          {
+            "x": 20.7554,
+            "y": 10.642
+          },
+          {
+            "x": 20.7554,
+            "y": 10.5698
+          },
+          {
+            "x": 21.0953,
+            "y": 10.23
+          },
+          {
+            "x": 21.4946,
+            "y": 10.23
+          },
+          {
+            "x": 21.4946,
+            "y": 10.542
+          },
+          {
+            "x": 21.5106,
+            "y": 10.5807
+          },
+          {
+            "x": 21.5403,
+            "y": 10.6104
+          },
+          {
+            "x": 21.579,
+            "y": 10.6264
+          },
+          {
+            "x": 22.421,
+            "y": 10.6264
+          },
+          {
+            "x": 22.4597,
+            "y": 10.6104
+          },
+          {
+            "x": 22.4894,
+            "y": 10.5807
+          },
+          {
+            "x": 22.5054,
+            "y": 10.542
+          },
+          {
+            "x": 22.5054,
+            "y": 9.6
+          },
+          {
+            "x": 22.4894,
+            "y": 9.5613
+          },
+          {
+            "x": 22.4597,
+            "y": 9.5316
+          },
+          {
+            "x": 22.421,
+            "y": 9.5156
+          },
+          {
+            "x": 21.579,
+            "y": 9.5156
+          },
+          {
+            "x": 21.5403,
+            "y": 9.5316
+          },
+          {
+            "x": 21.5106,
+            "y": 9.5613
+          },
+          {
+            "x": 21.4946,
+            "y": 9.6
+          },
+          {
+            "x": 21.4946,
+            "y": 9.77
+          },
+          {
+            "x": 21,
+            "y": 9.77
+          },
+          {
+            "x": 20.9551,
+            "y": 9.7744
+          },
+          {
+            "x": 20.912,
+            "y": 9.7875
+          },
+          {
+            "x": 20.8722,
+            "y": 9.8088
+          },
+          {
+            "x": 20.8374,
+            "y": 9.8374
+          },
+          {
+            "x": 20.7554,
+            "y": 9.9193
+          },
+          {
+            "x": 20.7554,
+            "y": 9.55
+          },
+          {
+            "x": 20.7394,
+            "y": 9.5113
+          },
+          {
+            "x": 20.7097,
+            "y": 9.4816
+          },
+          {
+            "x": 20.671,
+            "y": 9.4656
+          },
+          {
+            "x": 18.929,
+            "y": 9.4656
+          },
+          {
+            "x": 18.8903,
+            "y": 9.4816
+          },
+          {
+            "x": 18.8606,
+            "y": 9.5113
+          },
+          {
+            "x": 18.8446,
+            "y": 9.55
+          },
+          {
+            "x": 18.8446,
+            "y": 10.642
+          },
+          {
+            "x": 18.8606,
+            "y": 10.6807
+          },
+          {
+            "x": 18.8903,
+            "y": 10.7104
+          },
+          {
+            "x": 18.929,
+            "y": 10.7264
+          },
+          {
+            "x": 19.9483,
+            "y": 10.7264
+          },
+          {
+            "x": 18.1047,
+            "y": 12.57
+          },
+          {
+            "x": 17.8091,
+            "y": 12.57
+          },
+          {
+            "x": 17.7234,
+            "y": 11.7002
+          },
+          {
+            "x": 17.72,
+            "y": 11.6889
+          },
+          {
+            "x": 17.72,
+            "y": 10.6118
+          },
+          {
+            "x": 17.6924,
+            "y": 10.5269
+          },
+          {
+            "x": 17.6399,
+            "y": 10.4546
+          },
+          {
+            "x": 17.5676,
+            "y": 10.4021
+          },
+          {
+            "x": 17.4904,
+            "y": 10.377
+          },
+          {
+            "x": 17.2133,
+            "y": 9.5241
+          },
+          {
+            "x": 16.928,
+            "y": 9.03
+          },
+          {
+            "x": 18.2,
+            "y": 9.03
+          },
+          {
+            "x": 18.2449,
+            "y": 9.0256
+          },
+          {
+            "x": 18.288,
+            "y": 9.0125
+          },
+          {
+            "x": 18.3278,
+            "y": 8.9912
+          },
+          {
+            "x": 18.3626,
+            "y": 8.9626
+          },
+          {
+            "x": 19.1488,
+            "y": 8.1764
+          },
+          {
+            "x": 20.671,
+            "y": 8.1764
+          },
+          {
+            "x": 20.7097,
+            "y": 8.1604
+          },
+          {
+            "x": 20.7394,
+            "y": 8.1307
+          },
+          {
+            "x": 20.7554,
+            "y": 8.092
+          },
+          {
+            "x": 20.7554,
+            "y": 7.83
+          },
+          {
+            "x": 21.4946,
+            "y": 7.83
+          },
+          {
+            "x": 21.4946,
+            "y": 8.042
+          },
+          {
+            "x": 21.5106,
+            "y": 8.0807
+          },
+          {
+            "x": 21.5403,
+            "y": 8.1104
+          },
+          {
+            "x": 21.579,
+            "y": 8.1264
+          },
+          {
+            "x": 22.421,
+            "y": 8.1264
+          },
+          {
+            "x": 22.4597,
+            "y": 8.1104
+          },
+          {
+            "x": 22.4894,
+            "y": 8.0807
+          },
+          {
+            "x": 22.5054,
+            "y": 8.042
+          },
+          {
+            "x": 22.5054,
+            "y": 7.1
+          },
+          {
+            "x": 22.4894,
+            "y": 7.0613
+          },
+          {
+            "x": 22.4597,
+            "y": 7.0316
+          },
+          {
+            "x": 22.421,
+            "y": 7.0156
+          },
+          {
+            "x": 21.579,
+            "y": 7.0156
+          },
+          {
+            "x": 21.5403,
+            "y": 7.0316
+          },
+          {
+            "x": 21.5106,
+            "y": 7.0613
+          },
+          {
+            "x": 21.4946,
+            "y": 7.1
+          },
+          {
+            "x": 21.4946,
+            "y": 7.37
+          },
+          {
+            "x": 20.7554,
+            "y": 7.37
+          },
+          {
+            "x": 20.7554,
+            "y": 7
+          },
+          {
+            "x": 20.7394,
+            "y": 6.9613
+          },
+          {
+            "x": 20.7097,
+            "y": 6.9316
+          },
+          {
+            "x": 20.671,
+            "y": 6.9156
+          },
+          {
+            "x": 18.929,
+            "y": 6.9156
+          },
+          {
+            "x": 18.8903,
+            "y": 6.9316
+          },
+          {
+            "x": 18.8606,
+            "y": 6.9613
+          },
+          {
+            "x": 18.8446,
+            "y": 7
+          },
+          {
+            "x": 18.8446,
+            "y": 7.8302
+          },
+          {
+            "x": 18.1047,
+            "y": 8.57
+          },
+          {
+            "x": 16.624,
+            "y": 8.57
+          },
+          {
+            "x": 16.0861,
+            "y": 7.9726
+          },
+          {
+            "x": 15.306,
+            "y": 7.4059
+          },
+          {
+            "x": 14.5203,
+            "y": 7.056
+          },
+          {
+            "x": 14.545,
+            "y": 6.9802
+          },
+          {
+            "x": 14.545,
+            "y": 5.4418
+          },
+          {
+            "x": 14.5174,
+            "y": 5.3569
+          },
+          {
+            "x": 14.4649,
+            "y": 5.2846
+          },
+          {
+            "x": 14.3926,
+            "y": 5.2321
+          },
+          {
+            "x": 14.3077,
+            "y": 5.2045
+          },
+          {
+            "x": 14.2183,
+            "y": 5.2045
+          },
+          {
+            "x": 14.1334,
+            "y": 5.2321
+          },
+          {
+            "x": 14.0681,
+            "y": 5.2795
+          },
+          {
+            "x": 14.0681,
+            "y": 5.2795
+          },
+          {
+            "x": 14.0681,
+            "y": 5.2795
+          },
+          {
+            "x": 14.0681,
+            "y": 5.2795
+          },
+          {
+            "x": 14.0681,
+            "y": 5.2795
+          },
+          {
+            "x": 14.0681,
+            "y": 5.2795
+          },
+          {
+            "x": 14.0681,
+            "y": 5.2795
+          },
+          {
+            "x": 14.0681,
+            "y": 5.2795
+          },
+          {
+            "x": 14.0423,
+            "y": 5.2946
+          },
+          {
+            "x": 14.0423,
+            "y": 5.2946
+          },
+          {
+            "x": 14.0139,
+            "y": 5.3042
+          },
+          {
+            "x": 14.0139,
+            "y": 5.3042
+          },
+          {
+            "x": 13.9843,
+            "y": 5.3081
+          },
+          {
+            "x": 13.9843,
+            "y": 5.3081
+          },
+          {
+            "x": 13.9544,
+            "y": 5.3059
+          },
+          {
+            "x": 13.9544,
+            "y": 5.3059
+          },
+          {
+            "x": 13.9256,
+            "y": 5.2979
+          },
+          {
+            "x": 13.9256,
+            "y": 5.2979
+          },
+          {
+            "x": 13.8989,
+            "y": 5.2843
+          },
+          {
+            "x": 13.8989,
+            "y": 5.2843
+          },
+          {
+            "x": 13.8754,
+            "y": 5.2657
+          },
+          {
+            "x": 13.8754,
+            "y": 5.2657
+          },
+          {
+            "x": 13.8562,
+            "y": 5.2428
+          },
+          {
+            "x": 13.8562,
+            "y": 5.2428
+          },
+          {
+            "x": 13.8418,
+            "y": 5.2165
+          },
+          {
+            "x": 13.8418,
+            "y": 5.2165
+          },
+          {
+            "x": 13.833,
+            "y": 5.1879
+          },
+          {
+            "x": 13.833,
+            "y": 5.1879
+          },
+          {
+            "x": 13.83,
+            "y": 5.1582
+          },
+          {
+            "x": 13.83,
+            "y": 5.1582
+          },
+          {
+            "x": 13.83,
+            "y": 5.1582
+          },
+          {
+            "x": 13.83,
+            "y": 5.1582
+          },
+          {
+            "x": 13.83,
+            "y": 5.1582
+          },
+          {
+            "x": 13.83,
+            "y": 5.1582
+          },
+          {
+            "x": 13.83,
+            "y": 5.1582
+          },
+          {
+            "x": 13.83,
+            "y": 5.1582
+          },
+          {
+            "x": 13.83,
+            "y": 5.1582
+          },
+          {
+            "x": 13.83,
+            "y": 4.8
+          },
+          {
+            "x": 13.8256,
+            "y": 4.7551
+          },
+          {
+            "x": 13.8125,
+            "y": 4.712
+          },
+          {
+            "x": 13.7912,
+            "y": 4.6722
+          },
+          {
+            "x": 13.7626,
+            "y": 4.6374
+          },
+          {
+            "x": 11.3626,
+            "y": 2.2374
+          },
+          {
+            "x": 11.3278,
+            "y": 2.2088
+          },
+          {
+            "x": 11.288,
+            "y": 2.1875
+          },
+          {
+            "x": 11.2449,
+            "y": 2.1744
+          },
+          {
+            "x": 11.2,
+            "y": 2.17
+          },
+          {
+            "x": 3.4691,
+            "y": 2.17
+          },
+          {
+            "x": 3.4597,
+            "y": 2.1606
+          },
+          {
+            "x": 3.421,
+            "y": 2.1446
+          },
+          {
+            "x": 0.579,
+            "y": 2.1446
+          },
+          {
+            "x": 0.5403,
+            "y": 2.1606
+          },
+          {
+            "x": 0.5106,
+            "y": 2.1903
+          },
+          {
+            "x": 0.4946,
+            "y": 2.229
+          }
+        ],
+        [
+          {
+            "x": 0.4946,
+            "y": 7.229
+          },
+          {
+            "x": 0.4946,
+            "y": 8.771
+          },
+          {
+            "x": 0.5106,
+            "y": 8.8097
+          },
+          {
+            "x": 0.5403,
+            "y": 8.8394
+          },
+          {
+            "x": 0.579,
+            "y": 8.8554
+          },
+          {
+            "x": 3.421,
+            "y": 8.8554
+          },
+          {
+            "x": 3.4597,
+            "y": 8.8394
+          },
+          {
+            "x": 3.4894,
+            "y": 8.8097
+          },
+          {
+            "x": 3.5054,
+            "y": 8.771
+          },
+          {
+            "x": 3.5054,
+            "y": 8.0307
+          },
+          {
+            "x": 4.0374,
+            "y": 8.5626
+          },
+          {
+            "x": 4.0722,
+            "y": 8.5912
+          },
+          {
+            "x": 4.112,
+            "y": 8.6125
+          },
+          {
+            "x": 4.1551,
+            "y": 8.6256
+          },
+          {
+            "x": 4.2,
+            "y": 8.63
+          },
+          {
+            "x": 7.5112,
+            "y": 8.63
+          },
+          {
+            "x": 7.5748,
+            "y": 8.6935
+          },
+          {
+            "x": 7.6584,
+            "y": 8.7418
+          },
+          {
+            "x": 7.7517,
+            "y": 8.7668
+          },
+          {
+            "x": 7.8483,
+            "y": 8.7668
+          },
+          {
+            "x": 7.9416,
+            "y": 8.7418
+          },
+          {
+            "x": 8.0252,
+            "y": 8.6935
+          },
+          {
+            "x": 8.0935,
+            "y": 8.6252
+          },
+          {
+            "x": 8.1418,
+            "y": 8.5416
+          },
+          {
+            "x": 8.1668,
+            "y": 8.4483
+          },
+          {
+            "x": 8.1668,
+            "y": 8.3517
+          },
+          {
+            "x": 8.1418,
+            "y": 8.2584
+          },
+          {
+            "x": 8.0935,
+            "y": 8.1748
+          },
+          {
+            "x": 8.0252,
+            "y": 8.1065
+          },
+          {
+            "x": 7.9416,
+            "y": 8.0582
+          },
+          {
+            "x": 7.8483,
+            "y": 8.0332
+          },
+          {
+            "x": 7.7517,
+            "y": 8.0332
+          },
+          {
+            "x": 7.6584,
+            "y": 8.0582
+          },
+          {
+            "x": 7.5748,
+            "y": 8.1065
+          },
+          {
+            "x": 7.5112,
+            "y": 8.17
+          },
+          {
+            "x": 4.2953,
+            "y": 8.17
+          },
+          {
+            "x": 3.5054,
+            "y": 7.3802
+          },
+          {
+            "x": 3.5054,
+            "y": 7.229
+          },
+          {
+            "x": 3.4894,
+            "y": 7.1903
+          },
+          {
+            "x": 3.4597,
+            "y": 7.1606
+          },
+          {
+            "x": 3.421,
+            "y": 7.1446
+          },
+          {
+            "x": 0.579,
+            "y": 7.1446
+          },
+          {
+            "x": 0.5403,
+            "y": 7.1606
+          },
+          {
+            "x": 0.5106,
+            "y": 7.1903
+          },
+          {
+            "x": 0.4946,
+            "y": 7.229
+          }
+        ],
+        [
+          {
+            "x": 1.6249,
+            "y": 13.7486
+          },
+          {
+            "x": 1.6249,
+            "y": 13.8934
+          },
+          {
+            "x": 1.6438,
+            "y": 14.0371
+          },
+          {
+            "x": 1.6813,
+            "y": 14.177
+          },
+          {
+            "x": 1.7367,
+            "y": 14.3108
+          },
+          {
+            "x": 1.8091,
+            "y": 14.4363
+          },
+          {
+            "x": 1.8973,
+            "y": 14.5512
+          },
+          {
+            "x": 1.9998,
+            "y": 14.6537
+          },
+          {
+            "x": 2.1147,
+            "y": 14.7419
+          },
+          {
+            "x": 2.2402,
+            "y": 14.8143
+          },
+          {
+            "x": 2.374,
+            "y": 14.8697
+          },
+          {
+            "x": 2.5139,
+            "y": 14.9072
+          },
+          {
+            "x": 2.6576,
+            "y": 14.9261
+          },
+          {
+            "x": 2.8024,
+            "y": 14.9261
+          },
+          {
+            "x": 2.9461,
+            "y": 14.9072
+          },
+          {
+            "x": 3.086,
+            "y": 14.8697
+          },
+          {
+            "x": 3.2198,
+            "y": 14.8143
+          },
+          {
+            "x": 3.3453,
+            "y": 14.7419
+          },
+          {
+            "x": 3.4602,
+            "y": 14.6537
+          },
+          {
+            "x": 3.5627,
+            "y": 14.5512
+          },
+          {
+            "x": 3.6509,
+            "y": 14.4363
+          },
+          {
+            "x": 3.7233,
+            "y": 14.3108
+          },
+          {
+            "x": 3.7787,
+            "y": 14.177
+          },
+          {
+            "x": 3.8162,
+            "y": 14.0371
+          },
+          {
+            "x": 3.8351,
+            "y": 13.8934
+          },
+          {
+            "x": 3.8351,
+            "y": 13.7486
+          },
+          {
+            "x": 3.8162,
+            "y": 13.6049
+          },
+          {
+            "x": 3.7787,
+            "y": 13.465
+          },
+          {
+            "x": 3.7233,
+            "y": 13.3312
+          },
+          {
+            "x": 3.6509,
+            "y": 13.2057
+          },
+          {
+            "x": 3.5627,
+            "y": 13.0908
+          },
+          {
+            "x": 3.4602,
+            "y": 12.9883
+          },
+          {
+            "x": 3.3453,
+            "y": 12.9001
+          },
+          {
+            "x": 3.2198,
+            "y": 12.8277
+          },
+          {
+            "x": 3.086,
+            "y": 12.7723
+          },
+          {
+            "x": 2.9461,
+            "y": 12.7348
+          },
+          {
+            "x": 2.8024,
+            "y": 12.7159
+          },
+          {
+            "x": 2.6576,
+            "y": 12.7159
+          },
+          {
+            "x": 2.5139,
+            "y": 12.7348
+          },
+          {
+            "x": 2.374,
+            "y": 12.7723
+          },
+          {
+            "x": 2.2402,
+            "y": 12.8277
+          },
+          {
+            "x": 2.1147,
+            "y": 12.9001
+          },
+          {
+            "x": 1.9998,
+            "y": 12.9883
+          },
+          {
+            "x": 1.8973,
+            "y": 13.0908
+          },
+          {
+            "x": 1.8091,
+            "y": 13.2057
+          },
+          {
+            "x": 1.7367,
+            "y": 13.3312
+          },
+          {
+            "x": 1.6813,
+            "y": 13.465
+          },
+          {
+            "x": 1.6438,
+            "y": 13.6049
+          },
+          {
+            "x": 1.6249,
+            "y": 13.7486
+          }
+        ],
+        [
+          {
+            "x": 4.1646,
+            "y": 12.8
+          },
+          {
+            "x": 4.1646,
+            "y": 14.842
+          },
+          {
+            "x": 4.1806,
+            "y": 14.8807
+          },
+          {
+            "x": 4.2103,
+            "y": 14.9104
+          },
+          {
+            "x": 4.249,
+            "y": 14.9264
+          },
+          {
+            "x": 6.291,
+            "y": 14.9264
+          },
+          {
+            "x": 6.3297,
+            "y": 14.9104
+          },
+          {
+            "x": 6.3594,
+            "y": 14.8807
+          },
+          {
+            "x": 6.3754,
+            "y": 14.842
+          },
+          {
+            "x": 6.3754,
+            "y": 14.03
+          },
+          {
+            "x": 7.1946,
+            "y": 14.03
+          },
+          {
+            "x": 7.1946,
+            "y": 14.292
+          },
+          {
+            "x": 7.2106,
+            "y": 14.3307
+          },
+          {
+            "x": 7.2403,
+            "y": 14.3604
+          },
+          {
+            "x": 7.279,
+            "y": 14.3764
+          },
+          {
+            "x": 8.121,
+            "y": 14.3764
+          },
+          {
+            "x": 8.1597,
+            "y": 14.3604
+          },
+          {
+            "x": 8.1894,
+            "y": 14.3307
+          },
+          {
+            "x": 8.2054,
+            "y": 14.292
+          },
+          {
+            "x": 8.2054,
+            "y": 13.35
+          },
+          {
+            "x": 8.1894,
+            "y": 13.3113
+          },
+          {
+            "x": 8.1597,
+            "y": 13.2816
+          },
+          {
+            "x": 8.121,
+            "y": 13.2656
+          },
+          {
+            "x": 7.279,
+            "y": 13.2656
+          },
+          {
+            "x": 7.2403,
+            "y": 13.2816
+          },
+          {
+            "x": 7.2106,
+            "y": 13.3113
+          },
+          {
+            "x": 7.1946,
+            "y": 13.35
+          },
+          {
+            "x": 7.1946,
+            "y": 13.57
+          },
+          {
+            "x": 6.3754,
+            "y": 13.57
+          },
+          {
+            "x": 6.3754,
+            "y": 12.8
+          },
+          {
+            "x": 6.3594,
+            "y": 12.7613
+          },
+          {
+            "x": 6.3297,
+            "y": 12.7316
+          },
+          {
+            "x": 6.291,
+            "y": 12.7156
+          },
+          {
+            "x": 4.249,
+            "y": 12.7156
+          },
+          {
+            "x": 4.2103,
+            "y": 12.7316
+          },
+          {
+            "x": 4.1806,
+            "y": 12.7613
+          },
+          {
+            "x": 4.1646,
+            "y": 12.8
+          }
+        ],
+        [
+          {
+            "x": 9.1054,
+            "y": 23.2722
+          },
+          {
+            "x": 9.1054,
+            "y": 23.4498
+          },
+          {
+            "x": 9.1286,
+            "y": 23.6258
+          },
+          {
+            "x": 9.1745,
+            "y": 23.7974
+          },
+          {
+            "x": 9.2425,
+            "y": 23.9614
+          },
+          {
+            "x": 9.3313,
+            "y": 24.1152
+          },
+          {
+            "x": 9.4394,
+            "y": 24.2561
+          },
+          {
+            "x": 9.5649,
+            "y": 24.3816
+          },
+          {
+            "x": 9.7058,
+            "y": 24.4897
+          },
+          {
+            "x": 9.8596,
+            "y": 24.5785
+          },
+          {
+            "x": 10.0236,
+            "y": 24.6465
+          },
+          {
+            "x": 10.1952,
+            "y": 24.6924
+          },
+          {
+            "x": 10.3712,
+            "y": 24.7156
+          },
+          {
+            "x": 10.5488,
+            "y": 24.7156
+          },
+          {
+            "x": 10.7248,
+            "y": 24.6924
+          },
+          {
+            "x": 10.8964,
+            "y": 24.6465
+          },
+          {
+            "x": 11.0604,
+            "y": 24.5785
+          },
+          {
+            "x": 11.2142,
+            "y": 24.4897
+          },
+          {
+            "x": 11.3551,
+            "y": 24.3816
+          },
+          {
+            "x": 11.4806,
+            "y": 24.2561
+          },
+          {
+            "x": 11.5887,
+            "y": 24.1152
+          },
+          {
+            "x": 11.6775,
+            "y": 23.9614
+          },
+          {
+            "x": 11.7455,
+            "y": 23.7974
+          },
+          {
+            "x": 11.7914,
+            "y": 23.6258
+          },
+          {
+            "x": 11.8146,
+            "y": 23.4498
+          },
+          {
+            "x": 11.8146,
+            "y": 23.2722
+          },
+          {
+            "x": 11.7914,
+            "y": 23.0962
+          },
+          {
+            "x": 11.7455,
+            "y": 22.9246
+          },
+          {
+            "x": 11.6775,
+            "y": 22.7606
+          },
+          {
+            "x": 11.5887,
+            "y": 22.6068
+          },
+          {
+            "x": 11.4806,
+            "y": 22.4659
+          },
+          {
+            "x": 11.3551,
+            "y": 22.3404
+          },
+          {
+            "x": 11.2142,
+            "y": 22.2323
+          },
+          {
+            "x": 11.0604,
+            "y": 22.1435
+          },
+          {
+            "x": 10.8964,
+            "y": 22.0755
+          },
+          {
+            "x": 10.7248,
+            "y": 22.0296
+          },
+          {
+            "x": 10.5488,
+            "y": 22.0064
+          },
+          {
+            "x": 10.3712,
+            "y": 22.0064
+          },
+          {
+            "x": 10.1952,
+            "y": 22.0296
+          },
+          {
+            "x": 10.0236,
+            "y": 22.0755
+          },
+          {
+            "x": 9.8596,
+            "y": 22.1435
+          },
+          {
+            "x": 9.7058,
+            "y": 22.2323
+          },
+          {
+            "x": 9.5649,
+            "y": 22.3404
+          },
+          {
+            "x": 9.4394,
+            "y": 22.4659
+          },
+          {
+            "x": 9.3313,
+            "y": 22.6068
+          },
+          {
+            "x": 9.2425,
+            "y": 22.7606
+          },
+          {
+            "x": 9.1745,
+            "y": 22.9246
+          },
+          {
+            "x": 9.1286,
+            "y": 23.0962
+          },
+          {
+            "x": 9.1054,
+            "y": 23.2722
+          }
+        ],
+        [
+          {
+            "x": 12.7946,
+            "y": 1.75
+          },
+          {
+            "x": 12.7946,
+            "y": 2.692
+          },
+          {
+            "x": 12.8106,
+            "y": 2.7307
+          },
+          {
+            "x": 12.8403,
+            "y": 2.7604
+          },
+          {
+            "x": 12.879,
+            "y": 2.7764
+          },
+          {
+            "x": 12.9055,
+            "y": 2.7764
+          },
+          {
+            "x": 12.8582,
+            "y": 2.8584
+          },
+          {
+            "x": 12.8332,
+            "y": 2.9517
+          },
+          {
+            "x": 12.8332,
+            "y": 3.0483
+          },
+          {
+            "x": 12.8582,
+            "y": 3.1416
+          },
+          {
+            "x": 12.9065,
+            "y": 3.2252
+          },
+          {
+            "x": 12.9748,
+            "y": 3.2935
+          },
+          {
+            "x": 13.0584,
+            "y": 3.3418
+          },
+          {
+            "x": 13.1517,
+            "y": 3.3668
+          },
+          {
+            "x": 13.2483,
+            "y": 3.3668
+          },
+          {
+            "x": 13.3416,
+            "y": 3.3418
+          },
+          {
+            "x": 13.4252,
+            "y": 3.2935
+          },
+          {
+            "x": 13.4935,
+            "y": 3.2252
+          },
+          {
+            "x": 13.5418,
+            "y": 3.1416
+          },
+          {
+            "x": 13.5668,
+            "y": 3.0483
+          },
+          {
+            "x": 13.5668,
+            "y": 2.9517
+          },
+          {
+            "x": 13.5418,
+            "y": 2.8584
+          },
+          {
+            "x": 13.4945,
+            "y": 2.7764
+          },
+          {
+            "x": 13.721,
+            "y": 2.7764
+          },
+          {
+            "x": 13.7597,
+            "y": 2.7604
+          },
+          {
+            "x": 13.7894,
+            "y": 2.7307
+          },
+          {
+            "x": 13.8054,
+            "y": 2.692
+          },
+          {
+            "x": 13.8054,
+            "y": 1.75
+          },
+          {
+            "x": 13.7894,
+            "y": 1.7113
+          },
+          {
+            "x": 13.7597,
+            "y": 1.6816
+          },
+          {
+            "x": 13.721,
+            "y": 1.6656
+          },
+          {
+            "x": 12.879,
+            "y": 1.6656
+          },
+          {
+            "x": 12.8403,
+            "y": 1.6816
+          },
+          {
+            "x": 12.8106,
+            "y": 1.7113
+          },
+          {
+            "x": 12.7946,
+            "y": 1.75
+          }
+        ],
+        [
+          {
+            "x": 14.1854,
+            "y": 23.2722
+          },
+          {
+            "x": 14.1854,
+            "y": 23.4498
+          },
+          {
+            "x": 14.2086,
+            "y": 23.6258
+          },
+          {
+            "x": 14.2545,
+            "y": 23.7974
+          },
+          {
+            "x": 14.3225,
+            "y": 23.9614
+          },
+          {
+            "x": 14.4113,
+            "y": 24.1152
+          },
+          {
+            "x": 14.5194,
+            "y": 24.2561
+          },
+          {
+            "x": 14.6449,
+            "y": 24.3816
+          },
+          {
+            "x": 14.7858,
+            "y": 24.4897
+          },
+          {
+            "x": 14.9396,
+            "y": 24.5785
+          },
+          {
+            "x": 15.1036,
+            "y": 24.6465
+          },
+          {
+            "x": 15.2752,
+            "y": 24.6924
+          },
+          {
+            "x": 15.4512,
+            "y": 24.7156
+          },
+          {
+            "x": 15.6288,
+            "y": 24.7156
+          },
+          {
+            "x": 15.8048,
+            "y": 24.6924
+          },
+          {
+            "x": 15.9764,
+            "y": 24.6465
+          },
+          {
+            "x": 16.1404,
+            "y": 24.5785
+          },
+          {
+            "x": 16.2942,
+            "y": 24.4897
+          },
+          {
+            "x": 16.4351,
+            "y": 24.3816
+          },
+          {
+            "x": 16.5606,
+            "y": 24.2561
+          },
+          {
+            "x": 16.6687,
+            "y": 24.1152
+          },
+          {
+            "x": 16.7575,
+            "y": 23.9614
+          },
+          {
+            "x": 16.8255,
+            "y": 23.7974
+          },
+          {
+            "x": 16.8714,
+            "y": 23.6258
+          },
+          {
+            "x": 16.8946,
+            "y": 23.4498
+          },
+          {
+            "x": 16.8946,
+            "y": 23.2722
+          },
+          {
+            "x": 16.8714,
+            "y": 23.0962
+          },
+          {
+            "x": 16.8255,
+            "y": 22.9246
+          },
+          {
+            "x": 16.7575,
+            "y": 22.7606
+          },
+          {
+            "x": 16.6687,
+            "y": 22.6068
+          },
+          {
+            "x": 16.5606,
+            "y": 22.4659
+          },
+          {
+            "x": 16.4351,
+            "y": 22.3404
+          },
+          {
+            "x": 16.2942,
+            "y": 22.2323
+          },
+          {
+            "x": 16.1404,
+            "y": 22.1435
+          },
+          {
+            "x": 15.9764,
+            "y": 22.0755
+          },
+          {
+            "x": 15.8048,
+            "y": 22.0296
+          },
+          {
+            "x": 15.6288,
+            "y": 22.0064
+          },
+          {
+            "x": 15.4512,
+            "y": 22.0064
+          },
+          {
+            "x": 15.2752,
+            "y": 22.0296
+          },
+          {
+            "x": 15.1036,
+            "y": 22.0755
+          },
+          {
+            "x": 14.9396,
+            "y": 22.1435
+          },
+          {
+            "x": 14.7858,
+            "y": 22.2323
+          },
+          {
+            "x": 14.6449,
+            "y": 22.3404
+          },
+          {
+            "x": 14.5194,
+            "y": 22.4659
+          },
+          {
+            "x": 14.4113,
+            "y": 22.6068
+          },
+          {
+            "x": 14.3225,
+            "y": 22.7606
+          },
+          {
+            "x": 14.2545,
+            "y": 22.9246
+          },
+          {
+            "x": 14.2086,
+            "y": 23.0962
+          },
+          {
+            "x": 14.1854,
+            "y": 23.2722
+          }
+        ],
+        [
+          {
+            "x": 15.886,
+            "y": 5.4418
+          },
+          {
+            "x": 15.886,
+            "y": 6.9802
+          },
+          {
+            "x": 15.9136,
+            "y": 7.0651
+          },
+          {
+            "x": 15.9661,
+            "y": 7.1374
+          },
+          {
+            "x": 16.0384,
+            "y": 7.1899
+          },
+          {
+            "x": 16.1233,
+            "y": 7.2175
+          },
+          {
+            "x": 16.2127,
+            "y": 7.2175
+          },
+          {
+            "x": 16.2976,
+            "y": 7.1899
+          },
+          {
+            "x": 16.3699,
+            "y": 7.1374
+          },
+          {
+            "x": 16.4224,
+            "y": 7.0651
+          },
+          {
+            "x": 16.45,
+            "y": 6.9802
+          },
+          {
+            "x": 16.45,
+            "y": 5.4418
+          },
+          {
+            "x": 16.43,
+            "y": 5.3803
+          },
+          {
+            "x": 16.43,
+            "y": 5.0953
+          },
+          {
+            "x": 16.7488,
+            "y": 4.7764
+          },
+          {
+            "x": 17.171,
+            "y": 4.7764
+          },
+          {
+            "x": 17.2097,
+            "y": 4.7604
+          },
+          {
+            "x": 17.2394,
+            "y": 4.7307
+          },
+          {
+            "x": 17.2554,
+            "y": 4.692
+          },
+          {
+            "x": 17.2554,
+            "y": 3.75
+          },
+          {
+            "x": 17.2394,
+            "y": 3.7113
+          },
+          {
+            "x": 17.2097,
+            "y": 3.6816
+          },
+          {
+            "x": 17.171,
+            "y": 3.6656
+          },
+          {
+            "x": 16.329,
+            "y": 3.6656
+          },
+          {
+            "x": 16.2903,
+            "y": 3.6816
+          },
+          {
+            "x": 16.2606,
+            "y": 3.7113
+          },
+          {
+            "x": 16.2446,
+            "y": 3.75
+          },
+          {
+            "x": 16.2446,
+            "y": 4.6302
+          },
+          {
+            "x": 16.0374,
+            "y": 4.8374
+          },
+          {
+            "x": 16.0088,
+            "y": 4.8722
+          },
+          {
+            "x": 15.9875,
+            "y": 4.912
+          },
+          {
+            "x": 15.9744,
+            "y": 4.9551
+          },
+          {
+            "x": 15.97,
+            "y": 5
+          },
+          {
+            "x": 15.97,
+            "y": 5.2818
+          },
+          {
+            "x": 15.9661,
+            "y": 5.2846
+          },
+          {
+            "x": 15.9136,
+            "y": 5.3569
+          },
+          {
+            "x": 15.886,
+            "y": 5.4418
+          }
+        ],
+        [
+          {
+            "x": 16.4332,
+            "y": 7.5517
+          },
+          {
+            "x": 16.4332,
+            "y": 7.6483
+          },
+          {
+            "x": 16.4582,
+            "y": 7.7416
+          },
+          {
+            "x": 16.5065,
+            "y": 7.8252
+          },
+          {
+            "x": 16.5748,
+            "y": 7.8935
+          },
+          {
+            "x": 16.6584,
+            "y": 7.9418
+          },
+          {
+            "x": 16.7517,
+            "y": 7.9668
+          },
+          {
+            "x": 16.8483,
+            "y": 7.9668
+          },
+          {
+            "x": 16.9416,
+            "y": 7.9418
+          },
+          {
+            "x": 17.0252,
+            "y": 7.8935
+          },
+          {
+            "x": 17.0935,
+            "y": 7.8252
+          },
+          {
+            "x": 17.1418,
+            "y": 7.7416
+          },
+          {
+            "x": 17.1668,
+            "y": 7.6483
+          },
+          {
+            "x": 17.1668,
+            "y": 7.5517
+          },
+          {
+            "x": 17.1418,
+            "y": 7.4584
+          },
+          {
+            "x": 17.0935,
+            "y": 7.3748
+          },
+          {
+            "x": 17.03,
+            "y": 7.3112
+          },
+          {
+            "x": 17.03,
+            "y": 7.1028
+          },
+          {
+            "x": 17.0574,
+            "y": 7.0651
+          },
+          {
+            "x": 17.085,
+            "y": 6.9802
+          },
+          {
+            "x": 17.085,
+            "y": 5.4418
+          },
+          {
+            "x": 17.0574,
+            "y": 5.3569
+          },
+          {
+            "x": 17.0049,
+            "y": 5.2846
+          },
+          {
+            "x": 16.9326,
+            "y": 5.2321
+          },
+          {
+            "x": 16.8477,
+            "y": 5.2045
+          },
+          {
+            "x": 16.7583,
+            "y": 5.2045
+          },
+          {
+            "x": 16.6734,
+            "y": 5.2321
+          },
+          {
+            "x": 16.6011,
+            "y": 5.2846
+          },
+          {
+            "x": 16.5486,
+            "y": 5.3569
+          },
+          {
+            "x": 16.521,
+            "y": 5.4418
+          },
+          {
+            "x": 16.521,
+            "y": 6.9802
+          },
+          {
+            "x": 16.5486,
+            "y": 7.0651
+          },
+          {
+            "x": 16.57,
+            "y": 7.0945
+          },
+          {
+            "x": 16.57,
+            "y": 7.3112
+          },
+          {
+            "x": 16.5065,
+            "y": 7.3748
+          },
+          {
+            "x": 16.4582,
+            "y": 7.4584
+          },
+          {
+            "x": 16.4332,
+            "y": 7.5517
+          }
+        ],
+        [
+          {
+            "x": 17.156,
+            "y": 5.4418
+          },
+          {
+            "x": 17.156,
+            "y": 6.9802
+          },
+          {
+            "x": 17.1836,
+            "y": 7.0651
+          },
+          {
+            "x": 17.2361,
+            "y": 7.1374
+          },
+          {
+            "x": 17.3084,
+            "y": 7.1899
+          },
+          {
+            "x": 17.3933,
+            "y": 7.2175
+          },
+          {
+            "x": 17.4827,
+            "y": 7.2175
+          },
+          {
+            "x": 17.5676,
+            "y": 7.1899
+          },
+          {
+            "x": 17.6399,
+            "y": 7.1374
+          },
+          {
+            "x": 17.6924,
+            "y": 7.0651
+          },
+          {
+            "x": 17.72,
+            "y": 6.9802
+          },
+          {
+            "x": 17.72,
+            "y": 5.6053
+          },
+          {
+            "x": 19.5626,
+            "y": 3.7626
+          },
+          {
+            "x": 19.5912,
+            "y": 3.7278
+          },
+          {
+            "x": 19.6125,
+            "y": 3.688
+          },
+          {
+            "x": 19.6256,
+            "y": 3.6449
+          },
+          {
+            "x": 19.6295,
+            "y": 3.6054
+          },
+          {
+            "x": 20.271,
+            "y": 3.6054
+          },
+          {
+            "x": 20.3097,
+            "y": 3.5894
+          },
+          {
+            "x": 20.3394,
+            "y": 3.5597
+          },
+          {
+            "x": 20.3554,
+            "y": 3.521
+          },
+          {
+            "x": 20.3554,
+            "y": 0.679
+          },
+          {
+            "x": 20.3394,
+            "y": 0.6403
+          },
+          {
+            "x": 20.3097,
+            "y": 0.6106
+          },
+          {
+            "x": 20.271,
+            "y": 0.5946
+          },
+          {
+            "x": 18.729,
+            "y": 0.5946
+          },
+          {
+            "x": 18.6903,
+            "y": 0.6106
+          },
+          {
+            "x": 18.6606,
+            "y": 0.6403
+          },
+          {
+            "x": 18.6446,
+            "y": 0.679
+          },
+          {
+            "x": 18.6446,
+            "y": 3.521
+          },
+          {
+            "x": 18.6606,
+            "y": 3.5597
+          },
+          {
+            "x": 18.6903,
+            "y": 3.5894
+          },
+          {
+            "x": 18.729,
+            "y": 3.6054
+          },
+          {
+            "x": 19.0693,
+            "y": 3.6054
+          },
+          {
+            "x": 17.4702,
+            "y": 5.2045
+          },
+          {
+            "x": 17.3933,
+            "y": 5.2045
+          },
+          {
+            "x": 17.3084,
+            "y": 5.2321
+          },
+          {
+            "x": 17.2361,
+            "y": 5.2846
+          },
+          {
+            "x": 17.1836,
+            "y": 5.3569
+          },
+          {
+            "x": 17.156,
+            "y": 5.4418
+          }
+        ],
+        [
+          {
+            "x": 20.6332,
+            "y": 3.3517
+          },
+          {
+            "x": 20.6332,
+            "y": 3.4483
+          },
+          {
+            "x": 20.6582,
+            "y": 3.5416
+          },
+          {
+            "x": 20.7065,
+            "y": 3.6252
+          },
+          {
+            "x": 20.7748,
+            "y": 3.6935
+          },
+          {
+            "x": 20.8584,
+            "y": 3.7418
+          },
+          {
+            "x": 20.9517,
+            "y": 3.7668
+          },
+          {
+            "x": 21.0483,
+            "y": 3.7668
+          },
+          {
+            "x": 21.1416,
+            "y": 3.7418
+          },
+          {
+            "x": 21.2252,
+            "y": 3.6935
+          },
+          {
+            "x": 21.2935,
+            "y": 3.6252
+          },
+          {
+            "x": 21.305,
+            "y": 3.6054
+          },
+          {
+            "x": 22.771,
+            "y": 3.6054
+          },
+          {
+            "x": 22.8097,
+            "y": 3.5894
+          },
+          {
+            "x": 22.8394,
+            "y": 3.5597
+          },
+          {
+            "x": 22.8554,
+            "y": 3.521
+          },
+          {
+            "x": 22.8554,
+            "y": 0.679
+          },
+          {
+            "x": 22.8394,
+            "y": 0.6403
+          },
+          {
+            "x": 22.8097,
+            "y": 0.6106
+          },
+          {
+            "x": 22.771,
+            "y": 0.5946
+          },
+          {
+            "x": 21.229,
+            "y": 0.5946
+          },
+          {
+            "x": 21.1903,
+            "y": 0.6106
+          },
+          {
+            "x": 21.1606,
+            "y": 0.6403
+          },
+          {
+            "x": 21.1446,
+            "y": 0.679
+          },
+          {
+            "x": 21.1446,
+            "y": 1.9302
+          },
+          {
+            "x": 20.8374,
+            "y": 2.2374
+          },
+          {
+            "x": 20.8088,
+            "y": 2.2722
+          },
+          {
+            "x": 20.7875,
+            "y": 2.312
+          },
+          {
+            "x": 20.7744,
+            "y": 2.3551
+          },
+          {
+            "x": 20.77,
+            "y": 2.4
+          },
+          {
+            "x": 20.77,
+            "y": 3.1112
+          },
+          {
+            "x": 20.7065,
+            "y": 3.1748
+          },
+          {
+            "x": 20.6582,
+            "y": 3.2584
+          },
+          {
+            "x": 20.6332,
+            "y": 3.3517
+          }
+        ],
+        [
+          {
+            "x": 22.8946,
+            "y": 7.1
+          },
+          {
+            "x": 22.8946,
+            "y": 8.042
+          },
+          {
+            "x": 22.9106,
+            "y": 8.0807
+          },
+          {
+            "x": 22.9403,
+            "y": 8.1104
+          },
+          {
+            "x": 22.979,
+            "y": 8.1264
+          },
+          {
+            "x": 23.821,
+            "y": 8.1264
+          },
+          {
+            "x": 23.8597,
+            "y": 8.1104
+          },
+          {
+            "x": 23.8894,
+            "y": 8.0807
+          },
+          {
+            "x": 23.9054,
+            "y": 8.042
+          },
+          {
+            "x": 23.9054,
+            "y": 7.8838
+          },
+          {
+            "x": 23.965,
+            "y": 7.8838
+          },
+          {
+            "x": 23.9748,
+            "y": 7.8935
+          },
+          {
+            "x": 24.0584,
+            "y": 7.9418
+          },
+          {
+            "x": 24.1517,
+            "y": 7.9668
+          },
+          {
+            "x": 24.2483,
+            "y": 7.9668
+          },
+          {
+            "x": 24.3416,
+            "y": 7.9418
+          },
+          {
+            "x": 24.4252,
+            "y": 7.8935
+          },
+          {
+            "x": 24.4935,
+            "y": 7.8252
+          },
+          {
+            "x": 24.5418,
+            "y": 7.7416
+          },
+          {
+            "x": 24.5668,
+            "y": 7.6483
+          },
+          {
+            "x": 24.5668,
+            "y": 7.5517
+          },
+          {
+            "x": 24.5418,
+            "y": 7.4584
+          },
+          {
+            "x": 24.4935,
+            "y": 7.3748
+          },
+          {
+            "x": 24.4252,
+            "y": 7.3065
+          },
+          {
+            "x": 24.3416,
+            "y": 7.2582
+          },
+          {
+            "x": 24.2483,
+            "y": 7.2332
+          },
+          {
+            "x": 24.1517,
+            "y": 7.2332
+          },
+          {
+            "x": 24.0584,
+            "y": 7.2582
+          },
+          {
+            "x": 23.9748,
+            "y": 7.3065
+          },
+          {
+            "x": 23.965,
+            "y": 7.3162
+          },
+          {
+            "x": 23.9054,
+            "y": 7.3162
+          },
+          {
+            "x": 23.9054,
+            "y": 7.1
+          },
+          {
+            "x": 23.8894,
+            "y": 7.0613
+          },
+          {
+            "x": 23.8597,
+            "y": 7.0316
+          },
+          {
+            "x": 23.821,
+            "y": 7.0156
+          },
+          {
+            "x": 22.979,
+            "y": 7.0156
+          },
+          {
+            "x": 22.9403,
+            "y": 7.0316
+          },
+          {
+            "x": 22.9106,
+            "y": 7.0613
+          },
+          {
+            "x": 22.8946,
+            "y": 7.1
+          }
+        ],
+        [
+          {
+            "x": 22.8946,
+            "y": 9.6
+          },
+          {
+            "x": 22.8946,
+            "y": 10.542
+          },
+          {
+            "x": 22.9106,
+            "y": 10.5807
+          },
+          {
+            "x": 22.9403,
+            "y": 10.6104
+          },
+          {
+            "x": 22.979,
+            "y": 10.6264
+          },
+          {
+            "x": 23.821,
+            "y": 10.6264
+          },
+          {
+            "x": 23.8597,
+            "y": 10.6104
+          },
+          {
+            "x": 23.8894,
+            "y": 10.5807
+          },
+          {
+            "x": 23.9054,
+            "y": 10.542
+          },
+          {
+            "x": 23.9054,
+            "y": 10.2838
+          },
+          {
+            "x": 23.965,
+            "y": 10.2838
+          },
+          {
+            "x": 23.9748,
+            "y": 10.2935
+          },
+          {
+            "x": 24.0584,
+            "y": 10.3418
+          },
+          {
+            "x": 24.1517,
+            "y": 10.3668
+          },
+          {
+            "x": 24.2483,
+            "y": 10.3668
+          },
+          {
+            "x": 24.3416,
+            "y": 10.3418
+          },
+          {
+            "x": 24.4252,
+            "y": 10.2935
+          },
+          {
+            "x": 24.4935,
+            "y": 10.2252
+          },
+          {
+            "x": 24.5418,
+            "y": 10.1416
+          },
+          {
+            "x": 24.5668,
+            "y": 10.0483
+          },
+          {
+            "x": 24.5668,
+            "y": 9.9517
+          },
+          {
+            "x": 24.5418,
+            "y": 9.8584
+          },
+          {
+            "x": 24.4935,
+            "y": 9.7748
+          },
+          {
+            "x": 24.4252,
+            "y": 9.7065
+          },
+          {
+            "x": 24.3416,
+            "y": 9.6582
+          },
+          {
+            "x": 24.2483,
+            "y": 9.6332
+          },
+          {
+            "x": 24.1517,
+            "y": 9.6332
+          },
+          {
+            "x": 24.0584,
+            "y": 9.6582
+          },
+          {
+            "x": 23.9748,
+            "y": 9.7065
+          },
+          {
+            "x": 23.965,
+            "y": 9.7162
+          },
+          {
+            "x": 23.9054,
+            "y": 9.7162
+          },
+          {
+            "x": 23.9054,
+            "y": 9.6
+          },
+          {
+            "x": 23.8894,
+            "y": 9.5613
+          },
+          {
+            "x": 23.8597,
+            "y": 9.5316
+          },
+          {
+            "x": 23.821,
+            "y": 9.5156
+          },
+          {
+            "x": 22.979,
+            "y": 9.5156
+          },
+          {
+            "x": 22.9403,
+            "y": 9.5316
+          },
+          {
+            "x": 22.9106,
+            "y": 9.5613
+          },
+          {
+            "x": 22.8946,
+            "y": 9.6
+          }
+        ]
+      ],
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 0.3001,
+          "y": 26.0999
+        },
+        {
+          "x": 0.3001,
+          "y": 0.3001
+        },
+        {
+          "x": 27.2999,
+          "y": 0.3001
+        },
+        {
+          "x": 27.2999,
+          "y": 26.0999
+        },
+        {
+          "x": 0.3001,
+          "y": 26.0999
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "net": "GND",
+      "holes": [
+        [
+          {
+            "x": 4.1646,
+            "y": 12.8
+          },
+          {
+            "x": 4.1646,
+            "y": 14.842
+          },
+          {
+            "x": 4.1806,
+            "y": 14.8807
+          },
+          {
+            "x": 4.2103,
+            "y": 14.9104
+          },
+          {
+            "x": 4.249,
+            "y": 14.9264
+          },
+          {
+            "x": 6.291,
+            "y": 14.9264
+          },
+          {
+            "x": 6.3297,
+            "y": 14.9104
+          },
+          {
+            "x": 6.3594,
+            "y": 14.8807
+          },
+          {
+            "x": 6.3754,
+            "y": 14.842
+          },
+          {
+            "x": 6.3754,
+            "y": 12.8
+          },
+          {
+            "x": 6.3594,
+            "y": 12.7613
+          },
+          {
+            "x": 6.3297,
+            "y": 12.7316
+          },
+          {
+            "x": 6.291,
+            "y": 12.7156
+          },
+          {
+            "x": 4.249,
+            "y": 12.7156
+          },
+          {
+            "x": 4.2103,
+            "y": 12.7316
+          },
+          {
+            "x": 4.1806,
+            "y": 12.7613
+          },
+          {
+            "x": 4.1646,
+            "y": 12.8
+          }
+        ],
+        [
+          {
+            "x": 7.4332,
+            "y": 8.3517
+          },
+          {
+            "x": 7.4332,
+            "y": 8.4483
+          },
+          {
+            "x": 7.4582,
+            "y": 8.5416
+          },
+          {
+            "x": 7.5065,
+            "y": 8.6252
+          },
+          {
+            "x": 7.5748,
+            "y": 8.6935
+          },
+          {
+            "x": 7.6584,
+            "y": 8.7418
+          },
+          {
+            "x": 7.7517,
+            "y": 8.7668
+          },
+          {
+            "x": 7.8483,
+            "y": 8.7668
+          },
+          {
+            "x": 7.9416,
+            "y": 8.7418
+          },
+          {
+            "x": 8.0252,
+            "y": 8.6935
+          },
+          {
+            "x": 8.0888,
+            "y": 8.63
+          },
+          {
+            "x": 10.6,
+            "y": 8.63
+          },
+          {
+            "x": 10.6449,
+            "y": 8.6256
+          },
+          {
+            "x": 10.688,
+            "y": 8.6125
+          },
+          {
+            "x": 10.7278,
+            "y": 8.5912
+          },
+          {
+            "x": 10.7626,
+            "y": 8.5626
+          },
+          {
+            "x": 11.5584,
+            "y": 7.7668
+          },
+          {
+            "x": 11.6483,
+            "y": 7.7668
+          },
+          {
+            "x": 11.7416,
+            "y": 7.7418
+          },
+          {
+            "x": 11.8252,
+            "y": 7.6935
+          },
+          {
+            "x": 11.8935,
+            "y": 7.6252
+          },
+          {
+            "x": 11.9418,
+            "y": 7.5416
+          },
+          {
+            "x": 11.9668,
+            "y": 7.4483
+          },
+          {
+            "x": 11.9668,
+            "y": 7.3517
+          },
+          {
+            "x": 11.9418,
+            "y": 7.2584
+          },
+          {
+            "x": 11.8935,
+            "y": 7.1748
+          },
+          {
+            "x": 11.8252,
+            "y": 7.1065
+          },
+          {
+            "x": 11.7416,
+            "y": 7.0582
+          },
+          {
+            "x": 11.6483,
+            "y": 7.0332
+          },
+          {
+            "x": 11.5517,
+            "y": 7.0332
+          },
+          {
+            "x": 11.4584,
+            "y": 7.0582
+          },
+          {
+            "x": 11.3748,
+            "y": 7.1065
+          },
+          {
+            "x": 11.3065,
+            "y": 7.1748
+          },
+          {
+            "x": 11.2582,
+            "y": 7.2584
+          },
+          {
+            "x": 11.2332,
+            "y": 7.3517
+          },
+          {
+            "x": 11.2332,
+            "y": 7.4416
+          },
+          {
+            "x": 10.5047,
+            "y": 8.17
+          },
+          {
+            "x": 8.0888,
+            "y": 8.17
+          },
+          {
+            "x": 8.0252,
+            "y": 8.1065
+          },
+          {
+            "x": 7.9416,
+            "y": 8.0582
+          },
+          {
+            "x": 7.8483,
+            "y": 8.0332
+          },
+          {
+            "x": 7.7517,
+            "y": 8.0332
+          },
+          {
+            "x": 7.6584,
+            "y": 8.0582
+          },
+          {
+            "x": 7.5748,
+            "y": 8.1065
+          },
+          {
+            "x": 7.5065,
+            "y": 8.1748
+          },
+          {
+            "x": 7.4582,
+            "y": 8.2584
+          },
+          {
+            "x": 7.4332,
+            "y": 8.3517
+          }
+        ],
+        [
+          {
+            "x": 11.7951,
+            "y": 20.742
+          },
+          {
+            "x": 11.7951,
+            "y": 20.9
+          },
+          {
+            "x": 11.8157,
+            "y": 21.0566
+          },
+          {
+            "x": 11.8566,
+            "y": 21.2091
+          },
+          {
+            "x": 11.917,
+            "y": 21.3551
+          },
+          {
+            "x": 11.996,
+            "y": 21.4919
+          },
+          {
+            "x": 12.0922,
+            "y": 21.6172
+          },
+          {
+            "x": 12.2038,
+            "y": 21.7288
+          },
+          {
+            "x": 12.3291,
+            "y": 21.825
+          },
+          {
+            "x": 12.4659,
+            "y": 21.904
+          },
+          {
+            "x": 12.6119,
+            "y": 21.9644
+          },
+          {
+            "x": 12.7644,
+            "y": 22.0053
+          },
+          {
+            "x": 12.921,
+            "y": 22.0259
+          },
+          {
+            "x": 13.079,
+            "y": 22.0259
+          },
+          {
+            "x": 13.2356,
+            "y": 22.0053
+          },
+          {
+            "x": 13.3881,
+            "y": 21.9644
+          },
+          {
+            "x": 13.5341,
+            "y": 21.904
+          },
+          {
+            "x": 13.6709,
+            "y": 21.825
+          },
+          {
+            "x": 13.7962,
+            "y": 21.7288
+          },
+          {
+            "x": 13.9078,
+            "y": 21.6172
+          },
+          {
+            "x": 14.004,
+            "y": 21.4919
+          },
+          {
+            "x": 14.083,
+            "y": 21.3551
+          },
+          {
+            "x": 14.1434,
+            "y": 21.2091
+          },
+          {
+            "x": 14.1843,
+            "y": 21.0566
+          },
+          {
+            "x": 14.2049,
+            "y": 20.9
+          },
+          {
+            "x": 14.2049,
+            "y": 20.742
+          },
+          {
+            "x": 14.1843,
+            "y": 20.5854
+          },
+          {
+            "x": 14.1434,
+            "y": 20.4329
+          },
+          {
+            "x": 14.083,
+            "y": 20.2869
+          },
+          {
+            "x": 14.004,
+            "y": 20.1501
+          },
+          {
+            "x": 13.9078,
+            "y": 20.0248
+          },
+          {
+            "x": 13.7962,
+            "y": 19.9132
+          },
+          {
+            "x": 13.6709,
+            "y": 19.817
+          },
+          {
+            "x": 13.5341,
+            "y": 19.738
+          },
+          {
+            "x": 13.3881,
+            "y": 19.6776
+          },
+          {
+            "x": 13.2356,
+            "y": 19.6367
+          },
+          {
+            "x": 13.1486,
+            "y": 19.6253
+          },
+          {
+            "x": 13.115,
+            "y": 19.6008
+          },
+          {
+            "x": 13.0711,
+            "y": 19.5813
+          },
+          {
+            "x": 13.024,
+            "y": 19.5713
+          },
+          {
+            "x": 12.976,
+            "y": 19.5713
+          },
+          {
+            "x": 12.9289,
+            "y": 19.5813
+          },
+          {
+            "x": 12.885,
+            "y": 19.6008
+          },
+          {
+            "x": 12.8514,
+            "y": 19.6253
+          },
+          {
+            "x": 12.7644,
+            "y": 19.6367
+          },
+          {
+            "x": 12.6119,
+            "y": 19.6776
+          },
+          {
+            "x": 12.4659,
+            "y": 19.738
+          },
+          {
+            "x": 12.3291,
+            "y": 19.817
+          },
+          {
+            "x": 12.2038,
+            "y": 19.9132
+          },
+          {
+            "x": 12.0922,
+            "y": 20.0248
+          },
+          {
+            "x": 11.996,
+            "y": 20.1501
+          },
+          {
+            "x": 11.917,
+            "y": 20.2869
+          },
+          {
+            "x": 11.8566,
+            "y": 20.4329
+          },
+          {
+            "x": 11.8157,
+            "y": 20.5854
+          },
+          {
+            "x": 11.7951,
+            "y": 20.742
+          }
+        ],
+        [
+          {
+            "x": 16.4332,
+            "y": 7.5517
+          },
+          {
+            "x": 16.4332,
+            "y": 7.6483
+          },
+          {
+            "x": 16.4582,
+            "y": 7.7416
+          },
+          {
+            "x": 16.5065,
+            "y": 7.8252
+          },
+          {
+            "x": 16.5748,
+            "y": 7.8935
+          },
+          {
+            "x": 16.6584,
+            "y": 7.9418
+          },
+          {
+            "x": 16.7517,
+            "y": 7.9668
+          },
+          {
+            "x": 16.8483,
+            "y": 7.9668
+          },
+          {
+            "x": 16.9416,
+            "y": 7.9418
+          },
+          {
+            "x": 17.0252,
+            "y": 7.8935
+          },
+          {
+            "x": 17.0935,
+            "y": 7.8252
+          },
+          {
+            "x": 17.1418,
+            "y": 7.7416
+          },
+          {
+            "x": 17.1668,
+            "y": 7.6483
+          },
+          {
+            "x": 17.1668,
+            "y": 7.5584
+          },
+          {
+            "x": 20.9584,
+            "y": 3.7668
+          },
+          {
+            "x": 21.0483,
+            "y": 3.7668
+          },
+          {
+            "x": 21.1416,
+            "y": 3.7418
+          },
+          {
+            "x": 21.2252,
+            "y": 3.6935
+          },
+          {
+            "x": 21.2935,
+            "y": 3.6252
+          },
+          {
+            "x": 21.3418,
+            "y": 3.5416
+          },
+          {
+            "x": 21.3668,
+            "y": 3.4483
+          },
+          {
+            "x": 21.3668,
+            "y": 3.3517
+          },
+          {
+            "x": 21.3418,
+            "y": 3.2584
+          },
+          {
+            "x": 21.2935,
+            "y": 3.1748
+          },
+          {
+            "x": 21.2252,
+            "y": 3.1065
+          },
+          {
+            "x": 21.1416,
+            "y": 3.0582
+          },
+          {
+            "x": 21.0483,
+            "y": 3.0332
+          },
+          {
+            "x": 20.9517,
+            "y": 3.0332
+          },
+          {
+            "x": 20.8584,
+            "y": 3.0582
+          },
+          {
+            "x": 20.7748,
+            "y": 3.1065
+          },
+          {
+            "x": 20.7065,
+            "y": 3.1748
+          },
+          {
+            "x": 20.6582,
+            "y": 3.2584
+          },
+          {
+            "x": 20.6332,
+            "y": 3.3517
+          },
+          {
+            "x": 20.6332,
+            "y": 3.4416
+          },
+          {
+            "x": 16.8416,
+            "y": 7.2332
+          },
+          {
+            "x": 16.7517,
+            "y": 7.2332
+          },
+          {
+            "x": 16.6584,
+            "y": 7.2582
+          },
+          {
+            "x": 16.5748,
+            "y": 7.3065
+          },
+          {
+            "x": 16.5065,
+            "y": 7.3748
+          },
+          {
+            "x": 16.4582,
+            "y": 7.4584
+          },
+          {
+            "x": 16.4332,
+            "y": 7.5517
+          }
+        ]
+      ],
+      "layer": "B.Cu",
+      "points": [
+        {
+          "x": 0.3001,
+          "y": 26.0999
+        },
+        {
+          "x": 0.3001,
+          "y": 0.3001
+        },
+        {
+          "x": 27.2999,
+          "y": 0.3001
+        },
+        {
+          "x": 27.2999,
+          "y": 26.0999
+        },
+        {
+          "x": 0.3001,
+          "y": 26.0999
+        }
+      ]
+    }
+  ],
+  "traces": [
+    {
+      "id": "1",
+      "net": "XTAL_B",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 14.263,
+          "y": 6.210999999999999
+        },
+        {
+          "x": 14.263,
+          "y": 7.462999999999999
+        },
+        {
+          "x": 15.600000000000001,
+          "y": 8.8
+        },
+        {
+          "x": 18.2,
+          "y": 8.8
+        },
+        {
+          "x": 19.4,
+          "y": 7.6000000000000005
+        },
+        {
+          "x": 21.8,
+          "y": 7.6000000000000005
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "2",
+      "net": "XTAL_A",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 16.2,
+          "y": 12
+        },
+        {
+          "x": 16.2,
+          "y": 12.737499999999999
+        },
+        {
+          "x": 16.2625,
+          "y": 12.799999999999999
+        },
+        {
+          "x": 18.200000000000003,
+          "y": 12.799999999999999
+        },
+        {
+          "x": 21,
+          "y": 10
+        },
+        {
+          "x": 21.8,
+          "y": 10
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "3",
+      "net": "ROUT",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 21,
+          "y": 3.4000000000000004
+        },
+        {
+          "x": 21,
+          "y": 2.400000000000002
+        },
+        {
+          "x": 21.400000000000002,
+          "y": 2
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "4",
+      "net": "ROUT",
+      "layer": "B.Cu",
+      "points": [
+        {
+          "x": 16.8,
+          "y": 7.6000000000000005
+        },
+        {
+          "x": 21,
+          "y": 3.4000000000000004
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "5",
+      "net": "ROUT",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 16.8,
+          "y": 5.6000000000000005
+        },
+        {
+          "x": 16.8,
+          "y": 7.6000000000000005
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "6",
+      "net": "LOUT",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 17.400000000000002,
+          "y": 5.6000000000000005
+        },
+        {
+          "x": 19.400000000000002,
+          "y": 3.6000000000000005
+        },
+        {
+          "x": 19.400000000000002,
+          "y": 2
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "7",
+      "net": "AMI",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 10.4,
+          "y": 12
+        },
+        {
+          "x": 9.200000000000001,
+          "y": 13.2
+        },
+        {
+          "x": 9.200000000000001,
+          "y": 13.8
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "8",
+      "net": "AM_L",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 7.6000000000000005,
+          "y": 13.8
+        },
+        {
+          "x": 5.2,
+          "y": 13.8
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "9",
+      "net": "FMI",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 13,
+          "y": 11.4
+        },
+        {
+          "x": 13,
+          "y": 12.4
+        },
+        {
+          "x": 13.200000000000001,
+          "y": 12.600000000000001
+        },
+        {
+          "x": 13.200000000000001,
+          "y": 13.799999999999999
+        },
+        {
+          "x": 13,
+          "y": 14
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "10",
+      "net": "FM_ANT",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 13,
+          "y": 19.8
+        },
+        {
+          "x": 13,
+          "y": 15.4
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "11",
+      "net": "FM_ANT",
+      "layer": "B.Cu",
+      "points": [
+        {
+          "x": 13,
+          "y": 20.8
+        },
+        {
+          "x": 13,
+          "y": 19.8
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "12",
+      "net": "DBYP",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 16.2,
+          "y": 5.6000000000000005
+        },
+        {
+          "x": 16.2,
+          "y": 5.000000000000001
+        },
+        {
+          "x": 17,
+          "y": 4.2
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "13",
+      "net": "RADIO_INT",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 15.533,
+          "y": 11.381
+        },
+        {
+          "x": 15.533,
+          "y": 9.9955
+        },
+        {
+          "x": 15.4705,
+          "y": 9.933
+        },
+        {
+          "x": 3.6670000000000007,
+          "y": 9.933
+        },
+        {
+          "x": 3.2,
+          "y": 10.4
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "14",
+      "net": "RADIO_RST",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 7.800000000000001,
+          "y": 8.4
+        },
+        {
+          "x": 4.2,
+          "y": 8.4
+        },
+        {
+          "x": 3.2,
+          "y": 7.4
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "15",
+      "net": "RADIO_RST",
+      "layer": "B.Cu",
+      "points": [
+        {
+          "x": 11.600000000000001,
+          "y": 7.4
+        },
+        {
+          "x": 10.600000000000001,
+          "y": 8.4
+        },
+        {
+          "x": 7.800000000000001,
+          "y": 8.4
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "16",
+      "net": "RADIO_RST",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 11.722999999999999,
+          "y": 6.211
+        },
+        {
+          "x": 11.722999999999999,
+          "y": 7.277000000000003
+        },
+        {
+          "x": 11.600000000000001,
+          "y": 7.4
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "17",
+      "net": "I2C_SCL",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 13,
+          "y": 5.800000000000001
+        },
+        {
+          "x": 13,
+          "y": 7.600000000000001
+        },
+        {
+          "x": 12.200000000000001,
+          "y": 8.4
+        },
+        {
+          "x": 9.600000000000001,
+          "y": 8.4
+        },
+        {
+          "x": 6.600000000000001,
+          "y": 5.4
+        },
+        {
+          "x": 3.2,
+          "y": 5.4
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "18",
+      "net": "I2C_SDA",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 13.600000000000001,
+          "y": 5.6000000000000005
+        },
+        {
+          "x": 13.600000000000001,
+          "y": 4.800000000000001
+        },
+        {
+          "x": 11.200000000000001,
+          "y": 2.4000000000000004
+        },
+        {
+          "x": 3.2,
+          "y": 2.4000000000000004
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.25
+      }
+    },
+    {
+      "id": "19",
+      "net": "GND",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 13.200000000000001,
+          "y": 2.2
+        },
+        {
+          "x": 13.200000000000001,
+          "y": 3
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.356
+      }
+    },
+    {
+      "id": "20",
+      "net": "GND",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 23.400000000000002,
+          "y": 7.6000000000000005
+        },
+        {
+          "x": 24.200000000000003,
+          "y": 7.6000000000000005
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.356
+      }
+    },
+    {
+      "id": "21",
+      "net": "GND",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 23.400000000000002,
+          "y": 10
+        },
+        {
+          "x": 24.200000000000003,
+          "y": 10
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.356
+      }
+    },
+    {
+      "id": "22",
+      "net": "GND",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 12.357999999999999,
+          "y": 6.210999999999999
+        },
+        {
+          "x": 12.4,
+          "y": 6.168999999999998
+        },
+        {
+          "x": 12.4,
+          "y": 5
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.356
+      }
+    },
+    {
+      "id": "23",
+      "net": "GND",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 11.088,
+          "y": 6.211
+        },
+        {
+          "x": 11.076999999999998,
+          "y": 6.2
+        },
+        {
+          "x": 9.8,
+          "y": 6.2
+        },
+        {
+          "x": 9.811,
+          "y": 6.211
+        },
+        {
+          "x": 10.453,
+          "y": 6.211
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.356
+      }
+    },
+    {
+      "id": "24",
+      "net": "GND",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 11.088000000000001,
+          "y": 11.381
+        },
+        {
+          "x": 12.307000000000002,
+          "y": 12.600000000000001
+        },
+        {
+          "x": 12.4,
+          "y": 12.600000000000001
+        },
+        {
+          "x": 12.358,
+          "y": 12.558000000000002
+        },
+        {
+          "x": 12.358,
+          "y": 11.381
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.356
+      }
+    },
+    {
+      "id": "25",
+      "net": "GND",
+      "layer": "F.Cu",
+      "points": [
+        {
+          "x": 11.723,
+          "y": 11.381
+        },
+        {
+          "x": 12.4,
+          "y": 12.058
+        },
+        {
+          "x": 12.4,
+          "y": 12.600000000000001
+        }
+      ],
+      "widthProfile": {
+        "kind": "constant",
+        "widthMm": 0.356
+      }
+    }
+  ],
+  "designRules": {
+    "minViaDrill": 0.2,
+    "copperWeight": "1oz",
+    "minClearance": 0.1,
+    "minTraceWidth": 0.16,
+    "minViaAnnular": 0.125
+  },
+  "silkscreenItems": [],
+  "differentialImpedances": {},
+  "metadata": {
+    "author": "EasyGerber (easygerber.com)"
+  }
+}

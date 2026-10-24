@@ -1,0 +1,234 @@
+{
+ "C2765186": {
+  "ids": [
+   "J1"
+  ],
+  "empreinte": "USB-C-SMD_TYPE-C-16PIN-2MD-073",
+  "3d": false
+ },
+ "C23186": {
+  "ids": [
+   "R1",
+   "R2"
+  ],
+  "empreinte": "R0603",
+  "3d": false
+ },
+ "C2687116": {
+  "ids": [
+   "U1"
+  ],
+  "empreinte": "SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL",
+  "3d": false
+ },
+ "C14663": {
+  "ids": [
+   "C1",
+   "C5",
+   "C8",
+   "C14"
+  ],
+  "empreinte": "C0603",
+  "3d": false
+ },
+ "C6186": {
+  "ids": [
+   "U2"
+  ],
+  "empreinte": "SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR",
+  "3d": false
+ },
+ "C45783": {
+  "ids": [
+   "C2",
+   "C3"
+  ],
+  "empreinte": "C0805",
+  "3d": false
+ },
+ "C2913202": {
+  "ids": [
+   "U3"
+  ],
+  "empreinte": "WIRELM-SMD_ESP32-S3-WROOM-1",
+  "3d": false
+ },
+ "C440198": {
+  "ids": [
+   "C4",
+   "C13"
+  ],
+  "empreinte": "C0805",
+  "3d": false
+ },
+ "C17902": {
+  "ids": [
+   "R3"
+  ],
+  "empreinte": "R1206",
+  "3d": false
+ },
+ "C15849": {
+  "ids": [
+   "C6",
+   "C19",
+   "C15",
+   "C16"
+  ],
+  "empreinte": "C0603",
+  "3d": false
+ },
+ "C318884": {
+  "ids": [
+   "SW1",
+   "SW2"
+  ],
+  "empreinte": "SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5",
+  "3d": false
+ },
+ "C21190": {
+  "ids": [
+   "R4"
+  ],
+  "empreinte": "R0603",
+  "3d": false
+ },
+ "C2286": {
+  "ids": [
+   "D1"
+  ],
+  "empreinte": "LED-SMD_L1.6-W0.8-R-RD",
+  "3d": false
+ },
+ "C23162": {
+  "ids": [
+   "R5",
+   "R6"
+  ],
+  "empreinte": "R0603",
+  "3d": false
+ },
+ "C25803": {
+  "ids": [
+   "R8",
+   "R9",
+   "R7"
+  ],
+  "empreinte": "R0603",
+  "3d": false
+ },
+ "C492404": {
+  "ids": [
+   "J6"
+  ],
+  "empreinte": "HDR-TH_5P-P2.54-V-M",
+  "3d": false
+ },
+ "C5199798": {
+  "ids": [
+   "TP1",
+   "TP2",
+   "TP3",
+   "TP4",
+   "TP5",
+   "TP6",
+   "TP7",
+   "TP8",
+   "TP9",
+   "TP10",
+   "TP11",
+   "TP12",
+   "TP13",
+   "TP14",
+   "TP15",
+   "TP16",
+   "TP17",
+   "TP18",
+   "TP19"
+  ],
+  "empreinte": "SMD_RH-5015",
+  "3d": false
+ },
+ "C1526089": {
+  "ids": [
+   "U4"
+  ],
+  "empreinte": "SSOP-24_L8.7-W3.9-P0.64-LS6.0-BL",
+  "3d": false
+ },
+ "C5361379": {
+  "ids": [
+   "Y1"
+  ],
+  "empreinte": "CRYSTAL-SMD_L3.2-W1.5-1",
+  "3d": false
+ },
+ "C1653": {
+  "ids": [
+   "C11",
+   "C12"
+  ],
+  "empreinte": "C0603",
+  "3d": false
+ },
+ "C21122": {
+  "ids": [
+   "C7"
+  ],
+  "empreinte": "C0603",
+  "3d": false
+ },
+ "C5183768": {
+  "ids": [
+   "J2"
+  ],
+  "empreinte": "SMA-TH_SMA-RA-132135",
+  "3d": false
+ },
+ "C1588": {
+  "ids": [
+   "C9"
+  ],
+  "empreinte": "C0603",
+  "3d": false
+ },
+ "C1623": {
+  "ids": [
+   "C10",
+   "C17",
+   "C18"
+  ],
+  "empreinte": "C0603",
+  "3d": false
+ },
+ "C492401": {
+  "ids": [
+   "J3",
+   "J4",
+   "J5"
+  ],
+  "empreinte": "HDR-TH_2P-P2.54-V-M",
+  "3d": false
+ },
+ "C5122557": {
+  "ids": [
+   "U5"
+  ],
+  "empreinte": "SOP-16_L10.0-W3.9-P1.27-LS6.0-BL",
+  "3d": false
+ },
+ "C2155558": {
+  "ids": [
+   "U4"
+  ],
+  "empreinte": "SOIC-16_L9.9-W3.9-P1.27-LS6.0-BL",
+  "3d": false
+ },
+ "C496551": {
+  "ids": [
+   "J2"
+  ],
+  "empreinte": "SMA-TH_BWSMA-KWE-Z001",
+  "3d": false
+ }
+}

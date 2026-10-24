@@ -1,0 +1,5 @@
+(version 1)
+(rule "trou metallise - cuivre (fabricant)" (constraint hole_clearance (min 0.245mm)) (condition "A.isPlated()"))
+(rule "trou de composant (AISLER)" (constraint hole_size (min 0.495mm)) (condition "A.Type == 'Pad' && A.isPlated()"))
+(rule "couronne de composant (AISLER)" (constraint annular_width (min 0.295mm)) (condition "A.Type == 'Pad'"))
+(rule "trou non metallise (AISLER)" (constraint hole_size (min 0.495mm)) (condition "A.Type == 'Pad' && !A.isPlated()"))

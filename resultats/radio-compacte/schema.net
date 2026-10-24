@@ -1,0 +1,6729 @@
+(export
+	(version "E")
+	(design
+		(source "/tmp/claude-0/-home-claude/a74a14cb-1787-5557-95b8-25def8410e6c/scratchpad/radio-test/chaine/resultats/radio-compacte/carte.kicad_sch")
+		(date "2026-10-23T04:57:31")
+		(tool "Eeschema 10.0.7-10.0.7~ubuntu24.04.1")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "RADIONÉO carte radio — variante compacte (essai de réutilisation des blocs)")
+				(company "Exylia Project")
+				(rev "chaîne puzzle")
+				(date "2026-10-23")
+				(source "carte.kicad_sch")
+				(comment
+					(number "1")
+					(value "Schéma produit par la chaîne puzzle à partir de la carte : une étiquette = une liaison")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C1")
+			(value "100nF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C14663")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CC0603KRX7R9BB104")
+				(description "100nF (104) ±10% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C14663")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3da1b0bf-1436-545c-ae6d-0bb6190ec249")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "22uF")
+			(footprint "radioneo:C0805")
+			(fields
+				(field
+					(name "LCSC Part") "C45783")
+				(field
+					(name "Footprint") "radioneo:C0805")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL21A226MAQNNNE")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C45783")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4889ff0c-bcc3-5069-8899-73c465dc4672")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "22uF")
+			(footprint "radioneo:C0805")
+			(fields
+				(field
+					(name "LCSC Part") "C45783")
+				(field
+					(name "Footprint") "radioneo:C0805")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL21A226MAQNNNE")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C45783")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "06a1309d-2c6b-5451-897e-8ec40c423547")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C4")
+			(value "10uF")
+			(footprint "radioneo:C0805")
+			(fields
+				(field
+					(name "LCSC Part") "C440198")
+				(field
+					(name "Footprint") "radioneo:C0805")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "GRM21BR61H106KE43L")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C440198")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d4f2feda-2bc3-58d8-a2ee-48fe3972c0e9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C5")
+			(value "100nF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C14663")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CC0603KRX7R9BB104")
+				(description "100nF (104) ±10% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C14663")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8daf4b7b-7de1-5cf5-89de-bbfa68b727ad")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C6")
+			(value "1uF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C15849")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10A105KB8NNNC")
+				(description "1uF (105) ±10% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C15849")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9f4881b6-6a21-55b9-ac89-db91ca775dd9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C7")
+			(value "22nF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C21122")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10B223KB8NNNC")
+				(description "22nF (223) ±10% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C21122")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8fbf65ff-f8ee-5ad5-967d-fe7d4b69fcde")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C8")
+			(value "100nF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C14663")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CC0603KRX7R9BB104")
+				(description "100nF (104) ±10% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C14663")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "193b2539-0cf5-5dc3-bc66-a9c2dab2e808")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C9")
+			(value "1nF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C1588")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10B102KB8NNNC")
+				(description "1nF (102) ±10% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C1588")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "84b9bc12-4b2f-5942-bf41-a3f57d828037")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C10")
+			(value "470nF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C1623")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10B474KA8NNNC")
+				(description "470nF (474) ±10% 25V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C1623")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "46a89dd5-458d-53f4-80a8-f1ab941ba493")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11")
+			(value "22pF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C1653")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10C220JB8NNNC")
+				(description "22pF (220) ±5% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C1653")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a2008b1d-18a6-56f1-aed9-67558fd19ab7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12")
+			(value "22pF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C1653")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10C220JB8NNNC")
+				(description "22pF (220) ±5% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C1653")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ba5d9ed9-9011-5ed7-94f9-ede90c9c9200")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C13")
+			(value "10uF")
+			(footprint "radioneo:C0805")
+			(fields
+				(field
+					(name "LCSC Part") "C440198")
+				(field
+					(name "Footprint") "radioneo:C0805")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "GRM21BR61H106KE43L")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C440198")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b981b0c0-ff25-5e38-b011-2c95a5b6b56a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C14")
+			(value "100nF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C14663")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CC0603KRX7R9BB104")
+				(description "100nF (104) ±10% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C14663")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5fea01c8-db7f-5966-b5fe-1c6a97f50c9c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C15")
+			(value "1uF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C15849")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10A105KB8NNNC")
+				(description "1uF (105) ±10% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C15849")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5792d946-16e0-59c0-a3f3-d8dcf150cc36")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C16")
+			(value "1uF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C15849")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10A105KB8NNNC")
+				(description "1uF (105) ±10% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C15849")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "51ea03ec-5a33-5701-b8f9-9d40fd6a0f5c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C17")
+			(value "470nF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C1623")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10B474KA8NNNC")
+				(description "470nF (474) ±10% 25V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C1623")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "89a1e7fd-6fec-5131-91d7-4abc68ba122e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C18")
+			(value "470nF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C1623")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10B474KA8NNNC")
+				(description "470nF (474) ±10% 25V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C1623")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d4d023dc-e6ca-53fe-8dfc-904664e62d2b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C19")
+			(value "1uF")
+			(footprint "radioneo:C0603")
+			(fields
+				(field
+					(name "LCSC Part") "C15849")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "CL10A105KB8NNNC")
+				(description "1uF (105) ±10% 50V")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C15849")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Multilayer Ceramic Capacitors MLCC - SMD/SMT")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "93f0ce57-bacb-5f03-ba03-11f377ff163f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D1")
+			(value "LED")
+			(footprint "radioneo:LED-SMD_L1.6-W0.8-R-RD")
+			(fields
+				(field
+					(name "LCSC Part") "C2286")
+				(field
+					(name "Footprint") "radioneo:LED-SMD_L1.6-W0.8-R-RD")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "KT-0603R")
+				(description "0603")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C2286")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Light Emitting Diodes (LED)")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f7add90e-978c-50f9-bc68-013e923b01b4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J1")
+			(value "USB-C alimentation et programmation")
+			(footprint "radioneo:USB-C-SMD_TYPE-C-16PIN-2MD-073")
+			(fields
+				(field
+					(name "LCSC Part") "C2765186")
+				(field
+					(name "Footprint") "radioneo:USB-C-SMD_TYPE-C-16PIN-2MD-073")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "TYPE-C16PIN2MD")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C2765186")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "USB Connectors")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b67119e5-b55e-5673-994f-a4208fd9b6d8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "A1B12")
+						)
+						(pin
+							(num "A4B9")
+						)
+						(pin
+							(num "B8")
+						)
+						(pin
+							(num "A5")
+						)
+						(pin
+							(num "B7")
+						)
+						(pin
+							(num "A6")
+						)
+						(pin
+							(num "A7")
+						)
+						(pin
+							(num "B6")
+						)
+						(pin
+							(num "A8")
+						)
+						(pin
+							(num "B5")
+						)
+						(pin
+							(num "B4A9")
+						)
+						(pin
+							(num "B1A12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J2")
+			(value "Antenne FM")
+			(footprint "radioneo:SMA-TH_SMA-RA-132135")
+			(fields
+				(field
+					(name "LCSC Part") "C5183768")
+				(field
+					(name "Footprint") "radioneo:SMA-TH_SMA-RA-132135")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "132135")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5183768")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "602411aa-3bfc-528a-85a5-429c4b08470b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J3")
+			(value "Antenne ferrite AM")
+			(footprint "radioneo:HDR-TH_2P-P2.54-V-M")
+			(fields
+				(field
+					(name "LCSC Part") "C492401")
+				(field
+					(name "Footprint") "radioneo:HDR-TH_2P-P2.54-V-M")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "PZ254V-11-02P")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C492401")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Pin Headers")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5175fc94-5117-590d-b08c-5da02b4b723e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J4")
+			(value "HP gauche")
+			(footprint "radioneo:HDR-TH_2P-P2.54-V-M")
+			(fields
+				(field
+					(name "LCSC Part") "C492401")
+				(field
+					(name "Footprint") "radioneo:HDR-TH_2P-P2.54-V-M")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "PZ254V-11-02P")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C492401")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Pin Headers")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0c98bfdc-cd94-58cb-adfb-85bfac61cdde")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J5")
+			(value "HP droit")
+			(footprint "radioneo:HDR-TH_2P-P2.54-V-M")
+			(fields
+				(field
+					(name "LCSC Part") "C492401")
+				(field
+					(name "Footprint") "radioneo:HDR-TH_2P-P2.54-V-M")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "PZ254V-11-02P")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C492401")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Pin Headers")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6432526d-a1ad-5013-b690-95b90c1939ae")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J6")
+			(value "Molette (3V3 GND A B SW)")
+			(footprint "radioneo:HDR-TH_5P-P2.54-V-M")
+			(fields
+				(field
+					(name "LCSC Part") "C492404")
+				(field
+					(name "Footprint") "radioneo:HDR-TH_5P-P2.54-V-M")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "PZ254V-11-05P")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C492404")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Pin Headers")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cbcb0302-4200-54e9-915c-820efce23058")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "5.1k")
+			(footprint "radioneo:R0603")
+			(fields
+				(field
+					(name "LCSC Part") "C23186")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "0603WAF5101T5E")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C23186")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Resistors")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "aba043b1-30d7-5bab-846d-fed42d5ae2b0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R2")
+			(value "5.1k")
+			(footprint "radioneo:R0603")
+			(fields
+				(field
+					(name "LCSC Part") "C23186")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "0603WAF5101T5E")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C23186")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Resistors")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2044c592-c239-587c-b3de-9e40db83164b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R3")
+			(value "10k")
+			(footprint "radioneo:R1206")
+			(fields
+				(field
+					(name "LCSC Part") "C17902")
+				(field
+					(name "Footprint") "radioneo:R1206")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "1206W4F1002T5E")
+				(description "10KΩ (1002) ±1%")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C17902")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Resistors")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6796810c-aced-5c17-a345-232bc1fab333")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R4")
+			(value "1k")
+			(footprint "radioneo:R0603")
+			(fields
+				(field
+					(name "LCSC Part") "C21190")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "0603WAF1001T5E")
+				(description "1KΩ (1001) ±1%")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C21190")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Resistors")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1a25ab57-693b-5b23-a557-ab5a6a6a1e5c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R5")
+			(value "4.7k")
+			(footprint "radioneo:R0603")
+			(fields
+				(field
+					(name "LCSC Part") "C23162")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "0603WAF4701T5E")
+				(description "4.7KΩ (4701) ±1%")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C23162")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Resistors")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1de21f7e-4294-55fa-903b-50e1c3313754")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R6")
+			(value "4.7k")
+			(footprint "radioneo:R0603")
+			(fields
+				(field
+					(name "LCSC Part") "C23162")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "0603WAF4701T5E")
+				(description "4.7KΩ (4701) ±1%")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C23162")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Resistors")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "62a89a7a-9b13-509b-b478-1ae57589395e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R7")
+			(value "100k")
+			(footprint "radioneo:R0603")
+			(fields
+				(field
+					(name "LCSC Part") "C25803")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "0603WAF1003T5E")
+				(description "100KΩ (1003) ±1%")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C25803")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Resistors")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4813e296-67b0-5b8d-a95c-ef2ed03cf5fb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R8")
+			(value "100k")
+			(footprint "radioneo:R0603")
+			(fields
+				(field
+					(name "LCSC Part") "C25803")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "0603WAF1003T5E")
+				(description "100KΩ (1003) ±1%")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C25803")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Resistors")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "74cb1096-2b71-5214-b846-88bc925b8c3e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R9")
+			(value "100k")
+			(footprint "radioneo:R0603")
+			(fields
+				(field
+					(name "LCSC Part") "C25803")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "0603WAF1003T5E")
+				(description "100KΩ (1003) ±1%")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C25803")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Resistors")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d7dc5d9f-7aa2-5b8c-8714-de38d55c4ade")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW1")
+			(value "RESET")
+			(footprint "radioneo:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5")
+			(fields
+				(field
+					(name "LCSC Part") "C318884")
+				(field
+					(name "Footprint") "radioneo:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "TS-1187A-B-A-B")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C318884")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Tactile Switches")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ed3db26a-6ef1-59ea-ac81-cd460174e629")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "SW2")
+			(value "BOOT")
+			(footprint "radioneo:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5")
+			(fields
+				(field
+					(name "LCSC Part") "C318884")
+				(field
+					(name "Footprint") "radioneo:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "TS-1187A-B-A-B")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C318884")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Tactile Switches")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "50898a23-2e99-534f-a1f8-b1afce9433d0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP1")
+			(value "Sortie AMP_MUTE")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c8543247-66dc-535c-b5d2-7e97b242c468")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP2")
+			(value "Sortie VBUS")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4d9a9745-9557-5e27-83cc-2b3d3c069a7d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP3")
+			(value "Sortie I2C_SDA")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "450b4e66-a20b-5bb8-a5f5-4c9614ef186f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP4")
+			(value "Sortie I2C_SCL")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f3afc146-c908-5424-acaf-9b158193024b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP5")
+			(value "Sortie RADIO_RST")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4d8f4673-a1bf-52e0-9d53-b8fc0a31f38c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP6")
+			(value "Sortie RADIO_INT")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "625a97e3-3f69-5a3f-bfd2-5896afd265a6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP7")
+			(value "Sortie 3V3")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b8d8d8d9-ad07-5a0a-b8d0-0a36ce40c2cd")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP8")
+			(value "Sortie LOUT")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ae8c09bc-616a-5714-bdd5-5c4090ad4def")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP9")
+			(value "Sortie I2C_SDA")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7a22c9b7-9ad2-5c45-9752-f3f29b5488ee")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP10")
+			(value "Sortie I2C_SCL")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "241ce55c-7c00-56cf-b7b0-58e4ae1c5906")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP11")
+			(value "Sortie RADIO_RST")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f9874bac-c3bf-52be-996f-eafdb20ea78f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP12")
+			(value "Sortie RADIO_INT")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "70463dde-0a25-5541-8994-ea7f718db017")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP13")
+			(value "Sortie 3V3")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "58b6ae58-9367-55d2-bca3-0d06b87f037c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP14")
+			(value "Sortie LOUT")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e2af1802-cec5-58ba-81a1-77dbae8d95bd")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP15")
+			(value "Sortie ROUT")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5039e73f-0bea-5167-bb10-6ddb28263f4a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP16")
+			(value "Sortie LOUT")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "896dffe9-8536-574b-aaf6-b3a8fb50b9a0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP17")
+			(value "Sortie ROUT")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8bc4217b-bf1c-5937-a07e-77cd8a5aadc8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP18")
+			(value "Sortie VBUS")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "865dfb74-c057-5f15-8595-96d5def18d95")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP19")
+			(value "Sortie AMP_MUTE")
+			(footprint "radioneo:SMD_RH-5015")
+			(fields
+				(field
+					(name "LCSC Part") "C5199798")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "RH-5015")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5199798")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dacd509d-a908-51ea-ad36-4e8ba33bf640")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "USBLC6-2SC6")
+			(footprint "radioneo:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL")
+			(fields
+				(field
+					(name "LCSC Part") "C2687116")
+				(field
+					(name "Footprint") "radioneo:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "USBLC6-2SC6_C2687116")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C2687116")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "ESD Protection Devices")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "38679d22-db63-5d53-a813-b297a6e160f3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "AMS1117-3.3")
+			(footprint "radioneo:SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR")
+			(fields
+				(field
+					(name "LCSC Part") "C6186")
+				(field
+					(name "Footprint") "radioneo:SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "AMS1117-3.3")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C6186")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Linear Voltage Regulators (LDO)")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6700b352-6875-5aad-b1a7-92330559de3f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U3")
+			(value "ESP32-S3-WROOM-1")
+			(footprint "radioneo:WIRELM-SMD_ESP32-S3-WROOM-1")
+			(fields
+				(field
+					(name "LCSC Part") "C2913202")
+				(field
+					(name "Footprint") "radioneo:WIRELM-SMD_ESP32-S3-WROOM-1")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "ESP32-S3-WROOM-1")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C2913202")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a97da4cc-aabf-5b1a-b247-6bf0e081e594")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "21")
+						)
+						(pin
+							(num "22")
+						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "41")
+						)
+						(pin
+							(num "40")
+						)
+						(pin
+							(num "39")
+						)
+						(pin
+							(num "38")
+						)
+						(pin
+							(num "37")
+						)
+						(pin
+							(num "36")
+						)
+						(pin
+							(num "35")
+						)
+						(pin
+							(num "34")
+						)
+						(pin
+							(num "33")
+						)
+						(pin
+							(num "32")
+						)
+						(pin
+							(num "31")
+						)
+						(pin
+							(num "30")
+						)
+						(pin
+							(num "29")
+						)
+						(pin
+							(num "28")
+						)
+						(pin
+							(num "27")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U4")
+			(value "Si4735 tuner AM/FM/OC")
+			(footprint "radioneo:SSOP-24_L8.7-W3.9-P0.64-LS6.0-BL")
+			(fields
+				(field
+					(name "LCSC Part") "C1526089")
+				(field
+					(name "Footprint") "radioneo:SSOP-24_L8.7-W3.9-P0.64-LS6.0-BL")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "SI4735-D60-GU")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C1526089")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "RF Transceiver ICs")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "29e507c3-ce77-5827-956d-4a41509accb0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "22")
+						)
+						(pin
+							(num "21")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U5")
+			(value "PAM8403")
+			(footprint "radioneo:SOP-16_L10.0-W3.9-P1.27-LS6.0-BL")
+			(fields
+				(field
+					(name "LCSC Part") "C5122557")
+				(field
+					(name "Footprint") "radioneo:SOP-16_L10.0-W3.9-P1.27-LS6.0-BL")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "PAM8403")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5122557")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Audio Power OpAmps")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d073dca3-d8a0-56e4-854f-462d7cc244e9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Y1")
+			(value "32.768kHz")
+			(footprint "radioneo:CRYSTAL-SMD_L3.2-W1.5-1")
+			(fields
+				(field
+					(name "LCSC Part") "C5361379")
+				(field
+					(name "Footprint") "radioneo:CRYSTAL-SMD_L3.2-W1.5-1")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "radioneo")
+				(part "H31003271C2070CY")
+				(description "")
+			)
+			(property
+				(name "LCSC Part")
+				(value "C5361379")
+			)
+			(property
+				(name "Sheetname")
+				(value "carte")
+			)
+			(property
+				(name "Sheetfile")
+				(value "carte.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Crystals")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "058ae3ba-31df-5f29-bca6-2b2bc9f318d4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "radioneo")
+			(part "0603WAF1001T5E")
+			(description "1KΩ (1001) ±1%")
+			(docs "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_1KR-1001-1_C21190.html")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "0603WAF1001T5E")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_1KR-1001-1_C21190.html")
+				(field
+					(name "Description") "1KΩ (1001) ±1%")
+				(field
+					(name "Manufacturer") "UNI-ROYAL(厚声)")
+				(field
+					(name "MPN") "0603WAF1001T5E")
+				(field
+					(name "LCSC Part") "C21190")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "0603WAF1003T5E")
+			(description "100KΩ (1003) ±1%")
+			(docs "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_100KR-1003-1_C25803.html")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "0603WAF1003T5E")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_100KR-1003-1_C25803.html")
+				(field
+					(name "Description") "100KΩ (1003) ±1%")
+				(field
+					(name "Manufacturer") "UNI-ROYAL(厚声)")
+				(field
+					(name "MPN") "0603WAF1003T5E")
+				(field
+					(name "LCSC Part") "C25803")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "0603WAF4701T5E")
+			(description "4.7KΩ (4701) ±1%")
+			(docs "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_4-7KR-4701-1_C23162.html")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "0603WAF4701T5E")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_4-7KR-4701-1_C23162.html")
+				(field
+					(name "Description") "4.7KΩ (4701) ±1%")
+				(field
+					(name "Manufacturer") "UNI-ROYAL(厚声)")
+				(field
+					(name "MPN") "0603WAF4701T5E")
+				(field
+					(name "LCSC Part") "C23162")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "0603WAF5101T5E")
+			(docs "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_5-1KR-5101-1_C23186.html")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "0603WAF5101T5E")
+				(field
+					(name "Footprint") "radioneo:R0603")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_5-1KR-5101-1_C23186.html")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "UNI-ROYAL(厚声)")
+				(field
+					(name "MPN") "0603WAF5101T5E")
+				(field
+					(name "LCSC Part") "C23186")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "1206W4F1002T5E")
+			(description "10KΩ (1002) ±1%")
+			(docs "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_10KR-1002-1_C17902.html")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "1206W4F1002T5E")
+				(field
+					(name "Footprint") "radioneo:R1206")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount-UniOhm_10KR-1002-1_C17902.html")
+				(field
+					(name "Description") "10KΩ (1002) ±1%")
+				(field
+					(name "Manufacturer") "UNI-ROYAL(厚声)")
+				(field
+					(name "MPN") "1206W4F1002T5E")
+				(field
+					(name "LCSC Part") "C17902")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "132135")
+			(docs "https://www.lcsc.com/datasheet/C5183768.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "132135")
+				(field
+					(name "Footprint") "radioneo:SMA-TH_SMA-RA-132135")
+				(field
+					(name "Datasheet") "https://www.lcsc.com/datasheet/C5183768.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "Amphenol")
+				(field
+					(name "MPN") "132135")
+				(field
+					(name "LCSC Part") "C5183768")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "unspecified")
+				)
+				(pin
+					(num "3")
+					(name "3")
+					(type "unspecified")
+				)
+				(pin
+					(num "4")
+					(name "4")
+					(type "unspecified")
+				)
+				(pin
+					(num "5")
+					(name "5")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "AMS1117-3.3")
+			(docs "https://lcsc.com/product-detail/Low-Dropout-Regulators-LDO_AMS_AMS1117-3-3_AMS1117-3-3_C6186.html")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "AMS1117-3.3")
+				(field
+					(name "Footprint") "radioneo:SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Low-Dropout-Regulators-LDO_AMS_AMS1117-3-3_AMS1117-3-3_C6186.html")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "Advanced Monolithic Systems")
+				(field
+					(name "MPN") "AMS1117-3.3")
+				(field
+					(name "LCSC Part") "C6186")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "GND")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "VOUT")
+					(type "unspecified")
+				)
+				(pin
+					(num "3")
+					(name "VIN")
+					(type "unspecified")
+				)
+				(pin
+					(num "4")
+					(name "VOUT")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "CC0603KRX7R9BB104")
+			(description "100nF (104) ±10% 50V")
+			(docs "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_100nF-104-10-50V_C14663.html")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "CC0603KRX7R9BB104")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_100nF-104-10-50V_C14663.html")
+				(field
+					(name "Description") "100nF (104) ±10% 50V")
+				(field
+					(name "Manufacturer") "YAGEO(国巨)")
+				(field
+					(name "MPN") "CC0603KRX7R9BB104")
+				(field
+					(name "LCSC Part") "C14663")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "CL10A105KB8NNNC")
+			(description "1uF (105) ±10% 50V")
+			(docs "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A105KB8NNNC_1uF-105-10-50V_C15849.html")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "CL10A105KB8NNNC")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10A105KB8NNNC_1uF-105-10-50V_C15849.html")
+				(field
+					(name "Description") "1uF (105) ±10% 50V")
+				(field
+					(name "Manufacturer") "SAMSUNG(三星)")
+				(field
+					(name "MPN") "CL10A105KB8NNNC")
+				(field
+					(name "LCSC Part") "C15849")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "CL10B102KB8NNNC")
+			(description "1nF (102) ±10% 50V")
+			(docs "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B102KB8NNNC_1nF-102-10-50V_C1588.html")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "CL10B102KB8NNNC")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B102KB8NNNC_1nF-102-10-50V_C1588.html")
+				(field
+					(name "Description") "1nF (102) ±10% 50V")
+				(field
+					(name "Manufacturer") "SAMSUNG(三星)")
+				(field
+					(name "MPN") "CL10B102KB8NNNC")
+				(field
+					(name "LCSC Part") "C1588")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "CL10B223KB8NNNC")
+			(description "22nF (223) ±10% 50V")
+			(docs "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B223KB8NNNC_22nF-223-10-50V_C21122.html")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "CL10B223KB8NNNC")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B223KB8NNNC_22nF-223-10-50V_C21122.html")
+				(field
+					(name "Description") "22nF (223) ±10% 50V")
+				(field
+					(name "Manufacturer") "SAMSUNG(三星)")
+				(field
+					(name "MPN") "CL10B223KB8NNNC")
+				(field
+					(name "LCSC Part") "C21122")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "CL10B474KA8NNNC")
+			(description "470nF (474) ±10% 25V")
+			(docs "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B474KA8NNNC_470nF-474-10-25V_C1623.html")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "CL10B474KA8NNNC")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B474KA8NNNC_470nF-474-10-25V_C1623.html")
+				(field
+					(name "Description") "470nF (474) ±10% 25V")
+				(field
+					(name "Manufacturer") "SAMSUNG(三星)")
+				(field
+					(name "MPN") "CL10B474KA8NNNC")
+				(field
+					(name "LCSC Part") "C1623")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "CL10C220JB8NNNC")
+			(description "22pF (220) ±5% 50V")
+			(docs "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10C220JB8NNNC_22pF-220-5-50V_C1653.html")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "CL10C220JB8NNNC")
+				(field
+					(name "Footprint") "radioneo:C0603")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10C220JB8NNNC_22pF-220-5-50V_C1653.html")
+				(field
+					(name "Description") "22pF (220) ±5% 50V")
+				(field
+					(name "Manufacturer") "SAMSUNG(三星)")
+				(field
+					(name "MPN") "CL10C220JB8NNNC")
+				(field
+					(name "LCSC Part") "C1653")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "CL21A226MAQNNNE")
+			(docs "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21A226MAQNNNE_22uF-226-20-25V_C45783.html")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "CL21A226MAQNNNE")
+				(field
+					(name "Footprint") "radioneo:C0805")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21A226MAQNNNE_22uF-226-20-25V_C45783.html")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "SAMSUNG(三星)")
+				(field
+					(name "MPN") "CL21A226MAQNNNE")
+				(field
+					(name "LCSC Part") "C45783")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "ESP32-S3-WROOM-1")
+			(docs "https://www.lcsc.com/datasheet/C2913202.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "ESP32-S3-WROOM-1")
+				(field
+					(name "Footprint") "radioneo:WIRELM-SMD_ESP32-S3-WROOM-1")
+				(field
+					(name "Datasheet") "https://www.lcsc.com/datasheet/C2913202.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "ESPRESSIF(乐鑫)")
+				(field
+					(name "MPN") "ESP32-S3-WROOM-1-N16R8")
+				(field
+					(name "LCSC Part") "C2913202")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "GND")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "3V3")
+					(type "unspecified")
+				)
+				(pin
+					(num "3")
+					(name "EN")
+					(type "unspecified")
+				)
+				(pin
+					(num "4")
+					(name "IO4")
+					(type "unspecified")
+				)
+				(pin
+					(num "5")
+					(name "IO5")
+					(type "unspecified")
+				)
+				(pin
+					(num "6")
+					(name "IO6")
+					(type "unspecified")
+				)
+				(pin
+					(num "7")
+					(name "IO7")
+					(type "unspecified")
+				)
+				(pin
+					(num "8")
+					(name "IO15")
+					(type "unspecified")
+				)
+				(pin
+					(num "9")
+					(name "IO16")
+					(type "unspecified")
+				)
+				(pin
+					(num "10")
+					(name "IO17")
+					(type "unspecified")
+				)
+				(pin
+					(num "11")
+					(name "IO18")
+					(type "unspecified")
+				)
+				(pin
+					(num "12")
+					(name "IO8")
+					(type "unspecified")
+				)
+				(pin
+					(num "13")
+					(name "IO19")
+					(type "unspecified")
+				)
+				(pin
+					(num "14")
+					(name "IO20")
+					(type "unspecified")
+				)
+				(pin
+					(num "15")
+					(name "IO3")
+					(type "unspecified")
+				)
+				(pin
+					(num "16")
+					(name "IO46")
+					(type "unspecified")
+				)
+				(pin
+					(num "17")
+					(name "IO9")
+					(type "unspecified")
+				)
+				(pin
+					(num "18")
+					(name "IO10")
+					(type "unspecified")
+				)
+				(pin
+					(num "19")
+					(name "IO11")
+					(type "unspecified")
+				)
+				(pin
+					(num "20")
+					(name "IO12")
+					(type "unspecified")
+				)
+				(pin
+					(num "21")
+					(name "IO13")
+					(type "unspecified")
+				)
+				(pin
+					(num "22")
+					(name "IO14")
+					(type "unspecified")
+				)
+				(pin
+					(num "23")
+					(name "IO21")
+					(type "unspecified")
+				)
+				(pin
+					(num "24")
+					(name "IO47")
+					(type "unspecified")
+				)
+				(pin
+					(num "25")
+					(name "IO48")
+					(type "unspecified")
+				)
+				(pin
+					(num "26")
+					(name "IO45")
+					(type "unspecified")
+				)
+				(pin
+					(num "27")
+					(name "IO0")
+					(type "unspecified")
+				)
+				(pin
+					(num "28")
+					(name "IO35")
+					(type "unspecified")
+				)
+				(pin
+					(num "29")
+					(name "IO36")
+					(type "unspecified")
+				)
+				(pin
+					(num "30")
+					(name "IO37")
+					(type "unspecified")
+				)
+				(pin
+					(num "31")
+					(name "IO38")
+					(type "unspecified")
+				)
+				(pin
+					(num "32")
+					(name "IO39")
+					(type "unspecified")
+				)
+				(pin
+					(num "33")
+					(name "IO40")
+					(type "unspecified")
+				)
+				(pin
+					(num "34")
+					(name "IO41")
+					(type "unspecified")
+				)
+				(pin
+					(num "35")
+					(name "IO42")
+					(type "unspecified")
+				)
+				(pin
+					(num "36")
+					(name "RXD0")
+					(type "unspecified")
+				)
+				(pin
+					(num "37")
+					(name "TXD0")
+					(type "unspecified")
+				)
+				(pin
+					(num "38")
+					(name "IO2")
+					(type "unspecified")
+				)
+				(pin
+					(num "39")
+					(name "IO1")
+					(type "unspecified")
+				)
+				(pin
+					(num "40")
+					(name "GND")
+					(type "unspecified")
+				)
+				(pin
+					(num "41")
+					(name "GND")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "GRM21BR61H106KE43L")
+			(docs "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Murata-Electronics-GRM21BR61H106KE43L_C440198.html")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "GRM21BR61H106KE43L")
+				(field
+					(name "Footprint") "radioneo:C0805")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Murata-Electronics-GRM21BR61H106KE43L_C440198.html")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "muRata(村田)")
+				(field
+					(name "MPN") "GRM21BR61H106KE43L")
+				(field
+					(name "LCSC Part") "C440198")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "H31003271C2070CY")
+			(docs "https://www.lcsc.com/datasheet/C5361379.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "H31003271C2070CY")
+				(field
+					(name "Footprint") "radioneo:CRYSTAL-SMD_L3.2-W1.5-1")
+				(field
+					(name "Datasheet") "https://www.lcsc.com/datasheet/C5361379.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "JGHC(晶光华)")
+				(field
+					(name "MPN") "H31003271C2070CY")
+				(field
+					(name "LCSC Part") "C5361379")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "KT-0603R")
+			(description "0603")
+			(docs "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_Red-LED-0603_C2286.html")
+			(fields
+				(field
+					(name "Reference") "LED")
+				(field
+					(name "Value") "KT-0603R")
+				(field
+					(name "Footprint") "radioneo:LED-SMD_L1.6-W0.8-R-RD")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_Red-LED-0603_C2286.html")
+				(field
+					(name "Description") "0603")
+				(field
+					(name "Manufacturer") "KENTO")
+				(field
+					(name "MPN") "KT-0603R")
+				(field
+					(name "LCSC Part") "C2286")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "K")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "PAM8403")
+			(docs "https://www.lcsc.com/datasheet/C5122557.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "PAM8403")
+				(field
+					(name "Footprint") "radioneo:SOP-16_L10.0-W3.9-P1.27-LS6.0-BL")
+				(field
+					(name "Datasheet") "https://www.lcsc.com/datasheet/C5122557.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "Slkor(萨科微)")
+				(field
+					(name "MPN") "PAM8403")
+				(field
+					(name "LCSC Part") "C5122557")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "OUTL+")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "PGND")
+					(type "unspecified")
+				)
+				(pin
+					(num "3")
+					(name "OUTL-")
+					(type "unspecified")
+				)
+				(pin
+					(num "4")
+					(name "PVDD")
+					(type "unspecified")
+				)
+				(pin
+					(num "5")
+					(name "~{MUTE}")
+					(type "unspecified")
+				)
+				(pin
+					(num "6")
+					(name "VDD")
+					(type "unspecified")
+				)
+				(pin
+					(num "7")
+					(name "INL")
+					(type "unspecified")
+				)
+				(pin
+					(num "8")
+					(name "VREF")
+					(type "unspecified")
+				)
+				(pin
+					(num "9")
+					(name "NC")
+					(type "unspecified")
+				)
+				(pin
+					(num "10")
+					(name "INR")
+					(type "unspecified")
+				)
+				(pin
+					(num "11")
+					(name "GND")
+					(type "unspecified")
+				)
+				(pin
+					(num "12")
+					(name "~{SHDN}")
+					(type "unspecified")
+				)
+				(pin
+					(num "13")
+					(name "PVDD")
+					(type "unspecified")
+				)
+				(pin
+					(num "14")
+					(name "OUTR-")
+					(type "unspecified")
+				)
+				(pin
+					(num "15")
+					(name "PGND")
+					(type "unspecified")
+				)
+				(pin
+					(num "16")
+					(name "OUTR+")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "PZ254V-11-02P")
+			(docs "https://lcsc.com/product-detail/New-Arrivals_XFCN-PZ254V-11-02P_C492401.html")
+			(fields
+				(field
+					(name "Reference") "H")
+				(field
+					(name "Value") "PZ254V-11-02P")
+				(field
+					(name "Footprint") "radioneo:HDR-TH_2P-P2.54-V-M")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/New-Arrivals_XFCN-PZ254V-11-02P_C492401.html")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "XFCN(兴飞)")
+				(field
+					(name "MPN") "PZ254V-11-02P")
+				(field
+					(name "LCSC Part") "C492401")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "PZ254V-11-05P")
+			(docs "https://lcsc.com/product-detail/New-Arrivals_XFCN-PZ254V-11-05P_C492404.html")
+			(fields
+				(field
+					(name "Reference") "H")
+				(field
+					(name "Value") "PZ254V-11-05P")
+				(field
+					(name "Footprint") "radioneo:HDR-TH_5P-P2.54-V-M")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/New-Arrivals_XFCN-PZ254V-11-05P_C492404.html")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "XFCN(兴飞)")
+				(field
+					(name "MPN") "PZ254V-11-05P")
+				(field
+					(name "LCSC Part") "C492404")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "unspecified")
+				)
+				(pin
+					(num "3")
+					(name "3")
+					(type "unspecified")
+				)
+				(pin
+					(num "4")
+					(name "4")
+					(type "unspecified")
+				)
+				(pin
+					(num "5")
+					(name "5")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "RH-5015")
+			(docs "https://www.lcsc.com/datasheet/C5199798.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "RH-5015")
+				(field
+					(name "Footprint") "radioneo:SMD_RH-5015")
+				(field
+					(name "Datasheet") "https://www.lcsc.com/datasheet/C5199798.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "荣和")
+				(field
+					(name "MPN") "RH-5015")
+				(field
+					(name "LCSC Part") "C5199798")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "SI4735-D60-GU")
+			(docs "https://www.lcsc.com/datasheet/C1526089.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "SI4735-D60-GU")
+				(field
+					(name "Footprint") "radioneo:SSOP-24_L8.7-W3.9-P0.64-LS6.0-BL")
+				(field
+					(name "Datasheet") "https://www.lcsc.com/datasheet/C1526089.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "SKYWORKS/SILICON LABS(芯科)")
+				(field
+					(name "MPN") "SI4735-D60-GU")
+				(field
+					(name "LCSC Part") "C1526089")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "DOUT")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "DFS")
+					(type "unspecified")
+				)
+				(pin
+					(num "3")
+					(name "GPO3/[DCLK]")
+					(type "unspecified")
+				)
+				(pin
+					(num "4")
+					(name "GPO2/[INT#]")
+					(type "unspecified")
+				)
+				(pin
+					(num "5")
+					(name "GPO1")
+					(type "unspecified")
+				)
+				(pin
+					(num "6")
+					(name "NC")
+					(type "unspecified")
+				)
+				(pin
+					(num "7")
+					(name "NC")
+					(type "unspecified")
+				)
+				(pin
+					(num "8")
+					(name "FMI")
+					(type "unspecified")
+				)
+				(pin
+					(num "9")
+					(name "RFGND")
+					(type "unspecified")
+				)
+				(pin
+					(num "10")
+					(name "NC")
+					(type "unspecified")
+				)
+				(pin
+					(num "11")
+					(name "NC")
+					(type "unspecified")
+				)
+				(pin
+					(num "12")
+					(name "AMI")
+					(type "unspecified")
+				)
+				(pin
+					(num "13")
+					(name "GND")
+					(type "unspecified")
+				)
+				(pin
+					(num "14")
+					(name "GND")
+					(type "unspecified")
+				)
+				(pin
+					(num "15")
+					(name "~{RST}")
+					(type "unspecified")
+				)
+				(pin
+					(num "16")
+					(name "~{SEN}")
+					(type "unspecified")
+				)
+				(pin
+					(num "17")
+					(name "SCLK")
+					(type "unspecified")
+				)
+				(pin
+					(num "18")
+					(name "SDIO")
+					(type "unspecified")
+				)
+				(pin
+					(num "19")
+					(name "RCLK")
+					(type "unspecified")
+				)
+				(pin
+					(num "20")
+					(name "VD")
+					(type "unspecified")
+				)
+				(pin
+					(num "21")
+					(name "VA")
+					(type "unspecified")
+				)
+				(pin
+					(num "22")
+					(name "DBYP")
+					(type "unspecified")
+				)
+				(pin
+					(num "23")
+					(name "ROUT/[DOUT]")
+					(type "unspecified")
+				)
+				(pin
+					(num "24")
+					(name "LOUT/[DFS]")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "TS-1187A-B-A-B")
+			(docs "https://lcsc.com/product-detail/Tactile-Switches_XKB-Enterprise-TS-1187-B-A-A_C318884.html")
+			(fields
+				(field
+					(name "Reference") "SW")
+				(field
+					(name "Value") "TS-1187A-B-A-B")
+				(field
+					(name "Footprint") "radioneo:SW-SMD_4P-L5.1-W5.1-P3.70-LS6.5-TL_H1.5")
+				(field
+					(name "Datasheet") "https://lcsc.com/product-detail/Tactile-Switches_XKB-Enterprise-TS-1187-B-A-A_C318884.html")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "XKB Connection(中国星坤)")
+				(field
+					(name "MPN") "TS-1187A-B-A-B")
+				(field
+					(name "LCSC Part") "C318884")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "B")
+					(type "unspecified")
+				)
+				(pin
+					(num "3")
+					(name "C")
+					(type "unspecified")
+				)
+				(pin
+					(num "4")
+					(name "D")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "TYPE-C16PIN2MD")
+			(docs "https://www.lcsc.com/datasheet/C2765186.pdf")
+			(fields
+				(field
+					(name "Reference") "USB")
+				(field
+					(name "Value") "TYPE-C 16PIN 2MD")
+				(field
+					(name "Footprint") "radioneo:USB-C-SMD_TYPE-C-16PIN-2MD-073")
+				(field
+					(name "Datasheet") "https://www.lcsc.com/datasheet/C2765186.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "SHOU HAN(首韩)")
+				(field
+					(name "MPN") "TYPE-C 16PIN 2MD(073)")
+				(field
+					(name "LCSC Part") "C2765186")
+			)
+			(pins
+				(pin
+					(num "13")
+					(name "EH")
+					(type "unspecified")
+				)
+				(pin
+					(num "14")
+					(name "EH")
+					(type "unspecified")
+				)
+				(pin
+					(num "A1B12")
+					(name "GND")
+					(type "unspecified")
+				)
+				(pin
+					(num "A4B9")
+					(name "VBUS")
+					(type "unspecified")
+				)
+				(pin
+					(num "A5")
+					(name "CC1")
+					(type "unspecified")
+				)
+				(pin
+					(num "A6")
+					(name "Dp1")
+					(type "unspecified")
+				)
+				(pin
+					(num "A7")
+					(name "Dn1")
+					(type "unspecified")
+				)
+				(pin
+					(num "A8")
+					(name "SBU1")
+					(type "unspecified")
+				)
+				(pin
+					(num "B1A12")
+					(name "GND")
+					(type "unspecified")
+				)
+				(pin
+					(num "B4A9")
+					(name "VBUS")
+					(type "unspecified")
+				)
+				(pin
+					(num "B5")
+					(name "CC2")
+					(type "unspecified")
+				)
+				(pin
+					(num "B6")
+					(name "Dp2")
+					(type "unspecified")
+				)
+				(pin
+					(num "B7")
+					(name "Dn2")
+					(type "unspecified")
+				)
+				(pin
+					(num "B8")
+					(name "SBU2")
+					(type "unspecified")
+				)
+			)
+		)
+		(libpart
+			(lib "radioneo")
+			(part "USBLC6-2SC6_C2687116")
+			(docs "https://www.lcsc.com/datasheet/C2687116.pdf")
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "USBLC6-2SC6_C2687116")
+				(field
+					(name "Footprint") "radioneo:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL")
+				(field
+					(name "Datasheet") "https://www.lcsc.com/datasheet/C2687116.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Manufacturer") "UMW(友台半导体)")
+				(field
+					(name "MPN") "USBLC6-2SC6")
+				(field
+					(name "LCSC Part") "C2687116")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "I/O1")
+					(type "unspecified")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "unspecified")
+				)
+				(pin
+					(num "3")
+					(name "I/O2")
+					(type "unspecified")
+				)
+				(pin
+					(num "4")
+					(name "I/O2")
+					(type "unspecified")
+				)
+				(pin
+					(num "5")
+					(name "VBUS")
+					(type "unspecified")
+				)
+				(pin
+					(num "6")
+					(name "I/O1")
+					(type "unspecified")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "radioneo")
+			(uri "${KIPRJMOD}/lib/radioneo.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "/3V3")
+			(class "Default")
+			(node
+				(ref "C3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C7")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C8")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "R3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R8")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP13")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP7")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "VOUT_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U2")
+				(pin "4")
+				(pinfunction "VOUT_4")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "2")
+				(pinfunction "3V3_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "20")
+				(pinfunction "VD_20")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "21")
+				(pinfunction "VA_21")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "2")
+			(name "/AMI")
+			(class "Default")
+			(node
+				(ref "C10")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "12")
+				(pinfunction "AMI_12")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "3")
+			(name "/AMP_MUTE")
+			(class "Default")
+			(node
+				(ref "R7")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP19")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "17")
+				(pinfunction "IO9_17")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "5")
+				(pinfunction "~{MUTE}_5")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "4")
+			(name "/AM_L")
+			(class "Default")
+			(node
+				(ref "C10")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "5")
+			(name "/AUDIO_SENSE")
+			(class "Default")
+			(node
+				(ref "C19")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "R8")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "39")
+				(pinfunction "IO1_39")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "6")
+			(name "/BOOT")
+			(class "Default")
+			(node
+				(ref "SW2")
+				(pin "1")
+				(pinfunction "A_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "SW2")
+				(pin "2")
+				(pinfunction "B_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "27")
+				(pinfunction "IO0_27")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "7")
+			(name "/CC1")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "A5")
+				(pinfunction "CC1_A5")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "R1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "/CC2")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "B5")
+				(pinfunction "CC2_B5")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "R2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "9")
+			(name "/DBYP")
+			(class "Default")
+			(node
+				(ref "C7")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "22")
+				(pinfunction "DBYP_22")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "10")
+			(name "/EN")
+			(class "Default")
+			(node
+				(ref "C6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "R3")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW1")
+				(pin "1")
+				(pinfunction "A_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "SW1")
+				(pin "2")
+				(pinfunction "B_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "3")
+				(pinfunction "EN_3")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "11")
+			(name "/ENC_A")
+			(class "Default")
+			(node
+				(ref "J6")
+				(pin "3")
+				(pinfunction "3_3")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "4")
+				(pinfunction "IO4_4")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "12")
+			(name "/ENC_B")
+			(class "Default")
+			(node
+				(ref "J6")
+				(pin "4")
+				(pinfunction "4_4")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "5")
+				(pinfunction "IO5_5")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "13")
+			(name "/ENC_SW")
+			(class "Default")
+			(node
+				(ref "J6")
+				(pin "5")
+				(pinfunction "5_5")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "6")
+				(pinfunction "IO6_6")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "14")
+			(name "/FMI")
+			(class "Default")
+			(node
+				(ref "C9")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "8")
+				(pinfunction "FMI_8")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "15")
+			(name "/FM_ANT")
+			(class "Default")
+			(node
+				(ref "C9")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "5")
+				(pinfunction "5_5")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "16")
+			(name "/GND")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C11")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C12")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C13")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C14")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C15")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C16")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C2")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C4")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C5")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C6")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C8")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "D1")
+				(pin "2")
+				(pinfunction "K_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J1")
+				(pin "13")
+				(pinfunction "EH_13")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J1")
+				(pin "14")
+				(pinfunction "EH_14")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J1")
+				(pin "A1B12")
+				(pinfunction "GND_A1B12")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J1")
+				(pin "B1A12")
+				(pinfunction "GND_B1A12")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J2")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J2")
+				(pin "3")
+				(pinfunction "3_3")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J2")
+				(pin "4")
+				(pinfunction "4_4")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J3")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J6")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R7")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "SW1")
+				(pin "3")
+				(pinfunction "C_3")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "SW1")
+				(pin "4")
+				(pinfunction "D_4")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "SW2")
+				(pin "3")
+				(pinfunction "C_3")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "SW2")
+				(pin "4")
+				(pinfunction "D_4")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "GND_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "1")
+				(pinfunction "GND_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "40")
+				(pinfunction "GND_40")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "41")
+				(pinfunction "GND_41")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "10")
+				(pinfunction "NC_10")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "11")
+				(pinfunction "NC_11")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "13")
+				(pinfunction "GND_13")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "14")
+				(pinfunction "GND_14")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "16")
+				(pinfunction "~{SEN}_16")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "9")
+				(pinfunction "RFGND_9")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "11")
+				(pinfunction "GND_11")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "15")
+				(pinfunction "PGND_15")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "2")
+				(pinfunction "PGND_2")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "17")
+			(name "/I2C_SCL")
+			(class "Default")
+			(node
+				(ref "R6")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP10")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "19")
+				(pinfunction "IO11_19")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "17")
+				(pinfunction "SCLK_17")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "18")
+			(name "/I2C_SDA")
+			(class "Default")
+			(node
+				(ref "R5")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP9")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "18")
+				(pinfunction "IO10_18")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "18")
+				(pinfunction "SDIO_18")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "19")
+			(name "/INL")
+			(class "Default")
+			(node
+				(ref "C17")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U5")
+				(pin "7")
+				(pinfunction "INL_7")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "20")
+			(name "/INR")
+			(class "Default")
+			(node
+				(ref "C18")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U5")
+				(pin "10")
+				(pinfunction "INR_10")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "21")
+			(name "/LED_A")
+			(class "Default")
+			(node
+				(ref "D1")
+				(pin "1")
+				(pinfunction "A_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "R4")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "22")
+			(name "/LED_IO")
+			(class "Default")
+			(node
+				(ref "R4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "25")
+				(pinfunction "IO48_25")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "23")
+			(name "/LOUT")
+			(class "Default")
+			(node
+				(ref "C17")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C19")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP14")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP16")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP8")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "24")
+				(pinfunction "LOUT/[DFS]_24")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "24")
+			(name "/RADIO_INT")
+			(class "Default")
+			(node
+				(ref "TP12")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "21")
+				(pinfunction "IO13_21")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "4")
+				(pinfunction "GPO2/[INT#]_4")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "25")
+			(name "/RADIO_RST")
+			(class "Default")
+			(node
+				(ref "TP11")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "20")
+				(pinfunction "IO12_20")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "15")
+				(pinfunction "~{RST}_15")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "26")
+			(name "/ROUT")
+			(class "Default")
+			(node
+				(ref "C18")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP15")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP17")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "23")
+				(pinfunction "ROUT/[DOUT]_23")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "27")
+			(name "/SPK_L_N")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "3")
+				(pinfunction "OUTL-_3")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "28")
+			(name "/SPK_L_P")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "1")
+				(pinfunction "OUTL+_1")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "29")
+			(name "/SPK_R_N")
+			(class "Default")
+			(node
+				(ref "J5")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "14")
+				(pinfunction "OUTR-_14")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "30")
+			(name "/SPK_R_P")
+			(class "Default")
+			(node
+				(ref "J5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "16")
+				(pinfunction "OUTR+_16")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "31")
+			(name "/USB_DN")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "A7")
+				(pinfunction "Dn1_A7")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J1")
+				(pin "B7")
+				(pinfunction "Dn2_B7")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "I/O2_3")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U1")
+				(pin "4")
+				(pinfunction "I/O2_4")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "13")
+				(pinfunction "IO19_13")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "32")
+			(name "/USB_DP")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "A6")
+				(pinfunction "Dp1_A6")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J1")
+				(pin "B6")
+				(pinfunction "Dp2_B6")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "I/O1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "I/O1_6")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U3")
+				(pin "14")
+				(pinfunction "IO20_14")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "33")
+			(name "/VBUS")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C13")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C14")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C15")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "C2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J1")
+				(pin "A4B9")
+				(pinfunction "VBUS_A4B9")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "J1")
+				(pin "B4A9")
+				(pinfunction "VBUS_B4A9")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP18")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "TP2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "VBUS_5")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "VIN_3")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "12")
+				(pinfunction "~{SHDN}_12")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "13")
+				(pinfunction "PVDD_13")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "4")
+				(pinfunction "PVDD_4")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "6")
+				(pinfunction "VDD_6")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "34")
+			(name "/VREF")
+			(class "Default")
+			(node
+				(ref "C16")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U5")
+				(pin "8")
+				(pinfunction "VREF_8")
+				(pintype "unspecified")
+			)
+		)
+		(net
+			(code "35")
+			(name "/XTAL_A")
+			(class "Default")
+			(node
+				(ref "C11")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "3")
+				(pinfunction "GPO3/[DCLK]_3")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "Y1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "36")
+			(name "/XTAL_B")
+			(class "Default")
+			(node
+				(ref "C12")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "U4")
+				(pin "19")
+				(pinfunction "RCLK_19")
+				(pintype "unspecified")
+			)
+			(node
+				(ref "Y1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "37")
+			(name "unconnected-(J1-SBU1-PadA8)")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "A8")
+				(pinfunction "SBU1_A8")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "38")
+			(name "unconnected-(J1-SBU2-PadB8)")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "B8")
+				(pinfunction "SBU2_B8")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "39")
+			(name "unconnected-(U3-IO2-Pad38)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "38")
+				(pinfunction "IO2_38")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "40")
+			(name "unconnected-(U3-IO3-Pad15)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "15")
+				(pinfunction "IO3_15")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "41")
+			(name "unconnected-(U3-IO7-Pad7)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "7")
+				(pinfunction "IO7_7")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "42")
+			(name "unconnected-(U3-IO8-Pad12)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "12")
+				(pinfunction "IO8_12")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "43")
+			(name "unconnected-(U3-IO14-Pad22)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "22")
+				(pinfunction "IO14_22")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "44")
+			(name "unconnected-(U3-IO15-Pad8)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "8")
+				(pinfunction "IO15_8")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "45")
+			(name "unconnected-(U3-IO16-Pad9)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "9")
+				(pinfunction "IO16_9")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "46")
+			(name "unconnected-(U3-IO17-Pad10)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "10")
+				(pinfunction "IO17_10")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "47")
+			(name "unconnected-(U3-IO18-Pad11)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "11")
+				(pinfunction "IO18_11")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "48")
+			(name "unconnected-(U3-IO21-Pad23)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "23")
+				(pinfunction "IO21_23")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "49")
+			(name "unconnected-(U3-IO35-Pad28)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "28")
+				(pinfunction "IO35_28")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "50")
+			(name "unconnected-(U3-IO36-Pad29)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "29")
+				(pinfunction "IO36_29")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "51")
+			(name "unconnected-(U3-IO37-Pad30)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "30")
+				(pinfunction "IO37_30")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "52")
+			(name "unconnected-(U3-IO38-Pad31)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "31")
+				(pinfunction "IO38_31")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "53")
+			(name "unconnected-(U3-IO39-Pad32)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "32")
+				(pinfunction "IO39_32")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "54")
+			(name "unconnected-(U3-IO40-Pad33)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "33")
+				(pinfunction "IO40_33")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "55")
+			(name "unconnected-(U3-IO41-Pad34)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "34")
+				(pinfunction "IO41_34")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "56")
+			(name "unconnected-(U3-IO42-Pad35)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "35")
+				(pinfunction "IO42_35")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "57")
+			(name "unconnected-(U3-IO45-Pad26)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "26")
+				(pinfunction "IO45_26")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "58")
+			(name "unconnected-(U3-IO46-Pad16)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "16")
+				(pinfunction "IO46_16")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "59")
+			(name "unconnected-(U3-IO47-Pad24)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "24")
+				(pinfunction "IO47_24")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "60")
+			(name "unconnected-(U3-RXD0-Pad36)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "36")
+				(pinfunction "RXD0_36")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "61")
+			(name "unconnected-(U3-TXD0-Pad37)")
+			(class "Default")
+			(node
+				(ref "U3")
+				(pin "37")
+				(pinfunction "TXD0_37")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "62")
+			(name "unconnected-(U4-DFS-Pad2)")
+			(class "Default")
+			(node
+				(ref "U4")
+				(pin "2")
+				(pinfunction "DFS_2")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "63")
+			(name "unconnected-(U4-DOUT-Pad1)")
+			(class "Default")
+			(node
+				(ref "U4")
+				(pin "1")
+				(pinfunction "DOUT_1")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "64")
+			(name "unconnected-(U4-GPO1-Pad5)")
+			(class "Default")
+			(node
+				(ref "U4")
+				(pin "5")
+				(pinfunction "GPO1_5")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "65")
+			(name "unconnected-(U4-NC-Pad6)")
+			(class "Default")
+			(node
+				(ref "U4")
+				(pin "6")
+				(pinfunction "NC_6")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "66")
+			(name "unconnected-(U4-NC-Pad7)")
+			(class "Default")
+			(node
+				(ref "U4")
+				(pin "7")
+				(pinfunction "NC_7")
+				(pintype "unspecified+no_connect")
+			)
+		)
+		(net
+			(code "67")
+			(name "unconnected-(U5-NC-Pad9)")
+			(class "Default")
+			(node
+				(ref "U5")
+				(pin "9")
+				(pinfunction "NC_9")
+				(pintype "unspecified+no_connect")
+			)
+		)
+	)
+)

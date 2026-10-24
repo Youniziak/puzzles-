@@ -1,0 +1,9 @@
+USB : prise, côté du bas
+FM : prise, côté droit
+MOLETTE : fils, côté gauche
+AM : fils, côté droit
+HP G : fils, côté du bas
+HP D : fils, côté du bas
+RESET : bouton rond, sur le dessus
+BOOT : bouton carré, sur le dessus
+LED : trou, sur le dessus

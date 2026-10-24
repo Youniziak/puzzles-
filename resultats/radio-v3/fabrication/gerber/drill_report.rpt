@@ -1,0 +1,30 @@
+Drill report for carte.kicad_pcb
+Created on 2026-10-23T05:00:41
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'carte-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.200mm  0.0079"  (62 holes))
+    T2  0.250mm  0.0098"  (10 holes))
+    T3  0.300mm  0.0118"  (16 holes))
+    T4  0.600mm  0.0236"  (4 holes)  (with 4 slots)
+    T5  1.100mm  0.0433"  (5 holes))
+    T6  1.200mm  0.0472"  (6 holes))
+    T7  1.500mm  0.0591"  (1 hole)
+    T8  1.700mm  0.0669"  (4 holes))
+
+    Total plated holes count 108
+
+
+Drill file 'carte-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  0.700mm  0.0276"  (2 holes))
+
+    Total unplated holes count 2

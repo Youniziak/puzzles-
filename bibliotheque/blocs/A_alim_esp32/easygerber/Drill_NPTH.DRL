@@ -1,0 +1,13 @@
+M48
+;DRILL file {EasyGerber (easygerber.com)} date 2026-10-22T08:43:02.502Z
+;TYPE=NPTH
+;FORMAT={-:-/ absolute / metric / decimal}
+FMAT,2
+METRIC,TZ
+T1C0.700
+%
+T1
+X12.110Y4.895
+X17.890Y4.895
+T0
+M30

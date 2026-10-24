@@ -1,0 +1,987 @@
+{
+ "note": "Types des broches, appliqués par schema.py aux symboles d'easyeda2kicad. Fait par outils/typer_broches.py : ne pas corriger à la main, corriger symboles-officiels.json et relancer.",
+ "fait_le": "23/10/2026",
+ "bibliotheque_officielle": "kicad-symbols 9280a93 2026-10-15",
+ "pieces": {
+  "C2765186": {
+   "symbole": "TYPE-C16PIN2MD",
+   "reperes": [
+    "J1"
+   ],
+   "officiel": "Connector/USB_C_Receptacle_USB2.0_16P",
+   "broches": {
+    "A1B12": {
+     "type": "passive",
+     "d_apres": "officiel « A1 »"
+    },
+    "A4B9": {
+     "type": "passive",
+     "d_apres": "officiel « A4 »"
+    },
+    "B8": {
+     "type": "bidirectional",
+     "d_apres": "officiel « B8 »"
+    },
+    "A5": {
+     "type": "bidirectional",
+     "d_apres": "officiel « A5 »"
+    },
+    "B7": {
+     "type": "bidirectional",
+     "d_apres": "officiel « A7 »"
+    },
+    "A6": {
+     "type": "bidirectional",
+     "d_apres": "officiel « A6 »"
+    },
+    "A7": {
+     "type": "bidirectional",
+     "d_apres": "officiel « A7 »"
+    },
+    "B6": {
+     "type": "bidirectional",
+     "d_apres": "officiel « A6 »"
+    },
+    "A8": {
+     "type": "bidirectional",
+     "d_apres": "officiel « A8 »"
+    },
+    "B5": {
+     "type": "bidirectional",
+     "d_apres": "officiel « B5 »"
+    },
+    "B4A9": {
+     "type": "passive",
+     "d_apres": "officiel « A4 »"
+    },
+    "B1A12": {
+     "type": "passive",
+     "d_apres": "officiel « A1 »"
+    },
+    "14": {
+     "type": "passive",
+     "d_apres": "officiel « SH »"
+    },
+    "13": {
+     "type": "passive",
+     "d_apres": "officiel « SH »"
+    }
+   }
+  },
+  "C23186": {
+   "symbole": "0603WAF5101T5E",
+   "reperes": [
+    "R1",
+    "R2"
+   ],
+   "officiel": null,
+   "broches": {
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (R1, R2)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (R1, R2)"
+    }
+   }
+  },
+  "C2687116": {
+   "symbole": "USBLC6-2SC6_C2687116",
+   "reperes": [
+    "U1"
+   ],
+   "officiel": "Power_Protection/USBLC6-2SC6",
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "officiel n° 1"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "officiel n° 2"
+    },
+    "3": {
+     "type": "passive",
+     "d_apres": "officiel n° 3"
+    },
+    "4": {
+     "type": "passive",
+     "d_apres": "officiel n° 4"
+    },
+    "5": {
+     "type": "passive",
+     "d_apres": "officiel n° 5"
+    },
+    "6": {
+     "type": "passive",
+     "d_apres": "officiel n° 6"
+    }
+   }
+  },
+  "C14663": {
+   "symbole": "CC0603KRX7R9BB104",
+   "reperes": [
+    "C1",
+    "C5",
+    "C8",
+    "C14"
+   ],
+   "officiel": null,
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (C1, C5, C8, C14)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (C1, C5, C8, C14)"
+    }
+   }
+  },
+  "C6186": {
+   "symbole": "AMS1117-3.3",
+   "reperes": [
+    "U2"
+   ],
+   "officiel": "Regulator_Linear/AMS1117-3.3",
+   "broches": {
+    "1": {
+     "type": "power_in",
+     "d_apres": "officiel n° 1"
+    },
+    "2": {
+     "type": "power_out",
+     "d_apres": "officiel n° 2"
+    },
+    "3": {
+     "type": "power_in",
+     "d_apres": "officiel n° 3"
+    },
+    "4": {
+     "type": "passive",
+     "d_apres": "même nom que la broche 2"
+    }
+   }
+  },
+  "C45783": {
+   "symbole": "CL21A226MAQNNNE",
+   "reperes": [
+    "C2",
+    "C3"
+   ],
+   "officiel": null,
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (C2, C3)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (C2, C3)"
+    }
+   }
+  },
+  "C2913202": {
+   "symbole": "ESP32-S3-WROOM-1",
+   "reperes": [
+    "U3"
+   ],
+   "officiel": "RF_Module/ESP32-S3-WROOM-1",
+   "broches": {
+    "1": {
+     "type": "power_in",
+     "d_apres": "officiel n° 1"
+    },
+    "2": {
+     "type": "power_in",
+     "d_apres": "officiel n° 2"
+    },
+    "3": {
+     "type": "input",
+     "d_apres": "officiel n° 3"
+    },
+    "4": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 4"
+    },
+    "5": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 5"
+    },
+    "6": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 6"
+    },
+    "7": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 7"
+    },
+    "8": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 8"
+    },
+    "9": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 9"
+    },
+    "10": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 10"
+    },
+    "11": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 11"
+    },
+    "12": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 12"
+    },
+    "13": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 13"
+    },
+    "14": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 14"
+    },
+    "15": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 15"
+    },
+    "16": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 16"
+    },
+    "17": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 17"
+    },
+    "18": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 18"
+    },
+    "19": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 19"
+    },
+    "20": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 20"
+    },
+    "21": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 21"
+    },
+    "22": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 22"
+    },
+    "23": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 23"
+    },
+    "24": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 24"
+    },
+    "25": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 25"
+    },
+    "26": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 26"
+    },
+    "27": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 27"
+    },
+    "28": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 28"
+    },
+    "29": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 29"
+    },
+    "30": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 30"
+    },
+    "31": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 31"
+    },
+    "32": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 32"
+    },
+    "33": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 33"
+    },
+    "34": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 34"
+    },
+    "35": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 35"
+    },
+    "36": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 36"
+    },
+    "37": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 37"
+    },
+    "38": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 38"
+    },
+    "39": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 39"
+    },
+    "40": {
+     "type": "passive",
+     "d_apres": "officiel n° 40"
+    },
+    "41": {
+     "type": "passive",
+     "d_apres": "officiel n° 41"
+    }
+   }
+  },
+  "C440198": {
+   "symbole": "GRM21BR61H106KE43L",
+   "reperes": [
+    "C4",
+    "C13"
+   ],
+   "officiel": null,
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (C4, C13)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (C4, C13)"
+    }
+   }
+  },
+  "C17902": {
+   "symbole": "1206W4F1002T5E",
+   "reperes": [
+    "R3"
+   ],
+   "officiel": null,
+   "broches": {
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (R3)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (R3)"
+    }
+   }
+  },
+  "C15849": {
+   "symbole": "CL10A105KB8NNNC",
+   "reperes": [
+    "C6",
+    "C19",
+    "C15",
+    "C16"
+   ],
+   "officiel": null,
+   "broches": {
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (C6, C19, C15, C16)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (C6, C19, C15, C16)"
+    }
+   }
+  },
+  "C318884": {
+   "symbole": "TS-1187A-B-A-B",
+   "reperes": [
+    "SW1",
+    "SW2"
+   ],
+   "officiel": null,
+   "broches": {
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (SW1, SW2)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (SW1, SW2)"
+    },
+    "4": {
+     "type": "passive",
+     "d_apres": "pièce passive (SW1, SW2)"
+    },
+    "3": {
+     "type": "passive",
+     "d_apres": "pièce passive (SW1, SW2)"
+    }
+   }
+  },
+  "C21190": {
+   "symbole": "0603WAF1001T5E",
+   "reperes": [
+    "R4"
+   ],
+   "officiel": null,
+   "broches": {
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (R4)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (R4)"
+    }
+   }
+  },
+  "C2286": {
+   "symbole": "KT-0603R",
+   "reperes": [
+    "D1"
+   ],
+   "officiel": null,
+   "broches": {
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (D1)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (D1)"
+    }
+   }
+  },
+  "C23162": {
+   "symbole": "0603WAF4701T5E",
+   "reperes": [
+    "R5",
+    "R6"
+   ],
+   "officiel": null,
+   "broches": {
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (R5, R6)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (R5, R6)"
+    }
+   }
+  },
+  "C25803": {
+   "symbole": "0603WAF1003T5E",
+   "reperes": [
+    "R8",
+    "R9",
+    "R7"
+   ],
+   "officiel": null,
+   "broches": {
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (R8, R9, R7)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (R8, R9, R7)"
+    }
+   }
+  },
+  "C492404": {
+   "symbole": "PZ254V-11-05P",
+   "reperes": [
+    "J6"
+   ],
+   "officiel": null,
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (J6)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (J6)"
+    },
+    "3": {
+     "type": "passive",
+     "d_apres": "pièce passive (J6)"
+    },
+    "4": {
+     "type": "passive",
+     "d_apres": "pièce passive (J6)"
+    },
+    "5": {
+     "type": "passive",
+     "d_apres": "pièce passive (J6)"
+    }
+   }
+  },
+  "C5199798": {
+   "symbole": "RH-5015",
+   "reperes": [
+    "TP1",
+    "TP2",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9",
+    "TP10",
+    "TP11",
+    "TP12",
+    "TP13",
+    "TP14",
+    "TP15",
+    "TP16",
+    "TP17",
+    "TP18",
+    "TP19"
+   ],
+   "officiel": null,
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (TP1, TP2, TP3, TP4)"
+    }
+   }
+  },
+  "C1526089": {
+   "symbole": "SI4735-D60-GU",
+   "reperes": [
+    "U4"
+   ],
+   "officiel": "RF_AM_FM/Si4735-D60-GU",
+   "broches": {
+    "1": {
+     "type": "output",
+     "d_apres": "officiel n° 1"
+    },
+    "2": {
+     "type": "input",
+     "d_apres": "officiel n° 2"
+    },
+    "3": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 3"
+    },
+    "4": {
+     "type": "output",
+     "d_apres": "officiel n° 4"
+    },
+    "5": {
+     "type": "output",
+     "d_apres": "officiel n° 5"
+    },
+    "6": {
+     "type": "no_connect",
+     "d_apres": "officiel n° 6"
+    },
+    "7": {
+     "type": "no_connect",
+     "d_apres": "officiel n° 7"
+    },
+    "8": {
+     "type": "input",
+     "d_apres": "officiel n° 8"
+    },
+    "9": {
+     "type": "power_in",
+     "d_apres": "officiel n° 9"
+    },
+    "10": {
+     "type": "no_connect",
+     "d_apres": "officiel n° 10"
+    },
+    "11": {
+     "type": "no_connect",
+     "d_apres": "officiel n° 11"
+    },
+    "12": {
+     "type": "input",
+     "d_apres": "officiel n° 12"
+    },
+    "13": {
+     "type": "power_in",
+     "d_apres": "officiel n° 13"
+    },
+    "14": {
+     "type": "power_in",
+     "d_apres": "officiel n° 14"
+    },
+    "15": {
+     "type": "input",
+     "d_apres": "officiel n° 15"
+    },
+    "16": {
+     "type": "input",
+     "d_apres": "officiel n° 16"
+    },
+    "17": {
+     "type": "input",
+     "d_apres": "officiel n° 17"
+    },
+    "18": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 18"
+    },
+    "19": {
+     "type": "input",
+     "d_apres": "officiel n° 19"
+    },
+    "20": {
+     "type": "power_in",
+     "d_apres": "officiel n° 20"
+    },
+    "21": {
+     "type": "power_in",
+     "d_apres": "officiel n° 21"
+    },
+    "22": {
+     "type": "passive",
+     "d_apres": "officiel n° 22"
+    },
+    "23": {
+     "type": "output",
+     "d_apres": "officiel n° 23"
+    },
+    "24": {
+     "type": "bidirectional",
+     "d_apres": "officiel n° 24"
+    }
+   }
+  },
+  "C5361379": {
+   "symbole": "H31003271C2070CY",
+   "reperes": [
+    "Y1"
+   ],
+   "officiel": null,
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (Y1)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (Y1)"
+    }
+   }
+  },
+  "C1653": {
+   "symbole": "CL10C220JB8NNNC",
+   "reperes": [
+    "C11",
+    "C12"
+   ],
+   "officiel": null,
+   "broches": {
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (C11, C12)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (C11, C12)"
+    }
+   }
+  },
+  "C21122": {
+   "symbole": "CL10B223KB8NNNC",
+   "reperes": [
+    "C7"
+   ],
+   "officiel": null,
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (C7)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (C7)"
+    }
+   }
+  },
+  "C5183768": {
+   "symbole": "132135",
+   "reperes": [
+    "J2"
+   ],
+   "officiel": null,
+   "broches": {
+    "5": {
+     "type": "passive",
+     "d_apres": "pièce passive (J2)"
+    },
+    "4": {
+     "type": "passive",
+     "d_apres": "pièce passive (J2)"
+    },
+    "3": {
+     "type": "passive",
+     "d_apres": "pièce passive (J2)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (J2)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (J2)"
+    }
+   }
+  },
+  "C1588": {
+   "symbole": "CL10B102KB8NNNC",
+   "reperes": [
+    "C9"
+   ],
+   "officiel": null,
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (C9)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (C9)"
+    }
+   }
+  },
+  "C1623": {
+   "symbole": "CL10B474KA8NNNC",
+   "reperes": [
+    "C10",
+    "C17",
+    "C18"
+   ],
+   "officiel": null,
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (C10, C17, C18)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (C10, C17, C18)"
+    }
+   }
+  },
+  "C492401": {
+   "symbole": "PZ254V-11-02P",
+   "reperes": [
+    "J3",
+    "J4",
+    "J5"
+   ],
+   "officiel": null,
+   "broches": {
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (J3, J4, J5)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (J3, J4, J5)"
+    }
+   }
+  },
+  "C5122557": {
+   "symbole": "PAM8403",
+   "reperes": [
+    "U5"
+   ],
+   "officiel": "Amplifier_Audio/PAM8403D",
+   "broches": {
+    "1": {
+     "type": "output",
+     "d_apres": "officiel n° 1"
+    },
+    "2": {
+     "type": "power_in",
+     "d_apres": "officiel n° 2"
+    },
+    "3": {
+     "type": "output",
+     "d_apres": "officiel n° 3"
+    },
+    "4": {
+     "type": "power_in",
+     "d_apres": "officiel n° 4"
+    },
+    "5": {
+     "type": "input",
+     "d_apres": "officiel n° 5"
+    },
+    "6": {
+     "type": "power_in",
+     "d_apres": "officiel n° 6"
+    },
+    "7": {
+     "type": "input",
+     "d_apres": "officiel n° 7"
+    },
+    "8": {
+     "type": "input",
+     "d_apres": "officiel n° 8"
+    },
+    "9": {
+     "type": "no_connect",
+     "d_apres": "officiel n° 9"
+    },
+    "10": {
+     "type": "input",
+     "d_apres": "officiel n° 10"
+    },
+    "11": {
+     "type": "power_in",
+     "d_apres": "officiel n° 11"
+    },
+    "12": {
+     "type": "input",
+     "d_apres": "officiel n° 12"
+    },
+    "13": {
+     "type": "passive",
+     "d_apres": "officiel n° 13"
+    },
+    "14": {
+     "type": "output",
+     "d_apres": "officiel n° 14"
+    },
+    "15": {
+     "type": "passive",
+     "d_apres": "officiel n° 15"
+    },
+    "16": {
+     "type": "output",
+     "d_apres": "officiel n° 16"
+    }
+   }
+  },
+  "C2155558": {
+   "symbole": "SI4732-A10-GSR",
+   "reperes": [
+    "U4"
+   ],
+   "officiel": "RF_AM_FM/Si4735-D60-GU",
+   "broches": {
+    "1": {
+     "type": "bidirectional",
+     "d_apres": "officiel « 24 »"
+    },
+    "2": {
+     "type": "bidirectional",
+     "d_apres": "officiel « 3 »"
+    },
+    "3": {
+     "type": "output",
+     "d_apres": "officiel « 4 »"
+    },
+    "4": {
+     "type": "output",
+     "d_apres": "officiel « 5 »"
+    },
+    "5": {
+     "type": "no_connect",
+     "d_apres": "officiel « 6 »"
+    },
+    "6": {
+     "type": "input",
+     "d_apres": "officiel « 8 »"
+    },
+    "7": {
+     "type": "power_in",
+     "d_apres": "officiel « 9 »"
+    },
+    "8": {
+     "type": "input",
+     "d_apres": "officiel « 12 »"
+    },
+    "9": {
+     "type": "input",
+     "d_apres": "officiel « 15 »"
+    },
+    "10": {
+     "type": "input",
+     "d_apres": "officiel « 16 »"
+    },
+    "11": {
+     "type": "input",
+     "d_apres": "officiel « 17 »"
+    },
+    "12": {
+     "type": "bidirectional",
+     "d_apres": "officiel « 18 »"
+    },
+    "13": {
+     "type": "input",
+     "d_apres": "officiel « 19 »"
+    },
+    "14": {
+     "type": "power_in",
+     "d_apres": "officiel « 20 »"
+    },
+    "15": {
+     "type": "power_in",
+     "d_apres": "officiel « 13 »"
+    },
+    "16": {
+     "type": "output",
+     "d_apres": "officiel « 23 »"
+    }
+   }
+  },
+  "C496551": {
+   "symbole": "BWSMA-KWE-Z001",
+   "reperes": [
+    "J2"
+   ],
+   "officiel": null,
+   "broches": {
+    "5": {
+     "type": "passive",
+     "d_apres": "pièce passive (J2)"
+    },
+    "4": {
+     "type": "passive",
+     "d_apres": "pièce passive (J2)"
+    },
+    "3": {
+     "type": "passive",
+     "d_apres": "pièce passive (J2)"
+    },
+    "2": {
+     "type": "passive",
+     "d_apres": "pièce passive (J2)"
+    },
+    "1": {
+     "type": "passive",
+     "d_apres": "pièce passive (J2)"
+    }
+   }
+  }
+ }
+}

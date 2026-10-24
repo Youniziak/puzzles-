@@ -1,0 +1,43 @@
+{
+ "nom": "ESSAI — première disposition de la variante compacte (refusée)",
+ "etiquette": "essai",
+ "note": "Disposition du 22/10/2026 qui a échoué au routage : sert à vérifier que le contrôle de disposition la refuse.",
+ "bibliotheque": "../bibliotheque",
+ "regles": "jlcpcb-2-couches",
+ "contour": {
+  "largeur": 66.0,
+  "hauteur": 72.0,
+  "rayon_coins": 2.0
+ },
+ "masse": "GND",
+ "alimentations_externes": [
+  "VBUS"
+ ],
+ "alimentations_externes_note": "Liaisons alimentées depuis l'extérieur de la carte (ici le 5 V de la prise USB-C) : schema.py y met un drapeau d'alimentation (PWR_FLAG) pour l'ERC de KiCad.",
+ "blocs": [
+  {
+   "bloc": "A_alim_esp32",
+   "position": [
+    0.0,
+    31.5
+   ],
+   "rotation": 270
+  },
+  {
+   "bloc": "C_ampli",
+   "position": [
+    0.0,
+    0.0
+   ],
+   "rotation": 0
+  },
+  {
+   "bloc": "B_tuner",
+   "position": [
+    38.4,
+    0.0
+   ],
+   "rotation": 0
+  }
+ ]
+}

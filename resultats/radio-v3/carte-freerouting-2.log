@@ -1,0 +1,92 @@
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=33229 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+2026-10-23 05:00:19.383 INFO   Freerouting v2.1.0 (build-date: 2025-04-12)
+2026-10-23 05:00:19.478 WARN   No default constructor found for field: currentLocale
+2026-10-23 05:00:19.479 INFO   Settings were loaded from freerouting.json
+2026-10-23 05:00:21.253 INFO   [B14104\10C262] Job 'B14104\10C262' started at 2026-10-23T05:00:21.240409761Z
+java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:722)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:844)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+	at app.freerouting.management.VersionChecker.processResponse(VersionChecker.java:47)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718)
+	... 5 more
+2026-10-23 05:00:30.282 INFO   [B14104\10C262] Auto-router pass #1 on board '48fdfd561a0ac90abd0793d7f0ed5031' was completed in 8.51 seconds with the score of 968.96 (14 unrouted), using 26.11 CPU seconds and 3030 MB memory.
+2026-10-23 05:00:31.585 INFO   [B14104\10C262] Auto-router pass #2 on board '3577e1f872a011748c8e6b7f4cfd240a' was completed in 1.19 seconds with the score of 992.79, using 32.05 CPU seconds and 3397 MB memory.
+2026-10-23 05:00:31.689 INFO   [B14104\10C262] Auto-router pass #3 on board '20652362a97d688fd7373610e3eee509' was completed in 0.03 seconds with the score of 992.79, using 32.05 CPU seconds and 3397 MB memory.
+{
+  "host": "KiCad's Pcbnew,10.0.7-10.0.7~ubuntu24.04.1",
+  "unit": "mm",
+  "board": {
+    "bounding_box": {
+      "x": 801.0,
+      "y": 661.0,
+      "width": -1.0,
+      "height": -1.0
+    },
+    "size": {
+      "x": 0.0,
+      "y": 0.0,
+      "width": 802.0,
+      "height": 662.0
+    }
+  },
+  "layers": {
+    "total_count": 2,
+    "signal_count": 2
+  },
+  "items": {
+    "total_count": 1267,
+    "trace_count": 373,
+    "via_count": 88,
+    "conduction_area_count": 3,
+    "drill_item_count": 218,
+    "pin_count": 0,
+    "component_count": 578,
+    "other_count": 7
+  },
+  "components": {
+    "total_count": 62
+  },
+  "pads": {
+    "total_count": 218
+  },
+  "nets": {
+    "total_count": 36,
+    "class_count": 8
+  },
+  "connections": {
+    "maximum_count": 615,
+    "incomplete_count": 0
+  },
+  "traces": {
+    "total_count": 373,
+    "total_segment_count": 612,
+    "total_length": 10937.42,
+    "total_weighted_length": 2840356.0,
+    "average_length": 29.322842,
+    "total_vertical_length": 4046.395,
+    "total_horizontal_length": 4121.123,
+    "total_angled_length": 5114.2554
+  },
+  "bends": {
+    "total_count": 239,
+    "90_degree_count": 3,
+    "45_degree_count": 236,
+    "other_angle_count": 0
+  },
+  "vias": {
+    "total_count": 88,
+    "through_hole_count": 88,
+    "blind_count": 0,
+    "buried_count": 0
+  },
+  "clearance_violations": {
+    "total_count": 0
+  }
+}

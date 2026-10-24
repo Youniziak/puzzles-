@@ -1,0 +1,124 @@
+===== Contrôle du circuit (noms des broches, découplage, tirages I2C) (controle-circuit.txt) =====
+
+CONTRÔLE DU CIRCUIT — RADIONÉO carte radio v4
+212 broches, 35 liaisons
+
+⚠ VBUS (prise J1) : 33,2 µF de condensateurs (C1 100nF, C13 10uF, C14 100nF, C15 1uF, C2 22uF) : l'USB 2.0 en permet 10 µF au plus (charge prise au branchement)
+⚠ U3.13 « IO19 » (ESP32-S3-WROOM-1-N16R8) : ligne USB USB_DN reliée à la prise J1 sans résistance en série ; vérifier dans le guide du fabricant de la puce s'il en faut une (Espressif, pour l'ESP32-S3 : en prévoir la place, 22 ou 33 Ω)
+⚠ U3.14 « IO20 » (ESP32-S3-WROOM-1-N16R8) : ligne USB USB_DP reliée à la prise J1 sans résistance en série ; vérifier dans le guide du fabricant de la puce s'il en faut une (Espressif, pour l'ESP32-S3 : en prévoir la place, 22 ou 33 Ω)
+✓ U1,5 « VBUS » (USBLC6-2SC6) (VBUS) : C1 à 2,3 mm
+✓ U2,2 « VOUT » (AMS1117-3,3) (3V3) : C3 à 4,6 mm
+✓ U2,3 « VIN » (AMS1117-3,3) (VBUS) : C2 à 3,3 mm
+✓ U3,2 « 3V3 » (ESP32-S3-WROOM-1-N16R8) (3V3) : C5 à 2,3 mm
+✓ U4,14 « VDD » (SI4732-A10-GSR) (3V3) : C8 à 2,1 mm
+✓ U5,4 « PVDD » (PAM8403) (VBUS) : C14 à 3,9 mm
+✓ U5,6 « VDD » (PAM8403) (VBUS) : C15 à 4,0 mm
+✓ I2C_SCL : R6 vers 3V3
+✓ I2C_SDA : R5 vers 3V3
+✓ U2 (AMS1117-3,3) : reçoit VBUS (5 V), sort 3V3 (3,3 V)
+
+Alertes déjà vérifiées (bibliotheque/controles-verifies.json) :
+  (✗) Y1.2 « GND » (H31003271C2070CY) : broche de masse sur la liaison XTAL_B, pas sur GND — vérifié : quartz 32,768 kHz à deux broches (boîtier SMD3215-2P) : le catalogue nomme « GND » sa broche 2, mais c'est une borne du quartz ; elle va bien au tuner (RCLK) (Claude, d'après le boîtier à deux broches et la liste des connexions du bloc, 24/10/2026)
+
+Bilan : aucune erreur, 3 point(s) à regarder.
+Ce contrôle ne voit pas : la tension que supporte chaque broche (il faudrait les fiches), ni si une valeur est bonne.
+
+
+===== Contrôle indépendant des fichiers Gerber (controle-independant.txt) =====
+
+Cuivre lu : dessus 4464 mm², dessous 5389 mm² ; 115 trous métallisés, 2 non métallisés
+== 1. Coupures (un réseau en plusieurs morceaux) ==
+  35/35 réseaux d'un seul tenant
+== 2. Courts-circuits (un morceau de cuivre qui touche deux réseaux) ==
+  0 court(s)-circuit(s)
+== 3. Écart minimal entre cuivres de réseaux différents ==
+  face dessus : 0.102 mm (ROUT ↔ LOUT)
+  face dessous : 0.109 mm (RADIO_RST ↔ I2C_SCL)
+== 4. Zones sans cuivre des blocs ==
+  ✓ A_alim_esp32 : antenne de l'ESP32-S3 (ni plan, ni piste, ni via) : cuivre dessus 0.00 mm², dessous 0.00 mm²
+== 5. Cuivre au bord de la carte ==
+  distance minimale : dessus 0.20 mm, dessous 0.20 mm
+== 6. Perçages ==
+  métallisés : [0.2, 0.25, 0.3, 0.6, 1.1, 1.2, 1.3, 1.6, 3.2] mm ; non métallisés : [0.7] mm
+== 7. Trous ↔ cuivre d'un autre réseau (mini 0.28 mm pour un trou métallisé, 0.2 mm pour un trou non métallisé) ==
+  trous métallisés : 0.288 mm (trou Ø0.25 en (65.40, 33.60) ↔ 3V3, face dessus)
+  trous non métallisés : 0.200 mm (trou Ø0.7 en (17.89, 4.89) ↔ GND, face dessus)
+  0 trou(s) métallisé(s) à moins de 0.28 mm d'un autre réseau : []
+== 8. Couronne des trous de composants (0.18 mm mini, 0.25 conseillé) ==
+  plus petites : [(0.25, 'J1.13'), (0.25, 'J1.14'), (0.3, 'J1.13'), (0.3, 'J1.14'), (0.3, 'J2.1')]
+== 9. Largeur du cuivre des alimentations (courant demandé, IPC-2221, +10 °C) ==
+  ✓ 3V3 (0.8 A → 0.22 mm mini) : partout assez large
+  ✓ SPK_L_N (1.0 A → 0.30 mm mini) : partout assez large
+  ✓ SPK_L_P (1.0 A → 0.30 mm mini) : partout assez large
+  ✓ SPK_R_N (1.0 A → 0.30 mm mini) : partout assez large
+  ✓ SPK_R_P (1.0 A → 0.30 mm mini) : partout assez large
+  ✓ VBUS (1.5 A → 0.53 mm mini) : partout assez large
+== Bilan ==
+  ✓ rien à corriger
+
+
+===== Stock des pièces (disponibilite.txt) =====
+
+Disponibilité des composants chez JLCPCB — RADIONÉO carte radio v4, pour 5 carte(s) — 23/10/2026 23:34
+
+✓ C14663     CC0603KRX7R9BB104            C1, C5, C8, C14          besoin   20  stock 44646536  de base             0.0084 $  [JLCPCB]
+✓ C1623      CL10B474KA8NNNC              C10, C17, C18            besoin   15  stock 1144395  de base             0.0130 $  [JLCPCB]
+✓ C1653      CL10C220JB8NNNC              C11, C12                 besoin   10  stock 1974681  de base             0.0060 $  [JLCPCB]
+✓ C45783     CL21A226MAQNNNE              C2, C3                   besoin   10  stock 4309423  de base             0.1911 $  [JLCPCB]
+✓ C440198    GRM21BR61H106KE43L           C4, C7, C13              besoin   15  stock 1282383  de base             0.2077 $  [JLCPCB]
+✓ C15849     CL10A105KB8NNNC              C6, C19, C15, C16        besoin   20  stock 13890803  de base             0.0146 $  [JLCPCB]
+✓ C1588      CL10B102KB8NNNC              C9                       besoin    5  stock 5678093  de base             0.0098 $  [JLCPCB]
+✓ C2286      KT-0603R                     D1                       besoin    5  stock 7942184  de base             0.0077 $  [JLCPCB]
+✓ C2765186   TYPE-C 16PIN 2MD(073)        J1                       besoin    5  stock 1062221  étendue             0.0748 $  [JLCPCB]
+✓ C496551    BWSMA-KWE-Z001               J2                       besoin    5  stock  127549  étendue             0.5283 $  [JLCPCB]
+✓ C492401    PZ254V-11-02P                J3, J4, J5               besoin   15  stock  985311  étendue             0.0187 $  [JLCPCB]
+✓ C492404    PZ254V-11-05P                J6                       besoin    5  stock  175219  étendue             0.0324 $  [JLCPCB]
+✓ C23186     0603WAF5101T5E               R1, R2                   besoin   10  stock 22263794  de base             0.0015 $  [JLCPCB]
+✓ C17902     1206W4F1002T5E               R3                       besoin    5  stock 2535911  de base             0.0078 $  [JLCPCB]
+✓ C21190     0603WAF1001T5E               R4                       besoin    5  stock 35390114  de base             0.0017 $  [JLCPCB]
+✓ C23162     0603WAF4701T5E               R5, R6                   besoin   10  stock 17307294  de base             0.0028 $  [JLCPCB]
+✓ C25803     0603WAF1003T5E               R8, R9, R7               besoin   15  stock 18329260  de base             0.0031 $  [JLCPCB]
+✓ C318884    TS-1187A-B-A-B               SW1, SW2                 besoin   10  stock 1205093  de base             0.0207 $  [JLCPCB]
+✓ C2687116   USBLC6-2SC6                  U1                       besoin    5  stock  124143  étendue             0.0478 $  [JLCPCB]
+✓ C6186      AMS1117-3.3                  U2                       besoin    5  stock 1486037  de base             0.2046 $  [JLCPCB]
+✓ C2913202   ESP32-S3-WROOM-1-N16R8       U3                       besoin    5  stock   27779  étendue             5.3461 $  [JLCPCB]
+✓ C2155558   SI4732-A10-GSR               U4                       besoin    5  stock     155  étendue             2.8816 $  [JLCPCB]
+✓ C5122557   PAM8403                      U5                       besoin    5  stock    6753  étendue             0.2835 $  [JLCPCB]
+✓ C5361379   H31003271C2070CY             Y1                       besoin    5  stock   41540  étendue             0.2001 $  [JLCPCB]
+
+24 pièces différentes ; coût des composants pour 5 carte(s) : environ 54.45 $ (hors carte, pose et port)
+Pièces étendues : 9 type(s), chacun avec des frais de chargement chez JLCPCB (voir leur tarif) : TYPE-C 16PIN 2MD(073) (étendue); BWSMA-KWE-Z001 (étendue); PZ254V-11-02P (étendue); PZ254V-11-05P (étendue); USBLC6-2SC6 (étendue); ESP32-S3-WROOM-1-N16R8 (étendue); SI4732-A10-GSR (étendue); PAM8403 (étendue); H31003271C2070CY (étendue)
+✓ Toutes les pièces sont en stock en quantité suffisante, aujourd'hui.
+
+
+===== Autres fabricants (fabricants.txt) =====
+
+Autres fabricants — RADIONÉO carte radio v4
+
+La carte est routée pour « JLCPCB, 2 couches, cuivre 35 µm ». Ci-dessous : convient-elle aussi ailleurs ?
+
+✓ JLCPCB, 2 couches, cuivre 35 µm (fabricant de la carte)
+    source des règles : JLCPCB, page « PCB capabilities », consultée le 22/10/2026
+    conforme : KiCad et le contrôle indépendant ne trouvent rien.
+    fichiers dans fabrication/ (Gerber de KiKit, liste des pièces et placement repris d'EasyGerber)
+    stock des pièces : vérifiable avec --disponibilite
+
+✗ AISLER (Allemagne), 2 couches 1,6 mm, cuivre 35 µm, finition ENIG
+    source des règles : AISLER, « 2 Layer 1.6mm 35µm ENIG Design Rules », mis à jour le 07/07/2025, consulté le 23/10/2026 : https://community.aisler.net/t/2-layer-hd-design-rules/3732 (c'est le plus fin de leurs procédés 2 couches ; « 2 Layer 1.6mm HASL » est plus large : piste 0,2 mm, écart 0,15 mm)
+    pas conforme tel quel :
+      - 62 × diamètre de trou — exemple : Hole size out of range (board setup constraints min hole 0.2500 mm; actual 0.2000 mm) (Via [VBUS] on F.Cu - B.Cu)
+      - 6 × écart entre cuivres — exemple : Clearance violation (board minimum clearance 0.1250 mm; actual 0.1242 mm) (Via [I2C_SCL] on F.Cu - B.Cu, Track [RADIO_RST] on B.Cu, length 1.0706 mm)
+      - 4 × écart entre un trou et le cuivre — exemple : Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2219 mm) (Pad A4B9 [VBUS] of J1 on F.Cu, NPTH pad of J1)
+      - 2 × couronne de cuivre autour d'un trou — exemple : Annular width (rule 'couronne de composant (AISLER)' min annular width 0.2950 mm; actual 0.2500 mm) (PTH pad 13 [GND] of J1)
+      - contrôle indépendant : 4 point(s) à corriger avant de commander :
+      - contrôle indépendant : ✗ écart de 0.102 mm entre ROUT et LOUT (mini 0.125 mm)
+      - contrôle indépendant : ✗ écart de 0.109 mm entre RADIO_RST et I2C_SCL (mini 0.125 mm)
+      - contrôle indépendant : ✗ trou non métallisé Ø0.7 en (12.11, 4.89) à 0.201 mm du cuivre GND
+    stock des pièces : pas vérifiable d'ici : voir le devis du fabricant
+
+✓ PCBWay, 2 couches, cuivre 35 µm (offre standard)
+    source des règles : PCBWay, pages « PCB Capabilities » (offre standard) et « Advanced PCB Capabilities », consultées le 23/10/2026 : https://www.pcbway.com/capabilities.html
+    ajusté pour ce fabricant : 11 via(s) agrandi(s), pour une couronne de 0,15 mm (dans fabricants/pcbway-2-couches/ seulement ; la carte d'origine n'est pas changée)
+    conforme : KiCad et le contrôle indépendant ne trouvent rien.
+    fichiers préparés par KiKit dans fabricants/pcbway-2-couches/fabrication/ : bom.csv, gerber, gerbers.zip, pos.csv
+    stock des pièces : PCBWay achète les pièces lui-même, d'après la référence du fabricant (MPN). Leur stock ne se vérifie pas d'ici : il est donné sur le devis.

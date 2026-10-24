@@ -1,0 +1,43 @@
+{
+ "nom": "RADIONÉO carte radio — variante compacte (essai de réutilisation des blocs)",
+ "etiquette": "radio compacte",
+ "note": "Mêmes blocs que la v3, autre disposition, tous tournés de 270° : le bloc A en haut (antenne vers le haut, prise USB-C à gauche, sorties vers le bas) ; l'ampli et le tuner dessous, sorties vers le haut. Essai de la chaîne : la disposition n'a pas été relue par un humain. Première idée (ampli et tuner non tournés) : sorties de l'ampli tournées vers le bord, le 5 V n'a pas pu être relié.",
+ "bibliotheque": "../bibliotheque",
+ "regles": "jlcpcb-2-couches",
+ "contour": {
+  "largeur": 66.0,
+  "hauteur": 75.0,
+  "rayon_coins": 2.0
+ },
+ "masse": "GND",
+ "alimentations_externes": [
+  "VBUS"
+ ],
+ "alimentations_externes_note": "Liaisons alimentées depuis l'extérieur de la carte (ici le 5 V de la prise USB-C) : schema.py y met un drapeau d'alimentation (PWR_FLAG) pour l'ERC de KiCad.",
+ "blocs": [
+  {
+   "bloc": "A_alim_esp32",
+   "position": [
+    0.0,
+    34.5
+   ],
+   "rotation": 270
+  },
+  {
+   "bloc": "C_ampli",
+   "position": [
+    8.0,
+    0.0
+   ],
+   "rotation": 270
+  },
+  {
+   "bloc": "B_tuner",
+   "position": [
+    39.6,
+    0.0
+   ],
+   "rotation": 270
+  }
+ ]
+}

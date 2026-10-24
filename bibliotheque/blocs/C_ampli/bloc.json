@@ -1,0 +1,356 @@
+{
+ "nom": "C_ampli",
+ "description": "Ampli stéréo PAM8403 (2 × 3 W), avec ses condensateurs et les prises des haut-parleurs.",
+ "etiquette": "ampli",
+ "easygerber": {
+  "carte": "4ac9708f-68ee-43ba-929a-b0884e6fa95a",
+  "revision": 4
+ },
+ "taille": [
+  22.6,
+  21.8
+ ],
+ "interface": [
+  "AMP_MUTE",
+  "LOUT",
+  "ROUT",
+  "VBUS"
+ ],
+ "non_poses": [
+  "TP16",
+  "TP17",
+  "TP18",
+  "TP19"
+ ],
+ "sans_cuivre": [],
+ "intent": {
+  "suggestedName": "RADIONEO v3 bloc C_ampli",
+  "parts": [
+   [
+    "U5",
+    "9d1064612083d1a981edc3b0",
+    "PAM8403"
+   ],
+   [
+    "C13",
+    "6999504506edb6de277341a9",
+    "10uF"
+   ],
+   [
+    "C14",
+    "6999504406edb6de27734196",
+    "100nF"
+   ],
+   [
+    "C15",
+    "6999504406edb6de2773419f",
+    "1uF"
+   ],
+   [
+    "C16",
+    "6999504406edb6de2773419f",
+    "1uF"
+   ],
+   [
+    "C17",
+    "69c99b1cb86ba86cb7529717",
+    "470nF"
+   ],
+   [
+    "C18",
+    "69c99b1cb86ba86cb7529717",
+    "470nF"
+   ],
+   [
+    "R7",
+    "6999504206edb6de27734182",
+    "100k"
+   ],
+   [
+    "J4",
+    "69b0c90ce8c7a76e2cd5278d",
+    "HP gauche"
+   ],
+   [
+    "J5",
+    "69b0c90ce8c7a76e2cd5278d",
+    "HP droit"
+   ],
+   [
+    "TP16",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie LOUT"
+   ],
+   [
+    "TP17",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie ROUT"
+   ],
+   [
+    "TP18",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie VBUS"
+   ],
+   [
+    "TP19",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie AMP_MUTE"
+   ]
+  ],
+  "connections": [
+   {
+    "net": "VBUS",
+    "class": "power",
+    "pins": [
+     [
+      "U5",
+      "4"
+     ],
+     [
+      "U5",
+      "13"
+     ],
+     [
+      "U5",
+      "6"
+     ],
+     [
+      "U5",
+      "12"
+     ],
+     [
+      "C13",
+      "1"
+     ],
+     [
+      "C14",
+      "1"
+     ],
+     [
+      "C15",
+      "1"
+     ],
+     [
+      "TP18",
+      "1"
+     ]
+    ],
+    "requiredCurrentA": 1.5
+   },
+   {
+    "net": "GND",
+    "class": "ground",
+    "pins": [
+     [
+      "U5",
+      "2"
+     ],
+     [
+      "U5",
+      "15"
+     ],
+     [
+      "U5",
+      "11"
+     ],
+     [
+      "C13",
+      "2"
+     ],
+     [
+      "C14",
+      "2"
+     ],
+     [
+      "C15",
+      "2"
+     ],
+     [
+      "C16",
+      "2"
+     ],
+     [
+      "R7",
+      "2"
+     ]
+    ]
+   },
+   {
+    "net": "AMP_MUTE",
+    "class": "signal",
+    "pins": [
+     [
+      "U5",
+      "5"
+     ],
+     [
+      "R7",
+      "1"
+     ],
+     [
+      "TP19",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "LOUT",
+    "class": "signal",
+    "pins": [
+     [
+      "C17",
+      "1"
+     ],
+     [
+      "TP16",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "ROUT",
+    "class": "signal",
+    "pins": [
+     [
+      "C18",
+      "1"
+     ],
+     [
+      "TP17",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "INL",
+    "class": "signal",
+    "pins": [
+     [
+      "C17",
+      "2"
+     ],
+     [
+      "U5",
+      "7"
+     ]
+    ]
+   },
+   {
+    "net": "INR",
+    "class": "signal",
+    "pins": [
+     [
+      "C18",
+      "2"
+     ],
+     [
+      "U5",
+      "10"
+     ]
+    ]
+   },
+   {
+    "net": "VREF",
+    "class": "signal",
+    "pins": [
+     [
+      "U5",
+      "8"
+     ],
+     [
+      "C16",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "SPK_L_P",
+    "class": "power",
+    "pins": [
+     [
+      "U5",
+      "1"
+     ],
+     [
+      "J4",
+      "1"
+     ]
+    ],
+    "requiredCurrentA": 1.0
+   },
+   {
+    "net": "SPK_L_N",
+    "class": "power",
+    "pins": [
+     [
+      "U5",
+      "3"
+     ],
+     [
+      "J4",
+      "2"
+     ]
+    ],
+    "requiredCurrentA": 1.0
+   },
+   {
+    "net": "SPK_R_P",
+    "class": "power",
+    "pins": [
+     [
+      "U5",
+      "16"
+     ],
+     [
+      "J5",
+      "1"
+     ]
+    ],
+    "requiredCurrentA": 1.0
+   },
+   {
+    "net": "SPK_R_N",
+    "class": "power",
+    "pins": [
+     [
+      "U5",
+      "14"
+     ],
+     [
+      "J5",
+      "2"
+     ]
+    ],
+    "requiredCurrentA": 1.0
+   }
+  ]
+ },
+ "thermique": [
+  {
+   "composant": "U5",
+   "nom": "ampli stéréo PAM8403",
+   "type": "ampli_classe_d",
+   "canaux": 2,
+   "puissance_sortie_max_W": 3.0,
+   "rendement": 0.83,
+   "charge": "4 Ω",
+   "part_moyenne_musique": 0.125,
+   "hypothese_part_moyenne": "en musique, la puissance moyenne tourne autour du huitième de la puissance maximale (usage courant, hypothèse)",
+   "theta_ja_C_par_W": 110,
+   "tj_max_C": 120,
+   "source": "fiche PAM8403 (Diodes) : θJA 110 °C/W en SOP-16 ; rendement 83 % sous 4 Ω à 3 W par canal ; protection thermique vers 120 °C"
+  }
+ ],
+ "boitier": {
+  "fils": [
+   {
+    "ref": "J4",
+    "texte": "HP G"
+   },
+   {
+    "ref": "J5",
+    "texte": "HP D"
+   }
+  ]
+ }
+}

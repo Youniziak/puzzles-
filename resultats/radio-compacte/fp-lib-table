@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "radioneo")(type "KiCad")(uri "${KIPRJMOD}/lib/radioneo.pretty")(options "")(descr "Empreintes LCSC via easyeda2kicad"))
+)

@@ -1,0 +1,60 @@
+Boîtier d'essai — RADIONÉO carte radio v4
+
+Fabriqué par YAPP_Box 3.3.8 (OpenSCAD) à partir de la carte, le 23/10/2026.
+Les côtés sont ceux de la carte vue de dessus, prise USB vers soi si elle est en bas.
+
+== Pièces à imprimer ==
+- boitier-fond.stl : le fond, 86,0 × 79,0 × 9,8 mm, posé à plat.
+- boitier-dessus.stl : le dessus, 86,1 × 79,0 × 16,3 mm, posé face extérieure contre le plateau, et 4 pièce(s) de bouton à côté.
+- Chaque bouton est en deux pièces : le capuchon avec sa tige, et une petite plaque à coller au bout de la tige, sous le dessus, pour que le bouton ne tombe pas (documentation de YAPP_Box). Le bouton rond et le bouton carré se reconnaissent au toucher.
+- Couche de 0,2 mm. Les lettres sont creusées de 0,8 mm dans le dessus : elles sont imprimées contre le plateau, donc sans support. Le braille n'est pas possible sur cette face (il faudrait des points en relief contre le plateau) : une étiquette braille collée peut le compléter.
+- Matière : plastique seulement. Un boîtier en métal couperait l'antenne WiFi et la radio.
+
+== Ce qu'on trouve au toucher ==
+- côté du bas : prise « USB » (J1), 13,4 × 7,6 mm
+- côté droit : prise « FM » (J2), ronde, ⌀ 11,5 mm
+- côté gauche : passage de fils « MOLETTE » (J6), 8,0 × 4,0 mm
+- côté droit : passage de fils « AM » (J3), 8,0 × 4,0 mm
+- côté du bas : passage de fils « HP G » (J4), 8,0 × 4,0 mm
+- côté du bas : passage de fils « HP D » (J5), 8,0 × 4,0 mm
+- sur le dessus : bouton rond « RESET » (SW1), nom écrit en creux à côté
+- sur le dessus : bouton carré « BOOT » (SW2), nom écrit en creux à côté
+- sur le dessus : trou « LED » (D1), nom écrit en creux à côté
+
+== Maintien de la carte ==
+La carte est posée sur 4 plot(s) du fond, avec un téton qui entre dans chaque trou de fixation ; un plot du dessus appuie sur la carte au même endroit.
+En plus, aux coins sans trou, 2 plot(s) du fond et autant du dessus (⌀ 5,0 mm) pincent la carte, là où il n'y a ni composant ni patte.
+Le dessus se ferme avec deux crochets.
+
+== Hauteurs ==
+- Sous la carte : 3,0 mm (les pattes dépassent de 1,9 mm).
+- Au-dessus de la carte : 13,3 mm (plus haut composant : J2, 9,7 mm).
+- Pas d'aération : le calcul d'échauffement de l'étape 0 bis suppose une carte à l'air libre. À surveiller au premier essai.
+
+== Contrôles faits sur le modèle ==
+✓ pièces fermées (prêtes à imprimer) : fond oui, dessus oui ; 4 pièce(s) de bouton
+✓ prise J1 « USB », côté bas de la carte : traverse la paroi (13,4 × 7,6 mm)
+✓ prise J2 « FM », côté droit de la carte : traverse la paroi (⌀ 11,5 mm)
+✓ fils J6 « MOLETTE », côté gauche de la carte : traverse la paroi (8,0 × 4,0 mm)
+✓ fils J3 « AM », côté droit de la carte : traverse la paroi (8,0 × 4,0 mm)
+✓ fils J4 « HP G », côté bas de la carte : traverse la paroi (8,0 × 4,0 mm)
+✓ fils J5 « HP D », côté bas de la carte : traverse la paroi (8,0 × 4,0 mm)
+✓ bouton rond SW1 « RESET » : passe à travers le dessus
+✓ bouton carré SW2 « BOOT » : passe à travers le dessus
+✓ trou D1 « LED » : passe à travers le dessus
+✓ aucun composant ne rentre dans une paroi (contrôle sur leur boîte 3D)
+✓ la carte tient dans le boîtier sans toucher les parois
+✓ téton dans un trou en (76,5 ; 58,5) mm : dessous de la carte touché, dessus de la carte touché
+✓ téton dans un trou en (18,5 ; 69,5) mm : dessous de la carte touché, dessus de la carte touché
+✓ téton dans un trou en (66,0 ; 69,5) mm : dessous de la carte touché, dessus de la carte touché
+✓ téton dans un trou en (3,5 ; 69,0) mm : dessous de la carte touché, dessus de la carte touché
+✓ plot qui pince en (3,0 ; 3,0) mm : dessous de la carte touché, dessus de la carte touché
+✓ plot qui pince en (77,0 ; 3,0) mm : dessous de la carte touché, dessus de la carte touché
+✓ 9 nom(s) creusé(s) dans le dessus, chacun à sa place, sans déborder sur un voisin
+
+== À savoir ==
+- le boîtier est rehaussé à 13,3 mm au-dessus de la carte pour que l'ouverture la plus haute tienne dans la paroi
+
+Étiquettes en braille : etiquettes-braille.txt, une par ligne, à embosser (par exemple avec une BrailleRAP et son logiciel AccessBrailleRAP) puis à coller à côté de chaque prise ou bouton.
+
+Rien n'est encore imprimé : la première impression dira si les jeux (prises, boutons, nervure) conviennent à l'imprimante.

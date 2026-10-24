@@ -1,0 +1,411 @@
+{
+ "nom": "B_tuner",
+ "description": "Tuner AM/FM Si4735 avec son quartz et la prise d'antenne. Routé déjà retourné d'un demi-tour, pour que la prise d'antenne sorte par la droite.",
+ "etiquette": "tuner",
+ "easygerber": {
+  "carte": "77980028-72a8-4675-afe9-84771c985f0d",
+  "revision": 2
+ },
+ "taille": [
+  27.6,
+  26.4
+ ],
+ "interface": [
+  "3V3",
+  "I2C_SCL",
+  "I2C_SDA",
+  "LOUT",
+  "RADIO_INT",
+  "RADIO_RST",
+  "ROUT"
+ ],
+ "non_poses": [
+  "TP10",
+  "TP11",
+  "TP12",
+  "TP13",
+  "TP14",
+  "TP15",
+  "TP9"
+ ],
+ "sans_cuivre": [],
+ "au_bord": [
+  {
+   "quoi": "prise d'antenne radio (J2)",
+   "cote": "droite"
+  }
+ ],
+ "intent": {
+  "suggestedName": "RADIONEO v3 bloc B_tuner",
+  "parts": [
+   [
+    "U4",
+    "314a0f89ff46a63724ef4a8c",
+    "Si4735 tuner AM/FM/OC"
+   ],
+   [
+    "C7",
+    "a3d8523edb7d412e8438c7da",
+    "22nF"
+   ],
+   [
+    "C8",
+    "6999504406edb6de27734196",
+    "100nF"
+   ],
+   [
+    "C9",
+    "6999504406edb6de2773419e",
+    "1nF"
+   ],
+   [
+    "C10",
+    "69c99b1cb86ba86cb7529717",
+    "470nF"
+   ],
+   [
+    "Y1",
+    "cd1535442572a67ce65876d6",
+    "32.768kHz"
+   ],
+   [
+    "C11",
+    "d7df254bcefe64880157c1ca",
+    "22pF"
+   ],
+   [
+    "C12",
+    "d7df254bcefe64880157c1ca",
+    "22pF"
+   ],
+   [
+    "J2",
+    "074b33b88aa8645acf66045f",
+    "Antenne FM"
+   ],
+   [
+    "J3",
+    "69b0c90ce8c7a76e2cd5278d",
+    "Antenne ferrite AM"
+   ],
+   [
+    "TP9",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie I2C_SDA"
+   ],
+   [
+    "TP10",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie I2C_SCL"
+   ],
+   [
+    "TP11",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie RADIO_RST"
+   ],
+   [
+    "TP12",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie RADIO_INT"
+   ],
+   [
+    "TP13",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie 3V3"
+   ],
+   [
+    "TP14",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie LOUT"
+   ],
+   [
+    "TP15",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie ROUT"
+   ]
+  ],
+  "connections": [
+   {
+    "net": "3V3",
+    "class": "power",
+    "pins": [
+     [
+      "U4",
+      "21"
+     ],
+     [
+      "C7",
+      "1"
+     ],
+     [
+      "U4",
+      "20"
+     ],
+     [
+      "C8",
+      "1"
+     ],
+     [
+      "TP13",
+      "1"
+     ]
+    ],
+    "requiredCurrentA": 0.8
+   },
+   {
+    "net": "GND",
+    "class": "ground",
+    "pins": [
+     [
+      "U4",
+      "9"
+     ],
+     [
+      "U4",
+      "10"
+     ],
+     [
+      "U4",
+      "11"
+     ],
+     [
+      "U4",
+      "13"
+     ],
+     [
+      "U4",
+      "14"
+     ],
+     [
+      "U4",
+      "16"
+     ],
+     [
+      "C8",
+      "2"
+     ],
+     [
+      "C11",
+      "2"
+     ],
+     [
+      "C12",
+      "2"
+     ],
+     [
+      "J2",
+      "1"
+     ],
+     [
+      "J2",
+      "2"
+     ],
+     [
+      "J2",
+      "3"
+     ],
+     [
+      "J2",
+      "4"
+     ],
+     [
+      "J3",
+      "2"
+     ]
+    ]
+   },
+   {
+    "net": "I2C_SDA",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "18"
+     ],
+     [
+      "TP9",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "I2C_SCL",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "17"
+     ],
+     [
+      "TP10",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "RADIO_RST",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "15"
+     ],
+     [
+      "TP11",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "RADIO_INT",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "4"
+     ],
+     [
+      "TP12",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "DBYP",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "22"
+     ],
+     [
+      "C7",
+      "2"
+     ]
+    ]
+   },
+   {
+    "net": "FM_ANT",
+    "class": "signal",
+    "pins": [
+     [
+      "J2",
+      "5"
+     ],
+     [
+      "C9",
+      "1"
+     ]
+    ],
+    "targetImpedanceOhms": 50
+   },
+   {
+    "net": "FMI",
+    "class": "signal",
+    "pins": [
+     [
+      "C9",
+      "2"
+     ],
+     [
+      "U4",
+      "8"
+     ]
+    ],
+    "targetImpedanceOhms": 50
+   },
+   {
+    "net": "AM_L",
+    "class": "signal",
+    "pins": [
+     [
+      "J3",
+      "1"
+     ],
+     [
+      "C10",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "AMI",
+    "class": "signal",
+    "pins": [
+     [
+      "C10",
+      "2"
+     ],
+     [
+      "U4",
+      "12"
+     ]
+    ]
+   },
+   {
+    "net": "XTAL_A",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "3"
+     ],
+     [
+      "Y1",
+      "1"
+     ],
+     [
+      "C11",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "XTAL_B",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "19"
+     ],
+     [
+      "Y1",
+      "2"
+     ],
+     [
+      "C12",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "LOUT",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "24"
+     ],
+     [
+      "TP14",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "ROUT",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "23"
+     ],
+     [
+      "TP15",
+      "1"
+     ]
+    ]
+   }
+  ]
+ }
+}

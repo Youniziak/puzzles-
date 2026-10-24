@@ -1,0 +1,21 @@
+# Modèles 3D refaits par la chaîne : trop lourds pour le dépôt, et refaits à chaque passage.
+# (Les modèles 3D de la bibliothèque, eux, sont gardés : la chaîne en a besoin.)
+resultats/**/*.stl
+resultats/**/*.3mf
+resultats/**/*.step
+resultats/**/*.3dshapes/
+resultats/*/dossier-relecture-*.zip
+
+# Fichiers de travail
+__pycache__/
+.pio/
+*.kicad_prl
+*-bak
+*.lck
+fp-info-cache
+
+# Schémas d'autres projets publiés : chacun a sa licence, on ne les redistribue pas.
+**/montages-reels/schemas/
+
+# Premier essai du plan à toucher (23/10/2026), remplacé par plan-papier-gonfle.
+resultats/radio-v4/plan-tactile/

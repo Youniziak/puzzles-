@@ -1,0 +1,405 @@
+{
+ "nom": "B_tuner_si4732",
+ "description": "Tuner AM/FM/ondes courtes Si4732-A10 (SOIC-16) avec son quartz et la prise d'antenne SMA coudée BWSMA-KWE-Z001, qui sort par la droite. Remplace B_tuner (Si4735, en rupture de stock le 23/10/2026). Adresse I2C 0x11 (SENB à la masse).",
+ "etiquette": "tuner",
+ "easygerber": {
+  "carte": "5ca94803-f67a-4a6c-94ad-85e1730622d4",
+  "revision": 2
+ },
+ "taille": [
+  27.6,
+  26.4
+ ],
+ "interface": [
+  "3V3",
+  "I2C_SCL",
+  "I2C_SDA",
+  "LOUT",
+  "RADIO_INT",
+  "RADIO_RST",
+  "ROUT"
+ ],
+ "non_poses": [
+  "TP9",
+  "TP10",
+  "TP11",
+  "TP12",
+  "TP13",
+  "TP14",
+  "TP15"
+ ],
+ "sans_cuivre": [],
+ "au_bord": [
+  {
+   "quoi": "prise d'antenne radio (J2)",
+   "cote": "droite"
+  }
+ ],
+ "intent": {
+  "suggestedName": "RADIONEO v4 bloc B_tuner_si4732",
+  "parts": [
+   [
+    "U4",
+    "be2bc603176b623c0e67ee4b",
+    "Si4732-A10 tuner AM/FM/OC"
+   ],
+   [
+    "C7",
+    "6999504506edb6de277341a9",
+    "10uF"
+   ],
+   [
+    "C8",
+    "6999504406edb6de27734196",
+    "100nF"
+   ],
+   [
+    "C9",
+    "6999504406edb6de2773419e",
+    "1nF"
+   ],
+   [
+    "C10",
+    "69c99b1cb86ba86cb7529717",
+    "470nF"
+   ],
+   [
+    "Y1",
+    "cd1535442572a67ce65876d6",
+    "32.768kHz"
+   ],
+   [
+    "C11",
+    "d7df254bcefe64880157c1ca",
+    "22pF"
+   ],
+   [
+    "C12",
+    "d7df254bcefe64880157c1ca",
+    "22pF"
+   ],
+   [
+    "J2",
+    "fdd8d6c18c70cca83d8be702",
+    "Antenne FM"
+   ],
+   [
+    "J3",
+    "69b0c90ce8c7a76e2cd5278d",
+    "Antenne ferrite AM"
+   ],
+   [
+    "TP9",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie I2C_SDA"
+   ],
+   [
+    "TP10",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie I2C_SCL"
+   ],
+   [
+    "TP11",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie RADIO_RST"
+   ],
+   [
+    "TP12",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie RADIO_INT"
+   ],
+   [
+    "TP13",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie 3V3"
+   ],
+   [
+    "TP14",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie LOUT"
+   ],
+   [
+    "TP15",
+    "23c2dc1d5fd0ad52c2e6e721",
+    "Sortie ROUT"
+   ]
+  ],
+  "connections": [
+   {
+    "net": "3V3",
+    "class": "power",
+    "pins": [
+     [
+      "U4",
+      "14"
+     ],
+     [
+      "C7",
+      "1"
+     ],
+     [
+      "C8",
+      "1"
+     ],
+     [
+      "TP13",
+      "1"
+     ]
+    ],
+    "requiredCurrentA": 0.8
+   },
+   {
+    "net": "GND",
+    "class": "ground",
+    "pins": [
+     [
+      "U4",
+      "7"
+     ],
+     [
+      "U4",
+      "10"
+     ],
+     [
+      "U4",
+      "15"
+     ],
+     [
+      "C7",
+      "2"
+     ],
+     [
+      "C8",
+      "2"
+     ],
+     [
+      "C11",
+      "2"
+     ],
+     [
+      "C12",
+      "2"
+     ],
+     [
+      "J2",
+      "1"
+     ],
+     [
+      "J2",
+      "2"
+     ],
+     [
+      "J2",
+      "3"
+     ],
+     [
+      "J2",
+      "4"
+     ],
+     [
+      "J3",
+      "2"
+     ]
+    ]
+   },
+   {
+    "net": "I2C_SDA",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "12"
+     ],
+     [
+      "TP9",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "I2C_SCL",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "11"
+     ],
+     [
+      "TP10",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "RADIO_RST",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "9"
+     ],
+     [
+      "TP11",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "RADIO_INT",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "3"
+     ],
+     [
+      "TP12",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "FM_ANT",
+    "class": "signal",
+    "pins": [
+     [
+      "J2",
+      "5"
+     ],
+     [
+      "C9",
+      "1"
+     ]
+    ],
+    "targetImpedanceOhms": 50
+   },
+   {
+    "net": "FMI",
+    "class": "signal",
+    "pins": [
+     [
+      "C9",
+      "2"
+     ],
+     [
+      "U4",
+      "6"
+     ]
+    ],
+    "targetImpedanceOhms": 50
+   },
+   {
+    "net": "AM_L",
+    "class": "signal",
+    "pins": [
+     [
+      "J3",
+      "1"
+     ],
+     [
+      "C10",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "AMI",
+    "class": "signal",
+    "pins": [
+     [
+      "C10",
+      "2"
+     ],
+     [
+      "U4",
+      "8"
+     ]
+    ]
+   },
+   {
+    "net": "XTAL_A",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "2"
+     ],
+     [
+      "Y1",
+      "1"
+     ],
+     [
+      "C11",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "XTAL_B",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "13"
+     ],
+     [
+      "Y1",
+      "2"
+     ],
+     [
+      "C12",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "LOUT",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "1"
+     ],
+     [
+      "TP14",
+      "1"
+     ]
+    ]
+   },
+   {
+    "net": "ROUT",
+    "class": "signal",
+    "pins": [
+     [
+      "U4",
+      "16"
+     ],
+     [
+      "TP15",
+      "1"
+     ]
+    ]
+   }
+  ]
+ },
+ "boitier": {
+  "ouvertures": [
+   {
+    "ref": "J2",
+    "texte": "FM",
+    "forme": "rond",
+    "fiche_mm": [
+     10.5,
+     10.5
+    ],
+    "note": "place pour l'écrou de la fiche SMA (8 mm sur plats, 9,2 mm sur angles) et la clé"
+   }
+  ],
+  "fils": [
+   {
+    "ref": "J3",
+    "texte": "AM"
+   }
+  ]
+ }
+}

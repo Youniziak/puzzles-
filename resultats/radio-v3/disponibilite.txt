@@ -1,0 +1,32 @@
+Disponibilité des composants chez JLCPCB — RADIONÉO carte radio v3, pour 5 carte(s) — 23/10/2026 05:31
+
+✓ C14663     CC0603KRX7R9BB104            C1, C5, C8, C14          besoin   20  stock 45629688  de base             0.0084 $  [JLCPCB]
+✓ C1623      CL10B474KA8NNNC              C10, C17, C18            besoin   15  stock 1161139  de base             0.0130 $  [JLCPCB]
+✓ C1653      CL10C220JB8NNNC              C11, C12                 besoin   10  stock 1997866  de base             0.0060 $  [JLCPCB]
+✓ C45783     CL21A226MAQNNNE              C2, C3                   besoin   10  stock 4360319  de base             0.1911 $  [JLCPCB]
+✓ C440198    GRM21BR61H106KE43L           C4, C13                  besoin   10  stock 1314187  de base             0.2077 $  [JLCPCB]
+✓ C15849     CL10A105KB8NNNC              C6, C19, C15, C16        besoin   20  stock 14223588  de base             0.0146 $  [JLCPCB]
+✓ C21122     CL10B223KB8NNNC              C7                       besoin    5  stock  797790  de base             0.0070 $  [JLCPCB]
+✓ C1588      CL10B102KB8NNNC              C9                       besoin    5  stock 5750137  de base             0.0098 $  [JLCPCB]
+✓ C2286      KT-0603R                     D1                       besoin    5  stock 7996297  de base             0.0077 $  [JLCPCB]
+✓ C2765186   TYPE-C 16PIN 2MD(073)        J1                       besoin    5  stock 1058316  étendue             0.0748 $  [JLCPCB]
+✓ C5183768   132135                       J2                       besoin    5  stock     212  étendue            10.6513 $  [JLCPCB]
+✓ C492401    PZ254V-11-02P                J3, J4, J5               besoin   15  stock 1002028  étendue             0.0187 $  [JLCPCB]
+✓ C492404    PZ254V-11-05P                J6                       besoin    5  stock  176779  étendue             0.0324 $  [JLCPCB]
+✓ C23186     0603WAF5101T5E               R1, R2                   besoin   10  stock 22370731  de base             0.0015 $  [JLCPCB]
+✓ C17902     1206W4F1002T5E               R3                       besoin    5  stock 2557060  de base             0.0078 $  [JLCPCB]
+✓ C21190     0603WAF1001T5E               R4                       besoin    5  stock 35769930  de base             0.0018 $  [JLCPCB]
+✓ C23162     0603WAF4701T5E               R5, R6                   besoin   10  stock 17531660  de base             0.0028 $  [JLCPCB]
+✓ C25803     0603WAF1003T5E               R8, R9, R7               besoin   15  stock 18519742  de base             0.0031 $  [JLCPCB]
+✓ C318884    TS-1187A-B-A-B               SW1, SW2                 besoin   10  stock 1176717  de base             0.0207 $  [JLCPCB]
+✓ C2687116   USBLC6-2SC6                  U1                       besoin    5  stock  126985  étendue             0.0478 $  [JLCPCB]
+✓ C6186      AMS1117-3.3                  U2                       besoin    5  stock  983999  de base             0.2089 $  [JLCPCB]
+✓ C2913202   ESP32-S3-WROOM-1-N16R8       U3                       besoin    5  stock   22114  étendue             5.3461 $  [JLCPCB]
+✗ C1526089   SI4735-D60-GU                U4                       besoin    5  stock       0  étendue            13.1077 $  [JLCPCB]
+✓ C5122557   PAM8403                      U5                       besoin    5  stock    6788  étendue             0.2835 $  [JLCPCB]
+✓ C5361379   H31003271C2070CY             Y1                       besoin    5  stock   41547  étendue             0.2001 $  [JLCPCB]
+
+25 pièces différentes ; coût des composants pour 5 carte(s) : environ 155.21 $ (hors carte, pose et port)
+Pièces étendues : 9 type(s), chacun avec des frais de chargement chez JLCPCB (voir leur tarif) : TYPE-C 16PIN 2MD(073) (étendue); 132135 (étendue); PZ254V-11-02P (étendue); PZ254V-11-05P (étendue); USBLC6-2SC6 (étendue); ESP32-S3-WROOM-1-N16R8 (étendue); SI4735-D60-GU (étendue); PAM8403 (étendue); H31003271C2070CY (étendue)
+✗ 1 pièce(s) manquante(s) ou en quantité insuffisante : JLCPCB ne pourra pas tout assembler.
+  - SI4735-D60-GU (C1526089, U4) : stock 0, il en faut 5

@@ -1,0 +1,29 @@
+Autres fabricants — RADIONÉO carte radio v4
+
+La carte est routée pour « JLCPCB, 2 couches, cuivre 35 µm ». Ci-dessous : convient-elle aussi ailleurs ?
+
+✓ JLCPCB, 2 couches, cuivre 35 µm (fabricant de la carte)
+    source des règles : JLCPCB, page « PCB capabilities », consultée le 22/10/2026
+    conforme : KiCad et le contrôle indépendant ne trouvent rien.
+    fichiers dans fabrication/ (Gerber de KiKit, liste des pièces et placement repris d'EasyGerber)
+    stock des pièces : vérifiable avec --disponibilite
+
+✗ AISLER (Allemagne), 2 couches 1,6 mm, cuivre 35 µm, finition ENIG
+    source des règles : AISLER, « 2 Layer 1.6mm 35µm ENIG Design Rules », mis à jour le 07/07/2025, consulté le 23/10/2026 : https://community.aisler.net/t/2-layer-hd-design-rules/3732 (c'est le plus fin de leurs procédés 2 couches ; « 2 Layer 1.6mm HASL » est plus large : piste 0,2 mm, écart 0,15 mm)
+    pas conforme tel quel :
+      - 62 × diamètre de trou — exemple : Hole size out of range (board setup constraints min hole 0.2500 mm; actual 0.2000 mm) (Via [VBUS] on F.Cu - B.Cu)
+      - 6 × écart entre cuivres — exemple : Clearance violation (board minimum clearance 0.1250 mm; actual 0.1242 mm) (Via [I2C_SCL] on F.Cu - B.Cu, Track [RADIO_RST] on B.Cu, length 1.0706 mm)
+      - 4 × écart entre un trou et le cuivre — exemple : Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2219 mm) (Pad A4B9 [VBUS] of J1 on F.Cu, NPTH pad of J1)
+      - 2 × couronne de cuivre autour d'un trou — exemple : Annular width (rule 'couronne de composant (AISLER)' min annular width 0.2950 mm; actual 0.2500 mm) (PTH pad 13 [GND] of J1)
+      - contrôle indépendant : 4 point(s) à corriger avant de commander :
+      - contrôle indépendant : ✗ écart de 0.102 mm entre ROUT et LOUT (mini 0.125 mm)
+      - contrôle indépendant : ✗ écart de 0.109 mm entre RADIO_RST et I2C_SCL (mini 0.125 mm)
+      - contrôle indépendant : ✗ trou non métallisé Ø0.7 en (12.11, 4.89) à 0.201 mm du cuivre GND
+    stock des pièces : pas vérifiable d'ici : voir le devis du fabricant
+
+✓ PCBWay, 2 couches, cuivre 35 µm (offre standard)
+    source des règles : PCBWay, pages « PCB Capabilities » (offre standard) et « Advanced PCB Capabilities », consultées le 23/10/2026 : https://www.pcbway.com/capabilities.html
+    ajusté pour ce fabricant : 11 via(s) agrandi(s), pour une couronne de 0,15 mm (dans fabricants/pcbway-2-couches/ seulement ; la carte d'origine n'est pas changée)
+    conforme : KiCad et le contrôle indépendant ne trouvent rien.
+    fichiers préparés par KiKit dans fabricants/pcbway-2-couches/fabrication/ : bom.csv, gerber, gerbers.zip, pos.csv
+    stock des pièces : PCBWay achète les pièces lui-même, d'après la référence du fabricant (MPN). Leur stock ne se vérifie pas d'ici : il est donné sur le devis.

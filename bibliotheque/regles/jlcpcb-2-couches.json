@@ -1,0 +1,51 @@
+{
+ "nom": "JLCPCB, 2 couches, cuivre 35 µm",
+ "type": "fabricant",
+ "kikit": "jlcpcb",
+ "stock_verifiable": true,
+ "source": "JLCPCB, page « PCB capabilities », consultée le 22/10/2026",
+ "kicad": {
+  "min_clearance": 0.1,
+  "min_track_width": 0.1,
+  "min_copper_edge_clearance": 0.2,
+  "min_through_hole_diameter": 0.15,
+  "min_hole_clearance": 0.2,
+  "min_hole_to_hole": 0.2,
+  "min_via_diameter": 0.25,
+  "min_via_annular_width": 0.05
+ },
+ "classe_par_defaut": {
+  "clearance": 0.1,
+  "track_width": 0.25,
+  "via_diameter": 0.7,
+  "via_drill": 0.3,
+  "note": "Via de 0,7 mm pour un trou de 0,3 mm : couronne de 0,2 mm + écart de 0,1 mm = 0,3 mm entre le trou et le cuivre d'un autre réseau, au-dessus des 0,28 mm de JLCPCB. Constaté le 23/10/2026 : avec 0,6 mm, Freerouting a posé un via à 0,25 mm du 5 V."
+ },
+ "alimentations": {
+  "echauffement_C": 10,
+  "epaisseur_cuivre_um": 35,
+  "marge_largeur": 1.5,
+  "note": "Largeur donnée à Freerouting pour une alimentation : largeur IPC-2221 pour le courant, × la marge, arrondie au 0,05 mm supérieur. Si Freerouting n'y arrive pas, deuxième passage à la largeur minimale (sans marge)."
+ },
+ "plans": {
+  "retrait_du_bord": 0.3,
+  "ecart_masse": 0.25,
+  "ecart_alimentation": 0.15,
+  "epaisseur_min": 0.25
+ },
+ "controle": {
+  "trou_metallise_cuivre": 0.28,
+  "trou_non_metallise_cuivre": 0.2,
+  "couronne_min": 0.18,
+  "couronne_conseillee": 0.25
+ },
+ "routage": {
+  "passages_max": 3,
+  "note": "Nombre de passages de Freerouting au plus, si des liaisons manquent encore. Environ 5 minutes par passage."
+ },
+ "thermique": {
+  "temperature_ambiante_C": 40,
+  "marge_C": 10,
+  "note": "Température de l'air autour de la carte, dans un boîtier fermé : 40 °C (hypothèse prudente). Marge : on avertit à moins de 10 °C de la limite."
+ }
+}

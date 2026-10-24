@@ -1,0 +1,2 @@
+(version 1)
+(rule "trou metallise - cuivre (fabricant)" (constraint hole_clearance (min 0.145mm)) (condition "A.isPlated()"))

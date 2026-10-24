@@ -1,0 +1,73 @@
+Banc de test à pointes — RADIONÉO carte radio v4
+
+Fait par la chaîne puzzle le 23/10/2026.
+Pour mesurer toutes les sorties sans viser les pastilles : chaque sortie arrive sur une borne, au fond d'un entonnoir, avec son numéro et le nom du signal en lettres en relief, et le numéro en braille. Les numéros sont ceux du plan de test (TP1 = borne 1…).
+
+== À fabriquer ==
+- La carte du banc, chez JLCPCB : fabrication-carte-banc/ (Gerber et perçages), 130,1 × 123,0 mm, 2 couches, sans composant posé par l'usine.
+- banc-socle.stl : 130,1 × 123,1 × 17,3 mm, posé à plat.
+- banc-porte-pointes.stl : 3,0 mm d'épaisseur, posé à plat.
+- banc-capot.stl : 4,8 mm d'épaisseur (braille compris), posé face sans braille contre le plateau. Couche de 0,2 mm. Le coin coupé est en haut à gauche, comme sur la maquette.
+
+== À acheter ==
+- 20 pointes à ressort P75-E2 (pointe conique) ; P75-B1 (pointe fine) convient aussi (corps ⌀ 1,0 mm, longueur 16,5 mm), plus quelques-unes d'avance.
+- 4 vis M3 × 30 mm à tête hexagonale (ISO 4017) et 4 écrous papillon M3, qui se serrent à la main.
+
+== Montage (une fois, avec quelqu'un qui soude) ==
+1. Glisser chaque pointe par-dessous dans le porte-pointes, puis dans le trou de la carte du banc posée dessus : le bout de la pointe doit affleurer le dessus de la carte du banc. Souder sur le dessus.
+2. Poser le capot sur la carte du banc (le coin coupé du côté du coin coupé de la carte du banc).
+
+== Utilisation ==
+1. Glisser les 4 vis par-dessous dans le socle : leur tête hexagonale se loge dans le fond, elles ne tournent pas.
+2. Poser la carte radio sur le socle, composants vers le haut : les tétons entrent dans ses trous de fixation.
+3. Poser par-dessus le porte-pointes, la carte du banc et le capot, enfilés sur les vis.
+4. Visser les 4 écrous papillon à la main, jusqu'à ce que le porte-pointes appuie sur les colonnes : les pointes sont alors enfoncées de 1,7 mm, ni plus ni moins.
+5. Mesurer : la pointe du multimètre dans un entonnoir tombe sur la borne. La masse est l'entonnoir carré.
+La prise USB et les prises à fils restent accessibles : rien ne les gêne sur les côtés (USB, MOLETTE, FM, AM, HP G, HP D).
+
+== Les bornes ==
+- borne « masse » (entonnoir carré) : couronne du trou H2, masse
+- borne 1 : sortie TP1, AMP_MUTE (écrit « MUTE »)
+- borne 2 : sortie TP2, VBUS (écrit « 5V »)
+- borne 3 : sortie TP3, I2C_SDA (écrit « SDA »)
+- borne 4 : sortie TP4, I2C_SCL (écrit « SCL »)
+- borne 5 : sortie TP5, RADIO_RST (écrit « RST »)
+- borne 6 : sortie TP6, RADIO_INT (écrit « INT »)
+- borne 7 : sortie TP7, 3V3 (écrit « 3V3 »)
+- borne 8 : sortie TP8, LOUT (écrit « SON G »)
+- borne 9 : sortie TP9, I2C_SDA (écrit « SDA »)
+- borne 10 : sortie TP10, I2C_SCL (écrit « SCL »)
+- borne 11 : sortie TP11, RADIO_RST (écrit « RST »)
+- borne 12 : sortie TP12, RADIO_INT (écrit « INT »)
+- borne 13 : sortie TP13, 3V3 (écrit « 3V3 »)
+- borne 14 : sortie TP14, LOUT (écrit « SON G »)
+- borne 15 : sortie TP15, ROUT (écrit « SON D »)
+- borne 16 : sortie TP16, LOUT (écrit « SON G »)
+- borne 17 : sortie TP17, ROUT (écrit « SON D »)
+- borne 18 : sortie TP18, VBUS (écrit « 5V »)
+- borne 19 : sortie TP19, AMP_MUTE (écrit « MUTE »)
+
+== Hauteurs ==
+- Plus haut composant de la carte : J2, 9,7 mm ; le porte-pointes passe à 10,2 mm au-dessus de la carte.
+- Carte du banc à 13,2 mm au-dessus de la carte ; capot de 14,8 à 18,8 mm.
+- Sous la carte : 2,5 mm (les pattes dépassent de 1,9 mm) ; 12 appui(s) sous les sorties, en plus des tétons.
+
+== Contrôles faits sur le modèle ==
+✓ carte du banc : KiCad ne trouve aucune erreur, 0 liaison(s) manquante(s) ; 20 pointes reliées chacune à sa borne
+✓ chaque borne porte la même liaison que sa pointe (20 sur 20)
+✓ fichiers pour l'usine de la carte du banc (KiKit) : gerber, gerbers.zip
+✓ pièces imprimées fermées (prêtes à imprimer) : socle oui, porte-pointes oui, capot oui
+✓ enfoncement des pointes : 1,7 mm sur 2,6 possibles
+✓ chaque pointe descend jusqu'à sa sortie sans frôler un composant
+✓ entonnoirs loin des pointes : 6,5 mm au plus près
+✓ le bas de chaque entonnoir (⌀ 2,4 mm) tombe sur sa borne (⌀ 3,0 mm)
+✓ colonnes hors du passage des prises et des fils (6 passage(s) laissés libres)
+✓ la carte se pose dans le socle sans rien toucher d'autre que ses appuis et les tétons
+✓ aucun composant ne touche le socle ni le porte-pointes (boîtes 3D)
+✓ 20 entonnoir(s) ouvert(s) jusqu'à leur borne sur 20
+✓ braille complet (chaque point à sa place, bien séparé), numéro et nom du signal en relief pour 20 borne(s) sur 20
+
+== À savoir ==
+- carte du banc agrandie : 25,0 mm autour de la carte, pour que toutes les bornes tiennent
+
+Rien n'est encore fabriqué : les cotes des pointes viennent de fiches de vendeurs. Les mesurer à la réception, et corriger « pointe » dans banc_test.json si elles diffèrent, puis relancer cette étape.

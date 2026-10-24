@@ -1,0 +1,13 @@
+{
+ "note": "Pièces LCSC qui ont un symbole dans la bibliothèque officielle de KiCad : on y prend les types de broches (entrée, sortie, alimentation, passive…), pas les dessins. « par » : « numero » quand les numéros de broches sont les mêmes ; « nom » quand la numérotation diffère : on rapproche alors les noms, avec des « synonymes » au besoin. Utilisé par outils/typer_broches.py.",
+ "source": "Bibliothèque officielle de KiCad (kicad-symbols, https://gitlab.com/kicad/libraries/kicad-symbols), licence CC-BY-SA 4.0 avec une exception qui laisse libres les cartes faites avec.",
+ "pieces": {
+  "C2913202": {"symbole": "RF_Module/ESP32-S3-WROOM-1", "par": "numero"},
+  "C6186": {"symbole": "Regulator_Linear/AMS1117-3.3", "par": "numero", "note": "La patte 4 (languette du boîtier SOT-223, reliée à VOUT) n'a pas de broche chez KiCad : elle devient « passive », comme une broche en double."},
+  "C2687116": {"symbole": "Power_Protection/USBLC6-2SC6", "par": "numero"},
+  "C5122557": {"symbole": "Amplifier_Audio/PAM8403D", "par": "numero", "note": "PAM8403 de Slkor : même brochage SOP-16 que le PAM8403D (OUTL+ chez LCSC = LOUT+ chez KiCad)."},
+  "C2765186": {"symbole": "Connector/USB_C_Receptacle_USB2.0_16P", "par": "nom", "synonymes": {"DP1": "D+", "DP2": "D+", "DN1": "D-", "DN2": "D-", "EH": "SHIELD"}},
+  "C1526089": {"symbole": "RF_AM_FM/Si4735-D60-GU", "par": "numero"},
+  "C2155558": {"symbole": "RF_AM_FM/Si4735-D60-GU", "par": "nom", "synonymes": {"VDD": "VD"}, "note": "Le Si4732-A10 n'est pas dans la bibliothèque officielle : types repris du Si4735-D60-GU, de la même famille, en rapprochant les noms des broches. À confirmer avec la fiche du Si4732 (question pour l'électronicien)."}
+ }
+}

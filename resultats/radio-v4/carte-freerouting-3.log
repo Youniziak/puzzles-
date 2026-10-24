@@ -1,0 +1,142 @@
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=46695 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+2026-10-23 23:32:39.436 INFO   Freerouting v2.1.0 (build-date: 2025-04-12)
+2026-10-23 23:32:39.516 WARN   No default constructor found for field: currentLocale
+2026-10-23 23:32:39.517 INFO   Settings were loaded from freerouting.json
+2026-10-23 23:32:41.311 INFO   [A75403\0FCB5D] Job 'A75403\0FCB5D' started at 2026-10-23T23:32:41.310845329Z
+java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:315)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:320)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:722)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614)
+	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:844)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+	at app.freerouting.management.VersionChecker.processResponse(VersionChecker.java:47)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718)
+	... 5 more
+2026-10-23 23:32:45.040 WARN   Polyline: must contain at least 2 different points
+2026-10-23 23:32:45.040 WARN   Polyline.corner: arr.length is < 2
+2026-10-23 23:32:45.040 WARN   Polyline.corner: arr.length is < 2
+2026-10-23 23:32:45.041 ERROR  [A75403\0FCB5D] Error during autoroute_item
+java.lang.NullPointerException: Cannot invoke "Object.equals(Object)" because "from_corner" is null
+	at app.freerouting.board.RoutingBoard.insert_forced_trace_polyline(RoutingBoard.java:637) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.InsertFoundConnectionAlgo.insert_trace(InsertFoundConnectionAlgo.java:145) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.InsertFoundConnectionAlgo.get_instance(InsertFoundConnectionAlgo.java:55) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.AutorouteEngine.autoroute_connection(AutorouteEngine.java:239) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_item(BatchAutorouter.java:610) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_pass(BatchAutorouter.java:332) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.runBatchLoop(BatchAutorouter.java:447) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.management.RoutingJobSchedulerActionThread.thread_action(RoutingJobSchedulerActionThread.java:131) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.core.StoppableThread.run(StoppableThread.java:26) [freerouting-2.1.0.jar:unspecified]
+2026-10-23 23:32:45.041 ERROR  [A75403\0FCB5D] Error during autoroute_item
+java.lang.NullPointerException: Cannot invoke "Object.equals(Object)" because "from_corner" is null
+	at app.freerouting.board.RoutingBoard.insert_forced_trace_polyline(RoutingBoard.java:637) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.InsertFoundConnectionAlgo.insert_trace(InsertFoundConnectionAlgo.java:145) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.InsertFoundConnectionAlgo.get_instance(InsertFoundConnectionAlgo.java:55) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.AutorouteEngine.autoroute_connection(AutorouteEngine.java:239) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_item(BatchAutorouter.java:610) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_pass(BatchAutorouter.java:332) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.runBatchLoop(BatchAutorouter.java:447) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.management.RoutingJobSchedulerActionThread.thread_action(RoutingJobSchedulerActionThread.java:131) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.core.StoppableThread.run(StoppableThread.java:26) [freerouting-2.1.0.jar:unspecified]
+2026-10-23 23:32:46.352 WARN   Polyline: must contain at least 2 different points
+2026-10-23 23:32:46.352 WARN   Polyline.corner: arr.length is < 2
+2026-10-23 23:32:46.352 WARN   Polyline.corner: arr.length is < 2
+2026-10-23 23:32:46.352 ERROR  [A75403\0FCB5D] Error during autoroute_item
+java.lang.NullPointerException: Cannot invoke "Object.equals(Object)" because "from_corner" is null
+	at app.freerouting.board.RoutingBoard.insert_forced_trace_polyline(RoutingBoard.java:637) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.InsertFoundConnectionAlgo.insert_trace(InsertFoundConnectionAlgo.java:145) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.InsertFoundConnectionAlgo.get_instance(InsertFoundConnectionAlgo.java:55) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.AutorouteEngine.autoroute_connection(AutorouteEngine.java:239) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_item(BatchAutorouter.java:610) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_pass(BatchAutorouter.java:332) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.runBatchLoop(BatchAutorouter.java:447) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.management.RoutingJobSchedulerActionThread.thread_action(RoutingJobSchedulerActionThread.java:131) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.core.StoppableThread.run(StoppableThread.java:26) [freerouting-2.1.0.jar:unspecified]
+2026-10-23 23:32:46.352 ERROR  [A75403\0FCB5D] Error during autoroute_item
+java.lang.NullPointerException: Cannot invoke "Object.equals(Object)" because "from_corner" is null
+	at app.freerouting.board.RoutingBoard.insert_forced_trace_polyline(RoutingBoard.java:637) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.InsertFoundConnectionAlgo.insert_trace(InsertFoundConnectionAlgo.java:145) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.InsertFoundConnectionAlgo.get_instance(InsertFoundConnectionAlgo.java:55) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.AutorouteEngine.autoroute_connection(AutorouteEngine.java:239) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_item(BatchAutorouter.java:610) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_pass(BatchAutorouter.java:332) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.runBatchLoop(BatchAutorouter.java:447) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.management.RoutingJobSchedulerActionThread.thread_action(RoutingJobSchedulerActionThread.java:131) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.core.StoppableThread.run(StoppableThread.java:26) [freerouting-2.1.0.jar:unspecified]
+2026-10-23 23:32:49.682 INFO   [A75403\0FCB5D] Auto-router pass #1 on board '0bd4721cbda94a6f6972849c69b8f844' was completed in 7.85 seconds with the score of 963.65 (16 unrouted), using 20.67 CPU seconds and 2596 MB memory.
+2026-10-23 23:32:51.188 INFO   [A75403\0FCB5D] Auto-router pass #2 on board '915b1ae70fc4494c47f76e2187625553' was completed in 1.41 seconds with the score of 992.55, using 25.99 CPU seconds and 2940 MB memory.
+2026-10-23 23:32:51.340 INFO   [A75403\0FCB5D] Auto-router pass #3 on board '4903ada85bfda52596b79f43c1d1bf10' was completed in 0.04 seconds with the score of 992.55, using 31.90 CPU seconds and 3331 MB memory.
+{
+  "host": "KiCad's Pcbnew,10.0.7-10.0.7~ubuntu24.04.1",
+  "unit": "mm",
+  "board": {
+    "bounding_box": {
+      "x": 801.0,
+      "y": 731.0,
+      "width": -1.0,
+      "height": -1.0
+    },
+    "size": {
+      "x": 0.0,
+      "y": 0.0,
+      "width": 802.0,
+      "height": 732.0
+    }
+  },
+  "layers": {
+    "total_count": 2,
+    "signal_count": 2
+  },
+  "items": {
+    "total_count": 1238,
+    "trace_count": 335,
+    "via_count": 91,
+    "conduction_area_count": 4,
+    "drill_item_count": 214,
+    "pin_count": 0,
+    "component_count": 587,
+    "other_count": 7
+  },
+  "components": {
+    "total_count": 66
+  },
+  "pads": {
+    "total_count": 214
+  },
+  "nets": {
+    "total_count": 35,
+    "class_count": 8
+  },
+  "connections": {
+    "maximum_count": 581,
+    "incomplete_count": 0
+  },
+  "traces": {
+    "total_count": 335,
+    "total_segment_count": 581,
+    "total_length": 10313.962,
+    "total_weighted_length": 666742.25,
+    "average_length": 30.787945,
+    "total_vertical_length": 3142.15,
+    "total_horizontal_length": 4173.929,
+    "total_angled_length": 5238.0703
+  },
+  "bends": {
+    "total_count": 246,
+    "90_degree_count": 11,
+    "45_degree_count": 235,
+    "other_angle_count": 0
+  },
+  "vias": {
+    "total_count": 91,
+    "through_hole_count": 91,
+    "blind_count": 0,
+    "buried_count": 0
+  },
+  "clearance_violations": {
+    "total_count": 0
+  }
+}

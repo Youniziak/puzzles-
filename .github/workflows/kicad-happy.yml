@@ -1,0 +1,63 @@
+# Deuxième avis sur chaque carte de la chaîne : kicad-happy (Andrew Klofas, licence MIT).
+# Il contrôle ce que la chaîne ne contrôle pas encore : les valeurs (quartz, bus I2C, tension des
+# condensateurs), l'USB, l'alimentation. Ses scripts d'analyse ne se connectent pas à Internet.
+# Il tourne sur les machines de GitHub, pas dans l'espace de travail de Claude, où le garde-fou refuse
+# d'exécuter du code téléchargé (constaté le 24/10/2026).
+# Version épinglée (v2.3.2, commit du 22/10/2026) : on ne prend pas une nouvelle version sans l'avoir regardée.
+# Résultats : l'artefact « analyse-kicad-happy » de chaque passage, un dossier par carte (JSON et texte).
+name: kicad-happy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  analyse:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      KICAD_HAPPY_COMMIT: 2fd9aa0fe2d620f36627d9221e8b1393987ae38e
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Récupérer kicad-happy (version épinglée)
+        run: |
+          git clone --quiet https://github.com/aklofas/kicad-happy.git "$RUNNER_TEMP/kicad-happy"
+          git -C "$RUNNER_TEMP/kicad-happy" checkout --quiet "$KICAD_HAPPY_COMMIT"
+
+      - name: Analyser chaque carte (schéma, carte, analyse croisée)
+        run: |
+          KH="$RUNNER_TEMP/kicad-happy/skills/kicad/scripts"
+          mkdir -p analyse
+          : > analyse/echecs.txt
+          for sch in resultats/*/carte.kicad_sch; do
+            d=$(dirname "$sch"); nom=$(basename "$d"); o="analyse/$nom"; mkdir -p "$o"
+            echo "== $nom"
+            python3 "$KH/analyze_schematic.py" "$sch" --output "$o/schema.json" || echo "$nom : analyse du schéma en échec" >> analyse/echecs.txt
+            python3 "$KH/analyze_schematic.py" "$sch" --text > "$o/schema.txt" || true
+            if [ -f "$d/carte.kicad_pcb" ] && [ -f "$o/schema.json" ]; then
+              python3 "$KH/analyze_pcb.py" "$d/carte.kicad_pcb" --schematic "$o/schema.json" --output "$o/carte.json" || echo "$nom : analyse de la carte en échec" >> analyse/echecs.txt
+              python3 "$KH/analyze_pcb.py" "$d/carte.kicad_pcb" --schematic "$o/schema.json" --text > "$o/carte.txt" || true
+              if [ -f "$o/carte.json" ]; then
+                python3 "$KH/cross_analysis.py" --schematic "$o/schema.json" --pcb "$o/carte.json" --output "$o/croise.json" || echo "$nom : analyse croisée en échec" >> analyse/echecs.txt
+                python3 "$KH/cross_analysis.py" --schematic "$o/schema.json" --pcb "$o/carte.json" --text > "$o/croise.txt" || true
+              fi
+            fi
+          done
+
+      - name: Garder les résultats (30 jours)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: analyse-kicad-happy
+          path: analyse/
+          retention-days: 30
+
+      - name: Dire si une analyse a échoué
+        run: |
+          if [ -s analyse/echecs.txt ]; then cat analyse/echecs.txt; exit 1; fi
+          echo "Toutes les analyses ont tourné."

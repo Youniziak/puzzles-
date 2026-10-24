@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "radioneo")(type "KiCad")(uri "${KIPRJMOD}/lib/radioneo.kicad_sym")(options "")(descr "Symboles LCSC via easyeda2kicad"))
+)

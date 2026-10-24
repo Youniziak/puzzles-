@@ -1,0 +1,60 @@
+{
+ "nom": "Maquette à toucher, imprimée en 3D",
+ "note": "Toutes les mesures sont celles de la maquette (après agrandissement), sauf « trou_reel_min_mm ».",
+ "echelle": 3,
+ "plaque_mm": 3.0,
+ "pistes_dessus": {"relief_mm": 0.5, "largeur_min_mm": 0.8},
+ "pistes_dessous": {"creux_mm": 0.6, "largeur_min_mm": 0.8},
+ "sorties": {"relief_mm": 1.0},
+ "rainure_entre_blocs": {"largeur_mm": 1.2, "profondeur_mm": 0.8},
+ "trou_reel_min_mm": 0.6,
+ "coin_repere_mm": 9,
+ "bande_legende_mm": 28,
+ "exporter_step": false,
+ "braille": {
+  "source": "dimensions usuelles du braille imprimé : point de 1,5 à 1,6 mm, 2,5 mm entre points, 6 mm d'une cellule à l'autre, 10 mm d'une ligne à l'autre",
+  "point_diametre_mm": 1.6,
+  "ecart_points_mm": 2.5,
+  "pas_cellule_mm": 6.0,
+  "pas_ligne_mm": 10.0,
+  "marge_mm": 2.5
+ },
+ "texte": {
+  "note": "Nom de chaque bloc en grosses lettres en relief, pour les personnes qui voient. Police installée avec le paquet fonts-dejavu-core.",
+  "police": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+  "hauteur_mm": 8,
+  "relief_mm": 0.6
+ },
+ "couleurs": {
+  "note": "Une couleur par bloc, dans l'ordre des blocs de la carte. Palette d'Okabe et Ito, lisible aussi par les personnes qui distinguent mal les couleurs. Tout ce qui dépasse de la plaque (pistes, composants, braille, lettres) est dans la couleur « reliefs ».",
+  "actif": true,
+  "fond": {"nom": "gris clair", "rgb": "#C8C8C8"},
+  "reliefs": {"nom": "noir", "rgb": "#1A1A1A"},
+  "blocs": [
+   {"nom": "bleu", "rgb": "#0072B2"},
+   {"nom": "orange", "rgb": "#E69F00"},
+   {"nom": "vert", "rgb": "#009E73"},
+   {"nom": "rose", "rgb": "#CC79A7"},
+   {"nom": "jaune", "rgb": "#F0E442"},
+   {"nom": "bleu ciel", "rgb": "#56B4E9"}
+  ]
+ },
+ "textures": {
+  "note": "Une texture en creux par bloc, dans l'ordre des blocs, dans les endroits libres du bloc. Elle dit aux doigts ce que la couleur dit aux yeux. En creux, pour ne pas être confondue avec les pistes et le braille, qui sont en relief.",
+  "blocs": ["lignes", "quadrillage", "trous", "lisse"],
+  "fond": "lisse",
+  "profondeur_mm": 0.4,
+  "pas_mm": 4.0,
+  "largeur_mm": 1.0,
+  "pas_trous_mm": 6.0,
+  "diametre_trous_mm": 2.4,
+  "marge_mm": 1.5
+ },
+ "puzzle": {
+  "note": "Version en pièces : chaque bloc se pose dans son logement du fond, sur une pente à 45° haute de « assise_mm ». Une bande de fond plus mince que « bande_absorbee_mm » entre un bloc et le bord de la carte est rattachée au bloc.",
+  "assise_mm": 1.8,
+  "jeu_mm": 0.2,
+  "bande_absorbee_mm": 8
+ },
+ "plateau_mm": [220, 220]
+}

@@ -1,0 +1,62 @@
+{
+ "nom": "AISLER (Allemagne), 2 couches 1,6 mm, cuivre 35 µm, finition ENIG",
+ "type": "fabricant",
+ "kikit": null,
+ "stock_verifiable": false,
+ "source": "AISLER, « 2 Layer 1.6mm 35µm ENIG Design Rules », mis à jour le 07/07/2025, consulté le 23/10/2026 : https://community.aisler.net/t/2-layer-hd-design-rules/3732 (c'est le plus fin de leurs procédés 2 couches ; « 2 Layer 1.6mm HASL » est plus large : piste 0,2 mm, écart 0,15 mm)",
+ "kicad": {
+  "min_clearance": 0.125,
+  "min_track_width": 0.125,
+  "min_copper_edge_clearance": 0.3,
+  "min_through_hole_diameter": 0.25,
+  "min_hole_clearance": 0.25,
+  "min_hole_to_hole": 0.3,
+  "min_via_diameter": 0.45,
+  "min_via_annular_width": 0.1
+ },
+ "notes": {
+  "publie": "Piste et écart 0,125 mm ; via : trou de 0,25 à 0,45 mm, couronne 0,1 mm ; trou de composant : 0,5 mm au moins, couronne 0,3 mm ; trou non métallisé : 0,5 mm au moins, à 0,25 mm du cuivre ; 0,3 mm entre trous et du cuivre au bord.",
+  "non_publie": "L'écart entre un trou métallisé et le cuivre d'un autre réseau n'est pas donné : on prend celui des trous non métallisés (0,25 mm).",
+  "fichiers": "Fichiers Gerber et perçages standard (ceux de KiKit). Pas de préréglage KiKit pour AISLER. Leur service d'assemblage n'est pas vérifié ici.",
+  "tolerance": "Les règles KiCad ajoutées retirent 0,005 mm aux minimums publiés, pour ne pas compter comme fautes les arrondis de calcul (0,299988 au lieu de 0,3)."
+ },
+ "controle": {
+  "trou_metallise_cuivre": 0.25,
+  "trou_non_metallise_cuivre": 0.25,
+  "couronne_min": 0.3,
+  "couronne_conseillee": 0.3
+ },
+ "regles_kicad_dru": [
+  "(rule \"trou de composant (AISLER)\" (constraint hole_size (min 0.495mm)) (condition \"A.Type == 'Pad' && A.isPlated()\"))",
+  "(rule \"couronne de composant (AISLER)\" (constraint annular_width (min 0.295mm)) (condition \"A.Type == 'Pad'\"))",
+  "(rule \"trou non metallise (AISLER)\" (constraint hole_size (min 0.495mm)) (condition \"A.Type == 'Pad' && !A.isPlated()\"))"
+ ],
+ "classe_par_defaut": {
+  "clearance": 0.1,
+  "track_width": 0.25,
+  "via_diameter": 0.7,
+  "via_drill": 0.3,
+  "note": "Via de 0,7 mm pour un trou de 0,3 mm : couronne de 0,2 mm + écart de 0,1 mm = 0,3 mm entre le trou et le cuivre d'un autre réseau, au-dessus des 0,28 mm de JLCPCB. Constaté le 23/10/2026 : avec 0,6 mm, Freerouting a posé un via à 0,25 mm du 5 V."
+ },
+ "alimentations": {
+  "echauffement_C": 10,
+  "epaisseur_cuivre_um": 35,
+  "marge_largeur": 1.5,
+  "note": "Largeur donnée à Freerouting pour une alimentation : largeur IPC-2221 pour le courant, × la marge, arrondie au 0,05 mm supérieur. Si Freerouting n'y arrive pas, deuxième passage à la largeur minimale (sans marge)."
+ },
+ "plans": {
+  "retrait_du_bord": 0.3,
+  "ecart_masse": 0.25,
+  "ecart_alimentation": 0.15,
+  "epaisseur_min": 0.25
+ },
+ "routage": {
+  "passages_max": 3,
+  "note": "Nombre de passages de Freerouting au plus, si des liaisons manquent encore. Environ 5 minutes par passage."
+ },
+ "thermique": {
+  "temperature_ambiante_C": 40,
+  "marge_C": 10,
+  "note": "Température de l'air autour de la carte, dans un boîtier fermé : 40 °C (hypothèse prudente). Marge : on avertit à moins de 10 °C de la limite."
+ }
+}

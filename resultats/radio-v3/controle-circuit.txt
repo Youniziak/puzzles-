@@ -1,0 +1,26 @@
+CONTRÔLE DU CIRCUIT — RADIONÉO carte radio v3
+220 broches, 36 liaisons
+
+⚠ U4.2 « DFS » (SI4735-D60-GU) : entrée reliée à rien (en l'air)
+⚠ U4.10 « NC » (SI4735-D60-GU) : broche « non connectée » reliée à GND (55 autre(s) broche(s))
+⚠ U4.11 « NC » (SI4735-D60-GU) : broche « non connectée » reliée à GND (55 autre(s) broche(s))
+⚠ VBUS (prise J1) : 33,2 µF de condensateurs (C1 100nF, C13 10uF, C14 100nF, C15 1uF, C2 22uF) : l'USB 2.0 en permet 10 µF au plus (charge prise au branchement)
+⚠ U3.13 « IO19 » (ESP32-S3-WROOM-1-N16R8) : ligne USB USB_DN reliée à la prise J1 sans résistance en série ; vérifier dans le guide du fabricant de la puce s'il en faut une (Espressif, pour l'ESP32-S3 : en prévoir la place, 22 ou 33 Ω)
+⚠ U3.14 « IO20 » (ESP32-S3-WROOM-1-N16R8) : ligne USB USB_DP reliée à la prise J1 sans résistance en série ; vérifier dans le guide du fabricant de la puce s'il en faut une (Espressif, pour l'ESP32-S3 : en prévoir la place, 22 ou 33 Ω)
+✓ U1,5 « VBUS » (USBLC6-2SC6) (VBUS) : C1 à 2,3 mm
+✓ U2,2 « VOUT » (AMS1117-3,3) (3V3) : C3 à 4,6 mm
+✓ U2,3 « VIN » (AMS1117-3,3) (VBUS) : C2 à 3,3 mm
+✓ U3,2 « 3V3 » (ESP32-S3-WROOM-1-N16R8) (3V3) : C5 à 2,3 mm
+✓ U4,20 « VD » (SI4735-D60-GU) (3V3) : C8 à 4,0 mm
+✓ U4,21 « VA » (SI4735-D60-GU) (3V3) : C8 à 4,1 mm
+✓ U5,4 « PVDD » (PAM8403) (VBUS) : C14 à 3,9 mm
+✓ U5,6 « VDD » (PAM8403) (VBUS) : C15 à 4,0 mm
+✓ I2C_SCL : R6 vers 3V3
+✓ I2C_SDA : R5 vers 3V3
+✓ U2 (AMS1117-3,3) : reçoit VBUS (5 V), sort 3V3 (3,3 V)
+
+Alertes déjà vérifiées (bibliotheque/controles-verifies.json) :
+  (✗) Y1.2 « GND » (H31003271C2070CY) : broche de masse sur la liaison XTAL_B, pas sur GND — vérifié : quartz 32,768 kHz à deux broches (boîtier SMD3215-2P) : le catalogue nomme « GND » sa broche 2, mais c'est une borne du quartz ; elle va bien au tuner (RCLK) (Claude, d'après le boîtier à deux broches et la liste des connexions du bloc, 24/10/2026)
+
+Bilan : aucune erreur, 6 point(s) à regarder.
+Ce contrôle ne voit pas : la tension que supporte chaque broche (il faudrait les fiches), ni si une valeur est bonne.

@@ -1,0 +1,63 @@
+PLAN À TOUCHER SUR PAPIER GONFLÉ — RADIONÉO carte radio v4
+Fait par la chaîne puzzle (plan_tactile.py) le 23/10/2026, d'après radio-v4.json : la disposition des blocs, avant routage.
+
+== Ce que c'est ==
+Un plan de la carte agrandie 2,5 fois (200 × 182 mm), à imprimer sur papier gonflé : ce qui est noir gonfle sous la chaleur et se lit au doigt. Il sert à sentir la disposition des blocs en quelques minutes, avant de router. La maquette 3D reste le modèle détaillé.
+Page 1 : la carte. Page 2 : les liaisons entre blocs. Pages 3 à 4 : la légende en braille.
+Le haut de la feuille est le haut de la carte. Sur les pages 1 et 2, la colonne de gauche donne le titre en braille, puis la clé des symboles : chaque symbole, suivi de son nom en un mot de braille.
+
+== Imprimer ==
+- plan-tactile.pdf, A4 à l'italienne, à 100 % (taille réelle : ne pas « ajuster à la page »), sur papier gonflé, côté traité.
+- Le noir doit être à base de carbone : c'est lui qui gonfle. Le texte bleu, pour les personnes qui voient, ne gonfle pas avec une imprimante à jet d'encre couleur ; une photocopieuse le rendrait noir.
+- Passer la feuille dans la machine à papier gonflé (PIAF, Zychem…).
+- Les épaisseurs n'ont pas encore été essayées sur du vrai papier gonflé : noter ce qui gonfle trop ou pas assez, pour ajuster bibliotheque/regles/plan_tactile.json.
+- Les images plan-tactile-page-N.svg se retouchent dans Inkscape ; les .png servent à vérifier.
+
+== Symboles (mot de la clé : dessin, ce que c'est) ==
+- « carte » : trait épais, le bord de la carte.
+- « bloc » : tirets, le bord d'un bloc ; son nom est écrit en braille dedans.
+- « sortie » : petit carré plein, une sortie d'un bloc (pastille de test).
+- « prise » : pavé plein, une prise ou un fil.
+- « trou » : anneau, un trou de fixation.
+- « zone » : hachures, une zone sans cuivre (antenne).
+- « liaison » : trait fin, une liaison entre deux sorties de même nom.
+- Le bord d'un bloc s'interrompt là où il longe le bord de la carte, et là où un objet le touche presque.
+- Page 2 : chaque liaison est un trait droit d'une sortie à l'autre, comme le « chevelu » de KiCad avant routage. Ce n'est pas le chemin de la vraie piste, qui contourne les blocs.
+
+== Légende (la même qu'en braille) ==
+- Agrandie 2,5 fois. sorties : numéros du plan de test et du banc.
+- Alim, bord droit, de haut en bas : 8 son g, 7 3v3, 6 int, 5 rst, 4 scl, 3 sda, 1 mute, 2 5v.
+- Tuner, bord bas, de gauche à droite : 15 son d, 14 son g.
+- Tuner, bord gauche, de haut en bas : 13 3v3, 12 int, 11 rst, 10 scl, 9 sda.
+- Ampli, bord haut, de gauche à droite : 19 mute, 16 son g, 17 son d.
+- Ampli, bord gauche, de haut en bas : 18 5v.
+- Dans alim : prise usb au bord bas de la carte, fil molette au milieu.
+- Dans tuner : prise fm en haut, fil am à gauche.
+- Dans ampli : fil hp g à gauche, fil hp d en haut à gauche.
+- 4 trous de fixation : 2 en haut à gauche, 2 en haut à droite.
+- Zone : antenne de l'esp32-s3, en haut à gauche de la carte.
+- Page 2 : un trait relie deux sorties de même nom.
+
+== Liaisons de la page 2 (dans la notice seulement : trop long pour la légende braille) ==
+- 3v3 : sortie 7 (alim) à sortie 13 (tuner).
+- Mute : sortie 1 (alim) à sortie 19 (ampli).
+- Scl : sortie 4 (alim) à sortie 10 (tuner).
+- Sda : sortie 3 (alim) à sortie 9 (tuner).
+- Son g : sortie 8 (alim) à sortie 14 (tuner).
+- Son g : sortie 14 (tuner) à sortie 16 (ampli).
+- Int : sortie 6 (alim) à sortie 12 (tuner).
+- Rst : sortie 5 (alim) à sortie 11 (tuner).
+- Son d : sortie 15 (tuner) à sortie 17 (ampli).
+- 5v : sortie 2 (alim) à sortie 18 (ampli).
+
+== Contrôles ==
+✓ la carte tient sur la page (A4 à l'italienne), agrandie 2,5 fois : 200 × 182 mm
+✓ page 1 : tous les objets sont à au moins 3 mm les uns des autres
+⚠ page 2 : la liaison SON G (8-14) passe à 1,2 mm de la sortie 15 : au doigt, suivre le trait jusqu'au carré où il s'arrête
+✓ sorties voisines à au moins 6 mm de centre à centre
+⚠ page 2 : les liaisons 3V3 (7-13) et SON G (8-14) se croisent : au routage, l'une passera sur l'autre face (via)
+⚠ page 2 : les liaisons SON G (14-16) et SON D (15-17) se croisent : au routage, l'une passera sur l'autre face (via)
+✓ légende en braille : 12 paragraphes sur 2 page(s)
+✓ tout le noir est dans les marges de la page
+
+Règles chiffrées et leurs sources : bibliotheque/regles/plan_tactile.json.

@@ -1,0 +1,48 @@
+{
+ "carte": "RADIONÉO carte radio v4",
+ "source": "cartes/radio-v4-plan-de-test.md, version 2.2, étapes 2 à 4. Les bornes sont celles du banc de test (borne n = sortie TPn ; « masse » = entonnoir carré).",
+ "etapes": [
+  {
+   "titre": "Étape 2 : sans courant, pas de court-circuit",
+   "consigne": "Carte DÉBRANCHÉE. Multimètre en ohms (résistance).",
+   "arret_si_pas_bon": true,
+   "mesures": [
+    {"bornes": ["2", "masse"], "grandeur": "ohm", "min": 100, "sens": "5 V et masse : pas de court-circuit"},
+    {"bornes": ["7", "masse"], "grandeur": "ohm", "min": 100, "sens": "3,3 V et masse : pas de court-circuit"},
+    {"bornes": ["2", "7"], "grandeur": "ohm", "min": 100, "sens": "5 V et 3,3 V : pas de court-circuit"}
+   ]
+  },
+  {
+   "titre": "Étape 3 : sans courant, les liaisons entre blocs",
+   "consigne": "Carte DÉBRANCHÉE. Multimètre en ohms.",
+   "arret_si_pas_bon": false,
+   "mesures": [
+    {"bornes": ["2", "18"], "grandeur": "ohm", "max": 2, "sens": "5 V vers l'ampli"},
+    {"bornes": ["7", "13"], "grandeur": "ohm", "max": 2, "sens": "3,3 V vers le tuner"},
+    {"bornes": ["3", "9"], "grandeur": "ohm", "max": 2, "sens": "I2C SDA"},
+    {"bornes": ["4", "10"], "grandeur": "ohm", "max": 2, "sens": "I2C SCL"},
+    {"bornes": ["5", "11"], "grandeur": "ohm", "max": 2, "sens": "RADIO_RST"},
+    {"bornes": ["6", "12"], "grandeur": "ohm", "max": 2, "sens": "RADIO_INT"},
+    {"bornes": ["1", "19"], "grandeur": "ohm", "max": 2, "sens": "AMP_MUTE"},
+    {"bornes": ["8", "14"], "grandeur": "ohm", "max": 2, "sens": "son gauche, ESP32 ↔ tuner"},
+    {"bornes": ["14", "16"], "grandeur": "ohm", "max": 2, "sens": "son gauche, tuner ↔ ampli"},
+    {"bornes": ["15", "17"], "grandeur": "ohm", "max": 2, "sens": "son droit"},
+    {"bornes": ["3", "4"], "grandeur": "ohm", "min": 100, "sens": "SDA et SCL séparés"},
+    {"bornes": ["5", "6"], "grandeur": "ohm", "min": 100, "sens": "RST et INT séparés"},
+    {"bornes": ["14", "15"], "grandeur": "ohm", "min": 100, "sens": "son gauche et son droit séparés"}
+   ]
+  },
+  {
+   "titre": "Étape 4 : première mise sous tension",
+   "consigne": "Brancher la carte en USB-C, SANS haut-parleurs. Multimètre en volts continus. Si quelque chose chauffe : débrancher tout de suite.",
+   "arret_si_pas_bon": true,
+   "mesures": [
+    {"bornes": ["2", "masse"], "grandeur": "V", "min": 4.75, "max": 5.25, "sens": "5 V de l'USB"},
+    {"bornes": ["7", "masse"], "grandeur": "V", "min": 3.2, "max": 3.4, "sens": "3,3 V du régulateur"},
+    {"bornes": ["13", "masse"], "grandeur": "V", "min": 3.2, "max": 3.4, "sens": "3,3 V arrivé au tuner"},
+    {"bornes": ["18", "masse"], "grandeur": "V", "min": 4.75, "max": 5.25, "sens": "5 V arrivé à l'ampli"},
+    {"bornes": ["1", "masse"], "grandeur": "V", "min": 0, "max": 0.2, "sens": "ampli muet au départ (R7)"}
+   ]
+  }
+ ]
+}

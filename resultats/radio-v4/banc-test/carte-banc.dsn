@@ -1,0 +1,201 @@
+(pcb "/tmp/claude-0/-home-claude/a74a14cb-1787-5557-95b8-25def8410e6c/scratchpad/radio-test/chaine/resultats/radio-v4/banc-test/carte-banc.dsn"
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "10.0.7-10.0.7~ubuntu24.04.1")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (path pcb 0  102218 98047.6  102553 98009.9  102881 97935  103199 97823.8
+            103502 97677.7  103787 97498.6  104051 97288.7  104289 97050.6
+            104499 96787.4  104678 96502.3  104824 96199  104935 95881.2
+            105010 95552.9  105048 95218.3  105050 95050  105050 -22000
+            105048 -22168.3  105010 -22502.9  104935 -22831.2  104824 -23149
+            104678 -23452.3  104499 -23737.4  104289 -24000.6  104051 -24238.7
+            103787 -24448.6  103502 -24627.7  103199 -24773.8  102881 -24885
+            102553 -24959.9  102218 -24997.6  102050 -25000  -22000 -25000
+            -22168.3 -24997.6  -22502.9 -24959.9  -22831.2 -24885  -23149 -24773.8
+            -23452.3 -24627.7  -23737.4 -24448.6  -24000.6 -24238.7  -24238.7 -24000.6
+            -24448.6 -23737.4  -24627.7 -23452.3  -24773.8 -23149  -24885 -22831.2
+            -24959.9 -22502.9  -24997.6 -22168.3  -25000 -22000  -25000 95050
+            -24997.6 95218.3  -24959.9 95552.9  -24885 95881.2  -24773.8 96199
+            -24627.7 96502.3  -24448.6 96787.4  -24238.7 97050.6  -24000.6 97288.7
+            -23737.4 97498.6  -23452.3 97677.7  -23149 97823.8  -22831.2 97935
+            -22502.9 98009.9  -22168.3 98047.6  -22000 98050  102050 98050
+            102218 98047.6)
+    )
+    (via "Via[0-1]_700:300_um")
+    (rule
+      (width 300)
+      (clearance 200)
+      (clearance 50 (type smd_smd))
+    )
+  )
+  (placement
+    (component banc:Trou_vis
+      (place V4 100050 93050 front 0 (PN "trou de vis M3"))
+      (place V2 100050 -20000 front 0 (PN "trou de vis M3"))
+      (place V1 -20000 -20000 front 0 (PN "trou de vis M3"))
+      (place V3 -11000 93050 front 0 (PN "trou de vis M3"))
+    )
+    (component banc:Pointe_P75
+      (place P12 54425 36424.999 front 0 (PN "P75-E2"))
+      (place P7 38525 38924.999 front 0 (PN "P75-E2"))
+      (place P3 38525 20024.999 front 0 (PN "P75-E2"))
+      (place P17 71925 22224.999 front 0 (PN "P75-E2"))
+      (place P4 38525 31424.999 front 0 (PN "P75-E2"))
+      (place P16 71925 30524.999 front 0 (PN "P75-E2"))
+      (place P15 74425 30524.999 front 0 (PN "P75-E2"))
+      (place P8 38525 44024.999 front 0 (PN "P75-E2"))
+      (place P10 54425 31424.999 front 0 (PN "P75-E2"))
+      (place P1 74962.314 56837.393 front 0 (PN "P75-E2"))
+      (place P2 38525 28924.999 front 0 (PN "P75-E2"))
+      (place P9 38525 53624.999 front 0 (PN "P75-E2"))
+      (place P11 54425 33924.999 front 0 (PN "P75-E2"))
+      (place P20 56925 22324.999 front 0 (PN "P75-E2"))
+      (place P18 74925 22224.999 front 0 (PN "P75-E2"))
+      (place P5 38525 33924.999 front 0 (PN "P75-E2"))
+      (place P6 38525 36424.999 front 0 (PN "P75-E2"))
+      (place P14 54425 46424.999 front 0 (PN "P75-E2"))
+      (place P19 56925 5824.999 front 0 (PN "P75-E2"))
+      (place P13 54425 38924.999 front 0 (PN "P75-E2"))
+    )
+    (component banc:Borne_ronde
+      (place B8 9413.75 63449.999 front 0 (PN "borne 7"))
+      (place B13 -14950 34349.999 front 0 (PN "borne 12"))
+      (place B18 -2846.998 5249.999 front 0 (PN "borne 17"))
+      (place B20 36456.003 5249.999 front 0 (PN "borne 19"))
+      (place B10 44839.185 63449.999 front 0 (PN "borne 9"))
+      (place B6 -17512.588 63449.999 front 0 (PN "borne 5"))
+      (place B14 4150 34349.999 front 0 (PN "borne 13"))
+      (place B19 17356.003 5249.999 front 0 (PN "borne 18"))
+      (place B12 80932.374 63449.999 front 0 (PN "borne 11"))
+      (place B4 66047.643 92550 front 0 (PN "borne 3"))
+      (place B16 45496.319 34349.999 front 0 (PN "borne 15"))
+      (place B15 24271.658 34349.999 front 0 (PN "borne 14"))
+      (place B5 80258.746 92550 front 0 (PN "borne 4"))
+      (place B1 11050 92550 front 0 (PN "borne masse"))
+      (place B17 79720.98 34349.999 front 0 (PN "borne 16"))
+      (place B11 61832.374 63449.999 front 0 (PN "borne 10"))
+      (place B3 52054.454 92550 front 0 (PN "borne 2"))
+      (place B9 26824.337 63449.999 front 0 (PN "borne 8"))
+      (place B7 -3975.177 63449.999 front 0 (PN "borne 6"))
+      (place B2 36052.227 92550 front 0 (PN "borne 1"))
+    )
+  )
+  (library
+    (image banc:Trou_vis
+      (keepout "" (circle F.Cu 3900))
+      (keepout "" (circle B.Cu 3900))
+    )
+    (image banc:Pointe_P75
+      (pin Round[A]Pad_2000.000000_um 1 0 0)
+    )
+    (image banc:Borne_ronde
+      (pin Round[T]Pad_3000.000000_um 1 0 0)
+    )
+    (padstack Round[A]Pad_2000.000000_um
+      (shape (circle F.Cu 2000))
+      (shape (circle B.Cu 2000))
+      (attach off)
+    )
+    (padstack Round[T]Pad_3000.000000_um
+      (shape (circle F.Cu 3000))
+      (attach off)
+    )
+    (padstack "Via[0-1]_700:300_um"
+      (shape (circle F.Cu 700))
+      (shape (circle B.Cu 700))
+      (attach off)
+    )
+  )
+  (network
+    (net TP11
+      (pins P12-1 B12-1)
+    )
+    (net TP6
+      (pins P7-1 B7-1)
+    )
+    (net TP2
+      (pins P3-1 B3-1)
+    )
+    (net TP16
+      (pins P17-1 B17-1)
+    )
+    (net TP3
+      (pins P4-1 B4-1)
+    )
+    (net TP15
+      (pins P16-1 B16-1)
+    )
+    (net TP14
+      (pins P15-1 B15-1)
+    )
+    (net TP7
+      (pins P8-1 B8-1)
+    )
+    (net TP9
+      (pins P10-1 B10-1)
+    )
+    (net TP12
+      (pins B13-1 P13-1)
+    )
+    (net MASSE
+      (pins P1-1 B1-1)
+    )
+    (net TP17
+      (pins B18-1 P18-1)
+    )
+    (net TP19
+      (pins B20-1 P20-1)
+    )
+    (net TP5
+      (pins B6-1 P6-1)
+    )
+    (net TP13
+      (pins B14-1 P14-1)
+    )
+    (net TP18
+      (pins B19-1 P19-1)
+    )
+    (net TP1
+      (pins P2-1 B2-1)
+    )
+    (net TP4
+      (pins B5-1 P5-1)
+    )
+    (net TP8
+      (pins P9-1 B9-1)
+    )
+    (net TP10
+      (pins P11-1 B11-1)
+    )
+    (class kicad_default MASSE TP1 TP10 TP11 TP12 TP13 TP14 TP15 TP16 TP17
+      TP18 TP19 TP2 TP3 TP4 TP5 TP6 TP7 TP8 TP9
+      (circuit
+        (use_via "Via[0-1]_700:300_um")
+      )
+      (rule
+        (width 300)
+        (clearance 200)
+      )
+    )
+  )
+  (wiring
+  )
+)

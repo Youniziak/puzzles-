@@ -1,0 +1,13 @@
+{
+ "note": "Alertes du contrôle du circuit (scripts/controle_circuit.py) vérifiées par une personne : elles ne sont plus comptées, mais restent écrites dans le bilan. Chacune dit pourquoi, qui et quand. Une alerte se rattache à une pièce LCSC et à une broche : elle vaut pour toutes les cartes qui utilisent cette pièce.",
+ "verifies": [
+  {
+   "lcsc": "C5361379",
+   "broche": "2",
+   "regle": "masse",
+   "raison": "quartz 32,768 kHz à deux broches (boîtier SMD3215-2P) : le catalogue nomme « GND » sa broche 2, mais c'est une borne du quartz ; elle va bien au tuner (RCLK)",
+   "verifie_par": "Claude, d'après le boîtier à deux broches et la liste des connexions du bloc",
+   "le": "24/10/2026"
+  }
+ ]
+}

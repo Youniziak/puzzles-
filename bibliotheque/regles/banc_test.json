@@ -1,0 +1,77 @@
+{
+ "description": "Réglages du banc de test à pointes (étape 6, banc_test.py) : une petite carte du banc qui porte une pointe à ressort sur chaque sortie, un socle, un porte-pointes et un capot imprimés. Le braille suit maquette.json.",
+ "pointe": {
+  "modele": "P75-E2 (pointe conique) ; P75-B1 (pointe fine) convient aussi",
+  "longueur_mm": 16.5,
+  "diametre_corps_mm": 1.02,
+  "course_totale_mm": 2.65,
+  "course_travail_mm": 1.7,
+  "force_g": 100,
+  "source": "fiches de vendeurs consultées le 23/10/2026 (probots.co.in : 1,02 × 16,5 mm, course 2,65 mm, 100 g ; robotshop : 17 mm, 120 g) ; elles ne sont pas toutes d'accord : mesurer les pointes reçues et corriger ici",
+  "trou_carte_mm": 1.2,
+  "pastille_carte_mm": 2.0,
+  "jeu_guide_mm": 0.25
+ },
+ "carte_banc": {
+  "marge_autour_mm": 10.0,
+  "marge_max_mm": 30.0,
+  "epaisseur_mm": 1.6,
+  "rayon_coins_mm": 3.0,
+  "borne_diametre_mm": 3.0,
+  "ecart_borne_pointe_mm": 6.5,
+  "piste_mm": 0.3
+ },
+ "vis": {
+  "type": "vis M3 à tête hexagonale (ISO 4017) et écrou papillon M3, serrés à la main",
+  "trou_mm": 3.4,
+  "tete_sur_plats_mm": 5.5,
+  "tete_hauteur_mm": 2.0,
+  "depasse_pour_ecrou_mm": 5.0,
+  "longueurs_mm": [
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   50
+  ],
+  "colonne_diametre_mm": 9.0,
+  "retrait_du_bord_mm": 5.0,
+  "garde_autour_mm": 8.0
+ },
+ "socle": {
+  "fond_mm": 3.0,
+  "sous_la_carte_min_mm": 2.5,
+  "jeu_sous_les_pattes_mm": 0.5,
+  "plot_trou_diametre_mm": 5.0,
+  "teton_jeu_mm": 0.4,
+  "teton_depasse_mm": 0.3,
+  "plot_appui_diametre_mm": 4.0,
+  "plot_appui_recherche_mm": 6.0
+ },
+ "porte_pointes": {
+  "au_dessus_du_plus_haut_mm": 0.5,
+  "epaisseur_min_mm": 1.5
+ },
+ "capot": {
+  "epaisseur_mm": 4.0,
+  "entonnoir_haut_mm": 7.0,
+  "entonnoir_bas_mm": 2.4,
+  "logement_pointe_mm": 3.6,
+  "logement_profondeur_mm": 1.4,
+  "coin_repere_mm": 8.0,
+  "chiffres_hauteur_mm": 5.0,
+  "chiffres_relief_mm": 0.8,
+  "ecart_mm": 1.5,
+  "masse": {
+   "braille": "masse",
+   "relief": "MASSE"
+  },
+  "noms_hauteur_mm": 4.0,
+  "braille": true,
+  "table_braille": "fr-bfu-comp6.utb",
+  "note_braille": "Braille par liblouis : « fr-bfu-comp6.utb » est le braille français (chiffres en notation Antoine). Une autre table de liblouis peut se mettre ici ; « braille » à false pour ne mettre que les lettres et les chiffres en relief."
+ },
+ "couche_impression_mm": 0.2
+}
