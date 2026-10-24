@@ -1,0 +1,48 @@
+{
+ "nom": "Fraiseuse de fablab (type Roland SRM-20), fraise de 0,4 mm (1/64 de pouce), 2 faces, vias faits à la main",
+ "type": "fablab",
+ "kikit": "jlcpcb",
+ "stock_verifiable": false,
+ "source": "Hypothèses de Claude (24/10/2026), d'après les comptes rendus de la Fab Academy 2026 : fraise de 1/64 de pouce (0,4 mm), donc au moins 0,4 mm entre deux cuivres. Vias : un trou de 0,8 mm où l'on soude un fil, avec une large couronne. À confirmer avec le fablab (taille de ses fraises, deux faces ou une seule).",
+ "kicad": {
+  "min_clearance": 0.4,
+  "min_track_width": 0.4,
+  "min_copper_edge_clearance": 0.5,
+  "min_through_hole_diameter": 0.8,
+  "min_hole_clearance": 0.4,
+  "min_hole_to_hole": 0.5,
+  "min_via_diameter": 1.8,
+  "min_via_annular_width": 0.4
+ },
+ "classe_par_defaut": {
+  "clearance": 0.4,
+  "track_width": 0.5,
+  "via_diameter": 1.8,
+  "via_drill": 0.8,
+  "note": "Piste de 0,5 mm : plus solide qu'au minimum de 0,4 mm, une fois fraisée."
+ },
+ "alimentations": {
+  "echauffement_C": 10,
+  "epaisseur_cuivre_um": 35,
+  "marge_largeur": 1.5
+ },
+ "plans": {
+  "retrait_du_bord": 0.5,
+  "ecart_masse": 0.4,
+  "ecart_alimentation": 0.4,
+  "epaisseur_min": 0.5
+ },
+ "controle": {
+  "trou_metallise_cuivre": 0.4,
+  "trou_non_metallise_cuivre": 0.4,
+  "couronne_min": 0.5,
+  "couronne_conseillee": 0.5
+ },
+ "routage": {
+  "passages_max": 3
+ },
+ "thermique": {
+  "temperature_ambiante_C": 40,
+  "marge_C": 10
+ }
+}

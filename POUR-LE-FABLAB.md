@@ -48,6 +48,7 @@ Elle ne refait pas ce que de bons logiciels font déjà. C'est un assemblage de 
 - `broches_esp32.py` (environ 50 lignes) : écrit les broches de l'ESP32 pour le logiciel, à partir du schéma.
 - `outils/mesures_guidees.py` (environ 140 lignes) : déroule les mesures du plan de test avec le banc ; valeur lue par sigrok ou tapée.
 - `modeles3d.py` (environ 90 lignes) : pose les modèles 3D des composants comme sur la carte ; partagé par le boîtier et le banc.
+- `outils/vider_routage.py` (environ 50 lignes) : pour un essai, enlève le routage d'une carte et garde le placement, pour que Freerouting refasse tout avec d'autres règles (par exemple celles d'une fraiseuse de fablab : `bibliotheque/regles/fraiseuse-fablab.json`).
 - `fabricants.py` (140 lignes) : regarde si la carte convient aussi à d'autres fabricants (PCBWay, AISLER) que celui pour lequel elle est routée, avec KiCad et KiKit.
 
 Aucun nom de carte, de bloc ou de réseau n'est écrit dans ces scripts. Une nouvelle carte, c'est un nouveau fichier de description, sans toucher au code.

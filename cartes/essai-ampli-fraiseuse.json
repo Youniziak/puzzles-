@@ -1,0 +1,25 @@
+{
+ "nom": "Essai : bloc ampli seul, routé par Freerouting pour une fraiseuse de fablab (24/10/2026)",
+ "etiquette": "ampli",
+ "bibliotheque": "../bibliotheque",
+ "regles": "fraiseuse-fablab",
+ "contour": {
+  "largeur": 24.6,
+  "hauteur": 23.8,
+  "rayon_coins": 1.0
+ },
+ "masse": "GND",
+ "alimentations_externes": [
+  "VBUS"
+ ],
+ "blocs": [
+  {
+   "bloc": "C_ampli",
+   "position": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0
+  }
+ ]
+}

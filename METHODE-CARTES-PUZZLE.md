@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.27 — 24 octobre 2026
+Version 1.28 — 24 octobre 2026
 
 ## L'idée en une phrase
 
@@ -558,6 +558,28 @@ Le constat de Kévin : faire seuls tous les blocs prendrait trop longtemps (on n
   - kicad-skip (LGPL, dernière version en février 2024, KiCad 7 et plus) et kicad-sch-api (novembre 2025, KiCad 9, encore jeune), pour remplacer `sexpr.py` : pas encore. `sexpr.py` fait 60 lignes et marche.
 - **À surveiller** : LibrePCB (Suisse, GPL ; version 2.0 en janvier 2026, 2.1.1 en juin 2026, rouvert). Un logiciel de conception de cartes entièrement libre et européen, avec une commande pour l'automatiser (il lui faut un écran virtuel, xvfb). Une piste pour la chaîne « toute libre », si KiCad devenait difficile à automatiser après la version 11.
 
+## Essai : un bloc à la fraiseuse du fablab, routé par Freerouting (24/10/2026)
+
+But : savoir si un bloc peut être fait à la fraiseuse d'un fablab, et si un outil libre (Freerouting) peut router l'intérieur d'un bloc à la place d'EasyGerber.
+- **Comment** :
+  - carte `cartes/essai-ampli-fraiseuse.json` : le seul bloc ampli, avec le placement d'EasyGerber ;
+  - règles `bibliotheque/regles/fraiseuse-fablab.json` (hypothèses de Claude, à confirmer avec le fablab) : 0,4 mm au moins entre deux cuivres et pour une piste, pistes de 0,5 mm, vias de 1,8 mm pour un trou de 0,8 mm où l'on soude un fil, 0,5 mm du bord. La commande « Autres fabricants » ne les lit pas (type « fablab ») ;
+  - `outils/vider_routage.py` enlève le routage d'EasyGerber et ajoute une bande de garde le long du bord ; avec « une-face », il interdit le dessous et les vias.
+
+  ```
+  python3 scripts/assembler.py cartes/essai-ampli-fraiseuse.json resultats/essai-ampli-fraiseuse
+  python3 outils/vider_routage.py resultats/essai-ampli-fraiseuse/carte.kicad_pcb 0.6
+  python3 scripts/freerouter.py cartes/essai-ampli-fraiseuse.json resultats/essai-ampli-fraiseuse/carte.kicad_pcb OUTILS/freerouting-2.1.0.jar
+  ```
+- **Résultats** :
+  - le routage d'EasyGerber, tel quel, sous les règles de fraiseuse : 79 erreurs (pistes de 0,25 mm, 14 vias de 0,5 mm, écarts trop petits). Il ne passe pas ;
+  - Freerouting, sur deux faces, en une vingtaine de secondes : 2 essais sur 3 complets, sans aucune erreur pour KiCad, avec 11 vias chacun (11 fils à souder à la main). Le troisième laisse 2 liaisons. Freerouting ne donne jamais deux fois le même résultat : on garde un essai complet ;
+  - sur une seule face, sans via : 6 liaisons manquent encore après 3 passages. Il faudrait 2 ou 3 fils volants (des « straps »), ou un placement plus aéré ;
+  - sans la bande de garde, Freerouting passe à moins de 0,5 mm du bord (5 erreurs) : il ne connaît pas cette règle ;
+  - l'essai complet est rangé dans `resultats/essai-ampli-fraiseuse/` : la carte KiCad, et une image des deux faces pour les gens du fablab.
+- **Ce que ça montre** : on peut garder le placement d'EasyGerber et faire router l'intérieur d'un bloc par un outil libre. Pour une carte fraisée, il faudra un placement plus aéré, pour avoir moins de vias.
+- **Pas vérifié** : les vraies règles de la fraiseuse (taille des fraises, une ou deux faces), et le fraisage lui-même. Pour essayer le bloc seul sur place, il lui manque une pastille de masse au bord.
+
 ## Veille
 
 Une tâche programmée, « Veille chaîne puzzle », tourne le 1er de chaque mois à 8 h 41 (heure de Paris), depuis le 23/10/2026. Elle compare aux références de cette version : versions des logiciels (KiCad 11 et le retrait de SWIG en premier), règles de JLCPCB, PCBWay et AISLER, stock des pièces clés, pistes à revérifier. Elle cherche aussi du nouveau, avec la règle des deux sources. Elle envoie un rapport daté et peut proposer une mise à jour de la compétence, que Kévin relit avant de l'enregistrer. Elle n'a pas les fichiers de la chaîne : elle dit quoi changer et où, et les changements se font ici, avec une entrée d'historique.
@@ -599,6 +621,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.28 — 24/10/2026** : essai du bloc ampli à la fraiseuse du fablab, routé par Freerouting (règles `fraiseuse-fablab.json`, `outils/vider_routage.py`, carte `essai-ampli-fraiseuse.json`) : complet sur deux faces, sans erreur, avec 11 vias ; pas sur une seule face.
 - **1.27 — 24/10/2026** : fablabs autour de Lyon qui déclarent une fraiseuse de précision, d'après l'interface publique de fablabs.io ; état d'EDeA (vivant, au ralenti ; licence EUPL) ; le garde-fou refuse aussi de lancer EDeA dans l'espace de travail de Claude ; pcb2gcode absent d'Ubuntu 24.04.
 - **1.26 — 24/10/2026** : quatrième recherche, « Projets libres inattendus » : EDeA (bibliothèque partagée de sous-circuits KiCad, financée par NLnet), fraisage des cartes au fablab (mods, pcb2gcode), gerber2ems ; OrthoRoute, kicad-skip et kicad-sch-api regardés, pas retenus ; LibrePCB à surveiller.
 - **1.25 — 24/10/2026** : pistes pour une bibliothèque de blocs plus rapide et une chaîne toute libre (blocs de carte de KiCad 10, montages publiés, atopile, Freerouting à la place d'EasyGerber, partage des blocs génériques). Rien n'est encore essayé.
