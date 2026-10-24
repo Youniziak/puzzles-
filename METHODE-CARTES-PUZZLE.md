@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.24 — 24 octobre 2026
+Version 1.25 — 24 octobre 2026
 
 ## L'idée en une phrase
 
@@ -525,6 +525,18 @@ Recherche dans les tickets GitHub et GitLab, le forum KiCad, les forums japonais
   - **KiPilot** (serveur MCP, alpha de mai 2026 ; rouvert). Il lit et modifie une carte en conversation, mais il faut KiCad ouvert à l'écran : pas utilisable sans la vue, ni sans fenêtre.
 - **Rien trouvé** : un outil libre qui vérifie de façon générale « broche SDA sur liaison SCL ». D'où `controle_circuit.py`, petit et lisible.
 
+## Pistes pour une bibliothèque de blocs plus rapide, et une chaîne toute libre (24/10/2026)
+
+Le constat de Kévin : faire seuls tous les blocs prendrait trop longtemps (on ne fait pas quinze projets par jour), et EasyGerber n'est pas libre. Le but : une chaîne toute libre, utile à tout le monde. Rien n'est encore essayé.
+- **Les blocs de KiCad 10** (rouvert : annonce officielle de KiCad 10, mars 2026 ; deux fils du forum KiCad en parlent). KiCad rangeait déjà des blocs de schéma (« design blocks »). Depuis la version 10, il range aussi des blocs de carte : « Users can now create and manage libraries of board layouts ». C'est l'idée des blocs de la chaîne, dans le format de KiCad, qui est libre. À essayer : ranger nos 4 blocs comme blocs KiCad. Pas vérifié : si le routage du bloc est gardé, et si on peut les poser par script.
+- **Reprendre des blocs dans des montages publiés**, contrôlés par la chaîne avant d'être acceptés, avec leur licence notée :
+  - le jeu Open Schematics (environ 88 000 schémas KiCad), déjà utilisé par `outils/montages_reels.py` ;
+  - les projets libres d'OSHWLab (EasyEDA). KiCad sait importer EasyEDA, mais le nouveau format d'EasyEDA Pro ne passe plus (ticket KiCad n° 22239, encore ouvert d'après la page rouverte ; contournement proposé : passer par un export Altium).
+- **atopile** (MIT) a un registre de modules réutilisables (packages.atopile.io, rouvert). Pas vérifié : si ses modules apportent leur placement et leur routage pour KiCad.
+- **Se passer d'EasyGerber** : faire router aussi l'intérieur des blocs par Freerouting, qui est libre et déjà dans la chaîne. À essayer d'abord sur le bloc le plus simple (l'ampli), en comparant avec le routage d'EasyGerber.
+- **Partager les blocs génériques** (alimentation, ESP32, ampli, tuner), pas les inventions, sous une licence libre (par exemple CERN-OHL), pour que d'autres en ajoutent. Décision de Kévin.
+- Ce qui resterait non libre : les fabricants (ce sont des usines, pas des logiciels) et une partie des données des pièces (empreintes venues d'EasyEDA), que la bibliothèque officielle de KiCad remplace peu à peu (déjà les types des broches).
+
 ## Veille
 
 Une tâche programmée, « Veille chaîne puzzle », tourne le 1er de chaque mois à 8 h 41 (heure de Paris), depuis le 23/10/2026. Elle compare aux références de cette version : versions des logiciels (KiCad 11 et le retrait de SWIG en premier), règles de JLCPCB, PCBWay et AISLER, stock des pièces clés, pistes à revérifier. Elle cherche aussi du nouveau, avec la règle des deux sources. Elle envoie un rapport daté et peut proposer une mise à jour de la compétence, que Kévin relit avant de l'enregistrer. Elle n'a pas les fichiers de la chaîne : elle dit quoi changer et où, et les changements se font ici, avec une entrée d'historique.
@@ -566,6 +578,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.25 — 24/10/2026** : pistes pour une bibliothèque de blocs plus rapide et une chaîne toute libre (blocs de carte de KiCad 10, montages publiés, atopile, Freerouting à la place d'EasyGerber, partage des blocs génériques). Rien n'est encore essayé.
 - **1.24 — 24/10/2026** : la chaîne est prête pour un dépôt GitHub privé (`README.md`, et un `.gitignore` qui laisse de côté les modèles 3D refaits par la chaîne et les schémas d'autres projets) ; kicad-happy y tournera à chaque envoi (`.github/workflows/kicad-happy.yml`). Le dépôt reste à créer par Kévin. La suite pour la radio v4 : la relecture par un électronicien.
 - **1.23 — 24/10/2026** : le contrôle du circuit voit maintenant tout seul les deux points trouvés à la main : plus de 10 µF sur le VBUS d'une prise USB, et une ligne de données USB sans résistance en série (règles 10 et 11 de `controle_circuit.py`, essayées sur une copie corrigée de la radio v4).
 - **1.22 — 24/10/2026** : contrôles de kicad-happy refaits à la main sur la radio v4, car l'outil n'a pas pu être lancé ici ; fiche de questions de la radio v4 en version 1.5, avec deux questions de plus (condensateurs sur VBUS, lignes USB) ; dossier de relecture refait (12 questions).
