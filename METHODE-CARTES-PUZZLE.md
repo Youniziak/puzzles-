@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.25 — 24 octobre 2026
+Version 1.26 — 24 octobre 2026
 
 ## L'idée en une phrase
 
@@ -537,6 +537,24 @@ Le constat de Kévin : faire seuls tous les blocs prendrait trop longtemps (on n
 - **Partager les blocs génériques** (alimentation, ESP32, ampli, tuner), pas les inventions, sous une licence libre (par exemple CERN-OHL), pour que d'autres en ajoutent. Décision de Kévin.
 - Ce qui resterait non libre : les fabricants (ce sont des usines, pas des logiciels) et une partie des données des pièces (empreintes venues d'EasyEDA), que la bibliothèque officielle de KiCad remplace peu à peu (déjà les types des broches).
 
+## Projets libres inattendus (24/10/2026, quatrième recherche)
+
+« Rouvert » veut dire que Claude a lu la page lui-même. Rien n'est encore essayé.
+- **EDeA** (rouvert : fiche NLnet, entretien NGI, articles d'AB Open et d'OSHPark, forum KiCad).
+  - Ce que c'est : un catalogue et un portail communautaire de « modules de circuits éprouvés » (alimentation, conditionnement de signal, conversion, microcontrôleurs), avec un outil qui fusionne un sous-circuit, schéma et carte compris, dans un projet KiCad. Exactement notre idée de bibliothèque de blocs partagée.
+  - Qui : Fully Automated OÜ (Estonie), financé par NLnet (NGI0 Discovery) d'avril 2020 à septembre 2022. Code : gitlab.com/edea-dev. Dernière version vue : 0.6.0, sur le forum KiCad, en janvier 2024.
+  - Pas vérifié : s'il vit encore en 2026. Les blocs de carte de KiCad 10 font maintenant une partie de son travail.
+  - À retenir aussi : NLnet a déjà financé un outil libre de conception de cartes. Une chaîne accessible pourrait entrer dans un de ses appels (à vérifier).
+- **Faire la carte au fablab, à la fraiseuse** (rouvert : deux comptes rendus de la Fab Academy 2026 ; pages des paquets Debian et Fedora de pcb2gcode).
+  - Dans les fablabs, le montage habituel est une petite fraiseuse Roland SRM-20, le logiciel libre « mods » du MIT et une fraise de 1/64 de pouce (0,4 mm). pcb2gcode (GPL-3.0) fait la même chose en ligne de commande, depuis les Gerber.
+  - Pour la chaîne : un fichier de règles « fraiseuse du fablab » (écarts d'environ 0,4 mm, pas de trous métallisés), pour savoir si un bloc simple peut être fait sur place, en un après-midi, avec Kévin. Les blocs actuels (écarts de 0,1 mm, prise USB-C au pas de 0,5 mm) ne passeraient pas tels quels.
+  - Pas vérifié : quel fablab de Lyon a une fraiseuse pour cartes.
+- **gerber2ems** (Antmicro, Pologne ; Apache-2.0 ; rouvert). Simule une piste depuis les Gerber avec openEMS (impédance, paramètres S). Pourrait chiffrer la question 2 de la fiche (la piste FM de 1 cm). Lourd à installer. À 100 MHz, 1 cm est très court devant la longueur d'onde (environ 3 m dans l'air) : l'effet devrait être faible, mais c'est à l'électronicien de le dire.
+- **Regardés, pas retenus** :
+  - OrthoRoute (MIT, KiCad 10, rouvert) : l'auteur le dit lui-même, il n'est « pas un routeur général ». Il est fait pour d'énormes cartes multicouches, demande KiCad ouvert et une carte graphique NVIDIA.
+  - kicad-skip (LGPL, dernière version en février 2024, KiCad 7 et plus) et kicad-sch-api (novembre 2025, KiCad 9, encore jeune), pour remplacer `sexpr.py` : pas encore. `sexpr.py` fait 60 lignes et marche.
+- **À surveiller** : LibrePCB (Suisse, GPL ; version 2.0 en janvier 2026, 2.1.1 en juin 2026, rouvert). Un logiciel de conception de cartes entièrement libre et européen, avec une commande pour l'automatiser (il lui faut un écran virtuel, xvfb). Une piste pour la chaîne « toute libre », si KiCad devenait difficile à automatiser après la version 11.
+
 ## Veille
 
 Une tâche programmée, « Veille chaîne puzzle », tourne le 1er de chaque mois à 8 h 41 (heure de Paris), depuis le 23/10/2026. Elle compare aux références de cette version : versions des logiciels (KiCad 11 et le retrait de SWIG en premier), règles de JLCPCB, PCBWay et AISLER, stock des pièces clés, pistes à revérifier. Elle cherche aussi du nouveau, avec la règle des deux sources. Elle envoie un rapport daté et peut proposer une mise à jour de la compétence, que Kévin relit avant de l'enregistrer. Elle n'a pas les fichiers de la chaîne : elle dit quoi changer et où, et les changements se font ici, avec une entrée d'historique.
@@ -578,6 +596,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.26 — 24/10/2026** : quatrième recherche, « Projets libres inattendus » : EDeA (bibliothèque partagée de sous-circuits KiCad, financée par NLnet), fraisage des cartes au fablab (mods, pcb2gcode), gerber2ems ; OrthoRoute, kicad-skip et kicad-sch-api regardés, pas retenus ; LibrePCB à surveiller.
 - **1.25 — 24/10/2026** : pistes pour une bibliothèque de blocs plus rapide et une chaîne toute libre (blocs de carte de KiCad 10, montages publiés, atopile, Freerouting à la place d'EasyGerber, partage des blocs génériques). Rien n'est encore essayé.
 - **1.24 — 24/10/2026** : la chaîne est prête pour un dépôt GitHub privé (`README.md`, et un `.gitignore` qui laisse de côté les modèles 3D refaits par la chaîne et les schémas d'autres projets) ; kicad-happy y tournera à chaque envoi (`.github/workflows/kicad-happy.yml`). Le dépôt reste à créer par Kévin. La suite pour la radio v4 : la relecture par un électronicien.
 - **1.23 — 24/10/2026** : le contrôle du circuit voit maintenant tout seul les deux points trouvés à la main : plus de 10 µF sur le VBUS d'une prise USB, et une ligne de données USB sans résistance en série (règles 10 et 11 de `controle_circuit.py`, essayées sur une copie corrigée de la radio v4).
