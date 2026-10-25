@@ -1,65 +1,64 @@
-Montages réels de « SI4732|PAM8403D » — jeu Open Schematics (https://huggingface.co/datasets/bshada/open-schematics), 23/10/2026
-Projets publiés, non vérifiés : à comparer, pas à recopier les yeux fermés.
+Montages réels de « SI4732|PAM8403|SY8089 » — 25/10/2026
+Projets publiés : à comparer, pas à recopier les yeux fermés. Chaque projet garde sa licence : on lit et on cite.
+Toutes les liaisons ci-dessous sortent de KiCad, lisant le schéma d'origine. Une feuille par schéma : ce qui passe
+par une autre feuille apparaît comme « réseau X, rien d'autre sur cette feuille ».
 
-== dépôt Ahmed-H300/Carcotech — An autonomous car that can solve maze and find it's path out.
-   U7 = PAM8403D
-     broche 1 LOUT+ → LS1 Speaker
-     broche 2 PGND → masse
-     broche 3 LOUT- → LS1 Speaker
-     broche 4 PVDD → U10 TCT5000, U11 256 K-bit EEPROM (24C256), U13 ~, U4 SX1509 (port expander), U4 SX1509 (port expander), U5 LM2596S-3.3
-     broche 5 ~{MUTE} → non reliée
-     broche 6 VDD → U10 TCT5000, U11 256 K-bit EEPROM (24C256), U13 ~, U4 SX1509 (port expander), U4 SX1509 (port expander), U5 LM2596S-3.3
-     broche 7 INL → U6 DFR0299
-     broche 8 VREF → non reliée
-     broche 9 NC → non reliée
-     broche 10 INR → U6 DFR0299
-     broche 11 GND → masse
-     broche 12 ~{SHDN} → non reliée
-     broche 13 PVDD → U10 TCT5000, U11 256 K-bit EEPROM (24C256), U13 ~, U4 SX1509 (port expander), U4 SX1509 (port expander), U5 LM2596S-3.3
-     broche 14 ROUT- → LS2 Speaker
-     broche 15 PGND → masse
-     broche 16 ROUT+ → LS2 Speaker
+Sources, de la plus sûre à la moins sûre (un dépôt n'est pris que dans une source) :
+  - Ohmatic, « human-verified schematics » (1 000 schémas KiCad et Eagle, avec un niveau de confiance), https://huggingface.co/datasets/Ohmatic/human-verified-schematics-v1 :
+      « SI4732 » : 0 schéma(s) trouvé(s), 0 dépôt(s) montré(s)
+      « PAM8403 » : 0 schéma(s) trouvé(s), 0 dépôt(s) montré(s)
+      « SY8089 » : 0 schéma(s) trouvé(s), 0 dépôt(s) montré(s)
+  - electron-rare, « kicad9plus » (environ 300 schémas KiCad 9 et plus, rangés par licence), https://huggingface.co/datasets/electron-rare/kicad9plus-permissive :
+      « SI4732 » : 0 schéma(s) trouvé(s), 0 dépôt(s) montré(s)
+      « PAM8403 » : 0 schéma(s) trouvé(s), 0 dépôt(s) montré(s)
+      « SY8089 » : 0 schéma(s) trouvé(s), 0 dépôt(s) montré(s)
+  - bshada, « Open Schematics » (88 000 schémas tirés de 30 000 dépôts GitHub, avec la description de chaque dépôt ; une feuille par schéma), https://huggingface.co/datasets/bshada/open-schematics :
+      « SI4732 » : 5 dépôt(s) trouvé(s) (4 par le nom du symbole, 1 de plus par la valeur) ; 5 montré(s)
+      « PAM8403 » : 25 dépôt(s) trouvé(s) (13 par le nom du symbole, 12 de plus par la valeur), dont 11 en ancien format KiCad (.sch, pas lu) ; 13 montré(s), 1 sans la puce sur la feuille gardée par le jeu
+      « SY8089 » : 26 dépôt(s) trouvé(s) (4 par le nom du symbole, 22 de plus par la valeur), dont 18 en ancien format KiCad (.sch, pas lu), 2 absent(s) d'Open Schematics ; 6 montré(s)
 
-== dépôt Polyche/Polihack_Hush — First Place for an Active Noice Cancelling Speaker project done at Polihack V16
-   U3 = PAM8403D
-     broche 1 LOUT+ → LS2 Speaker
-     broche 2 PGND → non reliée
-     broche 3 LOUT- → LS2 Speaker
-     broche 4 PVDD → C6 100nF, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U4 LM78L05_TO92
-     broche 5 ~{MUTE} → C6 100nF, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U4 LM78L05_TO92
-     broche 6 VDD → C6 100nF, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U4 LM78L05_TO92
-     broche 7 INL → U1 STM32F103C8Tx
-     broche 8 VREF → C1 1uF
-     broche 9 NC → non reliée
-     broche 10 INR → U1 STM32F103C8Tx
-     broche 11 GND → masse
-     broche 12 ~{SHDN} → non reliée
-     broche 13 PVDD → C6 100nF, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U1 STM32F103C8Tx, U4 LM78L05_TO92
-     broche 14 ROUT- → LS1 Speaker
-     broche 15 PGND → non reliée
-     broche 16 ROUT+ → LS1 Speaker
+Ce qui revient chez au moins deux auteurs différents (composants branchés sur chaque broche ; deux dépôts
+d'un même compte GitHub comptent pour un ; les réseaux d'alimentation partagés par plus de 12 composants
+ne sont pas comptés) :
+  SY8089 (5 broches) : 6 projet(s) compté(s), de 6 auteur(s)
+    broche 1 (EN) : 22 µF (3 auteurs), 10 µF (2 auteurs)
+    broche 2 (GND) : à la masse (6 auteurs)
+    broche 3 (LX) : 2,2 µH (4 auteurs)
+    broche 4 (IN) : 22 µF (3 auteurs), 10 µF (2 auteurs), 100 nF (2 auteurs)
+    broche 5 (FB) : 220 kΩ (2 auteurs)
+  SI4732 (16 broches) : 5 projet(s) compté(s), de 4 auteur(s)
+    attention : brochage différent selon les projets (autre boîtier, module tout fait, ou symbole faux : à vérifier sur la fiche technique) : GND en broche 15 (4 projets), mais 10 chez frohro/raspberry_pi_pico_multiboard ; RCLK en broche 13 (4 projets), mais 12 chez frohro/raspberry_pi_pico_multiboard ; ROUT en broche 16 (4 projets), mais 9 chez frohro/raspberry_pi_pico_multiboard ; RST en broche 9 (4 projets), mais 16 chez frohro/raspberry_pi_pico_multiboard ; SCLK en broche 11 (4 projets), mais 14 chez frohro/raspberry_pi_pico_multiboard ; SDIO en broche 12 (4 projets), mais 13 chez frohro/raspberry_pi_pico_multiboard ; et 1 autre(s) signal(aux)
+    broche 1 (LOUT/DFS) : 4,7 µF (3 auteurs)
+    broche 2 (GPO3/DCLK) : 22 pF (2 auteurs)
+    broche 7 (RFGND) : à la masse (4 auteurs)
+    broche 13 (RCLK) : 22 pF (2 auteurs)
+    broche 14 (VDD) : 100 nF (2 auteurs)
+    broche 15 (GND) : à la masse (3 auteurs)
+    broche 16 (ROUT/DOUT) : 4,7 µF (3 auteurs)
+    laissées non reliées par au moins deux auteurs : 3 (GPO2/INTB), 4 (GPO1), 5 (NC)
+  PAM8403 (16 broches) : 5 projet(s) compté(s), de 5 auteur(s)
+    broche 2 (PGND) : à la masse (4 auteurs)
+    broche 4 (PVDD) : 100 nF (2 auteurs), 10 µF (2 auteurs), 1 µF (2 auteurs)
+    broche 6 (VDD) : 100 nF (2 auteurs), 10 µF (2 auteurs), 1 µF (2 auteurs)
+    broche 7 (INL) : 10 kΩ (2 auteurs)
+    broche 8 (VREF) : 1 µF (2 auteurs), 100 nF (2 auteurs)
+    broche 10 (INR) : 10 kΩ (2 auteurs)
+    broche 11 (GND) : à la masse (5 auteurs)
+    broche 13 (PVDD) : 100 nF (2 auteurs), 10 µF (2 auteurs), 1 µF (2 auteurs)
+    broche 15 (PGND) : à la masse (4 auteurs)
+    laissées non reliées par au moins deux auteurs : 9 (NC), 12 (/SHDN)
+  PAM8403 (9 broches) : 5 projet(s) compté(s), de 5 auteur(s)
+    attention : brochage différent selon les projets (autre boîtier, module tout fait, ou symbole faux : à vérifier sur la fiche technique) : GND en broche 5 (3 projets), mais 2+5+7+8 chez 46nori/fmsynthensemble ou 2 chez ukmaker/bassmate
+    broche 2 (GND) : à la masse (2 auteurs)
+    broche 5 (GND) : à la masse (4 auteurs)
+  PAM8403 (8 broches) : 2 projet(s) compté(s), de 2 auteur(s)
+  PAM8403 (15 broches) : 1 projet(s) compté(s), de 1 auteur(s)
 
-== dépôt rh1tech/frank — Murmulator
-   U12 = PAM8403D
-     broche 1 +OUT → non reliée
-     broche 2 PGND → masse
-     broche 3 -OUTL → non reliée
-     broche 4 PVDD → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K
-     broche 5 MUTE → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K
-     broche 6 VDD → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K
-     broche 7 INL → R55 10K
-     broche 8 VREF → C50 100n
-     broche 9 NC → non reliée
-     broche 10 INR → R60 10K
-     broche 11 GND → masse
-     broche 12 SHND → R63 10K
-     broche 13 PVDD → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K
-     broche 14 -OUT → non reliée
-     broche 15 PGND → masse
-     broche 16 +OUT → non reliée
+Le détail, projet par projet :
 
-== dépôt kholia/ConsensusBasedTimeSync — A portable, efficient, passive, consensus based (relative) time synchronization mechanism over radio
-   U2 = SI4732-A10-GS
+== dépôt kholia/ConsensusBasedTimeSync — https://github.com/kholia/ConsensusBasedTimeSync
+   source : Open Schematics — le dépôt se décrit ainsi : « A portable, efficient, passive, consensus based (relative) time synchronization mechanism over radio waves. Cost-effective radio receivers too! »
+   U2 = SI4732-A10-GS (16 broches)
      broche 1 LOUT/DFS → C3 4.7u
      broche 2 GPO3/DCLK → non reliée
      broche 3 GPO2/INTB → non reliée
@@ -68,58 +67,18 @@ Projets publiés, non vérifiés : à comparer, pas à recopier les yeux fermés
      broche 6 FMI → non reliée
      broche 7 RFGND → masse
      broche 8 AMI → C11 10n, D1 BAT54S
-     broche 9 *RST → U3 ATTINY3224-SSU
+     broche 9 *RST → U3 ATTINY3224-SSU (réseau RST)
      broche 10 SENB → masse
-     broche 11 SCLK → ES1 ESC, U3 ATTINY3224-SSU
-     broche 12 SDIO → ES1 ESC, U3 ATTINY3224-SSU
+     broche 11 SCLK → ES1 ESC, U3 ATTINY3224-SSU (réseau SCL)
+     broche 12 SDIO → ES1 ESC, U3 ATTINY3224-SSU (réseau SDA)
      broche 13 RCLK → C13 100n
-     broche 14 VDD → C8 1u, D3 CD4148WS, U1 XC6206PxxxMR, U3 ATTINY3224-SSU
+     broche 14 VDD → C8 1u, D3 CD4148WS, U1 XC6206PxxxMR, U3 ATTINY3224-SSU (réseau CLEAN_3.3)
      broche 15 GND → masse
      broche 16 ROUT/DOUT → C12 4.7u
 
-== dépôt locked/picoclock — 
-   U5 = PAM8403D
-     broche 1 LOUT+ → J13 AUDIO
-     broche 2 PGND → masse
-     broche 3 LOUT- → J13 AUDIO
-     broche 4 PVDD → C13 1uF, C14 1uF, C15 1uF, C16 470uF, C17 100nF, C3 0.1uF
-     broche 5 ~{MUTE} → R16 10K, U6 MCP23009-SO
-     broche 6 VDD → C13 1uF, C14 1uF, C15 1uF, C16 470uF, C17 100nF, C3 0.1uF
-     broche 7 INL → U7 MCP4652T
-     broche 8 VREF → C12 0.1uF
-     broche 9 NC → non reliée
-     broche 10 INR → U7 MCP4652T
-     broche 11 GND → masse
-     broche 12 ~{SHDN} → R16 10K, U6 MCP23009-SO
-     broche 13 PVDD → C13 1uF, C14 1uF, C15 1uF, C16 470uF, C17 100nF, C3 0.1uF
-     broche 14 ROUT- → J2 AUDIO
-     broche 15 PGND → masse
-     broche 16 ROUT+ → J2 AUDIO
-
-== dépôt zyyan20h/PCBRenewal — 
-   U3 = PAM8403DR
-     broche 1 +OUT → J1 B2B-PH-SM4-TBLFSN
-     broche 2 PGND@1 → masse
-     broche 3 -OUT → J1 B2B-PH-SM4-TBLFSN
-     broche 4 PVDD@1 → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u
-     broche 5 MUTE → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u
-     broche 6 VDD → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u
-     broche 7 INL → P1 S3B-ZR-SM4A-TF
-     broche 8 VREF → C6 0.1u
-     broche 10 INR → non reliée
-     broche 11 GND → masse
-     broche 12 SHND → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u
-     broche 13 PVDD@2 → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u
-     broche 14 -OUT → non reliée
-     broche 15 PGND@2 → masse
-     broche 16 +OUT → non reliée
-
-== dépôt bt-soft/pico-radio-5 — 
-   JP1 = Si4732 I2C Address
-     broche 1 A → masse
-     broche 2 C → U1 SI4732-A10-GS
-     broche 3 B → C8 4.7uF, C9 100nF, L1 220uH, U1 SI4732-A10-GS
-   U1 = SI4732-A10-GS
+== dépôt bt-soft/pico-radio-5 — https://github.com/bt-soft/pico-radio-5
+   source : Open Schematics — le dépôt n'a pas de description
+   U1 = SI4732-A10-GS (16 broches)
      broche 1 LOUT/DFS → C5 4.7uF
      broche 2 GPO3/DCLK → C1 22pF, Y1 32.762kHz
      broche 3 GPO2/INTB → non reliée
@@ -128,17 +87,18 @@ Projets publiés, non vérifiés : à comparer, pas à recopier les yeux fermés
      broche 6 FMI → C10 33pF, L2 220uH
      broche 7 RFGND → masse
      broche 8 AMI → C12 1nF
-     broche 9 *RST → A1 RaspberryPi_Pico - purple
+     broche 9 *RST → A1 RaspberryPi_Pico - purple (réseau Si_RST)
      broche 10 SENB → JP1 Si4732 I2C Address
-     broche 11 SCLK → A1 RaspberryPi_Pico - purple
-     broche 12 SDIO → A1 RaspberryPi_Pico - purple
+     broche 11 SCLK → A1 RaspberryPi_Pico - purple (réseau Si_SCL)
+     broche 12 SDIO → A1 RaspberryPi_Pico - purple (réseau Si_SDA)
      broche 13 RCLK → C2 22pF, Y1 32.762kHz
      broche 14 VDD → C8 4.7uF, C9 100nF, JP1 Si4732 I2C Address, L1 220uH
      broche 15 GND → masse
      broche 16 ROUT/DOUT → C4 4.7uF
 
-== dépôt ralphxavier/SI473x-T-Display-S3 — SI4735/SI4732 Radio with Lilygo T-Display S3
-   U1 = SI4732-A10-GSR
+== dépôt ralphxavier/SI473x-T-Display-S3 — https://github.com/ralphxavier/SI473x-T-Display-S3
+   source : Open Schematics — le dépôt se décrit ainsi : « SI4735/SI4732 Radio with Lilygo T-Display S3 »
+   U1 = SI4732-A10-GSR (16 broches)
      broche 1 LOUT/DFS → C6 4.7uF
      broche 2 GPO3/DCLK → C4 22pF, Y1 Xtal 32768 KHz
      broche 3 GPO2/INTB → non reliée
@@ -152,12 +112,17 @@ Projets publiés, non vérifiés : à comparer, pas à recopier les yeux fermés
      broche 11 SCLK → R2 4.7k, U2 Lilygo T-Display S3
      broche 12 SDIO → R1 4.7k, U2 Lilygo T-Display S3
      broche 13 RCLK → C5 22pF, Y1 Xtal 32768 KHz
-     broche 14 VDD → C3 100nF, R1 4.7k, R2 4.7k, S1 SW1, U2 Lilygo T-Display S3
+     broche 14 VDD → C3 100nF, R1 4.7k, R2 4.7k, S1 SW1, U2 Lilygo T-Display S3 (réseau VCC)
      broche 15 GND → masse
      broche 16 ROUT/DOUT → C7 4.7uF
 
-== dépôt ralphxavier/SI4735 — SI4735 / SI4732 Radio
-   U1 = SI4732-A10-GSR
+== dépôt ralphxavier/SI4735, schéma 1 sur 2 — https://github.com/ralphxavier/SI4735
+   source : Open Schematics — le dépôt se décrit ainsi : « SI4735 / SI4732 Radio »
+   même schéma, au caractère près, que ralphxavier/si473x-t-display-s3 (copie ou fourche) : non recompté.
+
+== dépôt ralphxavier/SI4735, schéma 2 sur 2 — https://github.com/ralphxavier/SI4735
+   source : Open Schematics — le dépôt se décrit ainsi : « SI4735 / SI4732 Radio »
+   U1 = SI4732-A10-GSR (16 broches)
      broche 1 LOUT/DFS → R4 10k
      broche 2 GPO3/DCLK → C5 22pF, Y1 Xtal 32768 KHz
      broche 3 GPO2/INTB → non reliée
@@ -171,25 +136,347 @@ Projets publiés, non vérifiés : à comparer, pas à recopier les yeux fermés
      broche 11 SCLK → R2 4.7k, U2 TTGO-T-Display
      broche 12 SDIO → R1 4.7k, U2 TTGO-T-Display
      broche 13 RCLK → C6 22pF, Y1 Xtal 32768 KHz
-     broche 14 VDD → C4 100nF, R1 4.7k, R2 4.7k, S1 SW1, U2 TTGO-T-Display, U3 MODULE_NS8002
+     broche 14 VDD → C4 100nF, R1 4.7k, R2 4.7k, S1 SW1, U2 TTGO-T-Display, U3 MODULE_NS8002 (réseau VCC)
      broche 15 GND → masse
      broche 16 ROUT/DOUT → R3 10k
 
-== dépôt Byter64/Hans2 — Es ist wie Hans, aber 2. Also besserer Hans (2).
-   U1 = PAM8403D
-     broche 1 LOUT+ → non reliée
+== dépôt frohro/Raspberry_Pi_Pico_MultiBoard, schéma 1 sur 2 — https://github.com/frohro/Raspberry_Pi_Pico_MultiBoard
+   source : Open Schematics — le dépôt se décrit ainsi : « This is a PCB with OLED, LaserTag, two Radio Receivers, Oscillotor, Sound Card for PC, Smoke Detector, LEDs, Maze Game, Accelerometer, Motor/Speaker Drivers, tw… »
+   U10 = Si4732 (16 broches)
+     broche 1 LOUT → C40 10uF
+     broche 2 DCLK → C37 22pF, X1 Q13FC1350000400
+     broche 3 /INT → non reliée
+     broche 4 GPO1 → non reliée
+     broche 5 NC → non reliée
+     broche 6 FMI → C34 10nF
+     broche 7 RFGND → masse
+     broche 8 AMI → C41 100nF
+     broche 9 ROUT → C45 10uF
+     broche 10 GND → masse
+     broche 11 VDD → C52 100nF (réseau +3.3V)
+     broche 12 RCLK → C36 22pF, X1 Q13FC1350000400
+     broche 13 SDIO → réseau SDA, rien d'autre sur cette feuille
+     broche 14 SCLK → réseau SCL, rien d'autre sur cette feuille
+     broche 15 /SEN → masse
+     broche 16 /RST → réseau /RST, rien d'autre sur cette feuille
+
+== dépôt Ahmed-H300/Carcotech — https://github.com/Ahmed-H300/Carcotech
+   source : Open Schematics — le dépôt se décrit ainsi : « An autonomous car that can solve maze and find it's path out. »
+   U7 = PAM8403D (16 broches)
+     broche 1 LOUT+ → LS1 Speaker
      broche 2 PGND → masse
-     broche 3 LOUT- → non reliée
-     broche 4 PVDD → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF
-     broche 5 ~{MUTE} → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF
-     broche 6 VDD → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF
+     broche 3 LOUT- → LS1 Speaker
+     broche 4 PVDD → U10 TCT5000, U11 256 K-bit EEPROM (24C256), U13 ~, U4 SX1509 (port expander), U5 LM2596S-3.3, U6 DFR0299 et 2 autres (réseau +3V3)
+     broche 5 /MUTE → non reliée
+     broche 6 VDD → U10 TCT5000, U11 256 K-bit EEPROM (24C256), U13 ~, U4 SX1509 (port expander), U5 LM2596S-3.3, U6 DFR0299 et 2 autres (réseau +3V3)
+     broche 7 INL → U6 DFR0299
+     broche 8 VREF → non reliée
+     broche 9 NC → non reliée
+     broche 10 INR → U6 DFR0299
+     broche 11 GND → masse
+     broche 12 /SHDN → non reliée
+     broche 13 PVDD → U10 TCT5000, U11 256 K-bit EEPROM (24C256), U13 ~, U4 SX1509 (port expander), U5 LM2596S-3.3, U6 DFR0299 et 2 autres (réseau +3V3)
+     broche 14 ROUT- → LS2 Speaker
+     broche 15 PGND → masse
+     broche 16 ROUT+ → LS2 Speaker
+
+== dépôt the-X-alien/Note — https://github.com/the-X-alien/Note
+   source : Open Schematics — le dépôt se décrit ainsi : « An open source speaker for all your music needs. Completed with bluetooth compatibility, this speaker is a great deal at just manufacturing price. Have the fun … »
+   U4 = pam8403 (9 broches)
+     broche 1 L → U6 ESP32-WROOM-32 (réseau GPIO25)
+     broche 2 T → masse
+     broche 3 R → U6 ESP32-WROOM-32 (réseau GPIO26)
+     broche 4 vin → U2 MT3608 (réseau VBUS)
+     broche 5 GND → masse
+     broche 6 R- → LS2 Speaker (réseau R-)
+     broche 7 R+ → LS2 Speaker (réseau R+)
+     broche 8 L+ → LS1 Speaker (réseau L+)
+     broche 9 L- → LS1 Speaker (réseau L-)
+
+== dépôt 46nori/FMSynthEnsemble, schéma 1 sur 2 — https://github.com/46nori/FMSynthEnsemble
+   source : Open Schematics — le dépôt se décrit ainsi : « USB MIDI FM synthesizer that supports voice synthesis using CSM (Composite Sinusoidal Model »
+   U3 = AE-PAM8403-AMP (9 broches)
+     broche 1 VDD → JP1 Jumper_2_Bridged
+     broche 2 GND → masse (GNDA)
+     broche 3 IN-L → C6 10u
+     broche 4 IN-R → C12 10u
+     broche 5 GND → masse (GNDA)
+     broche 6 SP-L → LS1 Speaker LEFT
+     broche 7 GND → masse (GNDA)
+     broche 8 GND → masse (GNDA)
+     broche 9 SP-R → LS2 Speaker RIGHT
+
+== dépôt 46nori/FMSynthEnsemble, schéma 2 sur 2 — https://github.com/46nori/FMSynthEnsemble
+   source : Open Schematics — le dépôt se décrit ainsi : « USB MIDI FM synthesizer that supports voice synthesis using CSM (Composite Sinusoidal Model »
+   même schéma, au caractère près, que 46nori/fmsynthensemble (copie ou fourche) : non recompté.
+
+== dépôt Polyche/Polihack_Hush, schéma 1 sur 2 — https://github.com/Polyche/Polihack_Hush
+   source : Open Schematics — le dépôt se décrit ainsi : « First Place for an Active Noice Cancelling Speaker project done at Polihack V16 »
+   U3 = PAM8403D (16 broches)
+     attention : broche de masse ou d'alimentation non reliée : PGND (2), PGND (15) (erreur dans le schéma d'origine ?)
+     broche 1 LOUT+ → LS2 Speaker
+     broche 2 PGND → non reliée
+     broche 3 LOUT- → LS2 Speaker
+     broche 4 PVDD → C6 100nF, U1 STM32F103C8Tx, U4 LM78L05_TO92 (réseau 5V)
+     broche 5 /MUTE → C6 100nF, U1 STM32F103C8Tx, U4 LM78L05_TO92 (réseau 5V)
+     broche 6 VDD → C6 100nF, U1 STM32F103C8Tx, U4 LM78L05_TO92 (réseau 5V)
+     broche 7 INL → U1 STM32F103C8Tx
+     broche 8 VREF → C1 1uF
+     broche 9 NC → non reliée
+     broche 10 INR → U1 STM32F103C8Tx
+     broche 11 GND → masse
+     broche 12 /SHDN → non reliée
+     broche 13 PVDD → C6 100nF, U1 STM32F103C8Tx, U4 LM78L05_TO92 (réseau 5V)
+     broche 14 ROUT- → LS1 Speaker
+     broche 15 PGND → non reliée
+     broche 16 ROUT+ → LS1 Speaker
+
+== dépôt Polyche/Polihack_Hush, schéma 2 sur 2 — https://github.com/Polyche/Polihack_Hush
+   source : Open Schematics — le dépôt se décrit ainsi : « First Place for an Active Noice Cancelling Speaker project done at Polihack V16 »
+   même schéma, au caractère près, que polyche/polihack_hush (copie ou fourche) : non recompté.
+
+== dépôt arturandre/Emo — https://github.com/arturandre/Emo
+   source : Open Schematics — le dépôt se décrit ainsi : « Your Personal Companion Robot »
+   U1 = pam8403 (9 broches)
+     broche 1 L → IC2 PCM5102
+     broche 2 T → IC2 PCM5102
+     broche 3 R → IC2 PCM5102
+     broche 4 vin → IC1 RaspberryPiZeroW, IC2 PCM5102, M1 Motor_Servo, M2 Motor_Servo, M3 Motor_Servo, U5 ~ et 2 autres (réseau +5V)
+     broche 5 gnd → masse
+     broche 6 R- → LS2 Speaker
+     broche 7 R+ → LS2 Speaker
+     broche 8 L+ → LS1 Speaker
+     broche 9 L- → LS1 Speaker
+
+== dépôt KafuuPone/DIP-E036 — https://github.com/KafuuPone/DIP-E036
+   source : Open Schematics — le dépôt se décrit ainsi : « Radio Design and Implementation »
+   U3 = PAM8403 Module (8 broches)
+     broche sans numéro GND → masse
+     broche sans numéro 5V → SW1 SW_SPST
+     broche sans numéro LIN → U5 PCM5102A, U7 CD4066BE
+     broche sans numéro LOUT+ → LS1 Left Speaker
+     broche sans numéro LOUT- → LS1 Left Speaker
+     broche sans numéro RIN → U5 PCM5102A, U7 CD4066BE
+     broche sans numéro ROUT+ → LS2 Right Speaker
+     broche sans numéro ROUT- → LS2 Right Speaker
+
+== dépôt rh1tech/frank, schéma 1 sur 4 — https://github.com/rh1tech/frank
+   source : Open Schematics — le dépôt se décrit ainsi : « Murmulator »
+   U12 = PAM8403D (16 broches)
+     broche 1 +OUT_L → réseau AMP_PAM_OUTL_P, rien d'autre sur cette feuille
+     broche 2 PGND → masse
+     broche 3 -OUTL → réseau AMP_PAM_OUTL_M, rien d'autre sur cette feuille
+     broche 4 PVDD → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K et 1 autre (réseau VBUS)
+     broche 5 MUTE → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K et 1 autre (réseau VBUS)
+     broche 6 VDD → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K et 1 autre (réseau VBUS)
+     broche 7 INL → R55 10K
+     broche 8 VREF → C50 100n
+     broche 9 NC → non reliée
+     broche 10 INR → R60 10K
+     broche 11 GND → masse
+     broche 12 SHND → R63 10K (réseau SHND)
+     broche 13 PVDD → C52 10u, C55 100n, C56 1u, C57 47u, R53 10K, R63 10K et 1 autre (réseau VBUS)
+     broche 14 -OUT_R → réseau AMP_PAM_OUTR_M, rien d'autre sur cette feuille
+     broche 15 PGND → masse
+     broche 16 +OUT_R → réseau AMP_PAM_OUTR_P, rien d'autre sur cette feuille
+
+== dépôt rh1tech/frank, schéma 2 sur 4 — https://github.com/rh1tech/frank
+   source : Open Schematics — le dépôt se décrit ainsi : « Murmulator »
+   même schéma, au caractère près, que rh1tech/frank (copie ou fourche) : non recompté.
+
+== dépôt rh1tech/frank, schéma 3 sur 4 — https://github.com/rh1tech/frank
+   source : Open Schematics — le dépôt se décrit ainsi : « Murmulator »
+   même schéma, au caractère près, que rh1tech/frank (copie ou fourche) : non recompté.
+
+== dépôt rh1tech/frank, schéma 4 sur 4 — https://github.com/rh1tech/frank
+   source : Open Schematics — le dépôt se décrit ainsi : « Murmulator »
+   même schéma, au caractère près, que rh1tech/frank (copie ou fourche) : non recompté.
+
+== dépôt locked/picoclock — https://github.com/locked/picoclock
+   source : Open Schematics — le dépôt n'a pas de description
+   U5 = PAM8403D (16 broches)
+     broche 1 LOUT+ → J13 AUDIO (réseau AUDIO_OUT_L+)
+     broche 2 PGND → masse
+     broche 3 LOUT- → J13 AUDIO (réseau AUDIO_OUT_L-)
+     broche 4 PVDD → réseau +3.3V, partagé par 27 composants
+     broche 5 /MUTE → R16 10K, U6 MCP23009-SO (réseau MUTE)
+     broche 6 VDD → réseau +3.3V, partagé par 27 composants
+     broche 7 INL → U7 MCP4652T (réseau LOL_ADJ)
+     broche 8 VREF → C12 0.1uF
+     broche 9 NC → non reliée
+     broche 10 INR → U7 MCP4652T (réseau LOR_ADJ)
+     broche 11 GND → masse
+     broche 12 /SHDN → R16 10K, U6 MCP23009-SO (réseau MUTE)
+     broche 13 PVDD → réseau +3.3V, partagé par 27 composants
+     broche 14 ROUT- → J2 AUDIO (réseau AUDIO_OUT_R-)
+     broche 15 PGND → masse
+     broche 16 ROUT+ → J2 AUDIO (réseau AUDIO_OUT_R+)
+
+== dépôt zyyan20h/PCBRenewal, schéma 1 sur 2 — https://github.com/zyyan20h/PCBRenewal
+   source : Open Schematics — le dépôt n'a pas de description
+   U3 = PAM8403DR (15 broches)
+     broche 1 +OUT_L → J1 B2B-PH-SM4-TBLFSN
+     broche 2 PGND@1 → masse
+     broche 3 -OUT_L → J1 B2B-PH-SM4-TBLFSN
+     broche 4 PVDD@1 → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u et 5 autres (réseau VCC)
+     broche 5 MUTE → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u et 5 autres (réseau VCC)
+     broche 6 VDD → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u et 5 autres (réseau VCC)
+     broche 7 INL → P1 S3B-ZR-SM4A-TF
+     broche 8 VREF → C6 0.1u
+     broche 10 INR → non reliée
+     broche 11 GND → masse
+     broche 12 SHND → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u et 5 autres (réseau VCC)
+     broche 13 PVDD@2 → C10 1u, C3 0.1u, C4 10u, C7 470u, C8 1u, C9 1u et 5 autres (réseau VCC)
+     broche 14 -OUT_R → non reliée
+     broche 15 PGND@2 → masse
+     broche 16 +OUT_R → non reliée
+
+== dépôt zyyan20h/PCBRenewal, schéma 2 sur 2 — https://github.com/zyyan20h/PCBRenewal
+   source : Open Schematics — le dépôt n'a pas de description
+   même schéma, au caractère près, que zyyan20h/pcbrenewal (copie ou fourche) : non recompté.
+
+== dépôt Marcel-bot/Docs, schéma 1 sur 2 — https://github.com/Marcel-bot/Docs
+   source : Open Schematics — le dépôt n'a pas de description
+   Audio amplifier1 = ~ (PAM8403) (9 broches)
+     broche 1 L → Audio to USB converter1 ~
+     broche 2 T → Audio to USB converter1 ~
+     broche 3 R → Audio to USB converter1 ~
+     broche 4 VIN → réseau +5V, rien d'autre sur cette feuille
+     broche 5 GND → masse, seule sur ce réseau dans cette feuille : reliée ailleurs ?
+     broche 6 R- → non reliée
+     broche 7 R+ → non reliée
+     broche 8 L+ → LS1 Speaker
+     broche 9 L- → LS1 Speaker
+
+== dépôt Marcel-bot/Docs, schéma 2 sur 2 — https://github.com/Marcel-bot/Docs
+   source : Open Schematics — le dépôt n'a pas de description
+   même schéma, au caractère près, que marcel-bot/docs (copie ou fourche) : non recompté.
+
+== dépôt ukmaker/BassMate — https://github.com/ukmaker/BassMate
+   source : Open Schematics — le dépôt se décrit ainsi : « A simple drum machine »
+   U5 = PAM8403_Module (9 broches)
+     broche 1 +5V → C6 100n, C7 4700u, U3 LM7805
+     broche 2 GND → masse
+     broche 3 L_IN → J9 Conn_01x05, R2 10K
+     broche 4 AGND → masse
+     broche 5 R_IN → J9 Conn_01x05, R3 10K
+     broche 6 L_OUT+ → J8 Conn_01x04
+     broche 7 L_OUT- → J8 Conn_01x04
+     broche 8 R_OUT+ → J8 Conn_01x04
+     broche 9 R_OUT- → J8 Conn_01x04
+
+== dépôt TuDo-Makerspace/Coinbox — https://github.com/TuDo-Makerspace/Coinbox
+   source : Open Schematics — le dépôt se décrit ainsi : « A cashbox in Super Mario style with coin sounds if you put money inside »
+   U2 = ~ (PAM8403_Breakout) (8 broches)
+     broche 1 rout- → non reliée
+     broche 2 rout+ → non reliée
+     broche 3 lout+ → LS1 Speaker
+     broche 4 lout- → LS1 Speaker
+     broche 5 -/GND → masse
+     broche 6 Vin → J2 Jack-DC, U3 ~ (réseau 5V)
+     broche 7 L → C2 10n, R3 3k3
+     broche 8 R → non reliée
+
+== dépôt Byter64/Hans2 — https://github.com/Byter64/Hans2
+   source : Open Schematics — le dépôt se décrit ainsi : « Es ist wie Hans, aber 2. Also besserer Hans (2). »
+   U1 = PAM8403D (16 broches)
+     broche 1 LOUT+ → réseau LOUT+, rien d'autre sur cette feuille
+     broche 2 PGND → masse
+     broche 3 LOUT- → réseau LOUT-, rien d'autre sur cette feuille
+     broche 4 PVDD → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF (réseau VDD)
+     broche 5 /MUTE → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF (réseau VDD)
+     broche 6 VDD → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF (réseau VDD)
      broche 7 INL → R1 10 kΩ
      broche 8 VREF → C19 1 μF
      broche 9 NC → non reliée
      broche 10 INR → R9 10 kΩ
      broche 11 GND → masse
-     broche 12 ~{SHDN} → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF
-     broche 13 PVDD → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF
-     broche 14 ROUT- → non reliée
+     broche 12 /SHDN → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF (réseau VDD)
+     broche 13 PVDD → C1 1 μF, C15 1 μF, C16 10 μF, C17 10 μF, C18 1 μF (réseau VDD)
+     broche 14 ROUT- → réseau ROUT-, rien d'autre sur cette feuille
      broche 15 PGND → masse
-     broche 16 ROUT+ → non reliée
+     broche 16 ROUT+ → réseau ROUT+, rien d'autre sur cette feuille
+
+== dépôt jzimme14/ESP32-C3-custom-test-board, schéma 1 sur 2 — https://github.com/jzimme14/ESP32-C3-custom-test-board
+   source : Open Schematics — le dépôt n'a pas de description
+   EX-Vpp1 = SMD_IC_SY8089AAAC (5 broches)
+     broche 1 EN → C17 22u, Vpp-extern1 ~
+     broche 2 GND → masse
+     broche 3 LX → L3 2.2u
+     broche 4 IN → C17 22u, Vpp-extern1 ~
+     broche 5 FB → R16 220k, R17 47k
+
+== dépôt jzimme14/ESP32-C3-custom-test-board, schéma 2 sur 2 — https://github.com/jzimme14/ESP32-C3-custom-test-board
+   source : Open Schematics — le dépôt n'a pas de description
+   même schéma, au caractère près, que jzimme14/esp32-c3-custom-test-board (copie ou fourche) : non recompté.
+
+== dépôt Naervern/sunnybreeze, schéma 1 sur 2 — https://github.com/Naervern/sunnybreeze
+   source : Open Schematics — le dépôt se décrit ainsi : « A tiny solar-powered esp32-s2 weather monitor with wifi capture portal access, intended as a weather awareness project to enable monitoring for climate research… »
+   U2 = SY8089AAAC (5 broches)
+     broche 1 EN → non reliée
+     broche 2 GND → masse (GNDREF)
+     broche 3 LX → L1 L
+     broche 4 IN → Q1 2N7000, R3 R_US
+     broche 5 FB → R1 R_US
+
+== dépôt Naervern/sunnybreeze, schéma 2 sur 2 — https://github.com/Naervern/sunnybreeze
+   source : Open Schematics — le dépôt se décrit ainsi : « A tiny solar-powered esp32-s2 weather monitor with wifi capture portal access, intended as a weather awareness project to enable monitoring for climate research… »
+   U2 = SY8089AAAC (5 broches)
+     broche 1 EN → non reliée
+     broche 2 GND → masse (GNDREF)
+     broche 3 LX → L1 L
+     broche 4 IN → R3 R_US, U5 LM393
+     broche 5 FB → R1 R_US
+
+== dépôt CXJ007/fish_pi — https://github.com/CXJ007/fish_pi
+   source : Open Schematics — le dépôt se décrit ainsi : « 全志H3的一个小项目 »
+   U2 = SY8089A (5 broches)
+     broche 1 EN → C40 22uF, C41 22uF, C42 104, C43 104, C51 22uF, C52 104 et 5 autres (réseau VCC_IN)
+     broche 2 GND → masse
+     broche 3 LX → L1 2.2uH
+     broche 4 IN → C40 22uF, C41 22uF, C42 104, C43 104, C51 22uF, C52 104 et 5 autres (réseau VCC_IN)
+     broche 5 FB → C45 22pF, R19 450K, R20 100k
+   U3 = SY8089A (5 broches)
+     broche 1 EN → R17 10K (réseau PWR_DRAM)
+     broche 2 GND → masse
+     broche 3 LX → L2 2.2uH
+     broche 4 IN → C40 22uF, C41 22uF, C42 104, C43 104, C51 22uF, C52 104 et 5 autres (réseau VCC_IN)
+     broche 5 FB → C46 22pF, R21 150K, R22 100k
+   U4 = SY8089A (5 broches)
+     broche 1 EN → R23 10K, U5 SY8113B (réseau PWR_STB)
+     broche 2 GND → masse
+     broche 3 LX → L3 2.2uH
+     broche 4 IN → C40 22uF, C41 22uF, C42 104, C43 104, C51 22uF, C52 104 et 5 autres (réseau VCC_IN)
+     broche 5 FB → C55 22pF, R26 100K, R27 100k
+
+== dépôt R-Mutura/GPS_MODULE_ECOBODA, schéma 2 sur 2 — https://github.com/R-Mutura/GPS_MODULE_ECOBODA
+   source : Open Schematics — le dépôt se décrit ainsi : « GPS MODULE BOARD »
+   U1 = SY8089AAAC (5 broches)
+     broche 1 EN → C16 10u, C38 100n, C6 10u (réseau PowerIn)
+     broche 2 GND → masse
+     broche 3 LX → L1 2.2u
+     broche 4 IN → C16 10u, C38 100n, C6 10u (réseau PowerIn)
+     broche 5 FB → C1 8.2p, R2 180K, R3 40K
+
+== dépôt Ottercast/OtterCastAudioV2, schéma 1 sur 2 — https://github.com/Ottercast/OtterCastAudioV2
+   source : Open Schematics — le dépôt se décrit ainsi : « OtterCast is an open-source audio streaming device running Linux. Based on a Sochip S3 SoC, featuring a Webinterface, shairport-sync, snapcast, Spotify Connect … »
+   U4 = SY8089AAAC (5 broches)
+     broche 1 EN → C26 10u, U3 AXP209(QFN-48) (réseau +3.0VA)
+     broche 2 GND → masse
+     broche 3 LX → L3 2.2uH
+     broche 4 IN → C10 47u, C16 10u, C17 10u, C19 10u, C20 10u, C24 10u et 6 autres (réseau IPS)
+     broche 5 FB → R30 5k1, R31 3k3
+
+== dépôt Ottercast/OtterCastAudioV2, schéma 2 sur 2 — https://github.com/Ottercast/OtterCastAudioV2
+   source : Open Schematics — le dépôt se décrit ainsi : « OtterCast is an open-source audio streaming device running Linux. Based on a Sochip S3 SoC, featuring a Webinterface, shairport-sync, snapcast, Spotify Connect … »
+   même schéma, au caractère près, que ottercast/ottercastaudiov2 (copie ou fourche) : non recompté.
+
+== dépôt koson/STM32L431RCT6_prototype_board — https://github.com/koson/STM32L431RCT6_prototype_board
+   source : Open Schematics — le dépôt n'a pas de description
+   U2 = SY8089 (5 broches)
+     broche 1 EN → C9 22uF, F1 Fuse (réseau +5.0V)
+     broche 2 GND → masse
+     broche 3 LX → L1 2.2uH/1.5A
+     broche 4 IN → C9 22uF, F1 Fuse (réseau +5.0V)
+     broche 5 FB → C10 100nF, R4 220k, R5 49.9k
+

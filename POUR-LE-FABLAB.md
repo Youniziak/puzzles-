@@ -20,11 +20,11 @@ Elle ne refait pas ce que de bons logiciels font déjà. C'est un assemblage de 
 | KiKit | produit les fichiers Gerber et perçages pour JLCPCB et PCBWay (avec la liste des pièces et le placement pour PCBWay) | 1.8.1 | MIT |
 | gerbonara et shapely | relisent les fichiers Gerber pour un contrôle indépendant de KiCad | 1.6.3 et 2.2.0 | Apache-2.0 et BSD |
 | CadQuery | fabrique la maquette à toucher (impression 3D) | 2.8.0 | Apache-2.0 |
-| polars et le jeu « Open Schematics » (Hugging Face) | retrouvent comment d'autres projets publiés ont branché une puce (`outils/montages_reels.py`) | 2.0.0 ; jeu du 30/06/2026 | MIT ; CC-BY 4.0 |
+| polars et des jeux de données libres (Hugging Face : Ohmatic, kicad9plus, Open Schematics, Electronics Stack Exchange ; détail dans `outils/jeux_donnees.py`) | retrouvent comment d'autres projets publiés ont branché une puce, quels projets font telle chose, et les pièges connus (`outils/montages_reels.py`, `outils/chercher_fonction.py`). On lit et on cite : rien n'est recopié dans le dépôt | 2.0.0 ; jeux lus le 25/10/2026 | MIT ; CC BY 4.0, CC BY-SA ; chaque projet cité garde sa licence |
 | ngspice | simule l'électronique (à part, hors de la commande) | 42 | libre |
 | kicad-happy | un deuxième avis sur le schéma et la carte, sur les machines de GitHub, à chaque envoi dans le dépôt (`.github/workflows/kicad-happy.yml`) | 2.3.2 (commit du 22/10/2026) | MIT |
 
-## La colle (ce qui est fait maison) — environ 5 600 lignes de Python
+## La colle (ce qui est fait maison) — environ 6 200 lignes de Python
 
 Licence : GNU AGPL-3.0 pour la colle, CERN-OHL-S-2.0 pour les cartes et les blocs, CC BY-SA 4.0 pour les textes (détail dans `LICENCE.md`).
 
@@ -56,6 +56,9 @@ Licence : GNU AGPL-3.0 pour la colle, CERN-OHL-S-2.0 pour les cartes et les bloc
 - `fabricants.py` (140 lignes) : regarde si la carte convient aussi à d'autres fabricants (PCBWay, AISLER) que celui pour lequel elle est routée, avec KiCad et KiKit.
 - `outils/bloc_depuis_kicad.py` (environ 150 lignes) : prend un bloc, routage compris, dans une carte KiCad libre déjà fabriquée (par exemple une carte d'Olimex) : la zone choisie est découpée par KiKit, on ne garde que les composants demandés, les réseaux sont renommés, et une fiche garde la source et la licence. Premier bloc : `bibliotheque/blocs-libres/alim_decoupage_olimex`.
 - `outils/remplacer_par_bloc.py` (environ 170 lignes) : pour un essai, pose un tel bloc à la place de composants d'une carte déjà routée, avec la mention de licence sur la sérigraphie ; Freerouting relie ensuite ce qui manque.
+- `outils/montages_reels.py` (environ 470 lignes) : comment d'autres ont branché une puce, dans trois jeux de schémas publiés. Toutes les liaisons sortent de KiCad, lisant le schéma d'origine. Il dit ce qui revient chez au moins deux auteurs différents (pas deux dépôts d'un même compte, pas deux copies d'un même schéma), et prévient quand un projet a un autre brochage que les autres, ou une puce dont la masse touche l'alimentation.
+- `outils/chercher_fonction.py` (environ 130 lignes) : les projets publiés qui font telle chose (d'après la description de chaque dépôt) et les pièces qui y reviennent ; avec `--pieges`, les questions d'Electronics Stack Exchange qui parlent d'une pièce, avec leur lien.
+- `outils/jeux_donnees.py` (environ 120 lignes) : la liste des jeux de données, leurs licences, ceux qui sont écartés et pourquoi ; le téléchargement dans un cache chez soi (environ 420 Mo), et l'index local d'Open Schematics (3 Mo, au lieu des 317 Go du jeu).
 - `outils/essai_edea.py` (environ 140 lignes) : pour un essai sur les machines de GitHub (`.github/workflows/edea.yml`), regarde si EDeA, un outil libre de blocs KiCad partagés, sait lire les fichiers de la chaîne, et ce qu'il perd en les réécrivant. Résultat du 25/10/2026 : il lit nos schémas, pas les cartes de KiCad 10.
 
 Aucun nom de carte, de bloc ou de réseau n'est écrit dans ces scripts. Une nouvelle carte, c'est un nouveau fichier de description, sans toucher au code.

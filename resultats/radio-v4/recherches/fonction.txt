@@ -1,0 +1,248 @@
+Recherche par fonction — 25/10/2026
+
+Projets dont la description ou le nom porte « \bFM radio|\bAM radio|radio receiver|DSP radio|SW radio|shortwave » :
+  71 schéma(s) dans 20 dépôt(s), de 18 auteur(s) — source : bshada, « Open Schematics » (88 000 schémas tirés de 30 000 dépôts GitHub, avec la description de chaque dépôt ; une feuille par schéma), https://huggingface.co/datasets/bshada/open-schematics
+  Les descriptions sont celles des auteurs, recopiées telles quelles. Chaque projet garde sa licence.
+
+Pièces qui reviennent chez au moins deux auteurs (sans les résistances, condensateurs, connecteurs…) :
+  AMS1117-3.3 : 2 auteurs
+  MMBT3904 : 2 auteurs
+Vues chez un seul auteur (pistes à regarder) : 1N4004W; 1N5402; 24LC256; 74HC595; ADE-1; AMS1117-5.0; ATTINY3224-SSU; ATmega8A-PU-MCU_Microchip_ATmega; AudioPlug3; BAT54S; BAW75; BC818; CC56-12GWA; CD2003GB_GP_Fixed; CD4148WS; CM1213A-01SO; CP1-Device; DS18B20; HFD4_5-S; IR26-21C_L110_TR8; L298N; LD39015M33R; LM2937xS; LM317_3PinPackage-Regulator_Linear; LM358; MCP1700x-330xxTT; MCP6022; MMBT2222A; MMBT2222A 1P; OLED_HS96LO3W2C03; OPA1612AxD; PAM8302_module-pam8302_module; RDA5807M; SG-3030CM; SI4732-A10-GS; SI5351A; SN74CBT3253; STM32F042C6Tx; STM8S003F3P; Si4705-D60-GM; Si4735-D60-GU; Si4735-D60-GU_1; TCA9517DR; TDA1517P/N3,112; TEA5767; TSOP45xx; USBLC6-2SC6; XC6206PxxxMR
+  (Open Schematics ne liste les pièces que pour les schémas KiCad 6 et plus : pour les autres, ouvrir le dépôt.)
+
+Les dépôts (au plus 30, ceux qui ont le plus de pièces communes d'abord) :
+
+== dilshan/rda5807-fm-radio-module — https://github.com/dilshan/rda5807-fm-radio-module
+   « RDA5807M based stereo FM radio receiver »
+   pièces principales : AMS1117-3.3; MMBT3904; 74HC595; CC56-12GWA; CP1-Device; RDA5807M; STM8S003F3P
+
+== EthicalEarth/Radio_SI4735_v1.0_stable — https://github.com/EthicalEarth/Radio_SI4735_v1.0_stable
+   « Stable final release of DSP Radio based on si4735 chip. »
+   pièces principales : AMS1117-3.3; 1N5402; 24LC256; AMS1117-5.0; BAW75; BC818; Si4735-D60-GU; TCA9517DR; TDA1517P/N3,112
+
+== kholia/ConsensusBasedTimeSync — https://github.com/kholia/ConsensusBasedTimeSync
+   « A portable, efficient, passive, consensus based (relative) time synchronization mechanism over radio waves. Cost-effective radio receivers too! »
+   pièces principales : MMBT3904; ADE-1; ATTINY3224-SSU; BAT54S; CD2003GB_GP_Fixed; CD4148WS; HFD4_5-S; MCP1700x-330xxTT; MCP6022; SI4732-A10-GS; SI5351A; XC6206PxxxMR
+
+== 411568/Atmega8_FM_radio — https://github.com/411568/Atmega8_FM_radio
+   « Simple FM radio based on Atmega8 and TEA5767 module »
+   pièces principales : ATmega8A-PU-MCU_Microchip_ATmega; LM317_3PinPackage-Regulator_Linear; PAM8302_module-pam8302_module; TEA5767
+
+== ahmed23shaf/AMRadioReceiver — https://github.com/ahmed23shaf/AMRadioReceiver
+   « Circuit schematics and PCB layout for a superhet AM radio receiver. »
+   pièces principales : non listées par le jeu (schéma .schdoc)
+
+== anttikes/usb-fm-radio — https://github.com/anttikes/usb-fm-radio
+   « Repository for an FM radio project, consisting of the firmware, cross-platform user interface and PCB / Schematic portions »
+   pièces principales : CM1213A-01SO; LD39015M33R; SG-3030CM; STM32F042C6Tx; Si4705-D60-GM; USBLC6-2SC6
+
+== conorpeterson/NS73M-Breakout — https://github.com/conorpeterson/NS73M-Breakout
+   « Breakout board for Niigata Seimitsu NS73M FM radio transmitter »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== dilshan/qn8035-rpi-fm-radio — https://github.com/dilshan/qn8035-rpi-fm-radio
+   « QN8035 based Raspberry Pi FM radio receiver »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== ESPboy-edu/ESPboy_FMradio — https://github.com/ESPboy-edu/ESPboy_FMradio
+   « ESPboy FM-radio module on chip Si4703, turning your ESP8266 ESPboy into portable FM radio »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== frohro/Raspberry_Pi_Pico_MultiBoard — https://github.com/frohro/Raspberry_Pi_Pico_MultiBoard
+   « This is a PCB with OLED, LaserTag, two Radio Receivers, Oscillotor, Sound Card for PC, Smoke Detector, LEDs, Maze Game, Accelerometer, Motor/Speaker Drivers, two Proximity Detecters, Thermometer, Phot… »
+   pièces principales : 1N4004W; AudioPlug3; DS18B20; IR26-21C_L110_TR8; L298N; LM2937xS; LM358; MMBT2222A; MMBT2222A 1P; OLED_HS96LO3W2C03; OPA1612AxD; SN74CBT3253
+
+== gabebuckmaster/Si4825-AM-FM-Radio-Kit-TH — https://github.com/gabebuckmaster/Si4825-AM-FM-Radio-Kit-TH
+   « Si4825 AM/FM Radio Kit (Through Hole) »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== gavinlyonsrepo/Arduino_FM_radio — https://github.com/gavinlyonsrepo/Arduino_FM_radio
+   « Arduino based FM radio using the Nano and the modules: SSD1306 OLED , TEA5767 FM radio, LM386 audio amplifer and KA2284 Audio level.. »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== kitspace-forks/FM_Transmitter — https://github.com/kitspace-forks/FM_Transmitter
+   « Simple low powered FM radio transmitter based on a MAX2606 »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== pricna/Software-Defined-Radio-Receiver — https://github.com/pricna/Software-Defined-Radio-Receiver
+   « Software Defined Radio receiver created for Engineering Electronics II at Walla Walla University. »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== pu2clr/RDA5807 — https://github.com/pu2clr/RDA5807
+   « Arduino Library for SINGLE-CHIP BROADCAST FM RADIO TUNER RDA5807 »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== pu2clr/SI4844 — https://github.com/pu2clr/SI4844
+   « Silicon Labs SI4844 (BROADCAST ANALOG TUNING DIGITAL DISPLAY AM/FM/SW RADIO RECEIVER) Library »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== rubienr/coax-relay-switch-shortwave — https://github.com/rubienr/coax-relay-switch-shortwave
+   « coax relay switch pcb for shortwave antennas »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== russery/fm-streamer — https://github.com/russery/fm-streamer
+   « Uses an ESP32 to stream internet audio to an FM radio transmitter »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== terjeio/MultimediaCenter — https://github.com/terjeio/MultimediaCenter
+   « Multimedia center with DAB/FM radio »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+== WiseLord/fm7segm — https://github.com/WiseLord/fm7segm
+   « FM Radio with 4x7segment indication »
+   pièces principales : non listées par le jeu (schéma .sch)
+
+Pièges connus : questions d'Electronics Stack Exchange qui parlent de « SI473[25]|PAM8403|SY8089 » — 31 question(s), les 30 premières (titre d'abord, puis les plus récentes)
+  Source : Electronics Stack Exchange (95 000 questions avec une réponse, de 2009 à mars 2024), copie https://huggingface.co/datasets/bshada/electronics.stackexchange.com. Licence CC BY-SA (3.0 avant mai 2018, 4.0 après) ; les auteurs sont nommés sur la page de chaque question, à citer avec son lien.
+  Une réponse de forum n'est pas une preuve : certaines sont fausses, à vérifier sur la fiche technique.
+
+== Ferrite beads for a pam8403 board (2023-10-08) — https://electronics.stackexchange.com/q/684386
+   étiquettes : amplifier, sound, emi-filtering
+   question : I can't figure out the EMI part of the datasheet for the PAM8403 chip. Which ferrite beads should I use for amplifier output? Does anyone know any specific models of ferrite beads? This is what the datasheet says Most applications require a ferrite bead…
+   réponse gardée par le jeu : The PAM8403H-EV Board User Guide has some part numbers: Diodes Incorporated PAM8403 is the Wurth page which has a link to the spec sheet the suggested ferrite beads. As well as the ferrite beads shown in the EMI part of the datasheet for the PAM8403 chip, the PAM8403H-EV Board User Guide also shows some 1 nF…
+
+== Why does a MOSFET cause a PAM8403 amplifier board to rapidly reset, and how can I fix it? (2023-06-18) — https://electronics.stackexchange.com/q/670928
+   étiquettes : mosfet, audio, switching, esp32
+   question : Recently I've been working on a project involving outputting audio from the DAC line on an ESP32. I'm using a breakout board for the PAM8403 amplifier chip that does not expose the shutdown pin on the chip. While the amplifier is powered, there is constant…
+   réponse gardée par le jeu : Do not switch ground! All inputs and output of the PAM IC will no longer be ground referenced and float up towards Vcc to varying degrees of impedance. This isn’t good. If your amplifier lacks mute or EN pin and you need it, change to a different one which has it. If there is noise when it should be silent, fix that.…
+
+== How to use Rf with PAM8403 amplifier (2022-05-26) — https://electronics.stackexchange.com/q/621155
+   étiquettes : amplifier, power-amplifier
+   question : In datasheet of PAM8403 written: " " With Ri it is clear, but naturally I did not realized where to connect Rf? My assumption - one of output pins
+   réponse gardée par le jeu : Rf is the fixed value negative feedback resistor inside the chip (142k) and you define the gain by the value of the external resistor (Ri) >= 18k.
+
+== Why does volume above 80% break my speaker (PAM8403, 3w 4ohm, 18650)? (2021-04-19) — https://electronics.stackexchange.com/q/560905
+   étiquettes : amplifier, audio, speakers, sound
+   question : I am new to working with electronics and I am building a simple speaker. The Problem The speaker I built so far (poor sound quality aside) stops working if the volume is above ~80%. By stop working I mean, emitting a stuttering buzz as if only a fraction of…
+   réponse gardée par le jeu : What you are describing is distortion. Your speaker isn't "breaking." If it broke, it wouldn't work anymore afterwards. There are a couple of possible causes for distortion in your case: The battery can't supply the needed current. Your audio signal is too high. First the battery: You are using an 18650 cell to power…
+
+== Reference clock in FM receiver chips (si4735) (2020-12-23) — https://electronics.stackexchange.com/q/538759
+   étiquettes : integrated-circuit, clock, frequency-modulation, reference
+   question : The datasheet is mentioning a 32678 Hz "reference clock" (RCLK) input. It appears to be a well known thing in this type of ICs because it's highlighted in the list of features. I guess because it's obvious to everyone they don't explain what this reference…
+   réponse gardée par le jeu : For an ultra-low-power design, only low-frequency crystals are usable, because with the frequency increase the current consumption increases significantly. The article The Strengths of 32.768 kHz Oscillators is undoubtedly a commercial, but I venture to mention it because the article excels, first of all, the…
+
+== Compact circuit with multiple PAM8403 (2019-03-26) — https://electronics.stackexchange.com/q/429113
+   étiquettes : capacitor, amplifier, audio
+   question : I'm building a 6 channel circuit with the PAM8403 (Filterless 3W Class-D Stereo audio amplifier) and was wondering if I could make things more compact by using less components. Is it possible to combine some capacitors between the amplifiers? Which ones and…
+   réponse gardée par le jeu : I would not share the capacitors that are in the signal path (connected to IN1, IN2) as combining them means that the inputs of the amplifiers are not AC coupled anymore so a DC offset from one amplifier can influence another amplifier. I would also not share the capacitor on the VREF pin. Note that you have used 1 uF…
+
+== Cost effective solution to using PAM8403 as a headphone amp (2015-01-18) — https://electronics.stackexchange.com/q/149687
+   étiquettes : amplifier, audio
+   question : I've just bought a PAM8403 pre-built circuit board for $1 on eBay. I was going to use it to drive a set of headphones but I neglected to consider that this is a class D amplifier and will not take kindly to connecting the -ve output terminals together (since…
+   réponse gardée par le jeu : I did connect the negative from the power supply to the headphone output. No problems and the sound is good. Nice to see that there are many more solutions.
+
+== Can you bridge or parallel the outputs of the PAM8403 amplifier? (2014-01-07) — https://electronics.stackexchange.com/q/95743
+   étiquettes : audio, amplifier, class-d
+   question : The PAM8403 is a dual channel amplifier, but I only need one channel. I want to utilise both channels as one, in order to get a single channel with higher output power. I have been reading through the PAM8403 datasheet , but can't find any hints on whether…
+   réponse gardée par le jeu : the outputs are 250KHz pulse modulated square waves, if these signals were put through inductors on each pin, the +R and +L could be commoned and ditto the -R and -L as long as the left and right inputs are also commoned. I have not tried this yet. Ferrite beads may be enough.At the worst it will overheat or blow up.
+
+== Can I use another pin instead of VIN? (2021-12-11) — https://electronics.stackexchange.com/q/598937
+   étiquettes : amplifier, audio, esp32
+   question : I'm currently trying to copy a setup (seen below) for an audio player using an ESP32-S2-Saola-1 instead of an ESP32-Wroom. The problem is that the ESP32-S2-Saola-1 doesn't have a VIN pin. Can I use another pin instead of VIN or is it simply not needed? I'm…
+   réponse gardée par le jeu : The pinout of the modules isn't enough to answer this question. You need the schematic diagram of the ESP32-S2-Saola-1 to see if it can be made to work. The sketch you are working from shows the amplifier drawing power from the VIN pin of the WROOM32. The VIN pin of the WROOM32 therefore must deliver 5V to the…
+
+== What's the difference between using 3.7v and 9v as phantom for electret mic? (2021-01-09) — https://electronics.stackexchange.com/q/541766
+   étiquettes : audio, lipo, microphone
+   question : I'd like to pass from a mic/filter/amp circuit with the LM386 and powered by a 9v battery in single supply to a 3.7v equivalent using the PAM8403. In hi-fi audio the phantom DC is 48v. Is there any downside in using a voltage as low as 3.7?
+   réponse gardée par le jeu : The electret phantom power only drives the Idss of a JFET with a crystal ceramic mic. such that the gain and DC rise with the pullup resistor. So it is ~ 1mA. The expected max input of the PAM8403 on 5V at max gain of 24dB (~21) supply is +/-0.5V which you could get by shouting into it. So it is not the "Line Levels"…
+
+== How to make my sound reactive LEDs with Tip31C work? (2020-06-08) — https://electronics.stackexchange.com/q/504321
+   étiquettes : arduino, led, amplifier, sound
+   question : I am building a rhythmic LED headphone prototype, but unfortunately I am missing something or am doing something wrong because my project is not working properly. The project is as follows: I bought A pair of one dollar headphones. Two tip31c transistors. One…
+   réponse gardée par le jeu : The outputs of the PAM8403 are at half the DC supply voltage which will keep the transistors and LEDs turned on most of the time. You need series input capacitors feeding the 100 ohm resistors to block the DC and you need a 10k resistor to ground at each transistor base.
+
+== Do higher impedance speakers generate clearer sound? (2020-02-05) — https://electronics.stackexchange.com/q/479637
+   étiquettes : amplifier, speakers
+   question : I have a PAM8403-based amplifier module and am going to build a small portable speaker, mostly to listen to lectures and audio books. The module looks like this: First I attached two 4 ohm 3 watt speakers and it worked fine. But I've read that it would make a…
+   réponse gardée par le jeu : The PAM8403 data sheet ( link to datasheet ) doesn't seem to contain anything to back up what you've read. Look at the characteristic labelled "Total Harmonic Distortion Plus Noise". For the specified noise level, it can deliver twice as much power into a 4 ohm load as into an 8 ohm load. That implies you would be…
+
+== Why does this circuit cut out when an extra load is added? (2020-01-27) — https://electronics.stackexchange.com/q/478207
+   étiquettes : current, relay, amperage
+   question : I have a circuit that consists of an Arduino controlling a small PAM8403 based amplifier which is powered via an L7805CV voltage regulator. When I press a button the arduino sends an audio signal to the amp and switches on a SPST relay. The whole thing is…
+   réponse gardée par le jeu : Your motor is a lot less sensitive to voltage than your circuit is. You are probably looking at this: But front-page "advertising" numbers can't be trusted, especially for numbers with more complicated behaviour. You should be looking deeper in the datasheet at this: Your battery's internal resistance is 0.12Ohms, at…
+
+== How to get stereo and mono signals simultaneously? (2019-10-04) — https://electronics.stackexchange.com/q/461458
+   étiquettes : amplifier, audio, speakers, stereo
+   question : I have PAM8403 circuit module to drive my two 3W speakers. I want to drive a subwoofer with a different amplifier. I have a 3 inch subwoofer, and I'll get an amplifier for that. My question is how do I get stereo and mono (both) from my source simultaneously?…
+   réponse gardée par le jeu : Instead of just shorting the channels, you should be mixing them with two high-value resistors, one in series of each channel L ----+-------> to stereo amp | | | high-value resistor | + ----> to mono amp | | | high-value resistor | R ----+-------> to stereo amp The idea is super simple: Amplifiers have an input…
+
+== How to add power-LED to my small amplifier? (2019-04-07) — https://electronics.stackexchange.com/q/431242
+   étiquettes : operational-amplifier, led
+   question : I have a simple PAM8403 that I use to amplify sound, The volume switch also works as power-off, if I slide it all the way down it makes a click and its off. My girlfriend is the user of this device and she often forgets to turn it off because its easy to…
+   réponse gardée par le jeu : If you look at the back of your amplifier board you will see you can pick up the power on the switch. The Black arrow points to the switched +5V You would connect your LED as follows: simulate this circuit – Schematic created using CircuitLab
+
+== 3.7V to 5V step up not providing enough current (2019-04-01) — https://electronics.stackexchange.com/q/430119
+   étiquettes : power-supply, current, battery-operated, 5v, step-up
+   question : I'm trying to power up a circuit that consists of an Arduino Nano, 3x 3W stereo audio amplifiers (PAM8403), an audio player module and 20x RGB LEDs. The power source is a lithium battery 3.7V 500mAh. The circuit works perfectly from any USB power bank or USB…
+   réponse gardée par le jeu : PAM8403 is 2x3W so 1.200mA, not like mentioned above 3x3W. Instead of using this: CE8301A, you should probably use: HX3608, AP2007SPER or smth. like this: MST9225BKP, SE3608, TPS61085DGKR, ME2159AM6G...
+
+== How to split up voltages (2018-09-14) — https://electronics.stackexchange.com/q/396015
+   étiquettes : voltage, batteries, resistors, resistance, series
+   question : I want to power up bluetooth receiver module (input voltage 3.7) and audio amplifier module which accepts only 2.4 - 3.7 voltage, exceeding which already burnt the IC. So i got new one. I'm having 2 x 4300mAh 18650 battery which gives 3.7 voltage each. When i…
+   réponse gardée par le jeu : First of all, connecting both batteries in series will raise the effective voltage to 3.7 * 2 = 7.4v. If your theory worked, each device would take roughly half of it. But, it is not the case, if one of the device needs to consume less current, it will most likely not take the voltage accordingly and you will have…
+
+== What is PVDD and AVDD? (2018-08-30) — https://electronics.stackexchange.com/q/393426
+   étiquettes : power-supply, amplifier, vcc
+   question : I know VDD,VCC,VEE and VSS and what they stand for. But when I came across this circuit: I saw this. Those PVDD and AVDD terms? What to do they convey or stand for? This circuit is amplifier circuit of PAM8403 DS.
+   réponse gardée par le jeu : This datasheet explains it all, but basically Vdd is for the analog pre-amp portion of the IC, while PVdd is for the digital/PWM portion and audio outputs, so can draw much more current than the Vdd pin. It is common sense to separate the 2 supplies even if they run at the same voltage. If not then even more reason to…
+
+== Connect common ground stereo to a device with different ground for each channel (2018-08-26) — https://electronics.stackexchange.com/q/392742
+   étiquettes : audio, grounding, speakers, sound, stereo
+   question : I have an old stereo that I want to resurrect and add Bluetooth to it. For that, I bought a Bluetooth module, this one:…
+   réponse gardée par le jeu : use an audio isolating transformer $5 at the auto-parts store.
+
+== reducing(or stopping)the pop when a speaker is switched (2017-12-12) — https://electronics.stackexchange.com/q/344633
+   étiquettes : arduino, mosfet, amplifier, audio
+   question : Is it possible to stop or reduce the popping sound which is emitted from the speaker when you turn on and off an amplifier? i am using a PAM8403 connected to a 4ohm speaker. i am switching using a low side mosfet connected to an arduino. Thanks.
+   réponse gardée par le jeu : Use the MUTE or SHDN inputs of the PAM8403 (pin 5 or 12) with your arduino instead of switching with a MOSFET. Popping sound will be greatly reduced. Also, put an high pass filter on the inputs as shown in the datasheet. Its cutoff frequency should match your speakers' bandwidth.
+
+== Daisy chaining a headphone amplifier with a speaker amplifier (2017-08-30) — https://electronics.stackexchange.com/q/326606
+   étiquettes : amplifier, audio
+   question : I want to build a small projekt for with just an Arduino, a radio receiver and 2 speakers. I have bought a small PCB with a TEA5767 radio FM chip ( ebay ). The audio output is however fed directly in a headphone amplifier chip TDA1308 from NXP ( datasheet ).…
+   réponse gardée par le jeu : Thanks for the suggestion. Daisy chaining actually works pretty good. I added two potentiometers for volume control, 50kOhm each. Nothing gets hot and it's running since 10 minutes. simulate this circuit – Schematic created using CircuitLab
+
+== Adding a potentiometer before or after a passive filter (2017-03-14) — https://electronics.stackexchange.com/q/292355
+   étiquettes : amplifier, audio, potentiometer, passive-filter
+   question : I would like to add a A50k potentiometer to control the volume of an audio input for a small amplifier. Additionally, I used some easy passive filtering to remove the lowest frequencies and some highs from the signal. This is the schematic: simulate this…
+   réponse gardée par le jeu : Is it safe to assume that a potentiometer after the filter will not alter the frequency response significantly? If you put the pot before the circuit and it is a high impedance pot then mid-band and mid-position, you will have a fairly high impedance pot loaded by R4 and R5. This can noticeably affect things so, in…
+
+== Is there way to construct an 18650 battery pack with built-in balance charging? Or is balancing not very necessary? (2017-02-10) — https://electronics.stackexchange.com/q/285722
+   étiquettes : batteries, battery-charging, charging, bms, cell-balancing
+   question : I am a DIY enthusiast, especially in electronics. I'm currently building a portable Playstation 2 Slim with an IPS display, so that it would look like a Wii U controller. It's my first large electronic endeavor. However, being portable, I'd need it to be…
+   réponse gardée par le jeu : Perhaps the best solution could be combining the use of the protection board and incorporating a set of balance charge wires in the battery pack itself. This approach would protect the cells on discharge via the protection circuit (cheap 3s "BMS") while also relying on the external balance charger (e.g. IMAX B6 or B3)…
+
+== Bidirectional DC motor driver from single analog pin (2017-02-09) — https://electronics.stackexchange.com/q/285415
+   étiquettes : amplifier, dc-motor, driver
+   question : I'd like to build about 12 units (too few to make custom PCBs, enough for time, cost and inexperience to be a concern) of a device mapping an analog (voltage, not PWM) input range of 0 to 5V to an output range of e.g. -12 to +12V, ~2W, with 0 output around…
+   réponse gardée par le jeu : It sounds like what you need is a DC coupled power type OpAmp. As long as the generated 0-5V analog signal is not "steppy" (i.e. generated with plenty of resolution) this type of amplifier should give a clean output. I could envision a part like the OnSemi LA6500 powered off +/-15V power supply being able to produce…
+
+== External power supply design (12V to 5V and 3.3V) for arduino based system (2016-08-19) — https://electronics.stackexchange.com/q/253093
+   étiquettes : 12v, 7805
+   question : I am designing an embedded system having following components: One arduino uno (~300-500mA 5V=2.5W) One nodemcu (esp8266) (~300-500mA 3.3v=~2W) One PAM8403 based audio amp board (3W output, so on 5V it should be ~600mA) One custom made mic preamp…
+   réponse gardée par le jeu : Have you considered a surplus PC PSU with 12,5,3.3V ? Then mod. the cable harness to suit your power connections and check power sequence issues , if they exist.
+
+== Trying to remove distortion of speakers seems impossible (2015-12-23) — https://electronics.stackexchange.com/q/207549
+   étiquettes : amplifier, audio, speakers, class-d
+   question : I'm working in a project with the goal of make a portable bluetooth speakers without distortion. When I try to turn up the volume, the speakers start to make a distorsion, like when rhe radio can't get the correct frequency.p In the project, I use a 3×2…
+   réponse gardée par le jeu : That isn't distortion, that is noise caused by a ground-loop. Like others mentioned, a 9V is not capable to deliver a huge amount of current. Use an USB powerbank or such to provide power. Besides 9V is a way to high to power the amp (and also I guess the BT-module), the amp accepts 6V at a maximum, better is to use…
+
+== Does resistance matter when charging devices (2015-07-07) — https://electronics.stackexchange.com/q/179002
+   étiquettes : amperage
+   question : I've been searching all over the web and couldn't find a simple answer to my question. Partially because I'm no electrical engineer, so I really need a simple and direct answer. My question is if you have a portable battery with the same output voltage as the…
+   réponse gardée par le jeu : You're trying to match up a power source with a load. The rated output voltage of the source has to match the input voltage that the load wants. The rated output current of the source also matters, but it doesn't have to match the load current. It just has to meet or exceed the load requirement. The source current (in…
+
+== Radio Receiver IC (2014-07-29) — https://electronics.stackexchange.com/q/123178
+   étiquettes : rf, radio, frequency-modulation, amplitude-modulation
+   question : I am a Junior EE student that is interested in putting together a small radio receiver project for fun and to get some general practice with design. I have found these receiver chips from Silicon Labs Si4732/34/35. I would like to hook up the final design…
+   réponse gardée par le jeu : Yes I think it is too ambitious when for a couple of dollars you can get a TEA 5767 board with all the functions necessary to actually put it to use. Single-station FM radio Instead of thinking about single chips, it is actually easier and less expensive to go with an entire FM radio with simple digital programming…
+
+== AM and FM reception with the same antenna (2014-07-09) — https://electronics.stackexchange.com/q/118525
+   étiquettes : antenna, radio
+   question : I'm designing a radio with the Si4735 chip to use in a car, and I want to use the existing FM antenna for both FM and AM reception. I'm not sure how to go about this, exactly. How would I go about achieving this? The chip's reference schematic is as follows:…
+   réponse gardée par le jeu : The usual technique is to use a pair of filters to connect the common antenna to the two chip inputs. Basically, a low-pass filter for the AM input and a high-pass filter for the FM input, although more-specific bandpass filters for each band would do a better job of rejecting out-of-band signals. Each filter has a…
+
+== Can I Stack these two Arduino Shields? (2012-09-05) — https://electronics.stackexchange.com/q/39573
+   étiquettes : arduino
+   question : I am using an Arduino uno currently with the Si4735 . I can not currently get the audio from this shield to the Arduino or other sources without using the 1/8 jack. To fix this I am thinking about adding another shield with the functionality I need that has…
+   réponse gardée par le jeu : According to the Rugged Audio Shield description , see under 'Pin Usage' All of the pins can be rewired for maximum flexibility, using cuttable jumpers on the bottom side of the shield (see the picture below). For example, if you want to use a different SPI slave select pin, other than D8, you would cut the small…
+

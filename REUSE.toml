@@ -23,9 +23,9 @@ path = ["*.md", "**/*.md"]
 SPDX-FileCopyrightText = "2026 Kévin Chatellard — Exylia Project"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
 
-# Résumés tirés du jeu de données Open Schematics (CC BY 4.0)
+# Résumés tirés de jeux de données publics (liste et licences : outils/jeux_donnees.py ; chaque projet cité garde la sienne)
 [[annotations]]
-path = ["resultats/*/montages-reels/**"]
+path = ["resultats/*/montages-reels/**", "resultats/*/recherches/**"]
 SPDX-FileCopyrightText = "2026 Kévin Chatellard — Exylia Project"
 SPDX-License-Identifier = "CC-BY-SA-4.0"
 

@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.34 — 25 octobre 2026
+Version 1.35 — 25 octobre 2026
 
 ## L'idée en une phrase
 
@@ -24,7 +24,11 @@ Un bloc garde ses règles où qu'on le pose : tourner le bloc tourne aussi sa zo
 
 ## Les étapes
 
-0. **Regarder comment d'autres ont fait** (`outils/montages_reels.py`, hors de la commande, quelques minutes avec internet). Pour une puce, le script cherche dans le jeu de données libre « Open Schematics » (Hugging Face, environ 88 000 schémas KiCad publiés) les projets qui l'utilisent, et écrit ce qui est branché sur chacune de ses broches. Ce sont des montages publiés, pas vérifiés : ils servent à comparer et à poser de bonnes questions. Essai du 23/10/2026 : deux projets avec un Si4732-A10 ont exactement notre montage du tuner ; plusieurs mettent 10 kΩ en série devant l'ampli.
+0. **Regarder comment d'autres ont fait** (hors de la commande, quelques minutes avec internet la première fois ; les jeux de données, leurs licences et ceux qui sont écartés : `outils/jeux_donnees.py`) :
+   - `outils/montages_reels.py 'PUCE' dossier/` : ce qui est branché sur chaque broche d'une puce, dans des schémas publiés. Trois jeux libres, du plus sûr au plus large : Ohmatic (1 000 schémas, avec un niveau de confiance), kicad9plus (300 schémas KiCad 9, avec la licence de chacun), Open Schematics (88 000 schémas de 30 000 dépôts GitHub). Toutes les liaisons sortent de KiCad lui-même, lisant le schéma d'origine. En tête du rapport : ce qui revient chez au moins deux auteurs différents (deux dépôts d'un même compte comptent pour un, une copie exacte n'est pas recomptée), et une alerte quand un projet a la puce avec un autre brochage que les autres (autre boîtier, module tout fait, ou symbole faux) ;
+   - `outils/chercher_fonction.py 'FM radio|AM radio' dossier/` : les projets publiés qui font telle chose (d'après la description de chaque dépôt, en anglais), et les pièces qui reviennent chez plusieurs auteurs. Avec `--pieges 'PAM8403'` : les questions d'Electronics Stack Exchange qui parlent d'une pièce (95 000 questions, jusqu'à mars 2024) ; leurs titres disent déjà où d'autres se sont trompés. Une réponse de forum n'est pas une preuve.
+
+   Ce sont des montages publiés, pas vérifiés : ils servent à comparer et à poser de bonnes questions. On lit et on cite : rien n'est recopié dans le dépôt. Essai du 23/10/2026 : deux projets avec un Si4732-A10 ont exactement notre montage du tuner ; plusieurs mettent 10 kΩ en série devant l'ampli. Essai du 25/10/2026 (`resultats/radio-v4/montages-reels/`) : le régulateur SY8089 d'Olimex a le montage le plus courant (2,2 µH chez 4 auteurs sur 6, 22 µF à l'entrée chez 3, 220 kΩ en haut du pont chez 2) ; un projet a les broches 9 à 16 du Si4732 dans l'ordre inverse des autres, l'erreur classique d'un symbole fait main, et l'alerte l'a vu.
 
    Chercher aussi sur hackaday.io (avec Firecrawl, recherche « site:hackaday.io » et le nom de la puce). C'est une source de premier rang : des professionnels et des amateurs reconnus y publient des projets aboutis, avec schémas, plans et récits d'essais, problèmes compris.
 
@@ -326,6 +330,8 @@ Pour l'essai, une seule chose a été ajoutée, et elle n'est pas dans la recett
 - Dans le Python de KiCad 10, `pcbnew.PCB_TRACK(piste)` ne copie pas la piste : il en crée une vide, dont la piste donnée serait le parent. Pour copier : `piste.Duplicate().Cast()`. Constaté le 25/10/2026 : toutes les pistes d'un bloc copié étaient perdues, sans message d'erreur ; seul le contrôle de KiCad (liaisons manquantes) l'a montré.
 - Avant de rendre un dépôt public, lire les conditions de chaque source, et se souvenir que Git garde tout : l'historique devient public avec le dépôt. Constaté le 25/10/2026 : la bibliothèque de LCSC/EasyEDA, que leurs conditions interdisent de republier, a dû être retirée de tout l'historique après coup.
 - Une retouche faite à la main dans un fichier téléchargé se perd au prochain téléchargement. Toute retouche va dans un fichier de description (`retouches.json`), avec sa raison, et un script la réapplique.
+- Ne jamais croire les liaisons qu'un jeu de données a déjà converties : les refaire sortir par KiCad, depuis le schéma d'origine. Constaté le 25/10/2026 sur le jeu « kicad-netlist-sft » : sur le projet Carcotech, la masse de l'ampli PAM8403 y est fondue dans le +3V3 et ses deux entrées n'ont plus de liaison, alors que KiCad les trouve reliées au lecteur DFR0299 ; sur 4 000 circuits tirés au hasard, 192 (4,8 %) ont une puce dont la masse et l'alimentation tombent sur le même réseau.
+- Deux sources indépendantes, ce sont deux auteurs, pas deux dépôts. Constaté le 25/10/2026 : ralphxavier a le même schéma, au caractère près, dans deux dépôts ; compté deux fois, il aurait fait croire à un accord.
 
 - Toujours des sorties au bord des blocs.
 - Choisir les broches du microcontrôleur pour que rien ne croise la paire USB.
@@ -670,7 +676,7 @@ But : savoir si un bloc pris dans une carte libre déjà fabriquée peut remplac
 
 La chaîne n'apprend pas comme une personne, mais elle n'oublie rien de ce qu'elle a vérifié. Pour une fonction qu'aucun bloc de la bibliothèque ne fait :
 
-1. **Chercher des montages qui existent** : le schéma conseillé par le fabricant de la puce (sa fiche technique), des cartes libres déjà fabriquées (Olimex, Adafruit, SparkFun : vérifier leur licence et leur nombre de couches), des montages publiés (`outils/montages_reels.py`, hackaday.io). Au moins deux sources indépendantes.
+1. **Chercher des montages qui existent** : le schéma conseillé par le fabricant de la puce (sa fiche technique), des cartes libres déjà fabriquées (Olimex, Adafruit, SparkFun : vérifier leur licence et leur nombre de couches), les projets publiés qui font la même chose (`outils/chercher_fonction.py`), comment ils branchent la puce (`outils/montages_reels.py`) et ses pièges connus (`outils/chercher_fonction.py --pieges`), hackaday.io. Au moins deux sources indépendantes, c'est-à-dire deux auteurs différents.
 2. **Faire le bloc** : le router dans EasyGerber, ou le découper dans une carte libre (`outils/bloc_depuis_kicad.py`, comme le régulateur d'Olimex).
 3. **Le contrôler** avec ce qui vaut pour tous les blocs : KiCad (règles du fabricant, contrôle électrique avec les vrais types de broches), `controle_circuit.py` (masse, alimentation, découplage, tirages…) et la simulation (ngspice) quand c'est possible. Si le bloc révèle une erreur que rien n'a vue, ajouter le contrôle qui la verra la prochaine fois.
 4. **Le faire relire, puis l'essayer** : une question dans la fiche pour l'électronicien, puis le prototype sur le banc de test.
@@ -736,6 +742,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.35 — 25/10/2026** : la chaîne regarde dans plus de schémas publiés. `outils/montages_reels.py` lit trois jeux (Ohmatic, kicad9plus, Open Schematics, avec un index local de 3 Mo), une puce à la fois, et toutes les liaisons sortent de KiCad ; il compte les auteurs, pas les dépôts, ne recompte pas une copie exacte, signale un brochage différent et une puce dont la masse touche l'alimentation. Nouveau : `outils/chercher_fonction.py` (projets qui font telle chose, et pièges connus d'après Electronics Stack Exchange) ; `outils/jeux_donnees.py` (les jeux, leurs licences, ceux qui sont écartés et pourquoi). Le jeu « kicad-netlist-sft » ne sert que d'index : ses liaisons sont fausses dans des cas vérifiés. Rapport de la radio v4 refait (Si4732, PAM8403, SY8089). Deux règles apprises.
 - **1.34 — 25/10/2026** : dépôt rendu public. La bibliothèque des composants de LCSC/EasyEDA (empreintes, symboles, modèles 3D) est retirée du dépôt et de tout son historique, car les conditions d'EasyEDA interdisent de la republier ; chacun la télécharge chez soi avec `outils/telecharger_bibliotheque.py`, qui réapplique les retouches (`retouches.json`) et vérifie les sommes (`attendu.json`). Les conditions d'EasyGerber permettent de garder ses fichiers. Installation, Docker, README, licence et compétence mis à jour ; deux règles apprises. Idée proposée à AutonaBee, avec le lien du dépôt (section « Proposée à AutonaBee »). Méthode pour un bloc que la chaîne n'a jamais vu, et trois pistes de Kévin (boîtier d'abord, IA ouverte, objet d'art).
 - **1.33 — 25/10/2026** : licences décidées et mises dans le dépôt : AGPL-3.0 pour le logiciel, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes (`LICENCE.md`, `LICENSES/`, `REUSE.toml`).
 - **1.32 — 25/10/2026** : « Licence de la chaîne » : Kévin veut une licence libre et stricte ; pistes (AGPL-3.0 ou EUPL-1.2 pour les scripts, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes) et l'intérêt de celui qui maintient la chaîne. Pas encore décidé.
