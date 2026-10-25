@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.31 — 25 octobre 2026
+Version 1.32 — 25 octobre 2026
 
 ## L'idée en une phrase
 
@@ -649,6 +649,16 @@ But : savoir si un bloc pris dans une carte libre déjà fabriquée peut remplac
 - **Ce qui manque avant de commander une carte avec ce bloc** : la chaîne doit savoir l'assembler elle-même (`assembler.py`), le mettre dans le schéma (`schema.py`, symboles) et dans la liste des pièces et le placement pour JLCPCB (`fab.py` : numéros LCSC de la bobine, des condensateurs et des résistances) ; le contrôle indépendant des Gerber (`verif_gerber.py`) ne connaît que les blocs EasyGerber. Et l'avis de l'électronicien (question 5).
 - **Vu en route** : l'ESP32-ADF d'Olimex (enceinte et radio par Internet, CERN OHL 1.2) alimente aussi son ESP32 par un SY8089, et son ampli est un PAM8003, cousin de notre PAM8403. Mais cette carte a 4 couches : ses blocs ne se posent pas tels quels sur notre carte à 2 couches.
 
+## Licence de la chaîne (25/10/2026, à décider)
+
+- Kévin veut une licence libre, mais stricte : sinon, une entreprise pourrait reprendre la chaîne, la fermer et ne rien rendre. Et celui qui maintient la chaîne doit y trouver un intérêt.
+- Pistes, une licence par partie :
+  - les scripts : AGPL-3.0, la plus stricte des licences libres courantes. Qui diffuse une version modifiée, ou la propose comme service en ligne (à la façon d'EasyGerber), doit publier ses changements sous la même licence. Elle va avec KiCad (GPL-3.0), Freerouting (GPL-3.0), easyeda2kicad (lui-même AGPL-3.0) et KiKit (MIT). Variante européenne : l'EUPL-1.2, qui a valeur légale en français et couvre aussi les services en ligne ; mais sa clause de compatibilité permet de passer à des licences plus souples (MPL, LGPL) quand on mélange avec du code sous ces licences : moins stricte en pratique ;
+  - les blocs, les cartes et les maquettes : CERN-OHL-S-2.0, déjà celle du bloc d'Olimex ;
+  - les textes (méthode, fiches) : CC BY-SA 4.0.
+- L'intérêt de celui qui maintient : la licence protège son travail, elle ne le paie pas. Pistes : son propre usage de la chaîne ; un financement (NLnet finance des logiciels libres, il a financé EDeA) ; une double licence, c'est-à-dire vendre une licence non libre aux entreprises qui ne veulent pas publier leurs changements. La double licence demande que Kévin ait les droits sur tout le code : chaque contributeur les lui cède par écrit, ce qui en freine certains. Et elle ne marche pas pour les blocs repris d'autres (Olimex) : ils restent sous leur licence.
+- À faire relire par quelqu'un qui connaît le droit avant de publier.
+
 ## Veille
 
 Une tâche programmée, « Veille chaîne puzzle », tourne le 1er de chaque mois à 8 h 41 (heure de Paris), depuis le 23/10/2026. Elle compare aux références de cette version : versions des logiciels (KiCad 11 et le retrait de SWIG en premier), règles de JLCPCB, PCBWay et AISLER, stock des pièces clés, pistes à revérifier. Elle cherche aussi du nouveau, avec la règle des deux sources. Elle envoie un rapport daté et peut proposer une mise à jour de la compétence, que Kévin relit avant de l'enregistrer. Elle n'a pas les fichiers de la chaîne : elle dit quoi changer et où, et les changements se font ici, avec une entrée d'historique.
@@ -693,6 +703,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.32 — 25/10/2026** : « Licence de la chaîne » : Kévin veut une licence libre et stricte ; pistes (AGPL-3.0 ou EUPL-1.2 pour les scripts, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes) et l'intérêt de celui qui maintient la chaîne. Pas encore décidé.
 - **1.31 — 25/10/2026** : essai du régulateur à découpage d'Olimex (SY8089) à la place de l'AMS1117, sur une copie de la radio v4 : `outils/bloc_depuis_kicad.py` et `outils/remplacer_par_bloc.py`, premier bloc libre (`bibliotheque/blocs-libres/alim_decoupage_olimex`). KiCad : aucune erreur, rien ne manque ; chaleur estimée vers 60 °C au lieu d'environ 104 °C, mais il découpe dans la bande AM (à l'électronicien de trancher). kicad-happy relit aussi les cartes sans schéma. Deux règles apprises (verrouiller les pistes avant Freerouting ; copier une piste avec `Duplicate().Cast()`). Fiche de questions 1.7 (question 5).
 - **1.30 — 25/10/2026** : cinquième recherche, « Ce que le dépôt GitHub débloque » : des blocs pris dans les cartes libres d'Olimex (essai : KiKit découpe leur régulateur à découpage, routage compris, en une seconde) ; les placeurs libres regardés, pas encore solides ; l'humain plus tôt, une question à la fois sur le forum KiCad ; un estimateur de chaleur à garder pour la question 5.
 - **1.29 — 25/10/2026** : la chaîne est dans le dépôt privé de Kévin, `Youniziak/puzzles-`. kicad-happy y relit chaque carte à chaque envoi : rien ne contredit la chaîne, il est moins strict qu'elle sur l'USB, et deux remarques utiles passent dans la fiche de questions 1.6 (protection de l'antenne, vias sous le régulateur). Essai d'EDeA sur GitHub (`edea.yml`, `outils/essai_edea.py`) : il lit nos schémas sans rien perdre pour l'électricité, mais pas les cartes de KiCad 10. Trois points de plus « à vérifier avant de commander ». Actions de GitHub passées à Node.js 24.
