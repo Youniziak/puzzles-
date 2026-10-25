@@ -666,6 +666,20 @@ But : savoir si un bloc pris dans une carte libre déjà fabriquée peut remplac
 - L'intérêt de celui qui maintient : la licence protège son travail, elle ne le paie pas. Pistes : son propre usage de la chaîne ; un financement (NLnet finance des logiciels libres, il a financé EDeA) ; une double licence, c'est-à-dire vendre une licence non libre aux entreprises qui ne veulent pas publier leurs changements. La double licence demande que Kévin ait les droits sur tout le code : chaque contributeur les lui cède par écrit, ce qui en freine certains. Et elle ne marche pas pour les blocs repris d'autres (Olimex) : ils restent sous leur licence.
 - Une relecture par quelqu'un qui connaît le droit reste la bienvenue, maintenant que le dépôt est public.
 
+## Un bloc que la chaîne n'a jamais vu (25/10/2026)
+
+La chaîne n'apprend pas comme une personne, mais elle n'oublie rien de ce qu'elle a vérifié. Pour une fonction qu'aucun bloc de la bibliothèque ne fait :
+
+1. **Chercher des montages qui existent** : le schéma conseillé par le fabricant de la puce (sa fiche technique), des cartes libres déjà fabriquées (Olimex, Adafruit, SparkFun : vérifier leur licence et leur nombre de couches), des montages publiés (`outils/montages_reels.py`, hackaday.io). Au moins deux sources indépendantes.
+2. **Faire le bloc** : le router dans EasyGerber, ou le découper dans une carte libre (`outils/bloc_depuis_kicad.py`, comme le régulateur d'Olimex).
+3. **Le contrôler** avec ce qui vaut pour tous les blocs : KiCad (règles du fabricant, contrôle électrique avec les vrais types de broches), `controle_circuit.py` (masse, alimentation, découplage, tirages…) et la simulation (ngspice) quand c'est possible. Si le bloc révèle une erreur que rien n'a vue, ajouter le contrôle qui la verra la prochaine fois.
+4. **Le faire relire, puis l'essayer** : une question dans la fiche pour l'électronicien, puis le prototype sur le banc de test.
+5. **Le ranger avec son niveau de confiance** : « nouveau » (contrôlé par la chaîne), « relu » (par un électronicien, avec la date et la personne), « essayé » (sur prototype), comme pour les cartes ; champ à ajouter dans `bloc.json`. Ce qu'on a appris en route va dans cette méthode.
+
+Piste à creuser : décrire chaque bloc par ce qu'il fait (« 5 V vers 3,3 V, 500 mA », « ampli 2 × 3 W », « tuner FM et AM ») dans son `bloc.json`. Une carte demanderait alors une fonction, et la chaîne trouverait le bloc qui convient, ou dirait qu'il manque.
+
+Premier cas prévu : la mesure de l'oscilloscope qui parle, une autre graine de Kévin, dont la bibliothèque n'a pas encore le bloc.
+
 ## Pistes notées le soir du 25/10/2026 (idées de Kévin, pas encore commencées)
 
 - **Partir du boîtier** (de l'extérieur vers l'intérieur, comme un designer) : on dessine d'abord l'objet dans CadQuery (forme, matière, épaisseur des parois), déjà dans la chaîne pour le banc de test ; l'intérieur de l'objet donne le contour de la carte (KiCad accepte n'importe quel contour) ; la chaîne y pose les blocs ; puis la carte revient dans l'objet en 3D (fichier STEP) et un contrôle vérifie que tout tombe juste (boutons en face des trous, rien ne touche une paroi). C'est la co-conception électronique et mécanique des industriels, en libre et pilotée par écrit, donc utilisable sans la vue.
@@ -722,7 +736,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
-- **1.34 — 25/10/2026** : dépôt rendu public. La bibliothèque des composants de LCSC/EasyEDA (empreintes, symboles, modèles 3D) est retirée du dépôt et de tout son historique, car les conditions d'EasyEDA interdisent de la republier ; chacun la télécharge chez soi avec `outils/telecharger_bibliotheque.py`, qui réapplique les retouches (`retouches.json`) et vérifie les sommes (`attendu.json`). Les conditions d'EasyGerber permettent de garder ses fichiers. Installation, Docker, README, licence et compétence mis à jour ; deux règles apprises. Idée proposée à AutonaBee, avec le lien du dépôt (section « Proposée à AutonaBee »).
+- **1.34 — 25/10/2026** : dépôt rendu public. La bibliothèque des composants de LCSC/EasyEDA (empreintes, symboles, modèles 3D) est retirée du dépôt et de tout son historique, car les conditions d'EasyEDA interdisent de la republier ; chacun la télécharge chez soi avec `outils/telecharger_bibliotheque.py`, qui réapplique les retouches (`retouches.json`) et vérifie les sommes (`attendu.json`). Les conditions d'EasyGerber permettent de garder ses fichiers. Installation, Docker, README, licence et compétence mis à jour ; deux règles apprises. Idée proposée à AutonaBee, avec le lien du dépôt (section « Proposée à AutonaBee »). Méthode pour un bloc que la chaîne n'a jamais vu, et trois pistes de Kévin (boîtier d'abord, IA ouverte, objet d'art).
 - **1.33 — 25/10/2026** : licences décidées et mises dans le dépôt : AGPL-3.0 pour le logiciel, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes (`LICENCE.md`, `LICENSES/`, `REUSE.toml`).
 - **1.32 — 25/10/2026** : « Licence de la chaîne » : Kévin veut une licence libre et stricte ; pistes (AGPL-3.0 ou EUPL-1.2 pour les scripts, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes) et l'intérêt de celui qui maintient la chaîne. Pas encore décidé.
 - **1.31 — 25/10/2026** : essai du régulateur à découpage d'Olimex (SY8089) à la place de l'AMS1117, sur une copie de la radio v4 : `outils/bloc_depuis_kicad.py` et `outils/remplacer_par_bloc.py`, premier bloc libre (`bibliotheque/blocs-libres/alim_decoupage_olimex`). KiCad : aucune erreur, rien ne manque ; chaleur estimée vers 60 °C au lieu d'environ 104 °C, mais il découpe dans la bande AM (à l'électronicien de trancher). kicad-happy relit aussi les cartes sans schéma. Deux règles apprises (verrouiller les pistes avant Freerouting ; copier une piste avec `Duplicate().Cast()`). Fiche de questions 1.7 (question 5).
