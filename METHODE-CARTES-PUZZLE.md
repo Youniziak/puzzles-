@@ -666,6 +666,12 @@ But : savoir si un bloc pris dans une carte libre déjà fabriquée peut remplac
 - L'intérêt de celui qui maintient : la licence protège son travail, elle ne le paie pas. Pistes : son propre usage de la chaîne ; un financement (NLnet finance des logiciels libres, il a financé EDeA) ; une double licence, c'est-à-dire vendre une licence non libre aux entreprises qui ne veulent pas publier leurs changements. La double licence demande que Kévin ait les droits sur tout le code : chaque contributeur les lui cède par écrit, ce qui en freine certains. Et elle ne marche pas pour les blocs repris d'autres (Olimex) : ils restent sous leur licence.
 - Une relecture par quelqu'un qui connaît le droit reste la bienvenue, maintenant que le dépôt est public.
 
+## Pistes notées le soir du 25/10/2026 (idées de Kévin, pas encore commencées)
+
+- **Partir du boîtier** (de l'extérieur vers l'intérieur, comme un designer) : on dessine d'abord l'objet dans CadQuery (forme, matière, épaisseur des parois), déjà dans la chaîne pour le banc de test ; l'intérieur de l'objet donne le contour de la carte (KiCad accepte n'importe quel contour) ; la chaîne y pose les blocs ; puis la carte revient dans l'objet en 3D (fichier STEP) et un contrôle vérifie que tout tombe juste (boutons en face des trous, rien ne touche une paroi). C'est la co-conception électronique et mécanique des industriels, en libre et pilotée par écrit, donc utilisable sans la vue.
+- **Essayer une IA ouverte** sur la chaîne, en clé de secours : par exemple la famille Mistral 3 (entreprise française, poids publiés sous licence Apache 2.0). Les petits modèles tournent sur un bon ordinateur avec carte graphique, le grand demande des serveurs. Rien n'est encore essayé ; les contrôles restent dans les outils, pas dans l'IA.
+- **Un mode « objet d'art »** : aujourd'hui la chaîne cherche une carte qui marche, pas une belle carte (Freerouting trace au plus efficace). Un réglage pourrait choisir la forme de la carte, la couleur du vernis, des dessins dans le cuivre. Une carte peut être un bel objet même si elle ne marche pas ; le relief viendrait plutôt de la forme découpée et des composants, le cuivre et le vernis étant trop fins pour un braille lisible.
+
 ## Proposée à AutonaBee (25/10/2026)
 
 - Kévin a envoyé l'idée de la chaîne dans la boîte à idées d'AutonaBee (page « Partager vos idées »). Si quelqu'un est intéressé, l'association le recontacte.
