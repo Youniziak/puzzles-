@@ -22,7 +22,7 @@ jobs:
     env:
       KICAD_HAPPY_COMMIT: 2fd9aa0fe2d620f36627d9221e8b1393987ae38e
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Récupérer kicad-happy (version épinglée)
         run: |
@@ -51,7 +51,7 @@ jobs:
 
       - name: Garder les résultats (30 jours)
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: analyse-kicad-happy
           path: analyse/

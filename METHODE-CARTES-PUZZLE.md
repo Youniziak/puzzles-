@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.28 — 24 octobre 2026
+Version 1.29 — 25 octobre 2026
 
 ## L'idée en une phrase
 
@@ -504,7 +504,8 @@ Recherche dans les tickets GitHub et GitLab, le forum KiCad, les forums japonais
     - Ce que c'est : des scripts Python sans dépendance (`analyze_schematic.py`, `analyze_pcb.py`, `cross_analysis.py`…), qui marchent seuls, sans KiCad, et des compétences pour Claude.
     - Ce qu'il ajouterait : des contrôles de valeurs, que `controle_circuit.py` ne fait pas. Par exemple : la capacité de charge d'un quartz, le temps de montée du bus I2C avec la valeur des tirages, la tension des condensateurs, la puissance des résistances, les protections contre les décharges.
     - D'après la recherche, il devine une partie des choses d'après les noms des liaisons, et dépend lui aussi des types de broches.
-    - Pas lancé : le 24/10/2026, le garde-fou de l'espace de travail de Claude a refusé trois fois d'exécuter ce code téléchargé, dont deux fois après l'accord écrit de Kévin. L'accord donné dans la conversation ne suffit pas à le débloquer. Pour le lancer pour de vrai : sur les machines de GitHub, dans un dépôt privé de Kévin. Le réglage est prêt : `.github/workflows/kicad-happy.yml` (version de kicad-happy épinglée, droits en lecture seule, un dossier de résultats par carte). Le garde-fou refuse aussi que Claude crée le dépôt (« partage de données ») : Kévin crée le dépôt vide `chaine-puzzle` (privé), puis Claude y envoie la chaîne.
+    - Le 24/10/2026, le garde-fou de l'espace de travail de Claude a refusé trois fois d'exécuter ce code téléchargé, dont deux fois après l'accord écrit de Kévin : l'accord donné dans la conversation ne suffit pas à le débloquer. Il a aussi refusé que Claude crée un dépôt GitHub (« partage de données »).
+    - Lancé pour de vrai depuis le 25/10/2026 : sur les machines de GitHub, à chaque envoi dans le dépôt privé que Kévin a créé, `Youniziak/puzzles-` (réglage `.github/workflows/kicad-happy.yml` : version épinglée, droits en lecture seule, un dossier de résultats par carte). Résultats : voir « Deuxième avis de kicad-happy et essai d'EDeA, sur GitHub ».
     - Ses contrôles ont été refaits à la main sur la radio v4, d'après sa documentation (`methodology_schematic.md`), le 24/10/2026 :
       - le quartz : deux 22 pF pour un quartz prévu pour 12,5 pF donnent environ 14 pF. Skyworks fait exactement pareil dans sa note AN299 : pas une erreur ;
       - la tension des condensateurs : tous tiennent au moins 25 V, sur des liaisons de 5 V au plus ;
@@ -544,7 +545,7 @@ Le constat de Kévin : faire seuls tous les blocs prendrait trop longtemps (on n
   - Ce que c'est : un catalogue et un portail communautaire de « modules de circuits éprouvés » (alimentation, conditionnement de signal, conversion, microcontrôleurs), avec un outil qui fusionne un sous-circuit, schéma et carte compris, dans un projet KiCad. Exactement notre idée de bibliothèque de blocs partagée.
   - Qui : Fully Automated OÜ (Estonie), financé par NLnet (NGI0 Discovery) d'avril 2020 à septembre 2022. Code : gitlab.com/edea-dev. Dernière version vue : 0.6.0, sur le forum KiCad, en janvier 2024.
   - Il vit encore, au ralenti (vérifié le 24/10/2026 sur GitLab et PyPI) : le paquet Python `edea` (« KiCAD file format parser and tools », licence européenne EUPL-1.2) en est à la version 0.8.4 du 09/06/2025, et le dépôt a bougé pour la dernière fois le 07/10/2025. Le groupe a aussi `edea-ms`, un serveur pour ranger les résultats de mesures de tests de cartes (à voir pour le banc de test), et `edea_draw` (KiCad vers SVG). Son portail (hub.automated.ee) refuse les robots : pas lu.
-  - Le 24/10/2026, le garde-fou a refusé d'installer et de lancer `edea` dans l'espace de travail de Claude (« code venu de l'extérieur »), comme kicad-happy. À essayer sur GitHub, dans le dépôt privé de Kévin.
+  - Le 24/10/2026, le garde-fou a refusé d'installer et de lancer `edea` dans l'espace de travail de Claude (« code venu de l'extérieur »), comme kicad-happy. Essayé le 25/10/2026 sur GitHub : il lit nos schémas, mais pas les cartes de KiCad 10 (voir « Deuxième avis de kicad-happy et essai d'EDeA, sur GitHub »).
   - Les blocs de carte de KiCad 10 font maintenant une partie de son travail.
   - À retenir aussi : NLnet a déjà financé un outil libre de conception de cartes. Une chaîne accessible pourrait entrer dans un de ses appels (à vérifier).
 - **Faire la carte au fablab, à la fraiseuse** (rouvert : deux comptes rendus de la Fab Academy 2026 ; pages des paquets Debian et Fedora de pcb2gcode).
@@ -579,6 +580,29 @@ But : savoir si un bloc peut être fait à la fraiseuse d'un fablab, et si un ou
   - l'essai complet est rangé dans `resultats/essai-ampli-fraiseuse/` : la carte KiCad, et une image des deux faces pour les gens du fablab.
 - **Ce que ça montre** : on peut garder le placement d'EasyGerber et faire router l'intérieur d'un bloc par un outil libre. Pour une carte fraisée, il faudra un placement plus aéré, pour avoir moins de vias.
 - **Pas vérifié** : les vraies règles de la fraiseuse (taille des fraises, une ou deux faces), et le fraisage lui-même. Pour essayer le bloc seul sur place, il lui manque une pastille de masse au bord.
+
+## Deuxième avis de kicad-happy et essai d'EDeA, sur GitHub (25/10/2026)
+
+Kévin a créé le dépôt privé `Youniziak/puzzles-`. La chaîne y est, avec son historique depuis la version 1.23.
+- **Comment** : deux réglages GitHub (« workflows ») tournent tout seuls à chaque envoi, sur les machines de GitHub, en moins d'une demi-minute chacun. Claude télécharge ensuite les résultats et les lit (`gh run list -R Youniziak/puzzles-`, puis `gh run download NUMÉRO -R Youniziak/puzzles- -n analyse-kicad-happy`, ou `-n essai-edea`). Ils sont gardés 30 jours.
+  - `kicad-happy.yml` : kicad-happy 2.3.2, épinglé ; analyse du schéma, de la carte, puis les deux ensemble, pour chaque carte de `resultats/` qui a un schéma.
+  - `edea.yml` et `outils/essai_edea.py` : EDeA 0.8.4, épinglé ; il lit chaque schéma et chaque carte, puis les réécrit, et on compte ce qui a changé. Ne tourne que si une carte, le script ou le réglage change.
+- **kicad-happy sur la radio v4** :
+  - Schéma : 0 erreur, 1 avertissement (il n'a pas les fiches des pièces, donc pas de contrôle broche par broche), 28 remarques. Carte : 2 erreurs, 3 avertissements, 14 remarques. Schéma et carte ensemble : rien.
+  - Rien ne contredit la chaîne. Il retrouve ce qu'elle a calculé : la charge du quartz (environ 14 pF), les tirages I2C (4,7 kΩ), la protection USBLC6, le courant du régulateur (environ 0,25 A, soit 0,43 W perdus en chaleur).
+  - Il est moins strict que la chaîne sur l'USB : il accepte les 33 µF sur VBUS (son contrôle « vbus_capacitance » passe), et ne cherche pas de résistances en série sur D+ et D-. Les règles 10 et 11 de `controle_circuit.py` gardent donc leur utilité.
+  - Ses 2 « erreurs » : pas de repères pour la machine de pose (« fiducials »), et la prise USB-C (J1) qui dépasse de 1,4 mm du bord du bas. La prise dépasse exprès, pour qu'on puisse brancher la fiche. Les repères : JLCPCB les exige pour le montage, et livre par défaut les cartes avec ses propres bandes de bord (page d'aide de JLCPCB, lue le 25/10/2026). Voir « À vérifier avant de commander ».
+  - Ses 3 avertissements : la prise d'antenne SMA (J2) à 0,6 mm du bord de droite ; 9 liaisons de signal sur 34 avec un point de test (26 %), assez pour un prototype ; une seule via sous la languette du régulateur, pour 5 conseillées (question 5 de la fiche).
+  - Une remarque à garder : aucune protection contre les décharges électrostatiques sur les prises, sauf l'USB, et donc pas sur l'antenne (question 2 de la fiche).
+  - Les anciennes cartes (v3 et compacte) ont des erreurs que la v4 n'a plus : aucune référence de fabricant dans la liste des pièces, et, sur la compacte, deux pistes à 0,12 mm l'une de l'autre (procédé avancé). Sur la v4, toutes les pièces ont leur référence.
+  - Pas fait par kicad-happy : le contrôle d'après les fiches des pièces (il faudrait les télécharger avec des clés de DigiKey, Mouser ou element14), et l'état des pièces (fabrication arrêtée ou non : option `--lifecycle` ; LCSC ne demande pas de clé, mais l'analyse se connecterait alors à Internet). À décider.
+- **EDeA** :
+  - Il lit nos schémas (format de KiCad 8, celui qu'écrit `schema.py`), en 0,1 s. Réécrit par EDeA, le schéma de la radio v4 donne dans KiCad 10 exactement les mêmes liaisons (63) et les mêmes composants (62, avec valeur et empreinte) : rien de perdu pour l'électricité.
+  - Mais il perd le réglage « caché » de 490 textes (sur la radio v4 : les champs empreinte, fiche, numéro LCSC, référence et fabricant de chaque composant, et les renvois entre feuilles) : ils s'afficheraient tous sur le schéma. Il ne connaît pas l'écriture `(hide yes)` de KiCad 8.
+  - Il refuse toutes nos cartes : « Only the stable KiCad 7 and KiCad 8 PCB file formats (...) are supported. Got '20260206' ». Il ne lit donc ni KiCad 9 ni KiCad 10, et KiCad ne sait pas enregistrer dans un format plus ancien.
+  - Conclusion : EDeA ne peut pas servir à la chaîne aujourd'hui, ni pour fusionner un bloc dans une carte, ni pour partager nos blocs. Il faudrait qu'il apprenne le format de KiCad 10, et son dépôt bouge peu (dernier changement le 07/10/2025). Les blocs de carte de KiCad 10 restent la piste la plus directe. L'idée d'un portail de blocs éprouvés, elle, reste bonne pour le jour où la chaîne partagera ses blocs génériques.
+- **Ce que ça change** : le deuxième avis est maintenant automatique. Chaque nouvelle version d'une carte envoyée dans le dépôt est relue par kicad-happy, sans rien à faire pour Kévin. C'est un avis de plus, pas une relecture humaine : la fiche de questions reste nécessaire.
+- Le 25/10/2026, GitHub prévenait que les actions écrites pour Node.js 20 sont dépassées : les deux réglages sont passés à `actions/checkout@v5`, `actions/setup-python@v6` et `actions/upload-artifact@v6`.
 
 ## Veille
 
@@ -618,9 +642,13 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 - L'impédance d'entrée de l'ampli PAM8403. Le tuner demande au moins 10 kΩ de charge sur sa sortie LOUT. La simulation donne 14 kΩ si l'ampli fait 20 kΩ (bon), et 8,3 kΩ s'il fait 10 kΩ (trop faible). La fiche téléchargée ne donne pas ce chiffre.
 - **Les condensateurs sur VBUS** : environ 33 µF, pour 10 µF au plus selon la règle de l'USB 2.0 (charge prise au branchement). Question 11 de la fiche.
 - **Les lignes USB D+ et D-** : pas d'emplacement pour les résistances en série (22 ou 33 Ω) que recommande le guide d'Espressif. Question 12 de la fiche.
+- **Les bandes de bord et les repères de pose** (kicad-happy, 25/10/2026) : la carte n'a pas de repères (« fiducials »). JLCPCB les exige pour le montage, et livre par défaut les cartes avec ses propres bandes de bord. Mais la prise USB-C dépasse de 1,4 mm du bord du bas : une bande de ce côté-là la gênerait. À la commande, regarder de quels côtés JLCPCB met ses bandes.
+- **La chaleur du régulateur, sur la carte** : une seule via sous sa languette, pour 5 conseillées par kicad-happy. Question 5 de la fiche.
+- **La prise d'antenne SMA (J2)**, à 0,6 mm du bord de droite : vérifier sur le boîtier d'essai imprimé que l'antenne se visse sans gêne.
 
 ## Historique
 
+- **1.29 — 25/10/2026** : la chaîne est dans le dépôt privé de Kévin, `Youniziak/puzzles-`. kicad-happy y relit chaque carte à chaque envoi : rien ne contredit la chaîne, il est moins strict qu'elle sur l'USB, et deux remarques utiles passent dans la fiche de questions 1.6 (protection de l'antenne, vias sous le régulateur). Essai d'EDeA sur GitHub (`edea.yml`, `outils/essai_edea.py`) : il lit nos schémas sans rien perdre pour l'électricité, mais pas les cartes de KiCad 10. Trois points de plus « à vérifier avant de commander ». Actions de GitHub passées à Node.js 24.
 - **1.28 — 24/10/2026** : essai du bloc ampli à la fraiseuse du fablab, routé par Freerouting (règles `fraiseuse-fablab.json`, `outils/vider_routage.py`, carte `essai-ampli-fraiseuse.json`) : complet sur deux faces, sans erreur, avec 11 vias ; pas sur une seule face.
 - **1.27 — 24/10/2026** : fablabs autour de Lyon qui déclarent une fraiseuse de précision, d'après l'interface publique de fablabs.io ; état d'EDeA (vivant, au ralenti ; licence EUPL) ; le garde-fou refuse aussi de lancer EDeA dans l'espace de travail de Claude ; pcb2gcode absent d'Ubuntu 24.04.
 - **1.26 — 24/10/2026** : quatrième recherche, « Projets libres inattendus » : EDeA (bibliothèque partagée de sous-circuits KiCad, financée par NLnet), fraisage des cartes au fablab (mods, pcb2gcode), gerber2ems ; OrthoRoute, kicad-skip et kicad-sch-api regardés, pas retenus ; LibrePCB à surveiller.

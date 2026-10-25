@@ -1,6 +1,6 @@
 # Carte radio RADIONÉO v4 — questions pour un électronicien
 
-Exylia Project — version 1.5 — 24 octobre 2026
+Exylia Project — version 1.6 — 25 octobre 2026
 
 Je conçois mes cartes sans la vue, avec une chaîne d'outils qui contrôle tout ce qu'un programme peut contrôler. Il reste des choix qu'il faut un humain du métier pour juger. Cette fiche les liste en questions précises : pas besoin de tout relire.
 
@@ -23,6 +23,7 @@ Je conçois mes cartes sans la vue, avec une chaîne d'outils qui contrôle tout
 - L'échauffement du régulateur et de l'ampli, calculé avec les chiffres des fiches.
 - Le contrôle électrique du schéma par KiCad, avec le rôle de chaque broche pris dans la bibliothèque officielle de KiCad : aucune erreur, aucun avertissement.
 - Les erreurs bêtes : broches de masse et d'alimentation, SDA et SCL, sens du régulateur, condensateur de découplage à moins de 5 mm de chaque alimentation de puce, résistances de tirage I2C.
+- Un deuxième avis automatique, par l'outil libre kicad-happy (version 2.3.2), le 25/10/2026 : aucune erreur sur le schéma, et rien qui contredise la chaîne. Il est moins strict qu'elle sur l'USB (il accepte les 33 µF sur VBUS, et ne cherche pas de résistances en série sur D+ et D-) : les questions 11 et 12 restent. Ses deux remarques utiles sont reprises aux questions 2 et 5.
 
 ## Les questions
 
@@ -48,6 +49,8 @@ Réponse :
 La piste de la prise d'antenne au tuner mesure environ 1 cm, en 0,25 mm de large (pas adaptée à 50 Ω).
 **Est-ce gênant à 100 MHz, ou est-ce négligeable sur cette longueur ?**
 
+kicad-happy note aussi qu'aucune protection contre les décharges électrostatiques n'est prévue sur la prise d'antenne J2 (seule la prise USB en a une). **Faut-il en ajouter une, pour une antenne que l'on touche ?**
+
 Réponse :
 
 ### 3. L'antenne AM
@@ -71,6 +74,8 @@ D'après le calcul, il va jusqu'à environ 0,33 A ; vers 0,25 A, la puce est aut
 **Garder ce régulateur pour un prototype, ou passer tout de suite à un régulateur à découpage ?**
 
 Fennec, sur hackaday.io, fait tourner un ESP32-S3 avec le WiFi allumé, un écran et le tuner sur un régulateur linéaire (LF33) depuis 5 V. Ça montre que c'est courant, pas que notre régulateur et son boîtier tiennent la chaleur.
+
+kicad-happy compte une seule via sous la languette du régulateur (reliée au 3,3 V), et en conseille au moins 5, pour mener la chaleur vers le dessous. Mais le dessous de la carte est le plan de masse : ces vias demanderaient une surface de 3,3 V sous le régulateur, prise sur la masse. **Si on garde ce régulateur : faut-il ces vias et cette surface ?**
 
 Réponse :
 
@@ -132,6 +137,7 @@ Après la relecture, les réponses vont dans `METHODE-CARTES-PUZZLE.md` (ce qui 
 
 ## Historique
 
+- **1.6 — 25/10/2026** : le deuxième avis de kicad-happy, lancé pour de vrai sur les machines de GitHub, dans « Ce que la chaîne a déjà vérifié » ; ses deux remarques utiles aux questions 2 (protection de la prise d'antenne) et 5 (vias sous le régulateur). Toujours 12 questions.
 - **1.5 — 24/10/2026** : questions 11 (condensateurs sur le 5 V de l'USB) et 12 (lignes USB de l'ESP32-S3), trouvées en refaisant à la main les contrôles de l'outil kicad-happy ; le calcul de charge du quartz et la note AN299 de Skyworks à la question 1 ; les nouveaux contrôles de la chaîne dans « Ce que la chaîne a déjà vérifié ».
 - **1.4 — 23/10/2026** : question 10, les trous de fixation (place, antenne, tenue).
 - **1.3 — 23/10/2026** : ligne de concordance à la question 1 (4 projets de 3 auteurs font pareil pour le quartz et le découplage).

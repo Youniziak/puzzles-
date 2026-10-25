@@ -107,7 +107,7 @@ def metadonnees(racine):
     """Ce que le portail d'EDeA montrerait d'un module : surface, couches, nombre de pièces."""
     lignes = []
     try:
-        from edea.kicad.project import Project
+        from edea.metadata import Project      # 0.8.4 : pas dans edea.kicad.project (essai du 25/10/2026)
     except Exception as e:
         return [f"Fiche de module : pas d'accès à Project ({panne(e)[0]})"]
     for pro in sorted(racine.glob('*/carte.kicad_pro')):

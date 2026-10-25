@@ -1,6 +1,6 @@
 # Relecture de la carte « RADIONÉO carte radio v4 »
 
-Kévin Chatellard — Exylia Project — 24/10/2026
+Kévin Chatellard — Exylia Project — 25/10/2026
 
 Je conçois sans la vue une radio de table, RADIONÉO, prévue en matériel libre. Cette carte en est le cœur : alimentation par USB-C, microcontrôleur ESP32-S3, tuner FM et AM Si4732, ampli PAM8403.
 
@@ -33,6 +33,7 @@ Chaque bloc a été routé par EasyGerber, puis les blocs ont été assemblés e
 - L'échauffement du régulateur et de l'ampli, calculé avec les chiffres des fiches.
 - Le contrôle électrique du schéma par KiCad, avec le rôle de chaque broche pris dans la bibliothèque officielle de KiCad : aucune erreur, aucun avertissement.
 - Les erreurs bêtes : broches de masse et d'alimentation, SDA et SCL, sens du régulateur, condensateur de découplage à moins de 5 mm de chaque alimentation de puce, résistances de tirage I2C.
+- Un deuxième avis automatique, par l'outil libre kicad-happy (version 2.3.2), le 25/10/2026 : aucune erreur sur le schéma, et rien qui contredise la chaîne. Il est moins strict qu'elle sur l'USB (il accepte les 33 µF sur VBUS, et ne cherche pas de résistances en série sur D+ et D-) : les questions 11 et 12 restent. Ses deux remarques utiles sont reprises aux questions 2 et 5.
 
 ## Le contrôle électrique
 
