@@ -1,6 +1,6 @@
 # Carte radio RADIONÉO v4 — questions pour un électronicien
 
-Exylia Project — version 1.7 — 25 octobre 2026
+Exylia Project — version 1.8 — 25 octobre 2026
 
 Je conçois mes cartes sans la vue, avec une chaîne d'outils qui contrôle tout ce qu'un programme peut contrôler. Il reste des choix qu'il faut un humain du métier pour juger. Cette fiche les liste en questions précises : pas besoin de tout relire.
 
@@ -60,8 +60,10 @@ Une antenne ferrite se branche sur J3, à travers 470 nF.
 Réponse :
 
 ### 4. La liaison tuner → ampli
-Le tuner demande au moins 10 kΩ de charge sur ses sorties audio. La fiche du PAM8403 ne donne pas sa résistance d'entrée. La simulation donne 14 kΩ si l'ampli fait 20 kΩ (bon), et 8,3 kΩ s'il fait 10 kΩ (trop faible). La sortie gauche va aussi vers une entrée de mesure de l'ESP32.
+Le tuner demande au moins 10 kΩ de charge sur ses sorties audio. La fiche du PAM8403 ne donne pas sa résistance d'entrée en clair (voir plus bas). La simulation donne 14 kΩ si l'ampli fait 20 kΩ (bon), et 8,3 kΩ s'il fait 10 kΩ (trop faible). La sortie gauche va aussi vers une entrée de mesure de l'ESP32.
 **Faut-il un étage tampon, ou des résistances en série ?**
+
+Ce que dit la fiche du PAM8403 (Power Analog Microelectronics, version de mars 2007, relue le 25/10/2026) : une formule du gain, AV = 20 log [2 × (Rf / Ri) × 1,4], avec Rf de 85 kΩ au plus et Ri de 15 kΩ au moins, pour 24 dB au plus. Lecture probable, à confirmer : Ri est dans la puce (15 kΩ), et une résistance mise en série devant l'entrée s'y ajoute. Sans résistance, l'ampli présenterait alors environ 15 kΩ au tuner, qui verrait en tout environ 11 kΩ (estimation tirée des deux cas de la simulation) : juste au-dessus des 10 kΩ demandés. Avec 10 kΩ en série, l'ampli présenterait 25 kΩ, et le gain passerait de 24 à environ 19,6 dB. Une réponse du forum Electronics Stack Exchange donne d'autres chiffres (Rf de 142 kΩ dans la puce, Ri d'au moins 18 kΩ : https://electronics.stackexchange.com/q/621155). **Est-ce la bonne lecture de la fiche ?**
 
 Ce que montrent des montages publiés : une version de `ralphxavier/SI4735` met une résistance de 10 kΩ en série entre chaque sortie du tuner et l'ampli ; deux projets avec un PAM8403 (`rh1tech/frank`, `Byter64/Hans2`) mettent aussi 10 kΩ en série devant ses entrées. Avec 10 kΩ en série, le tuner voit au moins 10 kΩ, quelle que soit la résistance d'entrée de l'ampli ; le son est un peu plus faible.
 
@@ -77,13 +79,17 @@ Fennec, sur hackaday.io, fait tourner un ESP32-S3 avec le WiFi allumé, un écra
 
 kicad-happy compte une seule via sous la languette du régulateur (reliée au 3,3 V), et en conseille au moins 5, pour mener la chaleur vers le dessous. Mais le dessous de la carte est le plan de masse : ces vias demanderaient une surface de 3,3 V sous le régulateur, prise sur la masse. **Si on garde ce régulateur : faut-il ces vias et cette surface ?**
 
-Une solution de rechange est déjà essayée sur une copie de la carte (pas sur celle que vous relisez) : le régulateur à découpage d'une carte libre d'Olimex, l'ESP32-S3-DevKit-LiPo (CERN-OHL-S-2.0), repris avec son routage. C'est un SY8089 (2 A), avec une bobine de 2,2 µH, 22 µF à l'entrée et à la sortie, et un pont de 220 kΩ et 49,9 kΩ (3,25 V). Il prend la place de l'AMS1117 et de ses deux 22 µF. KiCad n'y trouve aucune erreur, et aucune liaison ne manque. Pertes estimées : environ 0,15 W au lieu de 0,43 W, soit la puce vers 60 °C au lieu d'environ 104 °C (avec 85 % de rendement, une hypothèse : la courbe de la fiche n'a pas de chiffres lisibles). Mais il découpe vers 1 à 1,5 MHz (1,5 MHz d'après la fiche de Silergy, 1 MHz d'après la fiche de JLCPCB) : en plein dans la bande AM des ondes moyennes (0,53 à 1,7 MHz) que reçoit le tuner. **Faut-il partir sur ce montage pour le prototype, ou garder un régulateur linéaire, plus silencieux, pour une radio ?**
+Une solution de rechange est déjà essayée sur une copie de la carte (pas sur celle que vous relisez) : le régulateur à découpage d'une carte libre d'Olimex, l'ESP32-S3-DevKit-LiPo (CERN-OHL-S-2.0), repris avec son routage. C'est un SY8089 (2 A), avec une bobine de 2,2 µH, 22 µF à l'entrée et à la sortie, et un pont de 220 kΩ et 49,9 kΩ (3,25 V). Ce sont les valeurs les plus courantes dans les montages publiés (jeu Open Schematics, 6 auteurs avec un SY8089 : 2,2 µH chez 4 d'entre eux, 22 µF à l'entrée chez 3, 220 kΩ en haut du pont chez 2 ; détail dans `resultats/radio-v4/montages-reels/montages.txt`). Il prend la place de l'AMS1117 et de ses deux 22 µF. KiCad n'y trouve aucune erreur, et aucune liaison ne manque. Pertes estimées : environ 0,15 W au lieu de 0,43 W, soit la puce vers 60 °C au lieu d'environ 104 °C (avec 85 % de rendement, une hypothèse : la courbe de la fiche n'a pas de chiffres lisibles). Mais il découpe vers 1 à 1,5 MHz (1,5 MHz d'après la fiche de Silergy, 1 MHz d'après la fiche de JLCPCB) : en plein dans la bande AM des ondes moyennes (0,53 à 1,7 MHz) que reçoit le tuner. **Faut-il partir sur ce montage pour le prototype, ou garder un régulateur linéaire, plus silencieux, pour une radio ?**
 
 Réponse :
 
 ### 6. L'ampli PAM8403
 À pleine puissance continue sur 4 Ω, le calcul dit qu'il atteint sa protection thermique. Avec de la musique, ça passe.
 **La surface de cuivre autour de l'ampli suffit-elle ? Faut-il prévoir des haut-parleurs de 8 Ω ?**
+
+**Le découpage de l'ampli et la bande AM** (ajouté le 25/10/2026). Le PAM8403 est un ampli de classe D sans filtre : d'après sa fiche, il découpe entre 250 et 450 kHz (350 kHz typique). Les multiples de cette fréquence (par exemple 700, 1 050 et 1 400 kHz, pour 350 kHz) tombent dans la bande AM des ondes moyennes (531 à 1 701 kHz) que reçoit le tuner. C'est le même souci qu'à la question 5, mais l'ampli est sur toutes les versions de la carte. Sans filtre de sortie, la fiche conseille une perle de ferrite sur chaque fil de haut-parleur, qui « réduit les parasites vers 1 MHz et au-delà » (traduit), et son schéma montre une perle et un condensateur de 200 pF sur chaque sortie. Sur notre carte, les sorties de l'ampli vont directement aux prises J4 et J5. **Faut-il prévoir ces emplacements (perles et condensateurs) avant de commander ? Où placer l'antenne ferrite et les fils des haut-parleurs par rapport à l'ampli ?**
+
+Le plan de test (version 2.4, essai 8) mesure ce bruit sur toute la bande AM, ampli muet puis actif. La piste vient d'une question du forum Electronics Stack Exchange (https://electronics.stackexchange.com/q/684386), vérifiée ensuite sur la fiche.
 
 Réponse :
 
@@ -139,6 +145,7 @@ Après la relecture, les réponses vont dans `METHODE-CARTES-PUZZLE.md` (ce qui 
 
 ## Historique
 
+- **1.8 — 25/10/2026** : question 4 : ce que dit la fiche du PAM8403 sur sa résistance d'entrée (formule du gain, Ri d'au moins 15 kΩ), avec une lecture à confirmer. Question 5 : les valeurs du régulateur d'Olimex sont les plus courantes dans les montages publiés. Question 6 : le découpage de l'ampli (250 à 450 kHz) dans la bande AM, les perles de ferrite et les condensateurs de 200 pF que conseille sa fiche, et l'essai 8 du plan de test. Pistes trouvées par la recherche des pièges connus (`outils/chercher_fonction.py`, Electronics Stack Exchange), puis vérifiées sur la fiche. Toujours 12 questions.
 - **1.7 — 25/10/2026** : question 5 : la solution de rechange essayée sur une copie de la carte (régulateur à découpage SY8089 repris d'une carte libre d'Olimex), et la question du bruit de découpage pour le tuner. Toujours 12 questions.
 - **1.6 — 25/10/2026** : le deuxième avis de kicad-happy, lancé pour de vrai sur les machines de GitHub, dans « Ce que la chaîne a déjà vérifié » ; ses deux remarques utiles aux questions 2 (protection de la prise d'antenne) et 5 (vias sous le régulateur). Toujours 12 questions.
 - **1.5 — 24/10/2026** : questions 11 (condensateurs sur le 5 V de l'USB) et 12 (lignes USB de l'ESP32-S3), trouvées en refaisant à la main les contrôles de l'outil kicad-happy ; le calcul de charge du quartz et la note AN299 de Skyworks à la question 1 ; les nouveaux contrôles de la chaîne dans « Ce que la chaîne a déjà vérifié ».

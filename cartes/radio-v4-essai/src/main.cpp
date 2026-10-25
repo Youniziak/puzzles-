@@ -1,4 +1,4 @@
-// Programme d'essai de la carte radio RADIONÉO v4 — Exylia Project — version 1.0 — 23/10/2026
+// Programme d'essai de la carte radio RADIONÉO v4 — Exylia Project — version 1.1 — 25/10/2026
 //
 // Il suit l'étape 6 du plan de test (cartes/radio-v4-plan-de-test.md). Chaque essai est annoncé en français sur le
 // port série (USB), lisible par un lecteur d'écran : ce que fait le programme, ce qui est attendu, puis la question.
@@ -6,6 +6,7 @@
 // Les broches viennent de include/broches.h, écrit par la chaîne (scripts/broches_esp32.py) à partir du schéma.
 // Repris de projets publiés : bibliothèque PU2CLR SI4735 (MIT) ; attente de 80 ms avant de rendre le son à l'ampli,
 // conseil du projet Fennec (CiferTech, hackaday.io, MIT).
+// Version 1.1 : essai 8, le bruit du découpage de l'ampli dans la bande AM (plan de test 2.4, fiche de questions 1.8).
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -14,8 +15,9 @@
 
 SI4735 tuner;
 
-const int NB_ESSAIS = 7;
-const char *noms[NB_ESSAIS] = {"LED", "Molette", "Bus I2C", "Tuner FM", "Tuner AM", "Son du tuner (IO1)", "Ampli"};
+const int NB_ESSAIS = 8;
+const char *noms[NB_ESSAIS] = {"LED", "Molette", "Bus I2C", "Tuner FM", "Tuner AM", "Son du tuner (IO1)", "Ampli",
+                               "Bruit de l'ampli en AM"};
 char resultats[NB_ESSAIS];            // 'o', 'n', ou '-' (pas fait)
 bool tunerPret = false;
 
@@ -55,7 +57,7 @@ char reponse(const char *question) {
 // ---------- 1. LED
 void essaiLED() {
   dire("");
-  dire("ESSAI 1 SUR 7 : LA LED D1 (IO48).");
+  dire("ESSAI 1 SUR 8 : LA LED D1 (IO48).");
   dire("  Le programme fait clignoter la LED 10 fois, une fois par seconde.");
   dire("  Attendu : la LED clignote. À faire vérifier par une personne qui voit, ou avec un détecteur de lumière sonore.");
   attendreEntree();
@@ -70,7 +72,7 @@ void essaiLED() {
 // ---------- 2. Molette
 void essaiMolette() {
   dire("");
-  dire("ESSAI 2 SUR 7 : LA MOLETTE (IO4, IO5, appui IO6), branchée sur J6.");
+  dire("ESSAI 2 SUR 8 : LA MOLETTE (IO4, IO5, appui IO6), branchée sur J6.");
   dire("  Pendant 20 secondes, tourner la molette dans les deux sens et appuyer dessus.");
   dire("  Attendu : chaque cran est annoncé (« droite » ou « gauche »), et chaque appui.");
   attendreEntree();
@@ -109,7 +111,7 @@ void demarrerTunerEnI2C() {
 
 void essaiI2C() {
   dire("");
-  dire("ESSAI 3 SUR 7 : LE BUS I2C (SDA IO10, SCL IO11).");
+  dire("ESSAI 3 SUR 8 : LE BUS I2C (SDA IO10, SCL IO11).");
   dire("  Le programme démarre le tuner en mode I2C, puis cherche les appareils sur le bus.");
   dire("  Attendu : un seul appareil, le tuner, à l'adresse 0x11 (broche SENB à la masse).");
   attendreEntree();
@@ -136,7 +138,7 @@ void annoncerSignal(const char *bande, float frequence, const char *unite) {
 
 void essaiFM() {
   dire("");
-  dire("ESSAI 4 SUR 7 : LE TUNER EN FM, antenne (un bout de fil) vissée sur J2.");
+  dire("ESSAI 4 SUR 8 : LE TUNER EN FM, antenne (un bout de fil) vissée sur J2.");
   dire("  Le programme démarre le tuner en FM, puis cherche 5 stations, une par une.");
   dire("  Attendu : le tuner répond, et au moins une station a une force de signal nettement au-dessus des autres.");
   attendreEntree();
@@ -160,7 +162,7 @@ void essaiFM() {
 
 void essaiAM() {
   dire("");
-  dire("ESSAI 5 SUR 7 : LE TUNER EN ONDES MOYENNES (AM), antenne ferrite branchée sur J3.");
+  dire("ESSAI 5 SUR 8 : LE TUNER EN ONDES MOYENNES (AM), antenne ferrite branchée sur J3.");
   dire("  Le programme passe en AM et cherche 3 stations.");
   dire("  Attendu : le tuner répond. Selon le lieu et l'heure, il peut n'y avoir aucune station forte : le noter.");
   attendreEntree();
@@ -181,7 +183,7 @@ void essaiAM() {
 // ---------- 6. Son du tuner, mesuré par l'ESP32 sur IO1
 void essaiSon() {
   dire("");
-  dire("ESSAI 6 SUR 7 : LE SON DU TUNER, mesuré sur IO1 (AUDIO_SENSE).");
+  dire("ESSAI 6 SUR 8 : LE SON DU TUNER, mesuré sur IO1 (AUDIO_SENSE).");
   dire("  Le programme mesure pendant 2 secondes, sur une station FM.");
   dire("  Attendu : une tension moyenne vers 1,65 V (la moitié de 3,3 V), qui bouge avec le son de quelques dizaines de mV.");
   attendreEntree();
@@ -203,7 +205,7 @@ void essaiSon() {
 // ---------- 7. Ampli
 void essaiAmpli() {
   dire("");
-  dire("ESSAI 7 SUR 7 : L'AMPLI, haut-parleurs branchés sur J4 et J5.");
+  dire("ESSAI 7 SUR 8 : L'AMPLI, haut-parleurs branchés sur J4 et J5.");
   dire("  Le programme rend le son pendant 10 secondes, puis le coupe.");
   dire("  Attendu : la radio s'entend, puis le silence. Noter un éventuel « boum » quand le son revient.");
   attendreEntree();
@@ -219,6 +221,72 @@ void essaiAmpli() {
   resultats[6] = reponse("La radio s'est-elle entendue, puis tue ?");
 }
 
+// ---------- 8. Bruit de l'ampli en AM
+// Le PAM8403 est un ampli de classe D sans filtre : il découpe entre 250 et 450 kHz (350 kHz typique, d'après sa fiche),
+// et les multiples de cette fréquence tombent dans la bande AM. On relève la force du signal sur chaque canal AM, son
+// du tuner à zéro : ampli muet, puis actif, puis muet encore, pour ne pas confondre avec une station qui varie.
+const int NB_CANAUX_AM = 131;                // canaux européens, de 531 à 1701 kHz, tous les 9 kHz
+const int HAUSSE_NETTE = 6;                  // en dB : la force du signal double
+
+void releverBandeAM(uint8_t *rssi) {
+  for (int i = 0; i < NB_CANAUX_AM; i++) {
+    tuner.setFrequency(531 + 9 * i);
+    delay(60);
+    tuner.getCurrentReceivedSignalQuality();
+    rssi[i] = tuner.getCurrentRSSI();
+  }
+}
+
+void resumerBande(const char *etat, const uint8_t *rssi) {
+  long somme = 0;
+  int fort = 0;
+  for (int i = 0; i < NB_CANAUX_AM; i++) {
+    somme += rssi[i];
+    if (rssi[i] > rssi[fort]) fort = i;
+  }
+  Serial.printf("  Ampli %s : bruit moyen %ld dBµV ; le plus fort, %d dBµV à %d kHz.\n",
+                etat, somme / NB_CANAUX_AM, rssi[fort], 531 + 9 * fort);
+}
+
+void essaiBruitAM() {
+  dire("");
+  dire("ESSAI 8 SUR 8 : LE BRUIT DE L'AMPLI EN AM. Antenne ferrite sur J3, posée à sa place ; haut-parleurs branchés.");
+  dire("  Le programme relève la force du signal sur les 131 canaux AM, son du tuner à zéro : ampli muet, actif, puis muet.");
+  dire("  Cela prend environ 40 secondes, et on n'entend rien.");
+  dire("  Attendu : aucun canal plus fort de 6 dB quand l'ampli est actif. Sinon, le découpage de l'ampli arrive dans");
+  dire("  la radio : voir la fiche de questions, question 6.");
+  attendreEntree();
+  if (!tunerPret) { dire("  Tuner pas démarré : essai sauté."); resultats[7] = '-'; return; }
+  static uint8_t muet1[NB_CANAUX_AM], actif[NB_CANAUX_AM], muet2[NB_CANAUX_AM];
+  tuner.setAM(520, 1710, 999, 9);
+  tuner.setVolume(0);
+  delay(500);
+  digitalWrite(BROCHE_AMP_MUTE, LOW);
+  delay(200);
+  releverBandeAM(muet1);
+  digitalWrite(BROCHE_AMP_MUTE, HIGH);
+  delay(200);
+  releverBandeAM(actif);
+  digitalWrite(BROCHE_AMP_MUTE, LOW);
+  delay(200);
+  releverBandeAM(muet2);
+  resumerBande("muet", muet1);
+  resumerBande("actif", actif);
+  int hausses = 0;
+  for (int i = 0; i < NB_CANAUX_AM; i++) {
+    int avant = max(muet1[i], muet2[i]);
+    if (actif[i] >= avant + HAUSSE_NETTE) {
+      Serial.printf("  %d kHz : %d dBµV ampli muet, %d dBµV ampli actif.\n", 531 + 9 * i, avant, actif[i]);
+      hausses++;
+    }
+  }
+  Serial.printf("  Canaux plus forts de 6 dB ou plus quand l'ampli est actif : %d sur %d.\n", hausses, NB_CANAUX_AM);
+  resultats[7] = hausses ? 'n' : 'o';
+  Serial.printf("  Résultat : %s\n", hausses ? "l'ampli gêne l'AM (fiche de questions, question 6)" : "bon");
+  tuner.setVolume(40);
+  tuner.setFM(8750, 10800, 8750, 10);
+}
+
 void setup() {
   Serial.begin(115200);
   while (!Serial) delay(10);
@@ -228,7 +296,7 @@ void setup() {
   delay(500);
   dire("");
   dire("PROGRAMME D'ESSAI DE LA CARTE RADIO RADIONÉO V4.");
-  dire("Sept essais, l'un après l'autre. Chacun dit ce qu'il fait et ce qui est attendu.");
+  dire("Huit essais, l'un après l'autre. Chacun dit ce qu'il fait et ce qui est attendu.");
   dire("Taper Entrée pour commencer chaque essai ; répondre o ou n aux questions.");
   essaiLED();
   essaiMolette();
@@ -237,6 +305,7 @@ void setup() {
   essaiAM();
   essaiSon();
   essaiAmpli();
+  essaiBruitAM();
   dire("");
   dire("BILAN, à recopier dans le tableau Résultats du plan de test (étape 6) :");
   for (int i = 0; i < NB_ESSAIS; i++)

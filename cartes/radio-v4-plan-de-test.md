@@ -1,6 +1,6 @@
 # Carte radio RADIONÉO v4 — plan de test à la réception
 
-Exylia Project — version 2.3 — 23 octobre 2026
+Exylia Project — version 2.4 — 25 octobre 2026
 
 La carte v4 est la v3 avec un autre tuner : le **Si4732-A10** (boîtier SOIC-16) remplace le Si4735, en rupture de stock. La prise d'antenne FM change aussi (BWSMA-KWE-Z001). Les numéros des sorties TP sont les mêmes qu'en v3. Depuis le 23/10/2026, la carte a quatre trous de fixation M3 (H1 à H4), métallisés et reliés à la masse ; elle mesure 80 × 73 mm.
 
@@ -13,7 +13,7 @@ Les « sorties » (pastilles TP) servent de points de mesure : ce sont des pasti
 - Un multimètre avec bip de continuité. Un modèle qui annonce les valeurs à voix haute est idéal.
 - Un câble USB-C et un ordinateur. Pour l'essai de l'ampli à fort volume : un chargeur USB-C d'au moins 2 A. À pleine puissance, l'ampli et l'ESP32 demandent environ 1,7 A.
 - De préférence, un testeur USB à placer entre le câble et la carte, qui affiche le courant consommé (avec l'aide de quelqu'un pour le lire, s'il ne parle pas).
-- Deux haut-parleurs de 4 à 8 Ω, et un bout de fil comme antenne FM.
+- Deux haut-parleurs de 4 à 8 Ω, un bout de fil comme antenne FM, et l'antenne ferrite de l'AM (sur J3).
 - Quelqu'un qui voit, pour l'étape 1 et pour lire le testeur USB.
 - De préférence, le banc de test à pointes (étape 6 de la chaîne, dossier `resultats/radio-v4/banc-test/`) : il évite de viser les pastilles.
 
@@ -118,7 +118,7 @@ Brancher la carte en USB-C, si possible à travers le testeur USB, et **sans hau
 
 ## 6. Programme d'essai (`cartes/radio-v4-essai/`)
 
-Le programme est écrit et compile (PlatformIO, bibliothèque PU2CLR SI4735 2.1.8) ; il n'a pas encore tourné sur une vraie carte. Ses broches viennent du schéma, par `scripts/broches_esp32.py`. Il fait les essais du tableau ci-dessous l'un après l'autre, annonce chacun en français sur le port série (lisible par un lecteur d'écran), pose une question (répondre « o » ou « n »), et donne un bilan à recopier dans le tableau « Résultats ».
+Le programme (version 1.1) est écrit et compile (PlatformIO, bibliothèque PU2CLR SI4735 2.1.8) ; il n'a pas encore tourné sur une vraie carte. Ses broches viennent du schéma, par `scripts/broches_esp32.py`. Il fait les essais du tableau ci-dessous l'un après l'autre, annonce chacun en français sur le port série (lisible par un lecteur d'écran), pose une question (répondre « o » ou « n »), et donne un bilan à recopier dans le tableau « Résultats ».
 
 Commandes, depuis le dossier de la chaîne, carte branchée en USB :
 
@@ -140,10 +140,12 @@ Un petit programme pour l'ESP32-S3, qui fait les essais l'un après l'autre et l
 | Son du tuner | mesure la tension alternative entre TP14 et GND, au multimètre en volts alternatifs | quelques dizaines de millivolts, de l'ordre de 0,08 V selon la fiche du Si4735. La fiche courte du Si4732 ne donne pas ce chiffre : c'est à mesurer. |
 | Mesure audio | lit IO1 (AUDIO_SENSE) | autour de la moitié de 3,3 V au repos, qui bouge avec le son |
 | Ampli | haut-parleurs branchés sur J4 et J5, met AMP_MUTE (IO9) à 1 | la radio s'entend ; à 0, silence. Au volume maximum, la puce U5 chauffe : sa protection coupe le son vers 120 °C, puis le remet quand elle refroidit. C'est attendu à pleine puissance sur 4 Ω, d'après le calcul de la chaîne. Si un « boum » se fait entendre quand le son revient, le noter : le projet Fennec (hackaday.io) attend 80 ms avant de remettre le son, et conseille de vérifier le sens de la commande de l'ampli. |
+| Bruit de l'ampli en AM | antenne ferrite sur J3, posée là où elle sera dans le boîtier, haut-parleurs branchés ; son du tuner à zéro, relève la force du signal sur les 131 canaux AM (531 à 1 701 kHz), ampli muet, puis actif, puis muet encore (environ 40 secondes, on n'entend rien) | aucun canal plus fort de 6 dB quand l'ampli est actif. Pourquoi : le PAM8403 découpe entre 250 et 450 kHz (d'après sa fiche), et ses multiples tombent dans la bande AM. Si des canaux montent, le programme les nomme : les noter, c'est la question 6 de la fiche pour l'électronicien (perles de ferrite et condensateurs sur les sorties, place de l'antenne). Le programme donne aussi le bruit moyen de la bande, ampli muet : à comparer avec la copie de la carte qui a le régulateur à découpage (question 5). |
 
 ## 7. Ce qui reste à vérifier sur cette carte
 
-- **L'impédance d'entrée de l'ampli PAM8403.** Le tuner demande au moins 10 kΩ de charge sur LOUT. Si le son du tuner est faible ou déformé à l'essai 6, c'est la première piste.
+- **L'impédance d'entrée de l'ampli PAM8403.** Le tuner demande au moins 10 kΩ de charge sur LOUT. Si le son du tuner est faible ou déformé à l'essai 6, c'est la première piste. D'après la formule du gain de sa fiche, l'ampli présenterait environ 15 kΩ (lecture à confirmer : fiche de questions, question 4).
+- **Le découpage de l'ampli dans la bande AM.** Les sorties de l'ampli n'ont ni perle de ferrite ni condensateur, alors que sa fiche en conseille quand il n'y a pas de filtre de sortie. L'essai 8 mesure si ce découpage arrive dans la radio.
 - **La prise USB-C** : ses deux pastilles de masse ont été raccourcies de 0,02 mm, pour la règle de JLCPCB. Vérifier que la prise est bien soudée et tient.
 - **Le tuner Si4732-A10** : il est de la même famille que le Si4735, mais sa fiche publique ne fait que 3 pages. Le montage (quartz de 32,768 kHz avec deux 22 pF, découplage de 100 nF près de VDD, plus 10 µF à l'entrée du 3,3 V) reprend celui du Si4735. La bibliothèque Arduino « PU2CLR SI4735 » sert aussi pour le Si4732 : le projet Fennec (hackaday.io, ESP32-S3 + Si4732-A10 + PAM8403) l'utilise telle quelle, avec le cœur ESP32 2.0.10 pour Arduino (il ne compile pas avec la version 3).
 - **Le serrage de l'antenne FM** : le bout fileté de J2 s'arrête à environ 0,7 mm du bord de la carte. Vérifier qu'on peut visser un câble ou une antenne sans que l'écrou touche la carte.
@@ -161,6 +163,7 @@ Un petit programme pour l'ESP32-S3, qui fait les essais l'un après l'autre et l
 
 ## Historique
 
+- **2.4 — 25/10/2026** : essai 8 du programme d'essai (version 1.1, compilé, pas encore essayé sur une carte) : le bruit du découpage de l'ampli dans la bande AM, ampli muet puis actif ; l'antenne ferrite dans le matériel ; l'impédance d'entrée de l'ampli d'après sa fiche. Piste trouvée par la recherche des pièges connus (`outils/chercher_fonction.py`), puis vérifiée sur la fiche du PAM8403.
 - **2.3 — 23/10/2026** : programme d'essai écrit et compilé (`cartes/radio-v4-essai/`) ; mesures guidées pour les étapes 2 à 4 (`outils/mesures_guidees.py`, sigrok ou clavier).
 - **2.2 — 23/10/2026** : trous de fixation reliés à la masse (prise de masse facile) ; mesures possibles avec le banc de test à pointes.
 - **2.1 — 23/10/2026** : la bibliothèque PU2CLR SI4735 est utilisée avec un Si4732 par le projet Fennec (hackaday.io) ; conseil repris de Fennec pour l'essai de l'ampli.
