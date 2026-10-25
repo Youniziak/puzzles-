@@ -1,0 +1,151 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-25T08:58:42",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error"
+    ],
+    "kicad_version": "10.0.7",
+    "schematic_parity": [],
+    "source": "carte.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [VBUS] on B.Cu, length 3.1113 mm",
+                    "pos": {
+                        "x": 17.3787,
+                        "y": -12.8
+                    },
+                    "uuid": "eec182e4-9c93-4b7b-8c8e-39a051c50b71"
+                },
+                {
+                    "description": "Pad 4 [VBUS] of U2 on F.Cu",
+                    "pos": {
+                        "x": 27.871,
+                        "y": -10.804
+                    },
+                    "uuid": "b9cb4770-a935-4c9a-be4c-347ee8fa11f9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [VBUS] on F.Cu, length 0.3810 mm",
+                    "pos": {
+                        "x": 28.536,
+                        "y": -12.775
+                    },
+                    "uuid": "c7955f97-d82b-49c4-864c-23b8f487cebc"
+                },
+                {
+                    "description": "Track [VBUS] on B.Cu, length 14.5728 mm",
+                    "pos": {
+                        "x": 52.144,
+                        "y": -15.76
+                    },
+                    "uuid": "1d31f22f-caba-4ddc-884b-ae6be0d51a31"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [VBUS] on F.Cu, length 0.1240 mm",
+                    "pos": {
+                        "x": 37.5712,
+                        "y": -15.76
+                    },
+                    "uuid": "da3c3f1e-2429-4290-b290-bdfecd6c1a8b"
+                },
+                {
+                    "description": "Track [VBUS] on F.Cu, length 0.1000 mm",
+                    "pos": {
+                        "x": 38.5,
+                        "y": -20.0
+                    },
+                    "uuid": "e848d663-f605-4620-9e93-669032db7553"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 0.3,
+                        "y": -0.3
+                    },
+                    "uuid": "49a98d04-c3ad-4f77-ad43-f901ff442d6e"
+                },
+                {
+                    "description": "Zone [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 0.3,
+                        "y": -0.3
+                    },
+                    "uuid": "49a98d04-c3ad-4f77-ad43-f901ff442d6e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [3V3] on F.Cu, length 11.7802 mm",
+                    "pos": {
+                        "x": 49.7232,
+                        "y": -25.1002
+                    },
+                    "uuid": "ce010a7f-0dad-46f6-8a35-06679dc2d1a8"
+                },
+                {
+                    "description": "Via [3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 37.68,
+                        "y": -8.711
+                    },
+                    "uuid": "ea3e481a-9a22-4087-99ef-3b2331bdde58"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": []
+}

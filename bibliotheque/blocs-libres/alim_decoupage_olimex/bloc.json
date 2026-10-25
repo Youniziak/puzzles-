@@ -1,0 +1,138 @@
+{
+ "nom": "alim_decoupage_olimex",
+ "type": "kicad",
+ "description": "Régulateur à découpage 5 V → 3,3 V (SY8089, 2 A), routage d'Olimex : bobine de 2,2 µH, 22 µF à l'entrée et à la sortie, pont de 220 kΩ et 49,9 kΩ (3,25 V).",
+ "taille": [
+  6.9,
+  11.2
+ ],
+ "interface": [
+  "VBUS",
+  "3V3",
+  "GND"
+ ],
+ "source": {
+  "carte": "ESP32-S3-DevKit-LiPo_Rev_B.kicad_pcb",
+  "url": "https://github.com/OLIMEX/ESP32-S3-DevKit-LiPo",
+  "zone_mm": [
+   136.8,
+   95.9,
+   143.6,
+   107.0
+  ],
+  "reseaux_renommes": {
+   "+3.3V": "3V3",
+   "GND": "GND",
+   "Net-(C3-Pad1)": "VBUS",
+   "Net-(L1-Pad1)": "DCDC_SW",
+   "Net-(R10-Pad1)": "DCDC_FB"
+  },
+  "commit": "98e62ae (15/06/2026)"
+ },
+ "licence": "CERN-OHL-S-2.0",
+ "attribution": "D'après OLIMEX Ltd, ESP32-S3-DevKit-LiPo révision B (github.com/OLIMEX/ESP32-S3-DevKit-LiPo), CERN-OHL-S-2.0",
+ "composants": [
+  {
+   "repere": "C3",
+   "valeur": "22uF/6.3V/20%/X5R/C0603",
+   "empreinte": "OLIMEX_RLC-FP:C_0603_5MIL_DWS",
+   "reseaux": {
+    "1": "VBUS",
+    "2": "GND"
+   }
+  },
+  {
+   "repere": "C5",
+   "valeur": "22uF/6.3V/20%/X5R/C0603",
+   "empreinte": "OLIMEX_RLC-FP:C_0603_5MIL_DWS",
+   "reseaux": {
+    "1": "3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "repere": "L1",
+   "valeur": "2.2uH/1.5A/DCR=72mR/20%/3.00x3.00x1.50mm/CD32(NR3015T2R2M)",
+   "empreinte": "OLIMEX_RLC-FP:CD32",
+   "reseaux": {
+    "1": "DCDC_SW",
+    "2": "3V3"
+   }
+  },
+  {
+   "repere": "R10",
+   "valeur": "220k/R0402",
+   "empreinte": "OLIMEX_RLC-FP:R_0402_5MIL_DWS",
+   "reseaux": {
+    "1": "DCDC_FB",
+    "2": "3V3"
+   }
+  },
+  {
+   "repere": "R11",
+   "valeur": "49.9k/1%/R0402",
+   "empreinte": "OLIMEX_RLC-FP:R_0402_5MIL_DWS",
+   "reseaux": {
+    "1": "DCDC_FB",
+    "2": "GND"
+   }
+  },
+  {
+   "repere": "U2",
+   "valeur": "SY8089AAAC(SOT23-5)",
+   "empreinte": "OLIMEX_Regulators-FP:SOT-23-5",
+   "reseaux": {
+    "1": "VBUS",
+    "2": "GND",
+    "3": "DCDC_SW",
+    "4": "VBUS",
+    "5": "DCDC_FB"
+   }
+  }
+ ],
+ "routage": {
+  "pistes": 61,
+  "vias": 4,
+  "plans": 1
+ },
+ "pieces": {
+  "U2": {
+   "mpn": "SY8089AAAC",
+   "lcsc": "C78988",
+   "note": "31 185 en stock chez LCSC le 25/10/2026 ; pièce « étendue » chez JLCPCB (frais de chargement)"
+  },
+  "L1": {
+   "mpn": "NR3015T2R2M (Olimex)",
+   "lcsc": "",
+   "note": "2,2 µH, 1,5 A, 3 × 3 mm : équivalent LCSC à choisir"
+  },
+  "C3": {
+   "mpn": "",
+   "lcsc": "",
+   "note": "22 µF 6,3 V X5R 0603 (entrée) : équivalent LCSC à choisir"
+  },
+  "C5": {
+   "mpn": "",
+   "lcsc": "",
+   "note": "22 µF 6,3 V X5R 0603 (sortie) : équivalent LCSC à choisir"
+  },
+  "R10": {
+   "mpn": "",
+   "lcsc": "",
+   "note": "220 kΩ 0402"
+  },
+  "R11": {
+   "mpn": "",
+   "lcsc": "",
+   "note": "49,9 kΩ 1 % 0402"
+  }
+ },
+ "tension_sortie": "0,6 × (1 + 220/49,9) = 3,25 V (formule de la fiche Silergy : VOUT = 0,6 × (1 + RH/RL))",
+ "a_faire": [
+  "les numéros LCSC de la bobine, des condensateurs et des résistances",
+  "des symboles pour le schéma (schema.py)",
+  "apprendre à assembler.py à poser un bloc de type « kicad »",
+  "le contrôle indépendant des Gerber (verif_gerber.py) ne connaît que les blocs EasyGerber"
+ ],
+ "licence_texte": "LICENCE.txt"
+}

@@ -1,0 +1,19 @@
+Bloc « alim_decoupage_olimex » — régulateur à découpage 5 V vers 3,3 V (Silergy SY8089), avec son routage.
+
+Origine : OLIMEX Ltd (Plovdiv, Bulgarie), carte ESP32-S3-DevKit-LiPo, révision B.
+Dépôt : https://github.com/OLIMEX/ESP32-S3-DevKit-LiPo (commit 98e62ae du 15/06/2026).
+Fichier : HARDWARE/ESP32-S3-DevKit-LiPo_Rev_B/ESP32-S3-DevKit-LiPo_Rev_B.kicad_pcb
+Licence du matériel : CERN Open Hardware Licence Version 2 — Strongly Reciprocal (CERN-OHL-S-2.0),
+texte : https://ohwr.org/cern_ohl_s_v2.txt
+Olimex demande que les mentions d'Olimex sur la sérigraphie restent (README de leur dépôt).
+
+Modifié le 25/10/2026 par la chaîne puzzle (Exylia Project), avec outils/bloc_depuis_kicad.py :
+- découpe de la zone du régulateur (de 136,8 ; 95,9 à 143,6 ; 107 mm dans la carte d'Olimex) ;
+- seuls les composants U2, L1, C3, C5, R10 et R11 sont gardés ; les autres (diodes de l'alimentation, résistances du
+  chargeur de batterie et du démarrage de l'ESP32), leurs pistes et les bouts de piste devenus inutiles sont enlevés ;
+- réseaux renommés : l'entrée (après le choix USB ou batterie d'Olimex) devient VBUS, +3.3V devient 3V3 ; les
+  réseaux internes deviennent DCDC_SW et DCDC_FB ;
+- le bloc est ramené au coin (0, 0).
+
+Ce que la licence demande : une carte qui reprend ce bloc, si on la diffuse (fichiers ou cartes fabriquées), doit être
+publiée sous la même licence, avec ses sources, cette mention d'origine et la liste des modifications.

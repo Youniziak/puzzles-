@@ -48,6 +48,15 @@ jobs:
               fi
             fi
           done
+          # Les essais qui n'ont qu'une carte, sans schéma (par exemple un bloc libre posé à la main) : la carte seule.
+          for pcb in resultats/*/carte.kicad_pcb; do
+            d=$(dirname "$pcb"); nom=$(basename "$d")
+            [ -f "$d/carte.kicad_sch" ] && continue
+            o="analyse/$nom"; mkdir -p "$o"
+            echo "== $nom (carte seule, sans schéma)"
+            python3 "$KH/analyze_pcb.py" "$pcb" --output "$o/carte.json" || echo "$nom : analyse de la carte en échec" >> analyse/echecs.txt
+            python3 "$KH/analyze_pcb.py" "$pcb" --text > "$o/carte.txt" || true
+          done
 
       - name: Garder les résultats (30 jours)
         if: always()
