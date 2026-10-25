@@ -1,0 +1,48 @@
+# Essai d'EDeA (Fully Automated OÜ, Estonie ; licence européenne EUPL-1.2 ; financé par NLnet) : est-ce qu'il
+# lit les fichiers KiCad de la chaîne ? C'est la condition pour, plus tard, fusionner un bloc dans une carte avec
+# lui, ou partager nos blocs sur son portail.
+# Il tourne sur les machines de GitHub, pas dans l'espace de travail de Claude, où le garde-fou refuse
+# d'installer du code téléchargé (constaté le 24/10/2026).
+# Version épinglée : edea 0.8.4 (09/06/2025), la dernière publiée.
+# Résultats : l'artefact « essai-edea » (rapport en français, résumé JSON, et les fichiers tels qu'EDeA les réécrit).
+name: essai-edea
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/edea.yml'
+      - 'outils/essai_edea.py'
+      - 'resultats/**/*.kicad_sch'
+      - 'resultats/**/*.kicad_pcb'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  essai:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer EDeA (version épinglée)
+        run: python -m pip install --quiet edea==0.8.4
+
+      - name: Essayer de lire chaque schéma et chaque carte
+        run: |
+          mkdir -p essai-edea
+          python outils/essai_edea.py resultats essai-edea | tee essai-edea/rapport.txt
+
+      - name: Garder les résultats (30 jours)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: essai-edea
+          path: essai-edea/
+          retention-days: 30

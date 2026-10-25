@@ -10,5 +10,6 @@ Dépôt privé. La première carte faite avec la chaîne est la radio RADIONÉO 
 - `installer-ubuntu.sh` et `Dockerfile` : pour installer les logiciels.
 - `scripts/chaine.py` : la chaîne en une commande.
 - `.github/workflows/kicad-happy.yml` : un deuxième avis sur chaque carte, par l'outil libre kicad-happy, à chaque changement.
+- `.github/workflows/edea.yml` : un essai de l'outil libre EDeA (bibliothèque partagée de blocs KiCad) : sait-il lire nos fichiers ?
 
 Ne sont pas dans le dépôt : les modèles 3D à imprimer (refaits par la chaîne), et les schémas d'autres projets publiés.
