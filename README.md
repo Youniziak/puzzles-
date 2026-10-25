@@ -13,3 +13,7 @@ Dépôt privé. La première carte faite avec la chaîne est la radio RADIONÉO 
 - `.github/workflows/edea.yml` : un essai de l'outil libre EDeA (bibliothèque partagée de blocs KiCad) : sait-il lire nos fichiers ?
 
 Ne sont pas dans le dépôt : les modèles 3D à imprimer (refaits par la chaîne), et les schémas d'autres projets publiés.
+
+## Licences
+
+Libres et strictes : le logiciel sous GNU AGPL-3.0 (ou plus récente), le matériel (cartes, blocs, maquettes) sous CERN-OHL-S-2.0, les textes sous CC BY-SA 4.0. Le détail, et ce qui vient d'ailleurs : `LICENCE.md`. Les textes des licences : `LICENSES/`.

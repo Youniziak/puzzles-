@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.32 — 25 octobre 2026
+Version 1.33 — 25 octobre 2026
 
 ## L'idée en une phrase
 
@@ -649,10 +649,12 @@ But : savoir si un bloc pris dans une carte libre déjà fabriquée peut remplac
 - **Ce qui manque avant de commander une carte avec ce bloc** : la chaîne doit savoir l'assembler elle-même (`assembler.py`), le mettre dans le schéma (`schema.py`, symboles) et dans la liste des pièces et le placement pour JLCPCB (`fab.py` : numéros LCSC de la bobine, des condensateurs et des résistances) ; le contrôle indépendant des Gerber (`verif_gerber.py`) ne connaît que les blocs EasyGerber. Et l'avis de l'électronicien (question 5).
 - **Vu en route** : l'ESP32-ADF d'Olimex (enceinte et radio par Internet, CERN OHL 1.2) alimente aussi son ESP32 par un SY8089, et son ampli est un PAM8003, cousin de notre PAM8403. Mais cette carte a 4 couches : ses blocs ne se posent pas tels quels sur notre carte à 2 couches.
 
-## Licence de la chaîne (25/10/2026, à décider)
+## Licence de la chaîne (25/10/2026)
 
 - Kévin veut une licence libre, mais stricte : sinon, une entreprise pourrait reprendre la chaîne, la fermer et ne rien rendre. Et celui qui maintient la chaîne doit y trouver un intérêt.
-- Pistes, une licence par partie :
+- **Décidé le 25/10/2026** : AGPL-3.0 (ou plus récente) pour le logiciel, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes. Dans le dépôt : `LICENCE.md` (laquelle pour quoi, en français, et ce qui vient d'ailleurs), `LICENSES/` (les textes officiels, pris dans la liste SPDX, commit 31ba1a5 du 16/09/2026) et `REUSE.toml` (la même chose pour les programmes, spécification REUSE de la FSFE). Le dépôt reste privé.
+- À vérifier avant de publier : les conditions d'EasyGerber pour ses fichiers, et celles de LCSC et EasyEDA pour les empreintes et les modèles 3D.
+- Les pistes regardées avant de choisir :
   - les scripts : AGPL-3.0, la plus stricte des licences libres courantes. Qui diffuse une version modifiée, ou la propose comme service en ligne (à la façon d'EasyGerber), doit publier ses changements sous la même licence. Elle va avec KiCad (GPL-3.0), Freerouting (GPL-3.0), easyeda2kicad (lui-même AGPL-3.0) et KiKit (MIT). Variante européenne : l'EUPL-1.2, qui a valeur légale en français et couvre aussi les services en ligne ; mais sa clause de compatibilité permet de passer à des licences plus souples (MPL, LGPL) quand on mélange avec du code sous ces licences : moins stricte en pratique ;
   - les blocs, les cartes et les maquettes : CERN-OHL-S-2.0, déjà celle du bloc d'Olimex ;
   - les textes (méthode, fiches) : CC BY-SA 4.0.
@@ -703,6 +705,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.33 — 25/10/2026** : licences décidées et mises dans le dépôt : AGPL-3.0 pour le logiciel, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes (`LICENCE.md`, `LICENSES/`, `REUSE.toml`).
 - **1.32 — 25/10/2026** : « Licence de la chaîne » : Kévin veut une licence libre et stricte ; pistes (AGPL-3.0 ou EUPL-1.2 pour les scripts, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes) et l'intérêt de celui qui maintient la chaîne. Pas encore décidé.
 - **1.31 — 25/10/2026** : essai du régulateur à découpage d'Olimex (SY8089) à la place de l'AMS1117, sur une copie de la radio v4 : `outils/bloc_depuis_kicad.py` et `outils/remplacer_par_bloc.py`, premier bloc libre (`bibliotheque/blocs-libres/alim_decoupage_olimex`). KiCad : aucune erreur, rien ne manque ; chaleur estimée vers 60 °C au lieu d'environ 104 °C, mais il découpe dans la bande AM (à l'électronicien de trancher). kicad-happy relit aussi les cartes sans schéma. Deux règles apprises (verrouiller les pistes avant Freerouting ; copier une piste avec `Duplicate().Cast()`). Fiche de questions 1.7 (question 5).
 - **1.30 — 25/10/2026** : cinquième recherche, « Ce que le dépôt GitHub débloque » : des blocs pris dans les cartes libres d'Olimex (essai : KiKit découpe leur régulateur à découpage, routage compris, en une seconde) ; les placeurs libres regardés, pas encore solides ; l'humain plus tôt, une question à la fois sur le forum KiCad ; un estimateur de chaleur à garder pour la question 5.

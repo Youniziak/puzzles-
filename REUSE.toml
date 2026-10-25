@@ -1,0 +1,41 @@
+# Licences des fichiers, selon la spécification REUSE (FSFE). Explication en français : LICENCE.md.
+# Quand plusieurs annotations visent le même fichier, la dernière l'emporte : les cas particuliers sont à la fin.
+version = 1
+
+# Le logiciel
+[[annotations]]
+path = ["scripts/**", "outils/**", ".github/**", "installer-ubuntu.sh", "Dockerfile", ".dockerignore", ".gitignore",
+        "cartes/radio-v4-essai/**", "bibliotheque/regles/**", "bibliotheque/controles-verifies.json",
+        "bibliotheque/empreintes/correspondance.json"]
+SPDX-FileCopyrightText = "2026 Kévin Chatellard — Exylia Project"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+# Le matériel
+[[annotations]]
+path = ["cartes/*.json", "bibliotheque/blocs/*/bloc.json", "resultats/**"]
+SPDX-FileCopyrightText = "2026 Kévin Chatellard — Exylia Project"
+SPDX-License-Identifier = "CERN-OHL-S-2.0"
+
+# Les textes
+[[annotations]]
+path = ["*.md", "**/*.md"]
+SPDX-FileCopyrightText = "2026 Kévin Chatellard — Exylia Project"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+# Résumés tirés du jeu de données Open Schematics (CC BY 4.0)
+[[annotations]]
+path = ["resultats/*/montages-reels/**"]
+SPDX-FileCopyrightText = "2026 Kévin Chatellard — Exylia Project"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+# Tiré de la bibliothèque officielle de KiCad
+[[annotations]]
+path = ["bibliotheque/empreintes/types-broches.json", "bibliotheque/empreintes/symboles-officiels.json"]
+SPDX-FileCopyrightText = ["KiCad Library Team", "2026 Kévin Chatellard — Exylia Project"]
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+# Tiré d'une carte d'OLIMEX Ltd (voir bibliotheque/blocs-libres/alim_decoupage_olimex/LICENCE.txt)
+[[annotations]]
+path = ["bibliotheque/blocs-libres/**", "resultats/essai-radio-v4-decoupage/**"]
+SPDX-FileCopyrightText = ["OLIMEX Ltd", "2026 Kévin Chatellard — Exylia Project"]
+SPDX-License-Identifier = "CERN-OHL-S-2.0"

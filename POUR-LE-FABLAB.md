@@ -26,6 +26,8 @@ Elle ne refait pas ce que de bons logiciels font déjà. C'est un assemblage de 
 
 ## La colle (ce qui est fait maison) — environ 5 400 lignes de Python
 
+Licence : GNU AGPL-3.0 pour la colle, CERN-OHL-S-2.0 pour les cartes et les blocs, CC BY-SA 4.0 pour les textes (détail dans `LICENCE.md`).
+
 - `description.py` (150 lignes) : lit le fichier qui décrit la carte et les blocs. C'est le seul endroit qui sait ce qu'il y a sur la carte.
 - `assembler.py` (215 lignes) : convertit les blocs EasyGerber en carte KiCad. Aucun outil ne fait cette conversion. Il vérifie chaque pastille contre EasyGerber, à 0,05 mm près.
 - `freerouter.py` (111 lignes) : demande à KiCad ce qui manque, passe la main à Freerouting, reprend le résultat et fait le ménage. S'il manque encore une liaison, il relance Freerouting, jusqu'à 3 passages, avec des pistes d'alimentation plus fines.
