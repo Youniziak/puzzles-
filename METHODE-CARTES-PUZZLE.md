@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.29 — 25 octobre 2026
+Version 1.30 — 25 octobre 2026
 
 ## L'idée en une phrase
 
@@ -604,6 +604,25 @@ Kévin a créé le dépôt privé `Youniziak/puzzles-`. La chaîne y est, avec s
 - **Ce que ça change** : le deuxième avis est maintenant automatique. Chaque nouvelle version d'une carte envoyée dans le dépôt est relue par kicad-happy, sans rien à faire pour Kévin. C'est un avis de plus, pas une relecture humaine : la fiche de questions reste nécessaire.
 - Le 25/10/2026, GitHub prévenait que les actions écrites pour Node.js 20 sont dépassées : les deux réglages sont passés à `actions/checkout@v5`, `actions/setup-python@v6` et `actions/upload-artifact@v6`.
 
+## Ce que le dépôt GitHub débloque, et d'autres pistes (25/10/2026, cinquième recherche)
+
+« Rouvert » veut dire que Claude a lu la page lui-même. Avec le dépôt, du code téléchargé peut tourner sur les machines de GitHub. Le garde-fou de l'espace de travail de Claude, lui, reste une vraie limite : on ne le contourne pas.
+- **Reprendre des blocs dans des cartes libres déjà fabriquées en série : Olimex** (Bulgarie ; rouvert : dépôts GitHub d'Olimex, fiche de certification OSHWA BG000108).
+  - Olimex dessine ses cartes avec KiCad et publie tout : schéma, carte, liste des pièces, Gerber. Licences : CERN-OHL-S 2.0 pour l'ESP32-S3-DevKit-LiPo (certifiée matériel libre par l'OSHWA le 02/02/2024) ; CERN OHL 1.2 pour l'ESP32-ADF (enceinte et radio par Internet) ; Apache 2.0 pour des cartes plus anciennes, comme l'ESP32-GATEWAY.
+  - L'ESP32-S3-DevKit-LiPo porte le même module que la radio v4 (ESP32-S3-WROOM-1), une prise USB-C, et un régulateur à découpage SY8089 du 5 V vers le 3,3 V (bobine de 2,2 µH, 22 µF à l'entrée et à la sortie, pont de 220 kΩ et 49,9 kΩ). Deux couches, 28 × 56 mm, 64 composants.
+  - Essai du 25/10/2026, sur une copie : KiCad 10 ouvre la carte (format de KiCad 5). KiKit, déjà dans la chaîne, découpe la zone du régulateur en un bloc de 6,9 × 11,2 mm avec tout son routage (116 segments de piste, 12 vias, un plan de cuivre), en une seconde. `kikit separate` demande d'abord un contour autour de la zone : un rectangle tracé sur la couche Edge.Cuts de la copie (de 136,8 ; 95,9 à 143,6 ; 107 mm), puis :
+    ```
+    kikit separate --source 'type: rectangle; tlx: 136.5mm; tly: 95.6mm; brx: 143.9mm; bry: 107.3mm' olimex-decoupe.kicad_pcb bloc.kicad_pcb
+    ```
+    Le bloc emporte aussi 6 composants voisins, à trier : des diodes de l'alimentation, et des résistances du chargeur de batterie et du démarrage de l'ESP32.
+  - Ce que ça changerait : des blocs libres, déjà éprouvés en série, sans EasyGerber ; et une réponse possible à la question 5 de la fiche (un régulateur à découpage, avec un routage qui a fait ses preuves).
+  - Ce qui manque : la chaîne n'assemble que des blocs EasyGerber (`assembler.py`). Il faudrait une deuxième entrée, « bloc pris dans une carte KiCad libre » : nettoyage, sorties du bloc, contrôle aux règles du fabricant (celles d'Olimex ne sont pas forcément celles de JLCPCB), pièces disponibles chez JLCPCB.
+  - Licence : la CERN-OHL-S est « fortement réciproque ». Une carte qui reprend ce bloc, si on la diffuse, doit être publiée sous la même licence, et garder la mention d'Olimex sur la sérigraphie (README d'Olimex). L'Apache 2.0 laisse plus de liberté. Décision de Kévin, carte par carte.
+- **Placer les composants sans EasyGerber** (rouverts : les trois pages GitHub). Trois outils libres existent : pyplacer (BSD ; recuit simulé ; Python seul ; KiCad 9 ; un seul commit), KiCraft (MIT ; placement, routage et notation ; KiCad 9 ; 1 152 commits, aucune étoile) et kicad-smart-placer (écrit en français ; extension de KiCad 7 à 10 ; recuit simulé et routage A*). Tous jeunes, d'une seule personne, sans utilisateurs visibles. C'est une vraie limite aujourd'hui : pas de placeur libre éprouvé. Reprendre des blocs éprouvés évite souvent d'en avoir besoin. À la veille.
+- **L'humain plus tôt** (rouvert : fil « Crowdsource design reviews? » du forum KiCad, mars 2026). Les habitués du forum n'aiment pas les « relisez ma carte », mais aident sur une question précise quand on a fait le travail avant : « People are generally willing to help if you have a question and show a willingness to listen and roll up your sleeves ». C'est la forme de la fiche de questions : on peut en poser une à la fois, sans attendre la rentrée. Kévin poste lui-même ; publier un morceau du schéma est sa décision. Vus dans ce fil, pas essayés : Circuit Scope (site libre de relecture) et KiCAD Prism (plateforme de relecture à installer soi-même).
+- **Des chiffres pour la question 5** : kicad_thermal_sim (MIT, de janvier à mars 2026 ; vu sur ecosyste.ms, pas rouvert sur GitHub) estime la chaleur dans le cuivre de chaque couche, vias compris. Il se lance depuis KiCad, mais son calcul est séparé de la fenêtre. Jeune. À essayer sur GitHub seulement si on garde le régulateur linéaire.
+- **Petit** : kicad-happy sait aussi vérifier le stock et la plage de température des pièces (`lifecycle_audit.py`, par l'interface libre jlcsearch de tscircuit, sans clé ; code lu, pas lancé). La chaîne vérifie déjà le stock chez JLCPCB : pas prioritaire.
+
 ## Veille
 
 Une tâche programmée, « Veille chaîne puzzle », tourne le 1er de chaque mois à 8 h 41 (heure de Paris), depuis le 23/10/2026. Elle compare aux références de cette version : versions des logiciels (KiCad 11 et le retrait de SWIG en premier), règles de JLCPCB, PCBWay et AISLER, stock des pièces clés, pistes à revérifier. Elle cherche aussi du nouveau, avec la règle des deux sources. Elle envoie un rapport daté et peut proposer une mise à jour de la compétence, que Kévin relit avant de l'enregistrer. Elle n'a pas les fichiers de la chaîne : elle dit quoi changer et où, et les changements se font ici, avec une entrée d'historique.
@@ -648,6 +667,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.30 — 25/10/2026** : cinquième recherche, « Ce que le dépôt GitHub débloque » : des blocs pris dans les cartes libres d'Olimex (essai : KiKit découpe leur régulateur à découpage, routage compris, en une seconde) ; les placeurs libres regardés, pas encore solides ; l'humain plus tôt, une question à la fois sur le forum KiCad ; un estimateur de chaleur à garder pour la question 5.
 - **1.29 — 25/10/2026** : la chaîne est dans le dépôt privé de Kévin, `Youniziak/puzzles-`. kicad-happy y relit chaque carte à chaque envoi : rien ne contredit la chaîne, il est moins strict qu'elle sur l'USB, et deux remarques utiles passent dans la fiche de questions 1.6 (protection de l'antenne, vias sous le régulateur). Essai d'EDeA sur GitHub (`edea.yml`, `outils/essai_edea.py`) : il lit nos schémas sans rien perdre pour l'électricité, mais pas les cartes de KiCad 10. Trois points de plus « à vérifier avant de commander ». Actions de GitHub passées à Node.js 24.
 - **1.28 — 24/10/2026** : essai du bloc ampli à la fraiseuse du fablab, routé par Freerouting (règles `fraiseuse-fablab.json`, `outils/vider_routage.py`, carte `essai-ampli-fraiseuse.json`) : complet sur deux faces, sans erreur, avec 11 vias ; pas sur une seule face.
 - **1.27 — 24/10/2026** : fablabs autour de Lyon qui déclarent une fraiseuse de précision, d'après l'interface publique de fablabs.io ; état d'EDeA (vivant, au ralenti ; licence EUPL) ; le garde-fou refuse aussi de lancer EDeA dans l'espace de travail de Claude ; pcb2gcode absent d'Ubuntu 24.04.
