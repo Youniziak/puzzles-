@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.30 — 25 octobre 2026
+Version 1.31 — 25 octobre 2026
 
 ## L'idée en une phrase
 
@@ -322,6 +322,8 @@ Pour l'essai, une seule chose a été ajoutée, et elle n'est pas dans la recett
 - Une empreinte partagée entre plusieurs pièces garde les champs de la première pièce téléchargée. Les champs d'un composant (référence LCSC, MPN, fabricant) se prennent sur la pièce elle-même, jamais sur sa bibliothèque.
 - Regarder le résultat comme le verrait une personne, pas seulement le calculer. Constaté le 23/10/2026 sur le boîtier : tous les contrôles de forme passaient, mais l'image du dessus vue d'en haut montrait des noms décalés de 3 mm, collés aux boutons, et un mot qui sortait du bord. Le contrôle des noms fait maintenant partie de l'étape.
 - Mesurer la distance au bord sur le vrai contour, coins arrondis compris. Corrigé le 23/10/2026 : le contrôle indépendant mesurait sur un rectangle et donnait 0,30 mm ; la vraie distance est 0,20 mm, près d'un coin. C'est juste à la limite de JLCPCB (0,2 mm), mais c'est bon.
+- Avant de faire passer Freerouting sur une carte déjà routée, verrouiller toutes ses pistes. Constaté le 25/10/2026 : KiCad, en reprenant le travail de Freerouting, efface les pistes non verrouillées ; la chaîne ne garde ensuite le cuivre de Freerouting que sur les liaisons qui manquaient. Résultat : 7 liaisons entre blocs perdues (I2C, son, reset du tuner). Avec les pistes verrouillées, tout est passé en un seul passage.
+- Dans le Python de KiCad 10, `pcbnew.PCB_TRACK(piste)` ne copie pas la piste : il en crée une vide, dont la piste donnée serait le parent. Pour copier : `piste.Duplicate().Cast()`. Constaté le 25/10/2026 : toutes les pistes d'un bloc copié étaient perdues, sans message d'erreur ; seul le contrôle de KiCad (liaisons manquantes) l'a montré.
 
 - Toujours des sorties au bord des blocs.
 - Choisir les broches du microcontrôleur pour que rien ne croise la paire USB.
@@ -623,6 +625,30 @@ Kévin a créé le dépôt privé `Youniziak/puzzles-`. La chaîne y est, avec s
 - **Des chiffres pour la question 5** : kicad_thermal_sim (MIT, de janvier à mars 2026 ; vu sur ecosyste.ms, pas rouvert sur GitHub) estime la chaleur dans le cuivre de chaque couche, vias compris. Il se lance depuis KiCad, mais son calcul est séparé de la fenêtre. Jeune. À essayer sur GitHub seulement si on garde le régulateur linéaire.
 - **Petit** : kicad-happy sait aussi vérifier le stock et la plage de température des pièces (`lifecycle_audit.py`, par l'interface libre jlcsearch de tscircuit, sans clé ; code lu, pas lancé). La chaîne vérifie déjà le stock chez JLCPCB : pas prioritaire.
 
+## Essai : le régulateur à découpage d'Olimex à la place de l'AMS1117 (25/10/2026)
+
+But : savoir si un bloc pris dans une carte libre déjà fabriquée peut remplacer une partie d'une de nos cartes, avec son routage, et répondre en chiffres à la question 5 de la fiche (le régulateur qui chauffe).
+- **Le bloc** : `bibliotheque/blocs-libres/alim_decoupage_olimex/`, fait par `outils/bloc_depuis_kicad.py` dans l'ESP32-S3-DevKit-LiPo d'Olimex (révision B, commit 98e62ae ; CERN-OHL-S-2.0, origine et modifications dans `LICENCE.txt`). Six composants : le SY8089 (régulateur à découpage, 2 A), sa bobine de 2,2 µH, 22 µF à l'entrée et à la sortie, le pont de 220 kΩ et 49,9 kΩ. Sortie : 0,6 × (1 + 220/49,9) = 3,25 V. Bloc de 6,9 × 11,2 mm, avec 61 segments de piste et 4 vias d'Olimex.
+  ```
+  python3 outils/bloc_depuis_kicad.py ESP32-S3-DevKit-LiPo_Rev_B.kicad_pcb 136.8,95.9,143.6,107.0 U2,L1,C3,C5,R10,R11 bibliotheque/blocs-libres/alim_decoupage_olimex --kikit chemin/kikit --prefixe DCDC --reseaux 'Net-(C3-Pad1)=VBUS,+3.3V=3V3,GND=GND,Net-(L1-Pad1)=DCDC_SW,Net-(R10-Pad1)=DCDC_FB' --interface VBUS,3V3,GND --licence CERN-OHL-S-2.0
+  ```
+- **La pose**, sur une copie de la radio v4 (`resultats/essai-radio-v4-decoupage/`, carte `cartes/essai-radio-v4-decoupage.json`), par `outils/remplacer_par_bloc.py` : le régulateur AMS1117 (U2) et ses deux 22 µF (C2, C3) enlevés, avec les 29 pistes et vias de leur place (13 × 9 mm) ; le bloc posé là, tourné d'un quart de tour ; la mention d'Olimex et de la licence sur la sérigraphie du dessous ; puis Freerouting relie ce qui manque.
+  ```
+  python3 outils/remplacer_par_bloc.py resultats/radio-v4/carte.kicad_pcb bibliotheque/blocs-libres/alim_decoupage_olimex resultats/essai-radio-v4-decoupage/carte.kicad_pcb --retirer U2,C2,C3 --zone 25.5,-15.0,39.5,-5.2 --centre 32.45,-10.1 --rotation 90 --mention "Alim. : OLIMEX ESP32-S3-DevKit-LiPo, CERN-OHL-S-2.0" --mention-position 40,-25 --mention-face B
+  python3 scripts/freerouter.py cartes/essai-radio-v4-decoupage.json resultats/essai-radio-v4-decoupage/carte.kicad_pcb chemin/freerouting-2.1.0.jar
+  ```
+- **Résultats** :
+  - Freerouting, en un passage : le 5 V (11 segments en 0,8 mm, 28 mm en tout, une via) et le 3,3 V vers le tuner (14 mm, en 0,25 mm, sur la face du dessous). Il a aussi relié des îlots du plan de masse du dessus, par 62 petits bouts de piste.
+  - Contrôle de KiCad 10 : aucune erreur, aucune liaison manquante. Les avertissements sont ceux de la radio v4, plus 6 empreintes d'Olimex absentes de nos bibliothèques. Les textes d'Olimex (0,76 mm) ont été agrandis à 0,8 mm, la règle de la carte.
+  - kicad-happy (carte seule) : 3 erreurs. Deux sont celles de la radio v4 (repères de pose, prise USB-C au bord). La troisième, « L1 dans une zone interdite », est fausse : la zone d'Olimex sous la bobine n'interdit que le plan de cuivre, pas le composant. Il note aussi un risque moyen que les deux résistances 0402 du pont se soulèvent au soudage (une pastille sur un plan, l'autre non). L'avertissement sur les vias sous le régulateur disparaît : le SY8089 n'a pas de languette.
+  - Condensateurs : 33,2 µF sur VBUS et 42,2 µF sur le 3,3 V, comme avant (les 22 µF d'Olimex remplacent ceux de l'AMS1117). La question 11 ne change pas.
+  - Chaleur, estimée avec la fiche de Silergy (θJA de 120 °C/W, mesurée sur leur carte d'essai, à 2 couches de cuivre de 70 µm) et 0,25 A : avec un rendement de 85 %, environ 0,15 W perdus au lieu de 0,43 W pour l'AMS1117, soit une puce vers 60 °C dans 40 °C d'air, au lieu d'environ 104 °C. Même avec 80 % de rendement et une carte moins bonne que celle de Silergy (180 °C/W), elle resterait sous 80 °C. La fiche donne une courbe de rendement de 5 V vers 3,3 V, sans chiffres lisibles : 85 % est une hypothèse, à mesurer sur le prototype. Le courant pris sur l'USB baisse aussi : environ 0,19 A au lieu de 0,25 A.
+  - La pièce : SY8089AAAC, LCSC C78988 (31 185 en stock chez LCSC le 25/10/2026) ; « étendue » chez JLCPCB, donc des frais de chargement.
+  - Attention, pour une radio : le SY8089 découpe vers 1 à 1,5 MHz (1,5 MHz d'après la fiche de Silergy, 1 MHz d'après la fiche de JLCPCB), en plein dans la bande AM des ondes moyennes (0,53 à 1,7 MHz) que reçoit le tuner. Un régulateur linéaire ne fait pas ce bruit. C'est à l'électronicien de trancher (question 5 de la fiche).
+- **Ce que ça montre** : un bloc libre, éprouvé en série, se pose sur une de nos cartes, et les outils libres de la chaîne le relient et le contrôlent, sans EasyGerber. Ça ne dit pas encore si ce régulateur convient à une radio (bruit en AM).
+- **Ce qui manque avant de commander une carte avec ce bloc** : la chaîne doit savoir l'assembler elle-même (`assembler.py`), le mettre dans le schéma (`schema.py`, symboles) et dans la liste des pièces et le placement pour JLCPCB (`fab.py` : numéros LCSC de la bobine, des condensateurs et des résistances) ; le contrôle indépendant des Gerber (`verif_gerber.py`) ne connaît que les blocs EasyGerber. Et l'avis de l'électronicien (question 5).
+- **Vu en route** : l'ESP32-ADF d'Olimex (enceinte et radio par Internet, CERN OHL 1.2) alimente aussi son ESP32 par un SY8089, et son ampli est un PAM8003, cousin de notre PAM8403. Mais cette carte a 4 couches : ses blocs ne se posent pas tels quels sur notre carte à 2 couches.
+
 ## Veille
 
 Une tâche programmée, « Veille chaîne puzzle », tourne le 1er de chaque mois à 8 h 41 (heure de Paris), depuis le 23/10/2026. Elle compare aux références de cette version : versions des logiciels (KiCad 11 et le retrait de SWIG en premier), règles de JLCPCB, PCBWay et AISLER, stock des pièces clés, pistes à revérifier. Elle cherche aussi du nouveau, avec la règle des deux sources. Elle envoie un rapport daté et peut proposer une mise à jour de la compétence, que Kévin relit avant de l'enregistrer. Elle n'a pas les fichiers de la chaîne : elle dit quoi changer et où, et les changements se font ici, avec une entrée d'historique.
@@ -667,6 +693,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.31 — 25/10/2026** : essai du régulateur à découpage d'Olimex (SY8089) à la place de l'AMS1117, sur une copie de la radio v4 : `outils/bloc_depuis_kicad.py` et `outils/remplacer_par_bloc.py`, premier bloc libre (`bibliotheque/blocs-libres/alim_decoupage_olimex`). KiCad : aucune erreur, rien ne manque ; chaleur estimée vers 60 °C au lieu d'environ 104 °C, mais il découpe dans la bande AM (à l'électronicien de trancher). kicad-happy relit aussi les cartes sans schéma. Deux règles apprises (verrouiller les pistes avant Freerouting ; copier une piste avec `Duplicate().Cast()`). Fiche de questions 1.7 (question 5).
 - **1.30 — 25/10/2026** : cinquième recherche, « Ce que le dépôt GitHub débloque » : des blocs pris dans les cartes libres d'Olimex (essai : KiKit découpe leur régulateur à découpage, routage compris, en une seconde) ; les placeurs libres regardés, pas encore solides ; l'humain plus tôt, une question à la fois sur le forum KiCad ; un estimateur de chaleur à garder pour la question 5.
 - **1.29 — 25/10/2026** : la chaîne est dans le dépôt privé de Kévin, `Youniziak/puzzles-`. kicad-happy y relit chaque carte à chaque envoi : rien ne contredit la chaîne, il est moins strict qu'elle sur l'USB, et deux remarques utiles passent dans la fiche de questions 1.6 (protection de l'antenne, vias sous le régulateur). Essai d'EDeA sur GitHub (`edea.yml`, `outils/essai_edea.py`) : il lit nos schémas sans rien perdre pour l'électricité, mais pas les cartes de KiCad 10. Trois points de plus « à vérifier avant de commander ». Actions de GitHub passées à Node.js 24.
 - **1.28 — 24/10/2026** : essai du bloc ampli à la fraiseuse du fablab, routé par Freerouting (règles `fraiseuse-fablab.json`, `outils/vider_routage.py`, carte `essai-ampli-fraiseuse.json`) : complet sur deux faces, sans erreur, avec 11 vias ; pas sur une seule face.

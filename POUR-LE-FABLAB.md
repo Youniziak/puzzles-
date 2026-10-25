@@ -24,7 +24,7 @@ Elle ne refait pas ce que de bons logiciels font déjà. C'est un assemblage de 
 | ngspice | simule l'électronique (à part, hors de la commande) | 42 | libre |
 | kicad-happy | un deuxième avis sur le schéma et la carte, sur les machines de GitHub, à chaque envoi dans le dépôt (`.github/workflows/kicad-happy.yml`) | 2.3.2 (commit du 22/10/2026) | MIT |
 
-## La colle (ce qui est fait maison) — environ 5 000 lignes de Python
+## La colle (ce qui est fait maison) — environ 5 400 lignes de Python
 
 - `description.py` (150 lignes) : lit le fichier qui décrit la carte et les blocs. C'est le seul endroit qui sait ce qu'il y a sur la carte.
 - `assembler.py` (215 lignes) : convertit les blocs EasyGerber en carte KiCad. Aucun outil ne fait cette conversion. Il vérifie chaque pastille contre EasyGerber, à 0,05 mm près.
@@ -51,6 +51,8 @@ Elle ne refait pas ce que de bons logiciels font déjà. C'est un assemblage de 
 - `modeles3d.py` (environ 90 lignes) : pose les modèles 3D des composants comme sur la carte ; partagé par le boîtier et le banc.
 - `outils/vider_routage.py` (environ 50 lignes) : pour un essai, enlève le routage d'une carte et garde le placement, pour que Freerouting refasse tout avec d'autres règles (par exemple celles d'une fraiseuse de fablab : `bibliotheque/regles/fraiseuse-fablab.json`).
 - `fabricants.py` (140 lignes) : regarde si la carte convient aussi à d'autres fabricants (PCBWay, AISLER) que celui pour lequel elle est routée, avec KiCad et KiKit.
+- `outils/bloc_depuis_kicad.py` (environ 150 lignes) : prend un bloc, routage compris, dans une carte KiCad libre déjà fabriquée (par exemple une carte d'Olimex) : la zone choisie est découpée par KiKit, on ne garde que les composants demandés, les réseaux sont renommés, et une fiche garde la source et la licence. Premier bloc : `bibliotheque/blocs-libres/alim_decoupage_olimex`.
+- `outils/remplacer_par_bloc.py` (environ 170 lignes) : pour un essai, pose un tel bloc à la place de composants d'une carte déjà routée, avec la mention de licence sur la sérigraphie ; Freerouting relie ensuite ce qui manque.
 - `outils/essai_edea.py` (environ 140 lignes) : pour un essai sur les machines de GitHub (`.github/workflows/edea.yml`), regarde si EDeA, un outil libre de blocs KiCad partagés, sait lire les fichiers de la chaîne, et ce qu'il perd en les réécrivant. Résultat du 25/10/2026 : il lit nos schémas, pas les cartes de KiCad 10.
 
 Aucun nom de carte, de bloc ou de réseau n'est écrit dans ces scripts. Une nouvelle carte, c'est un nouveau fichier de description, sans toucher au code.

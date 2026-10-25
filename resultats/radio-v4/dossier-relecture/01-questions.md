@@ -1,6 +1,6 @@
 # Carte radio RADIONÉO v4 — questions pour un électronicien
 
-Exylia Project — version 1.6 — 25 octobre 2026
+Exylia Project — version 1.7 — 25 octobre 2026
 
 Je conçois mes cartes sans la vue, avec une chaîne d'outils qui contrôle tout ce qu'un programme peut contrôler. Il reste des choix qu'il faut un humain du métier pour juger. Cette fiche les liste en questions précises : pas besoin de tout relire.
 
@@ -77,6 +77,8 @@ Fennec, sur hackaday.io, fait tourner un ESP32-S3 avec le WiFi allumé, un écra
 
 kicad-happy compte une seule via sous la languette du régulateur (reliée au 3,3 V), et en conseille au moins 5, pour mener la chaleur vers le dessous. Mais le dessous de la carte est le plan de masse : ces vias demanderaient une surface de 3,3 V sous le régulateur, prise sur la masse. **Si on garde ce régulateur : faut-il ces vias et cette surface ?**
 
+Une solution de rechange est déjà essayée sur une copie de la carte (pas sur celle que vous relisez) : le régulateur à découpage d'une carte libre d'Olimex, l'ESP32-S3-DevKit-LiPo (CERN-OHL-S-2.0), repris avec son routage. C'est un SY8089 (2 A), avec une bobine de 2,2 µH, 22 µF à l'entrée et à la sortie, et un pont de 220 kΩ et 49,9 kΩ (3,25 V). Il prend la place de l'AMS1117 et de ses deux 22 µF. KiCad n'y trouve aucune erreur, et aucune liaison ne manque. Pertes estimées : environ 0,15 W au lieu de 0,43 W, soit la puce vers 60 °C au lieu d'environ 104 °C (avec 85 % de rendement, une hypothèse : la courbe de la fiche n'a pas de chiffres lisibles). Mais il découpe vers 1 à 1,5 MHz (1,5 MHz d'après la fiche de Silergy, 1 MHz d'après la fiche de JLCPCB) : en plein dans la bande AM des ondes moyennes (0,53 à 1,7 MHz) que reçoit le tuner. **Faut-il partir sur ce montage pour le prototype, ou garder un régulateur linéaire, plus silencieux, pour une radio ?**
+
 Réponse :
 
 ### 6. L'ampli PAM8403
@@ -137,6 +139,7 @@ Après la relecture, les réponses vont dans `METHODE-CARTES-PUZZLE.md` (ce qui 
 
 ## Historique
 
+- **1.7 — 25/10/2026** : question 5 : la solution de rechange essayée sur une copie de la carte (régulateur à découpage SY8089 repris d'une carte libre d'Olimex), et la question du bruit de découpage pour le tuner. Toujours 12 questions.
 - **1.6 — 25/10/2026** : le deuxième avis de kicad-happy, lancé pour de vrai sur les machines de GitHub, dans « Ce que la chaîne a déjà vérifié » ; ses deux remarques utiles aux questions 2 (protection de la prise d'antenne) et 5 (vias sous le régulateur). Toujours 12 questions.
 - **1.5 — 24/10/2026** : questions 11 (condensateurs sur le 5 V de l'USB) et 12 (lignes USB de l'ESP32-S3), trouvées en refaisant à la main les contrôles de l'outil kicad-happy ; le calcul de charge du quartz et la note AN299 de Skyworks à la question 1 ; les nouveaux contrôles de la chaîne dans « Ce que la chaîne a déjà vérifié ».
 - **1.4 — 23/10/2026** : question 10, les trous de fixation (place, antenne, tenue).
