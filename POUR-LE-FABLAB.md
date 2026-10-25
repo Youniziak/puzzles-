@@ -14,7 +14,7 @@ Elle ne refait pas ce que de bons logiciels font déjà. C'est un assemblage de 
 | Brique | Rôle dans la chaîne | Version utilisée | Licence |
 |---|---|---|---|
 | EasyGerber (service en ligne) | route chaque bloc (10 à 30 composants) | carte du 22/10/2026 | service commercial |
-| easyeda2kicad | télécharge les vraies empreintes et modèles 3D depuis la bibliothèque de JLCPCB | 1.0.1 | AGPL-3.0 |
+| easyeda2kicad | télécharge chez soi les vraies empreintes, symboles et modèles 3D depuis la bibliothèque de JLCPCB (`outils/telecharger_bibliotheque.py` ; ils ne sont pas dans le dépôt) | 1.0.1 | AGPL-3.0 |
 | KiCad | assemble la carte, contrôle les règles (DRC), fait l'image 3D, échange avec Freerouting | 10.0.7 | GPL |
 | Freerouting | trace les liaisons entre les blocs | 2.1.0 | GPL-3.0 |
 | KiKit | produit les fichiers Gerber et perçages pour JLCPCB et PCBWay (avec la liste des pièces et le placement pour PCBWay) | 1.8.1 | MIT |
@@ -24,7 +24,7 @@ Elle ne refait pas ce que de bons logiciels font déjà. C'est un assemblage de 
 | ngspice | simule l'électronique (à part, hors de la commande) | 42 | libre |
 | kicad-happy | un deuxième avis sur le schéma et la carte, sur les machines de GitHub, à chaque envoi dans le dépôt (`.github/workflows/kicad-happy.yml`) | 2.3.2 (commit du 22/10/2026) | MIT |
 
-## La colle (ce qui est fait maison) — environ 5 400 lignes de Python
+## La colle (ce qui est fait maison) — environ 5 600 lignes de Python
 
 Licence : GNU AGPL-3.0 pour la colle, CERN-OHL-S-2.0 pour les cartes et les blocs, CC BY-SA 4.0 pour les textes (détail dans `LICENCE.md`).
 
@@ -45,6 +45,7 @@ Licence : GNU AGPL-3.0 pour la colle, CERN-OHL-S-2.0 pour les cartes et les bloc
 - `banc_test.py` (environ 560 lignes) : fabrique un banc de test à pointes. Une petite carte du banc (dessinée dans KiCad, routée par Freerouting, préparée par KiKit) porte une pointe à ressort P75 sur chaque sortie de la carte et sur la couronne d'un trou de fixation relié à la masse ; chaque pointe mène à une borne. Trois pièces imprimées (CadQuery) : un socle avec des tétons dans les trous de fixation, un porte-pointes, et un capot où un entonnoir guide la pointe du multimètre sur chaque borne, avec le numéro en braille et en chiffres en relief. Il contrôle la carte du banc (KiCad), le trajet des pointes, les entonnoirs et le braille.
 - `braille.py` (environ 30 lignes) : le braille par liblouis, la bibliothèque des lecteurs d'écran ; utilisé par la maquette, le banc et le plan sur papier gonflé.
 - `controle_circuit.py` (environ 210 lignes) : avant de router, attrape les erreurs bêtes (masse ou alimentation mal branchée, SDA et SCL inversés, régulateur à l'envers, découplage trop loin, tirages I2C absents, trop de condensateurs sur le 5 V d'une prise USB, lignes USB sans résistance en série).
+- `outils/telecharger_bibliotheque.py` (environ 220 lignes) : télécharge chez soi la bibliothèque des composants de LCSC/EasyEDA (elle n'est pas dans le dépôt : leurs conditions interdisent de la republier), réapplique les retouches de la chaîne (`retouches.json`) et vérifie que les pièces n'ont pas changé chez LCSC (`attendu.json`).
 - `outils/typer_broches.py` (environ 140 lignes) et `sexpr.py` : donnent leur vrai type aux broches des symboles téléchargés, d'après la bibliothèque officielle de KiCad, pour que le contrôle électrique de KiCad voie quelque chose.
 - `dossier_relecture.py` (environ 200 lignes) : réunit dans un zip tout ce qu'il faut à un électronicien pour relire une carte, avec un mot d'accompagnement et des PDF balisés (pandoc, LibreOffice). Il n'envoie rien.
 - `plan_tactile.py` (environ 450 lignes) : un plan de la carte à imprimer sur papier gonflé, en quelques secondes, sans KiCad : contour, blocs, sorties, prises, trous, liaisons, avec du braille et une légende. Règles chiffrées dans `bibliotheque/regles/plan_tactile.json`.

@@ -6,7 +6,8 @@ version = 1
 [[annotations]]
 path = ["scripts/**", "outils/**", ".github/**", "installer-ubuntu.sh", "Dockerfile", ".dockerignore", ".gitignore",
         "cartes/radio-v4-essai/**", "bibliotheque/regles/**", "bibliotheque/controles-verifies.json",
-        "bibliotheque/empreintes/correspondance.json"]
+        "bibliotheque/empreintes/correspondance.json", "bibliotheque/empreintes/retouches.json",
+        "bibliotheque/empreintes/attendu.json"]
 SPDX-FileCopyrightText = "2026 Kévin Chatellard — Exylia Project"
 SPDX-License-Identifier = "AGPL-3.0-or-later"
 

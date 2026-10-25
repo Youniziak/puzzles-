@@ -1,0 +1,30 @@
+{
+ "a_quoi_ca_sert": "Les empreintes, symboles et modèles 3D de LCSC/EasyEDA ne sont pas dans le dépôt : chacun les télécharge chez soi avec outils/telecharger_bibliotheque.py. Ce fichier dit ce que la chaîne y change ensuite, et pourquoi. Le script l'applique tout seul après chaque téléchargement.",
+ "nom_bibliotheque": "radioneo",
+ "retouches": [
+  {
+   "type": "raccourcir_pastilles",
+   "empreinte": "USB-C-SMD_TYPE-C-16PIN-2MD-073",
+   "lcsc": "C2765186",
+   "pastilles": ["A1B12", "B1A12"],
+   "mm": 0.02,
+   "cote": "celui du trou de fixation le plus proche ; l'autre bout de la pastille ne bouge pas",
+   "pourquoi": "Dans le dessin du fabricant, ces deux pastilles de masse sont à 0,18 mm des trous de fixation ; JLCPCB demande 0,2 mm. Après retouche (1,10 → 1,08 mm) : 0,201 mm.",
+   "decision": "Kévin, 23/10/2026"
+  },
+  {
+   "type": "broches_passives",
+   "symboles": ["0603WAF5101T5E", "1206W4F1002T5E", "0603WAF1001T5E", "0603WAF4701T5E", "0603WAF1003T5E",
+                "H31003271C2070CY", "CL10B223KB8NNNC", "CL10B102KB8NNNC", "CL10B474KA8NNNC"],
+   "pourquoi": "Le catalogue déclare « entrée » les deux broches de ces résistances, condensateurs et du quartz. Ce sont des broches passives ; sinon le contrôle électrique de KiCad se plaint à tort."
+  },
+  {
+   "type": "renommer_broche",
+   "symbole": "H31003271C2070CY",
+   "broche": "2",
+   "avant": "GND",
+   "nom": "2",
+   "pourquoi": "Quartz 32,768 kHz du tuner (boîtier SMD3215-2P) : le catalogue nomme « GND » sa broche 2, mais c'est une borne du quartz, reliée au tuner (RCLK)."
+  }
+ ]
+}

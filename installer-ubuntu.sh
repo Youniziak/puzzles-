@@ -50,6 +50,10 @@ git -C "$OUTILS/YAPP_Box" checkout --quiet "$YAPP_COMMIT"
 ls "$OUTILS/YAPP_Box/YAPPgenerator_v3.scad"
 
 echo
-echo "Installation terminée. Pour lancer la chaîne, depuis le dossier de la chaîne :"
+echo "Installation terminée. Avant la première carte, depuis le dossier de la chaîne, télécharger la bibliothèque"
+echo "des composants (elle n'est pas dans le dépôt : les conditions d'EasyEDA interdisent de la republier) :"
+echo "  $OUTILS/venv/bin/python outils/telecharger_bibliotheque.py --easyeda2kicad $OUTILS/venv/bin/easyeda2kicad"
+echo
+echo "Pour lancer la chaîne, depuis le dossier de la chaîne :"
 echo "  $OUTILS/venv/bin/python scripts/chaine.py cartes/radio-v3.json resultats/radio-v3 \\"
 echo "      --freerouting $OUTILS/freerouting-2.1.0.jar --kikit $OUTILS/venv/bin/kikit --yapp $OUTILS/YAPP_Box"

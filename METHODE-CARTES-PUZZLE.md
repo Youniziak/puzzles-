@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.33 — 25 octobre 2026
+Version 1.34 — 25 octobre 2026
 
 ## L'idée en une phrase
 
@@ -9,7 +9,7 @@ On découpe la carte en blocs par fonction. Chaque outil fait la partie où il e
 
 ## Des briques, pas un programme en dur
 
-La chaîne est un assemblage de logiciels maintenus chacun par leur équipe : EasyGerber, easyeda2kicad, KiCad, Freerouting, KiKit, gerbonara, CadQuery, OpenSCAD, YAPP_Box, liblouis (braille), PlatformIO, sigrok, pandoc, LibreOffice et pyflakes. Entre eux, de la colle en Python (environ 4 800 lignes), qui ne connaît aucune carte.
+La chaîne est un assemblage de logiciels maintenus chacun par leur équipe : EasyGerber, easyeda2kicad, KiCad, Freerouting, KiKit, gerbonara, CadQuery, OpenSCAD, YAPP_Box, liblouis (braille), PlatformIO, sigrok, pandoc, LibreOffice et pyflakes. Entre eux, de la colle en Python (environ 5 600 lignes), qui ne connaît aucune carte.
 
 Ce qui change d'une carte à l'autre est rangé dans des fichiers, pas dans le code :
 - **la bibliothèque de blocs** (`bibliotheque/blocs/`) : un dossier par bloc validé, avec son export EasyGerber et un fichier `bloc.json`. Ce fichier donne :
@@ -114,7 +114,7 @@ Le 23/10/2026, après correction de la prise USB-C, la carte radio v3 passe tous
      - Rien n'est encore imprimé : les épaisseurs sont à ajuster après le premier essai.
 
 5. **Recoller les blocs** dans KiCad (`assembler.py`). Le script :
-   - pose les vraies empreintes des composants, avec leur dessin et leur modèle 3D. Elles sont téléchargées par easyeda2kicad (libre) depuis la bibliothèque de JLCPCB. Chaque pastille doit coïncider avec celle d'EasyGerber à 0,05 mm près, sinon le script s'arrête ;
+   - pose les vraies empreintes des composants, avec leur dessin et leur modèle 3D. Elles sont téléchargées chez soi par easyeda2kicad (libre) depuis la bibliothèque de JLCPCB, avec `outils/telecharger_bibliotheque.py` : elles ne sont pas dans le dépôt. Chaque pastille doit coïncider avec celle d'EasyGerber à 0,05 mm près, sinon le script s'arrête ;
    - met chaque bloc à sa place et dans son sens, et vérifie qu'aucun bloc ne déborde ni n'en chevauche un autre ;
    - ajoute les plans de masse et les zones sans cuivre des blocs ;
    - pose les trous de fixation, si la carte en décrit (« trous_fixation ») : trous M3 métallisés, reliés à la masse par les plans. En « auto », la chaîne les place là où il n'y a ni bloc, ni zone sans cuivre, ni couloir entre deux blocs (les liaisons y passent), au plus près des coins. Ils sont « sur la carte seulement » : hors schéma, liste des pièces et placement ;
@@ -324,6 +324,8 @@ Pour l'essai, une seule chose a été ajoutée, et elle n'est pas dans la recett
 - Mesurer la distance au bord sur le vrai contour, coins arrondis compris. Corrigé le 23/10/2026 : le contrôle indépendant mesurait sur un rectangle et donnait 0,30 mm ; la vraie distance est 0,20 mm, près d'un coin. C'est juste à la limite de JLCPCB (0,2 mm), mais c'est bon.
 - Avant de faire passer Freerouting sur une carte déjà routée, verrouiller toutes ses pistes. Constaté le 25/10/2026 : KiCad, en reprenant le travail de Freerouting, efface les pistes non verrouillées ; la chaîne ne garde ensuite le cuivre de Freerouting que sur les liaisons qui manquaient. Résultat : 7 liaisons entre blocs perdues (I2C, son, reset du tuner). Avec les pistes verrouillées, tout est passé en un seul passage.
 - Dans le Python de KiCad 10, `pcbnew.PCB_TRACK(piste)` ne copie pas la piste : il en crée une vide, dont la piste donnée serait le parent. Pour copier : `piste.Duplicate().Cast()`. Constaté le 25/10/2026 : toutes les pistes d'un bloc copié étaient perdues, sans message d'erreur ; seul le contrôle de KiCad (liaisons manquantes) l'a montré.
+- Avant de rendre un dépôt public, lire les conditions de chaque source, et se souvenir que Git garde tout : l'historique devient public avec le dépôt. Constaté le 25/10/2026 : la bibliothèque de LCSC/EasyEDA, que leurs conditions interdisent de republier, a dû être retirée de tout l'historique après coup.
+- Une retouche faite à la main dans un fichier téléchargé se perd au prochain téléchargement. Toute retouche va dans un fichier de description (`retouches.json`), avec sa raison, et un script la réapplique.
 
 - Toujours des sorties au bord des blocs.
 - Choisir les broches du microcontrôleur pour que rien ne croise la paire USB.
@@ -652,14 +654,17 @@ But : savoir si un bloc pris dans une carte libre déjà fabriquée peut remplac
 ## Licence de la chaîne (25/10/2026)
 
 - Kévin veut une licence libre, mais stricte : sinon, une entreprise pourrait reprendre la chaîne, la fermer et ne rien rendre. Et celui qui maintient la chaîne doit y trouver un intérêt.
-- **Décidé le 25/10/2026** : AGPL-3.0 (ou plus récente) pour le logiciel, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes. Dans le dépôt : `LICENCE.md` (laquelle pour quoi, en français, et ce qui vient d'ailleurs), `LICENSES/` (les textes officiels, pris dans la liste SPDX, commit 31ba1a5 du 16/09/2026) et `REUSE.toml` (la même chose pour les programmes, spécification REUSE de la FSFE). Le dépôt reste privé.
-- À vérifier avant de publier : les conditions d'EasyGerber pour ses fichiers, et celles de LCSC et EasyEDA pour les empreintes et les modèles 3D.
+- **Décidé le 25/10/2026** : AGPL-3.0 (ou plus récente) pour le logiciel, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes. Dans le dépôt : `LICENCE.md` (laquelle pour quoi, en français, et ce qui vient d'ailleurs), `LICENSES/` (les textes officiels, pris dans la liste SPDX, commit 31ba1a5 du 16/09/2026) et `REUSE.toml` (la même chose pour les programmes, spécification REUSE de la FSFE).
+- **Dépôt rendu public par Kévin le 25/10/2026**, avec les Discussions ouvertes. Conditions des sources lues le même jour :
+  - EasyGerber (https://www.easygerber.com/terms) : l'utilisateur garde ses droits sur ce qu'il crée ; ses fichiers restent dans le dépôt ;
+  - EasyEDA (https://easyeda.com/page/legal) : interdit de republier son contenu. La bibliothèque des composants de LCSC/EasyEDA (empreintes, symboles, modèles 3D) a donc été retirée du dépôt et de tout son historique. Chacun la télécharge chez soi avec `outils/telecharger_bibliotheque.py`, qui réapplique les retouches de la chaîne (`bibliotheque/empreintes/retouches.json`) et compare le résultat à des sommes de contrôle (`attendu.json`). Essai le 25/10/2026 : deux téléchargements donnent les mêmes 58 fichiers ; les pastilles de l'USB-C, retouchées, sont identiques à celles qui ont servi aux cartes.
+  - Reste une zone plus grise : les cartes KiCad de `resultats/` contiennent une copie des empreintes qu'elles utilisent, comme toute carte. À régler en passant peu à peu aux empreintes officielles de KiCad.
 - Les pistes regardées avant de choisir :
   - les scripts : AGPL-3.0, la plus stricte des licences libres courantes. Qui diffuse une version modifiée, ou la propose comme service en ligne (à la façon d'EasyGerber), doit publier ses changements sous la même licence. Elle va avec KiCad (GPL-3.0), Freerouting (GPL-3.0), easyeda2kicad (lui-même AGPL-3.0) et KiKit (MIT). Variante européenne : l'EUPL-1.2, qui a valeur légale en français et couvre aussi les services en ligne ; mais sa clause de compatibilité permet de passer à des licences plus souples (MPL, LGPL) quand on mélange avec du code sous ces licences : moins stricte en pratique ;
   - les blocs, les cartes et les maquettes : CERN-OHL-S-2.0, déjà celle du bloc d'Olimex ;
   - les textes (méthode, fiches) : CC BY-SA 4.0.
 - L'intérêt de celui qui maintient : la licence protège son travail, elle ne le paie pas. Pistes : son propre usage de la chaîne ; un financement (NLnet finance des logiciels libres, il a financé EDeA) ; une double licence, c'est-à-dire vendre une licence non libre aux entreprises qui ne veulent pas publier leurs changements. La double licence demande que Kévin ait les droits sur tout le code : chaque contributeur les lui cède par écrit, ce qui en freine certains. Et elle ne marche pas pour les blocs repris d'autres (Olimex) : ils restent sous leur licence.
-- À faire relire par quelqu'un qui connaît le droit avant de publier.
+- Une relecture par quelqu'un qui connaît le droit reste la bienvenue, maintenant que le dépôt est public.
 
 ## Veille
 
@@ -705,6 +710,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.34 — 25/10/2026** : dépôt rendu public. La bibliothèque des composants de LCSC/EasyEDA (empreintes, symboles, modèles 3D) est retirée du dépôt et de tout son historique, car les conditions d'EasyEDA interdisent de la republier ; chacun la télécharge chez soi avec `outils/telecharger_bibliotheque.py`, qui réapplique les retouches (`retouches.json`) et vérifie les sommes (`attendu.json`). Les conditions d'EasyGerber permettent de garder ses fichiers. Installation, Docker, README, licence et compétence mis à jour ; deux règles apprises.
 - **1.33 — 25/10/2026** : licences décidées et mises dans le dépôt : AGPL-3.0 pour le logiciel, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes (`LICENCE.md`, `LICENSES/`, `REUSE.toml`).
 - **1.32 — 25/10/2026** : « Licence de la chaîne » : Kévin veut une licence libre et stricte ; pistes (AGPL-3.0 ou EUPL-1.2 pour les scripts, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes) et l'intérêt de celui qui maintient la chaîne. Pas encore décidé.
 - **1.31 — 25/10/2026** : essai du régulateur à découpage d'Olimex (SY8089) à la place de l'AMS1117, sur une copie de la radio v4 : `outils/bloc_depuis_kicad.py` et `outils/remplacer_par_bloc.py`, premier bloc libre (`bibliotheque/blocs-libres/alim_decoupage_olimex`). KiCad : aucune erreur, rien ne manque ; chaleur estimée vers 60 °C au lieu d'environ 104 °C, mais il découpe dans la bande AM (à l'électronicien de trancher). kicad-happy relit aussi les cartes sans schéma. Deux règles apprises (verrouiller les pistes avant Freerouting ; copier une piste avec `Duplicate().Cast()`). Fiche de questions 1.7 (question 5).

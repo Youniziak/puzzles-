@@ -727,7 +727,7 @@
    "quoi": "prise USB-C J1 (LCSC C2765186) : pastilles de masse A1B12 et B1A12 raccourcies de 0,02 mm côté trou de fixation (1,10 → 1,08 mm)",
    "pourquoi": "dans le dessin du fabricant, elles étaient à 0,18 mm des trous de fixation ; JLCPCB demande 0,2 mm. Après retouche : 0,201 mm",
    "decide_par": "Kévin, le 23/10/2026",
-   "attention": "fichier radioneo.pretty/USB-C-SMD_TYPE-C-16PIN-2MD-073.kicad_mod : un nouveau téléchargement par easyeda2kicad effacerait la retouche"
+   "attention": "la retouche est décrite dans bibliotheque/empreintes/retouches.json ; outils/telecharger_bibliotheque.py la réapplique après chaque téléchargement"
   }
  ],
  "thermique": [

@@ -9,7 +9,7 @@ Copyright © 2026 Kévin Chatellard — Exylia Project, sauf mention contraire p
 ## Quelle licence pour quoi
 
 - **Le logiciel : GNU AGPL-3.0, ou une version plus récente** (texte : `LICENSES/AGPL-3.0-or-later.txt`).
-  - Ce que ça couvre : les scripts (`scripts/`, `outils/`), les réglages GitHub (`.github/`), l'installation (`installer-ubuntu.sh`, `Dockerfile`, `.dockerignore`, `.gitignore`), le programme d'essai de la radio (`cartes/radio-v4-essai/`), les règles et les données de la chaîne (`bibliotheque/regles/`, `bibliotheque/controles-verifies.json`, `bibliotheque/empreintes/correspondance.json`).
+  - Ce que ça couvre : les scripts (`scripts/`, `outils/`), les réglages GitHub (`.github/`), l'installation (`installer-ubuntu.sh`, `Dockerfile`, `.dockerignore`, `.gitignore`), le programme d'essai de la radio (`cartes/radio-v4-essai/`), les règles et les données de la chaîne (`bibliotheque/regles/`, `bibliotheque/controles-verifies.json`, `bibliotheque/empreintes/correspondance.json`, `bibliotheque/empreintes/retouches.json`, `bibliotheque/empreintes/attendu.json`).
   - Elle vaut aussi pour un service en ligne : qui propose une version modifiée de la chaîne sur un site doit en donner le code.
 - **Le matériel : CERN-OHL-S-2.0** (texte : `LICENSES/CERN-OHL-S-2.0.txt`).
   - Ce que ça couvre : les descriptions de cartes (`cartes/*.json`), les blocs (`bibliotheque/blocs/*/bloc.json`, `bibliotheque/blocs-libres/`), et ce que la chaîne produit pour fabriquer ou toucher une carte (`resultats/` : cartes KiCad, Gerber, maquettes, boîtiers, bancs de test, plans en papier gonflé).
@@ -22,8 +22,8 @@ Le fichier `REUSE.toml` dit la même chose pour les programmes, selon la spécif
 
 - `bibliotheque/blocs-libres/alim_decoupage_olimex/` : tiré d'une carte d'OLIMEX Ltd, sous CERN-OHL-S-2.0 ; origine et modifications dans son `LICENCE.txt`. Une carte qui reprend ce bloc garde la mention d'Olimex (par exemple `resultats/essai-radio-v4-decoupage/`).
 - `bibliotheque/empreintes/types-broches.json` et `bibliotheque/empreintes/symboles-officiels.json` : tirés de la bibliothèque officielle de KiCad (CC BY-SA 4.0, avec son exception pour les cartes).
-- `bibliotheque/empreintes/radioneo.pretty/`, `radioneo.kicad_sym` et `radioneo.3dshapes/` : empreintes, symboles et modèles 3D téléchargés depuis la bibliothèque de LCSC et EasyEDA, par easyeda2kicad. Leurs conditions sont à vérifier avant de publier.
-- `bibliotheque/blocs/*/easygerber/` : fichiers produits par le service EasyGerber. Ses conditions sont à vérifier avant de publier.
+- Les empreintes, symboles et modèles 3D de LCSC et EasyEDA (`radioneo.pretty/`, `radioneo.kicad_sym`, `radioneo.3dshapes/`) **ne sont pas dans le dépôt**, ni dans son historique : les conditions d'utilisation d'EasyEDA interdisent de republier leur contenu (lues le 25/10/2026 : https://easyeda.com/page/legal). Chacun les télécharge chez soi, pour son usage, avec `outils/telecharger_bibliotheque.py` (par easyeda2kicad). Le dépôt ne garde que la liste des pièces (`correspondance.json`), les retouches de la chaîne (`retouches.json`) et des sommes de contrôle (`attendu.json`). Les cartes KiCad de `resultats/` contiennent encore une copie des empreintes qu'elles utilisent, comme toute carte KiCad : c'est une zone plus grise, à régler en passant peu à peu aux empreintes officielles de KiCad.
+- `bibliotheque/blocs/*/easygerber/` : fichiers produits par le service EasyGerber. Ses conditions (lues le 25/10/2026 : https://www.easygerber.com/terms) disent que l'utilisateur garde ses droits sur ce qu'il crée ; les pièces et modèles d'autres fournisseurs restent sous leurs propres conditions.
 - `resultats/*/montages-reels/` : des résumés tirés du jeu de données Open Schematics (Hugging Face, CC BY 4.0). Les schémas des autres projets ne sont pas dans le dépôt.
 - Les logiciels dont la chaîne se sert (KiCad, Freerouting, KiKit, kicad-happy, EDeA…) gardent chacun leur licence. Ils ne sont pas dans le dépôt.
 
@@ -35,4 +35,4 @@ Avec une licence trop souple, une entreprise pourrait reprendre la chaîne, la f
 
 L'auteur peut proposer ses propres parties sous une autre licence, par exemple à une entreprise qui ne veut pas publier ses changements. Les parties venues d'ailleurs restent sous leur licence. À décider avant la première contribution d'une autre personne : lui demander si sa contribution pourra aussi être proposée sous une autre licence.
 
-Ce fichier n'est pas un avis juridique : à faire relire avant de publier le dépôt.
+Ce fichier n'est pas un avis juridique. Le dépôt est public depuis le 25/10/2026 ; une relecture par un juriste reste la bienvenue.

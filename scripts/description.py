@@ -15,7 +15,7 @@ Un bloc posé peut renommer ses réseaux (« renommer »), par exemple pour pose
 Trous de fixation (facultatif, « trous_fixation ») : diamètre du trou et du cuivre, reliés ou non à la masse, et
 leurs positions, ou « auto » : les places libres (hors blocs, zones sans cuivre et couloirs entre deux blocs) les plus
 proches des coins."""
-import json, math, os
+import json, math, os, sys
 from collections import Counter
 
 def largeur_pour_courant(i_a, echauffement=10, epaisseur_um=35):
@@ -94,7 +94,11 @@ class Carte:
         self.masse = d.get('masse', 'GND')
         self.empreintes = os.path.join(self.bibliotheque, 'empreintes')
         self.correspondance = json.load(open(os.path.join(self.empreintes, 'correspondance.json'), encoding='utf-8'))
-        self.nom_bib = next(f[:-len('.pretty')] for f in os.listdir(self.empreintes) if f.endswith('.pretty'))
+        noms_bib = [f[:-len('.pretty')] for f in os.listdir(self.empreintes) if f.endswith('.pretty')]
+        if not noms_bib:  # pas dans le dépôt : les conditions d'EasyEDA interdisent de la republier
+            sys.exit("La bibliothèque des composants (empreintes, symboles et modèles 3D de LCSC) n'est pas encore là. "
+                     "La télécharger d'abord : python3 outils/telecharger_bibliotheque.py")
+        self.nom_bib = noms_bib[0]
         self.blocs = [BlocPose(self, i + 1, e, self.bibliotheque) for i, e in enumerate(d['blocs'])]
         self._noms()
         self._verifier_place()

@@ -17,5 +17,14 @@ fp-info-cache
 # Schémas d'autres projets publiés : chacun a sa licence, on ne les redistribue pas.
 **/montages-reels/schemas/
 
+# Empreintes, symboles et modèles 3D de LCSC/EasyEDA : les conditions d'EasyEDA interdisent de les republier.
+# Chacun les télécharge chez soi : python3 outils/telecharger_bibliotheque.py (retouches : bibliotheque/empreintes/retouches.json).
+bibliotheque/empreintes/radioneo.pretty/
+bibliotheque/empreintes/radioneo.kicad_sym
+bibliotheque/empreintes/radioneo.3dshapes/
+resultats/**/lib/radioneo.pretty/
+resultats/**/lib/radioneo.kicad_sym
+resultats/**/lib/radioneo.3dshapes/
+
 # Premier essai du plan à toucher (23/10/2026), remplacé par plan-papier-gonfle.
 resultats/radio-v4/plan-tactile/
