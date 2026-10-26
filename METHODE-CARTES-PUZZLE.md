@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.35 — 25 octobre 2026
+Version 1.36 — 26 octobre 2026
 
 ## L'idée en une phrase
 
@@ -692,6 +692,28 @@ Premier cas prévu : la mesure de l'oscilloscope qui parle, une autre graine de 
 - **Essayer une IA ouverte** sur la chaîne, en clé de secours : par exemple la famille Mistral 3 (entreprise française, poids publiés sous licence Apache 2.0). Les petits modèles tournent sur un bon ordinateur avec carte graphique, le grand demande des serveurs. Rien n'est encore essayé ; les contrôles restent dans les outils, pas dans l'IA.
 - **Un mode « objet d'art »** : aujourd'hui la chaîne cherche une carte qui marche, pas une belle carte (Freerouting trace au plus efficace). Un réglage pourrait choisir la forme de la carte, la couleur du vernis, des dessins dans le cuivre. Une carte peut être un bel objet même si elle ne marche pas ; le relief viendrait plutôt de la forme découpée et des composants, le cuivre et le vernis étant trop fins pour un braille lisible.
 
+## Explorer la maquette : questions à travailler à plusieurs (26/10/2026)
+
+Le but : qu'une personne aveugle ou malvoyante, même sans connaître l'électronique, comprenne une carte assez bien pour l'intégrer dans un objet. La chaîne sait déjà faire le boîtier, avec CadQuery. Ce qui manque, c'est de comprendre la carte qu'on met dedans.
+
+La difficulté : ne pas être trop technique pour la personne qui crée, mais assez précis pour celle qui s'y connaît. Une piste : deux niveaux de lecture, comme pour Basket à la demande, un autre projet de Kévin.
+- Par défaut, simple : « Ça, c'est le tuner, il capte la radio. »
+- À la demande, le détail : « U4, broche 16, sortie audio droite, vers l'ampli. »
+
+Trois idées, de la plus simple à la plus dure :
+1. la maquette actuelle : relief, braille, lettres, couleurs, puzzle ;
+2. une maquette qui parle : on touche un composant, elle dit ce qu'il est (par exemple une petite pièce de métal par composant, reliée à un ESP32 ou à un module tactile) ;
+3. des pistes qui parlent : on suit une liaison du doigt, elle dit d'où elle vient et où elle va (il faudrait imprimer les pistes en filament conducteur, isolées les unes des autres). Version simple : rendre tactiles les plots des sorties, qui annonceraient chacun sa liaison, avec la numérotation du banc de test.
+
+Rien n'est décidé. D'abord, imprimer la maquette actuelle et l'explorer, avec trois questions pour juger :
+- Est-ce que je sais ce que je touche ?
+- Est-ce que je retrouve les liaisons entre les blocs ?
+- Est-ce que je pourrais l'expliquer à quelqu'un, maquette en main ?
+
+Règle : un outil virtuel qui ne marche pas en vrai ne sert à rien. L'essai physique décide, et la réflexion se fait à plusieurs, avec AutonaBee et le TactiLab.
+
+Référence : AccessibleCircuits (Chang et al., conférence CHI 2021, https://cs.dartmouth.edu/~zheer/files/AccessibleCircuit.pdf). Avec des pièces imprimées en relief et qui parlent, la réussite de personnes aveugles au montage de circuits sur plaque d'essai est passée d'environ 20 % à plus de 80 %. L'étude mesure surtout des gestes (reconnaître, brancher, mesurer), avec 10 personnes ; les cartes imprimées restent à faire. Pour comprendre une carte entière, c'est notre essai qui dira.
+
 ## Proposée à AutonaBee (25/10/2026)
 
 - Kévin a envoyé l'idée de la chaîne dans la boîte à idées d'AutonaBee (page « Partager vos idées »). Si quelqu'un est intéressé, l'association le recontacte.
@@ -742,6 +764,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.36 — 26/10/2026** : section « Explorer la maquette » : le but (comprendre une carte assez bien pour l'intégrer dans un objet), deux niveaux de lecture, trois idées (maquette actuelle, maquette qui parle, pistes qui parlent), trois questions pour juger après l'essai de la maquette imprimée, et la référence AccessibleCircuits (CHI 2021). Rien n'est décidé : réflexion à mener à plusieurs.
 - **1.35 — 25/10/2026** : la chaîne regarde dans plus de schémas publiés. `outils/montages_reels.py` lit trois jeux (Ohmatic, kicad9plus, Open Schematics, avec un index local de 3 Mo), une puce à la fois, et toutes les liaisons sortent de KiCad ; il compte les auteurs, pas les dépôts, ne recompte pas une copie exacte, signale un brochage différent et une puce dont la masse touche l'alimentation. Nouveau : `outils/chercher_fonction.py` (projets qui font telle chose, et pièges connus d'après Electronics Stack Exchange) ; `outils/jeux_donnees.py` (les jeux, leurs licences, ceux qui sont écartés et pourquoi). Le jeu « kicad-netlist-sft » ne sert que d'index : ses liaisons sont fausses dans des cas vérifiés. Rapport de la radio v4 refait (Si4732, PAM8403, SY8089). Deux règles apprises. La recherche des pièges a trouvé deux questions pour l'électronicien, vérifiées ensuite sur la fiche du PAM8403 : son découpage (250 à 450 kHz) tombe dans la bande AM, et sa résistance d'entrée se déduit de la formule du gain (fiche de questions 1.8, questions 4 et 6 ; plan de test 2.4, essai 8, et programme d'essai 1.1). Le forum disait 250 kHz et d'autres résistances : la fiche corrige.
 - **1.34 — 25/10/2026** : dépôt rendu public. La bibliothèque des composants de LCSC/EasyEDA (empreintes, symboles, modèles 3D) est retirée du dépôt et de tout son historique, car les conditions d'EasyEDA interdisent de la republier ; chacun la télécharge chez soi avec `outils/telecharger_bibliotheque.py`, qui réapplique les retouches (`retouches.json`) et vérifie les sommes (`attendu.json`). Les conditions d'EasyGerber permettent de garder ses fichiers. Installation, Docker, README, licence et compétence mis à jour ; deux règles apprises. Idée proposée à AutonaBee, avec le lien du dépôt (section « Proposée à AutonaBee »). Méthode pour un bloc que la chaîne n'a jamais vu, et trois pistes de Kévin (boîtier d'abord, IA ouverte, objet d'art).
 - **1.33 — 25/10/2026** : licences décidées et mises dans le dépôt : AGPL-3.0 pour le logiciel, CERN-OHL-S-2.0 pour le matériel, CC BY-SA 4.0 pour les textes (`LICENCE.md`, `LICENSES/`, `REUSE.toml`).
