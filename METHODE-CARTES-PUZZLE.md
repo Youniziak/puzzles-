@@ -1,7 +1,7 @@
 # Chaîne « puzzle » pour faire une carte électronique sans la vue
 
 Exylia Project — méthode de la chaîne SKiDL
-Version 1.36 — 26 octobre 2026
+Version 1.37 — 6 novembre 2026
 
 ## L'idée en une phrase
 
@@ -38,7 +38,7 @@ Un bloc garde ses règles où qu'on le pose : tourner le bloc tourne aussi sa zo
 
    Sur hackaday.io, la même recherche n'a trouvé aucun projet de conception de cartes sans la vue, ni de maquette de carte à toucher : surtout des aides pour les personnes aveugles (afficheurs braille, guidage par vibrations). Ça ne prouve pas que rien n'existe ailleurs.
 1. **Décrire le circuit en texte.** C'est la liste des composants et de leurs liaisons. Fichier `intent.json`, écrit avec `carte_radio.py`.
-2. **Placer les composants.** Claude le fait, avec les règles d'électronique :
+2. **Placer les composants.** L'IA le fait, ou une personne, avec les règles d'électronique :
    - condensateurs de découplage à moins de 5 mm ;
    - quartz près de la puce ;
    - antenne et prises au bord.
@@ -594,7 +594,7 @@ But : savoir si un bloc peut être fait à la fraiseuse d'un fablab, et si un ou
 ## Deuxième avis de kicad-happy et essai d'EDeA, sur GitHub (25/10/2026)
 
 Kévin a créé le dépôt privé `Youniziak/puzzles-`. La chaîne y est, avec son historique depuis la version 1.23.
-- **Comment** : deux réglages GitHub (« workflows ») tournent tout seuls à chaque envoi, sur les machines de GitHub, en moins d'une demi-minute chacun. Claude télécharge ensuite les résultats et les lit (`gh run list -R Youniziak/puzzles-`, puis `gh run download NUMÉRO -R Youniziak/puzzles- -n analyse-kicad-happy`, ou `-n essai-edea`). Ils sont gardés 30 jours.
+- **Comment** : deux réglages GitHub (« workflows ») tournent tout seuls à chaque envoi, sur les machines de GitHub, en moins d'une demi-minute chacun. L'IA (ou une personne) télécharge ensuite les résultats et les lit (`gh run list -R Youniziak/puzzles-`, puis `gh run download NUMÉRO -R Youniziak/puzzles- -n analyse-kicad-happy`, ou `-n essai-edea`). Ils sont gardés 30 jours.
   - `kicad-happy.yml` : kicad-happy 2.3.2, épinglé ; analyse du schéma, de la carte, puis les deux ensemble, pour chaque carte de `resultats/` qui a un schéma.
   - `edea.yml` et `outils/essai_edea.py` : EDeA 0.8.4, épinglé ; il lit chaque schéma et chaque carte, puis les réécrit, et on compte ce qui a changé. Ne tourne que si une carte, le script ou le réglage change.
 - **kicad-happy sur la radio v4** :
@@ -689,7 +689,7 @@ Premier cas prévu : la mesure de l'oscilloscope qui parle, une autre graine de 
 ## Pistes notées le soir du 25/10/2026 (idées de Kévin, pas encore commencées)
 
 - **Partir du boîtier** (de l'extérieur vers l'intérieur, comme un designer) : on dessine d'abord l'objet dans CadQuery (forme, matière, épaisseur des parois), déjà dans la chaîne pour le banc de test ; l'intérieur de l'objet donne le contour de la carte (KiCad accepte n'importe quel contour) ; la chaîne y pose les blocs ; puis la carte revient dans l'objet en 3D (fichier STEP) et un contrôle vérifie que tout tombe juste (boutons en face des trous, rien ne touche une paroi). C'est la co-conception électronique et mécanique des industriels, en libre et pilotée par écrit, donc utilisable sans la vue.
-- **Essayer une IA ouverte** sur la chaîne, en clé de secours : par exemple la famille Mistral 3 (entreprise française, poids publiés sous licence Apache 2.0). Les petits modèles tournent sur un bon ordinateur avec carte graphique, le grand demande des serveurs. Rien n'est encore essayé ; les contrôles restent dans les outils, pas dans l'IA.
+- **Essayer une IA ouverte** sur la chaîne, en clé de secours : par exemple la famille Mistral 3 (entreprise française, poids publiés sous licence Apache 2.0). Les petits modèles tournent sur un bon ordinateur avec carte graphique, le grand demande des serveurs. Rien n'est encore essayé ; les contrôles restent dans les outils, pas dans l'IA. Le 06/11/2026, Kévin le dit ainsi : « tout le monde utilisera le chef d'orchestre qu'il veut ». La chaîne tourne sans IA, et ses instructions sont du texte simple (version 1.37). Deux briques libres de Mistral à essayer : Devstral Small 2 (24 milliards de paramètres, licence Apache 2.0, tourne sur une seule carte graphique, même grand public) et Vibe, un agent libre (Apache 2.0) qui lit et modifie des fichiers et lance des commandes. D'autres modèles ouverts (GLM, DeepSeek, Qwen) annoncent des résultats proches des IA fermées, mais ces chiffres viennent surtout de leurs fabricants. L'essai à faire : un banc, comme pour les lecteurs d'écran, qui donne la même étape de la chaîne à une IA libre et compare (sources : https://mistral.ai/news/devstral-2-vibe-cli/ et https://dev.to/zyvop/the-best-open-source-llms-for-coding-right-now-june-2026-n10).
 - **Un mode « objet d'art »** : aujourd'hui la chaîne cherche une carte qui marche, pas une belle carte (Freerouting trace au plus efficace). Un réglage pourrait choisir la forme de la carte, la couleur du vernis, des dessins dans le cuivre. Une carte peut être un bel objet même si elle ne marche pas ; le relief viendrait plutôt de la forme découpée et des composants, le cuivre et le vernis étant trop fins pour un braille lisible.
 
 ## Explorer la maquette : questions à travailler à plusieurs (26/10/2026)
@@ -764,6 +764,7 @@ Ampli PAM8403 : SHDN est relié au 5 V, donc l'ampli est allumé. MUTE est actif
 
 ## Historique
 
+- **1.37 — 06/11/2026** : chacun peut conduire la chaîne avec l'IA qu'il veut, libre ou non (idée de Kévin). Les scripts tournent sans IA et les instructions sont du texte simple. Les phrases qui supposaient que l'IA était Claude disent maintenant « l'IA » (méthode, compétence, README, document pour le fablab, plan de test de la radio v3). Ce qui ne vaut que pour l'espace de travail de Claude (`add_repo`, autorisation d'installer, garde-fou qui refuse le code téléchargé) est rangé à part dans la compétence, « Notes propres à un environnement ». Les mentions qui disent qui a fait quoi (« hypothèses de Claude », « vérifié par Claude ») restent : c'est l'historique. Piste « IA ouverte » complétée (Devstral Small 2 et Vibe, de Mistral). Reste à vérifier la chaîne avec une deuxième IA, par un banc d'essai.
 - **1.36 — 26/10/2026** : section « Explorer la maquette » : le but (comprendre une carte assez bien pour l'intégrer dans un objet), deux niveaux de lecture, trois idées (maquette actuelle, maquette qui parle, pistes qui parlent), trois questions pour juger après l'essai de la maquette imprimée, et la référence AccessibleCircuits (CHI 2021). Rien n'est décidé : réflexion à mener à plusieurs.
 - **1.35 — 25/10/2026** : la chaîne regarde dans plus de schémas publiés. `outils/montages_reels.py` lit trois jeux (Ohmatic, kicad9plus, Open Schematics, avec un index local de 3 Mo), une puce à la fois, et toutes les liaisons sortent de KiCad ; il compte les auteurs, pas les dépôts, ne recompte pas une copie exacte, signale un brochage différent et une puce dont la masse touche l'alimentation. Nouveau : `outils/chercher_fonction.py` (projets qui font telle chose, et pièges connus d'après Electronics Stack Exchange) ; `outils/jeux_donnees.py` (les jeux, leurs licences, ceux qui sont écartés et pourquoi). Le jeu « kicad-netlist-sft » ne sert que d'index : ses liaisons sont fausses dans des cas vérifiés. Rapport de la radio v4 refait (Si4732, PAM8403, SY8089). Deux règles apprises. La recherche des pièges a trouvé deux questions pour l'électronicien, vérifiées ensuite sur la fiche du PAM8403 : son découpage (250 à 450 kHz) tombe dans la bande AM, et sa résistance d'entrée se déduit de la formule du gain (fiche de questions 1.8, questions 4 et 6 ; plan de test 2.4, essai 8, et programme d'essai 1.1). Le forum disait 250 kHz et d'autres résistances : la fiche corrige.
 - **1.34 — 25/10/2026** : dépôt rendu public. La bibliothèque des composants de LCSC/EasyEDA (empreintes, symboles, modèles 3D) est retirée du dépôt et de tout son historique, car les conditions d'EasyEDA interdisent de la republier ; chacun la télécharge chez soi avec `outils/telecharger_bibliotheque.py`, qui réapplique les retouches (`retouches.json`) et vérifie les sommes (`attendu.json`). Les conditions d'EasyGerber permettent de garder ses fichiers. Installation, Docker, README, licence et compétence mis à jour ; deux règles apprises. Idée proposée à AutonaBee, avec le lien du dépôt (section « Proposée à AutonaBee »). Méthode pour un bloc que la chaîne n'a jamais vu, et trois pistes de Kévin (boîtier d'abord, IA ouverte, objet d'art).

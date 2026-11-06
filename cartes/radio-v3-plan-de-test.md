@@ -1,6 +1,6 @@
 # Carte radio RADIONÉO v3 — plan de test à la réception
 
-Exylia Project — version 1.1 — 23 octobre 2026
+Exylia Project — version 1.2 — 6 novembre 2026
 
 Ce plan sert à vérifier une carte reçue de l'usine. On va du plus sûr au plus risqué : d'abord sans courant, ensuite sous tension, enfin avec un programme d'essai. À chaque étape, la valeur attendue est donnée. Si une mesure ne correspond pas, **on s'arrête** et on note ce qu'on a trouvé avant d'aller plus loin.
 
@@ -102,7 +102,7 @@ Brancher la carte en USB-C, si possible à travers le testeur USB, et **sans hau
 
   Avec les versions récentes d'esptool, la commande s'écrit `esptool chip-id`. La réponse doit contenir « ESP32-S3 ». Sinon, noter le message d'erreur.
 
-## 6. Programme d'essai (à écrire, Claude peut le faire)
+## 6. Programme d'essai (à écrire, l'IA peut le faire)
 
 Un petit programme pour l'ESP32-S3, qui fait les essais l'un après l'autre et les annonce sur le port série (lisible par un lecteur d'écran) :
 
@@ -134,5 +134,6 @@ Un petit programme pour l'ESP32-S3, qui fait les essais l'un après l'autre et l
 
 ## Historique
 
+- **1.2 — 06/11/2026** : « l'IA » au lieu de « Claude » : la chaîne ne dépend d'aucune IA en particulier.
 - **1.1 — 23/10/2026** : ajout de la vérification d'échauffement du régulateur U2 et du chargeur d'au moins 2 A.
 - **1.0 — 23/10/2026** : première version. Les numéros de sorties et de broches sont relevés sur la carte produite par la chaîne puzzle v1.6.

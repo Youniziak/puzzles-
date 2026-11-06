@@ -6,7 +6,7 @@ Dépôt public depuis le 25/10/2026. La première carte faite avec la chaîne es
 
 - `METHODE-CARTES-PUZZLE.md` : la méthode, ce qui a été appris, et l'historique des versions.
 - `POUR-LE-FABLAB.md` : les briques et la colle, pour quelqu'un qui voudrait aider.
-- `SKILL-carte-puzzle.md` : la compétence Claude qui sait se servir de la chaîne.
+- `SKILL-carte-puzzle.md` : les instructions pour l'IA qui conduit la chaîne. C'est du texte simple : chacun prend l'IA qu'il veut, libre ou non, du moment qu'elle sait lire des fichiers et lancer des commandes. La chaîne elle-même tourne sans IA. Ces instructions ont été écrites et essayées avec Claude.
 - `installer-ubuntu.sh` et `Dockerfile` : pour installer les logiciels.
 - `scripts/chaine.py` : la chaîne en une commande.
 - `.github/workflows/kicad-happy.yml` : un deuxième avis sur chaque carte, par l'outil libre kicad-happy, à chaque changement.
